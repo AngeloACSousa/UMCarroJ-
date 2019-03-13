@@ -1,6 +1,7 @@
 import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;
 //class coordenadas, para simplicar calculos de distancias
+//acrescentei o setX, setY, clone, equals -- RAFA.
 public class Coordenada {
     double x;
     double y;
@@ -26,6 +27,29 @@ public class Coordenada {
 
     public double getX() {
         return x;
+    }
+
+    public double setX(int cx){
+        this.x = cx;
+    }
+
+    public double setY(int cy){
+        this.x = cy;
+    }
+
+    public Coordenada clone(){
+        return new Coordenada(this);
+    }
+
+    public boolean equals(Object o){
+        if(this == o){
+            return true;
+        }
+        if (o == null || o.getClass() != this.getClass()) {
+            return false;
+        }
+        Coordenada aux = (Coordenada) o;
+        return this.equals(aux);
     }
 
     public double distancia(Coordenada c){
