@@ -3,8 +3,8 @@ import static java.lang.Math.sqrt;
 //class coordenadas, para simplicar calculos de distancias
 //acrescentei o setX, setY, clone, equals -- RAFA.
 public class Coordenada {
-    double x;
-    double y;
+    private double x;
+    private double y;
 
     public Coordenada(){
         this.x = 0;
@@ -29,11 +29,11 @@ public class Coordenada {
         return x;
     }
 
-    public double setX(int cx){
+    public void setX(double cx){
         this.x = cx;
     }
 
-    public double setY(int cy){
+    public void setY(double cy){
         this.x = cy;
     }
 
