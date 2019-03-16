@@ -45,4 +45,19 @@ public class Cliente extends Pessoa {
     public void setAlugueres(List<String> alugueres) {
         this.alugueres = alugueres;
     }
+
+    public Cliente clone(){
+        return new Cliente(this);
+    }
+
+    public boolean equals(Object o){
+        if(this == o){
+            return true;
+        }
+        if (o == null || o.getClass() != this.getClass()) {
+            return false;
+        }
+        Cliente aux = (Cliente) o;
+        return this.equals(aux);
+    }
 }

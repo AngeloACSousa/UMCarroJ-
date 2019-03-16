@@ -70,4 +70,19 @@ public abstract class Pessoa {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public Pessoa clone(){
+        return new Pessoa(this);
+    }
+
+    public boolean equals(Object o){
+        if(this == o){
+            return true;
+        }
+        if (o == null || o.getClass() != this.getClass()) {
+            return false;
+        }
+        Pessoa aux = (Pessoa) o;
+        return this.equals(aux);
+    }
 }

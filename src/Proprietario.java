@@ -43,4 +43,19 @@ public class Proprietario extends Pessoa{
     public void setClassificacao(int c){
         this.classificacao = c;
     }
+
+    public Proprietario clone(){
+        return new Proprietario(this);
+    }
+
+    public boolean equals(Object o){
+        if(this == o){
+            return true;
+        }
+        if (o == null || o.getClass() != this.getClass()) {
+            return false;
+        }
+        Proprietario aux = (Proprietario) o;
+        return this.equals(aux);
+    }
 }
