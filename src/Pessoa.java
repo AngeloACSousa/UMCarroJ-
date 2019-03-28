@@ -1,3 +1,5 @@
+package src;
+
 import java.time.LocalDate;
 
 public abstract class Pessoa {
@@ -69,10 +71,6 @@ public abstract class Pessoa {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public Pessoa clone(){
-        return new Pessoa(this);
     }
 
     public boolean equals(Object o){

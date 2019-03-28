@@ -1,5 +1,8 @@
+package src;
+
 import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;
+import java.util.List;
 //class coordenadas, para simplicar calculos de distancias
 //acrescentei o setX, setY, clone, equals -- RAFA.
 public class Coordenada {
@@ -51,8 +54,31 @@ public class Coordenada {
         Coordenada aux = (Coordenada) o;
         return this.equals(aux);
     }
-
-    public double distancia(Coordenada c){
+    
+    //esta versao nao faz muito sentido....
+    /*public double distancia(Coordenada c){
         return sqrt(pow(this.x,c.getX()) + pow(this.y,c.getY()));
+    }
+    */
+    
+   
+   public double distancia(Coordenada a, Coordenada b){
+        double dist = 0;
+        dist = Math.sqrt(Math.pow(b.getX() - a.getX(), 2) + Math.pow(b.getY() - a.getY(), 2));
+        return dist;
+    }
+    
+    
+    public Coordenada MaisPerto(List<Coordenada> cor, Coordenada loc){
+        Coordenada corPerto = new Coordenada();
+        double dist = 99999;
+        for(Coordenada c : cor){
+            if(distancia(c, loc) < dist){
+                dist = distancia(c, loc);
+                corPerto.setX(c.getX());
+                corPerto.setY(c.getY());
+            }
+        }
+        return corPerto;
     }
 }
