@@ -1,4 +1,3 @@
-package src;
 
 import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;
@@ -55,26 +54,20 @@ public class Coordenada {
         return this.equals(aux);
     }
     
-    //esta versao nao faz muito sentido....
-    /*public double distancia(Coordenada c){
+
+    public double distancia(Coordenada c){
         return sqrt(pow(this.x,c.getX()) + pow(this.y,c.getY()));
     }
-    */
+
+
     
-   
-   public double distancia(Coordenada a, Coordenada b){
-        double dist = 0;
-        dist = Math.sqrt(Math.pow(b.getX() - a.getX(), 2) + Math.pow(b.getY() - a.getY(), 2));
-        return dist;
-    }
-    
-    
-    public Coordenada MaisPerto(List<Coordenada> cor, Coordenada loc){
+    public Coordenada maisPerto(List<Coordenada> cor){
         Coordenada corPerto = new Coordenada();
-        double dist = 99999;
+        double dist = Double.MAX_VALUE;
         for(Coordenada c : cor){
-            if(distancia(c, loc) < dist){
-                dist = distancia(c, loc);
+
+            if(distancia(c) < dist){
+                dist = distancia(c);
                 corPerto.setX(c.getX());
                 corPerto.setY(c.getY());
             }
