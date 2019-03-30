@@ -1,8 +1,13 @@
 import java.util.ArrayList;
 import java.util.List;
-//classe abstrata de carro, em principio vai ser ainda uma subclasse de outra classe veiculo(discutir em reuniao)
-//em falta metodos equals e clone
-public abstract class Carro {
+
+/*classe abstrata de carro, é uma subclasse
+da classe veiculo(discutir em reuniao)(assim é possivel atingir uma melhor modelação
+Esta classe terá outras três subclasses(elétricos,hibridos,combustão)
+em falta metodos equals e clone*/
+
+
+public abstract class Carro extends Veiculo{
     private int velocidadeMedia;
     private int preco;
     private int consumoMedio;
@@ -11,6 +16,7 @@ public abstract class Carro {
     private int classificacao;
 
     public Carro(){
+    super();
     this.velocidadeMedia = 0;
     this.preco = 0;
     this.consumoMedio = 0;
@@ -19,7 +25,8 @@ public abstract class Carro {
     this.classificacao = 0;
     }
 
-    public Carro(int vm, int p, int cm, List<String> a, int c){
+    public Carro(int vm, int p, int cm, List<String> a, int c, Coordenada cd){
+        super(cd);
         this.velocidadeMedia = vm;
         this.preco = p;
         this.consumoMedio = cm;
@@ -28,6 +35,7 @@ public abstract class Carro {
     }
 
     public Carro(Carro c){
+        super(c);
         this.velocidadeMedia = c.getVelocidadeMedia();
         this.preco = c.getPreco();
         this.consumoMedio = c.getConsumoMedio();
