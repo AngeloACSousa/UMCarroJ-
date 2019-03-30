@@ -57,7 +57,7 @@ public class Coordenada {
     
 
     public double distancia(Coordenada c){
-        return sqrt(pow(this.x,c.getX()) + pow(this.y,c.getY()));
+        return sqrt(pow(this.x -c.getX(), 2) + pow(this.y - c.getY(), 2));
     }
 
 
