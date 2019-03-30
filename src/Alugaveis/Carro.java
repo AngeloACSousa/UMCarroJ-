@@ -1,13 +1,15 @@
+package Alugaveis;
+
 import java.util.ArrayList;
 import java.util.List;
-
+import Tracking.Coordenada;
 /*classe abstrata de carro, é uma subclasse
 da classe veiculo(discutir em reuniao)(assim é possivel atingir uma melhor modelação
 Esta classe terá outras três subclasses(elétricos,hibridos,combustão)
 em falta metodos equals e clone*/
 
 
-public abstract class Carro extends Veiculo{
+public abstract class Carro extends Veiculo {
     private int velocidadeMedia;
     private int preco;
     private int consumoMedio;

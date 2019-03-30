@@ -1,35 +1,30 @@
+package Utilizadores;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Cliente extends Pessoa {
-
-    private Coordenada coordenada;
-
+public class Proprietario extends Pessoa {
     //está como lista de strings porque a class aluguer ainda não está definida
     private List<String> alugueres;
+    private int classificacao;
 
-    public Cliente(){
+    public Proprietario(){
         super();
-        this.coordenada = new Coordenada();
         this.alugueres = new ArrayList<>();
+        this.classificacao = 0;
     }
 
-    public Cliente(String email, String nome, String pass, String morada, LocalDate nascimento, Coordenada c, List<String> a){
+    public Proprietario(String email, String nome, String pass, String morada, LocalDate nascimento, int c, List<String> a){
         super(email, nome, pass, morada, nascimento);
-        this.coordenada = new Coordenada(c);
         this.alugueres = new ArrayList<>(a);
+        this.classificacao = c;
     }
 
-    public Cliente(Cliente c){
+    public Proprietario(Proprietario c){
         super(c);
-        this.coordenada = c.getCoordenada();
         this.alugueres = c .getAlugueres();
-    }
-
-    public Coordenada getCoordenada() {
-        return new Coordenada(this.coordenada.getX(),this.coordenada.getY());
+        this.classificacao = c.getClassificacao();
     }
 
     public List<String> getAlugueres(){
@@ -39,16 +34,20 @@ public class Cliente extends Pessoa {
         return res;
     }
 
-    public void setCoordenada(Coordenada coordenada) {
-        this.coordenada = new Coordenada(coordenada);
-    }
-
     public void setAlugueres(List<String> alugueres) {
         this.alugueres = alugueres;
     }
 
-    public Cliente clone(){
-        return new Cliente(this);
+    public int getClassificacao() {
+        return classificacao;
+    }
+
+    public void setClassificacao(int c){
+        this.classificacao = c;
+    }
+
+    public Proprietario clone(){
+        return new Proprietario(this);
     }
 
     public boolean equals(Object o){
@@ -58,7 +57,7 @@ public class Cliente extends Pessoa {
         if (o == null || o.getClass() != this.getClass()) {
             return false;
         }
-        Cliente aux = (Cliente) o;
+        Proprietario aux = (Proprietario) o;
         return this.equals(aux);
     }
 }

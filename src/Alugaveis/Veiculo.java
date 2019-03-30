@@ -1,6 +1,8 @@
-/*Classe base para tudo oq possa ser alugado,
+package Alugaveis;/*Classe base para tudo oq possa ser alugado,
  desta forma é possivel a modelação e expansão da aplicação para além dos carros.
 */
+
+import Tracking.Coordenada;
 
 public abstract class Veiculo {
     private Coordenada coordenada;//tudo oq é alugavel precisa de uma localização.
