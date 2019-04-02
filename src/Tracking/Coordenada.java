@@ -37,7 +37,7 @@ public class Coordenada {
     }
 
     public void setY(double cy){
-        this.x = cy;
+        this.y = cy;
     }
 
     public Coordenada clone(){
@@ -67,8 +67,8 @@ public class Coordenada {
         double dist = Double.MAX_VALUE;
         for(Coordenada c : cor){
 
-            if(distancia(c) < dist){
-                dist = distancia(c);
+            if(this.distancia(c) < dist){
+                dist = this.distancia(c);
                 corPerto.setX(c.getX());
                 corPerto.setY(c.getY());
             }

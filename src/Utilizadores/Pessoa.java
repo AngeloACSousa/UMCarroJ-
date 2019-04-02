@@ -9,6 +9,7 @@ public abstract class Pessoa {
     private String password;
     private String morada;
     private LocalDate nascimento;
+    private int nif;
 
     public Pessoa(){
         this.nome = "";
@@ -16,6 +17,7 @@ public abstract class Pessoa {
         this.password = "";
         this.morada = "";
         this.nascimento = null;
+        this.nif = 0;
     }
 
     public Pessoa(Pessoa p){
@@ -24,14 +26,16 @@ public abstract class Pessoa {
         this.password = p.getPassword();
         this.morada = p.getMorada();
         this.nascimento = p.getNascimento();
+        this.nif = p.getNif();
     }
 
-    public Pessoa(String email, String nome, String pass, String morada, LocalDate nascimento){
+    public Pessoa(int nif, String email, String nome, String pass, String morada, LocalDate nascimento){
         this.email = email;
         this.nome = nome;
         this.password = pass;
         this.morada = morada;
         this.nascimento = nascimento;
+        this.nif = nif;
     }
 
     public String getNome() {
@@ -50,6 +54,10 @@ public abstract class Pessoa {
         return password;
     }
 
+    public int getNif() {
+        return nif;
+    }
+
     public LocalDate getNascimento() {
         return nascimento;
     }
@@ -60,6 +68,10 @@ public abstract class Pessoa {
 
     public void setMorada(String morada) {
         this.morada = morada;
+    }
+
+    public void setNif(int nif) {
+        this.nif = nif;
     }
 
     public void setEmail(String email) {

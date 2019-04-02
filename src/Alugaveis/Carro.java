@@ -27,8 +27,8 @@ public abstract class Carro extends Veiculo {
     this.classificacao = 0;
     }
 
-    public Carro(int vm, int p, int cm, List<String> a, int c, Coordenada cd){
-        super(cd);
+    public Carro(int id, int vm, int p, int cm, List<String> a, int c, Coordenada cd){
+        super(cd, id);
         this.velocidadeMedia = vm;
         this.preco = p;
         this.consumoMedio = cm;

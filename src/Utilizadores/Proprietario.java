@@ -15,8 +15,8 @@ public class Proprietario extends Pessoa {
         this.classificacao = 0;
     }
 
-    public Proprietario(String email, String nome, String pass, String morada, LocalDate nascimento, int c, List<String> a){
-        super(email, nome, pass, morada, nascimento);
+    public Proprietario(int nif, String email, String nome, String pass, String morada, LocalDate nascimento, int c, List<String> a){
+        super(nif, email, nome, pass, morada, nascimento);
         this.alugueres = new ArrayList<>(a);
         this.classificacao = c;
     }

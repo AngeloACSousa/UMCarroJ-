@@ -22,8 +22,8 @@ public class Cliente extends Pessoa {
         this.alugueres = new ArrayList<>();
     }
 
-    public Cliente(String email, String nome, String pass, String morada, LocalDate nascimento, Coordenada c, List<String> a){
-        super(email, nome, pass, morada, nascimento);
+    public Cliente(int nif, String email, String nome, String pass, String morada, LocalDate nascimento, Coordenada c, List<String> a){
+        super(nif, email, nome, pass, morada, nascimento);
         this.coordenada = new Coordenada(c);
         this.alugueres = new ArrayList<>(a);
     }
