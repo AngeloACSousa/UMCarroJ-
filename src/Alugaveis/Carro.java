@@ -12,22 +12,19 @@ em falta metodos equals e clone*/
 public abstract class Carro extends Veiculo {
     private int velocidadeMedia;
     private int preco;
-    private int consumoMedio;
     private int classificacao;
 
     public Carro(){
     super();
     this.velocidadeMedia = 0;
     this.preco = 0;
-    this.consumoMedio = 0;
     this.classificacao = 0;
     }
 
-    public Carro(int id, int vm, int p, int cm, List<String> a, int c, Coordenada cd){
+    public Carro(int id, int vm, int p, List<String> a, int c, Coordenada cd){
         super(cd, id, a);
         this.velocidadeMedia = vm;
         this.preco = p;
-        this.consumoMedio = cm;
         this.classificacao = c;
     }
 
@@ -35,13 +32,9 @@ public abstract class Carro extends Veiculo {
         super(c);
         this.velocidadeMedia = c.getVelocidadeMedia();
         this.preco = c.getPreco();
-        this.consumoMedio = c.getConsumoMedio();
         this.classificacao = c.getClassificacao();
     }
 
-    public int getConsumoMedio() {
-        return consumoMedio;
-    }
 
     public int getPreco() {
         return preco;
@@ -53,11 +46,6 @@ public abstract class Carro extends Veiculo {
 
     public int getClassificacao() {
         return classificacao;
-    }
-
-
-    public void setConsumoMedio(int consumoMedio) {
-        this.consumoMedio = consumoMedio;
     }
 
     public void setClassificacao(int classificacao) {
