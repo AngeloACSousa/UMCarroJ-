@@ -14,9 +14,10 @@ import Alugaveis.Carro;
 public class Alugueres
 {
     
-    private Cliente cliente;
-    private Proprietario proprietario;
-    private Carro carro;
+    private int idAluguer;
+    private int idCliente;
+    private int idProprietario;
+    private int idVeiculo;
     private Coordenada coordIni;
     private Coordenada coordFin;
     private double tempoViagem;   
@@ -24,19 +25,21 @@ public class Alugueres
     
     //construtor vazio
     public Alugueres(){
-        this.cliente= new Cliente();
-        this.proprietario= new Proprietario();
-        this.carro= new Carro();
+        this.idAluguer=0;
+        this.idCliente= 0;
+        this.idProprietario= 0;
+        this.idVeiculo=0;
         this.coordIni= new Coordenada(0,0);
         this.coordFin= new Coordenada(0,0);
         this.tempoViagem= 0.0;
         this.classMedia= 0.0;        
     }
     //construtor parametrizado
-    public Alugueres(Cliente cliente,Proprietario proprietario,Carro carro,Coordenada a,Coordenada b, double tempoViagem,double classMedia){
-        this.cliente= new Cliente(cliente);
-        this.proprietario= new Proprietario(proprietario);
-        this.carro= new Carro(carro);
+    public Alugueres(int idAluguer,int idCliente,int idProprietario,int idVeiculo,Coordenada a,Coordenada b, double tempoViagem,double classMedia){
+        this.idAluguer=idAluguer;
+        this.idCliente= idCliente;
+        this.idProprietario= idProprietario;
+        this.idVeiculo=idVeiculo;
         this.coordIni= new Coordenada(a);
         this.coordFin= new Coordenada(b);
         this.tempoViagem= 0.0;
@@ -44,23 +47,27 @@ public class Alugueres
     };
     //construtor copia
     public Alugueres(Alugueres v){
-        this.cliente=v.getCliente();
-        this.proprietario=v.getProprietario();
-        this.carro=v.getCarro();
+        this.idAluguer=v.getIdAluguer();
+        this.idCliente=v.getIdCliente();
+        this.idProprietario=v.getIdProprietario();
+        this.idVeiculo=v.getIdVeiculo();
         this.coordIni=v.getCoordenadaI();
         this.coordFin=v.getCoordenadaF();
         this.tempoViagem=v.getTempoViagem();
         this.classMedia=v.getClassMedia();
     }
     //get's
-    public Cliente getCliente(){
-        return this.cliente;
+    public int getIdAluguer(){
+        return this.idAluguer;
     }
-    public Proprietario getProprietario(){
-        return this.proprietario;
+    public int getIdCliente(){
+        return this.idCliente;
     }
-    public Carro getCarro(){
-        return this.carro;
+    public int getIdProprietario(){
+        return this.idProprietario;
+    }
+    public int getIdVeiculo(){
+        return this.idVeiculo;
     }
     public Coordenada getCoordenadaI(){
         return this.coordIni;
@@ -75,14 +82,18 @@ public class Alugueres
         return this.classMedia;
     }
     // set's
-    public void setCliente(Cliente c){
-        this.cliente=c;
+    
+    public void setIdAluguer(int a){
+        this.idAluguer=a;
     };
-    public void setProprietario(Proprietario p){
-        this.proprietario=p;
+    public void setIdCliente(int c){
+        this.idCliente=c;
     };
-    public void setCarro(Carro c){
-       this.carro=c;
+    public void setProprietario(int p){
+        this.idProprietario=p;
+    };
+    public void setIdVeiculo(int v){
+       this.idVeiculo=v;
     };
     public void setCoordenadaI(Coordenada c){
         this.coordIni=c;
@@ -115,12 +126,14 @@ public class Alugueres
     public String toString(){
         StringBuilder sb= new StringBuilder();
         
+        sb.append("Aluguer: ");
+        sb.append(this.getIdAluguer()+"\n");
         sb.append("Cliente: ");
-        sb.append(this.cliente+"\n");
+        sb.append(this.getIdCliente()+"\n");
         sb.append("Proprietario: ");
-        sb.append(this.proprietario+"\n");
+        sb.append(this.getIdProprietario()+"\n");
         sb.append("Carro ");
-        sb.append(this.carro+"\n");
+        sb.append(this.getIdVeiculo()+"\n");
         sb.append("Ponto partida: ");
         sb.append(this.coordIni+"\n");
         sb.append("Ponto chegada: ");
