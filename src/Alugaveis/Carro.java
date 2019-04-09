@@ -3,16 +3,20 @@ package Alugaveis;
 import java.util.ArrayList;
 import java.util.List;
 import Tracking.Coordenada;
-/*classe abstrata de carro, é uma subclasse
-da classe veiculo(discutir em reuniao)(assim é possivel atingir uma melhor modelação
-Esta classe terá outras três subclasses(elétricos,hibridos,combustão)
-em falta metodos equals e clone*/
 
+/**
+ * Classe Carro, abstrata
+ */
 
 public abstract class Carro extends Veiculo {
     private int velocidadeMedia;
     private int preco;
     private int classificacao;
+
+    /**
+     * Construtores --------------------------------------------------------------------------------------
+     * Construtor default da classe
+     */
 
     public Carro(){
     super();
@@ -21,21 +25,39 @@ public abstract class Carro extends Veiculo {
     this.classificacao = 0;
     }
 
-    public Carro(int id, int vm, int p, List<String> a, int c, Coordenada cd){
-        super(cd, id, a);
-        this.velocidadeMedia = vm;
-        this.preco = p;
-        this.classificacao = c;
+    /**
+     * Construtor Parameterizado
+     * @param id
+     * @param velocidadeMedia
+     * @param preco
+     * @param alugueres
+     * @param classificacao
+     * @param coordenada
+     */
+
+    public Carro(int id, int velocidadeMedia, int preco,
+                 List<String> alugueres, int classificacao, Coordenada coordenada){
+        super(coordenada, id, alugueres);
+        this.velocidadeMedia = velocidadeMedia;
+        this.preco = preco;
+        this.classificacao = classificacao;
     }
 
-    public Carro(Carro c){
-        super(c);
-        this.velocidadeMedia = c.getVelocidadeMedia();
-        this.preco = c.getPreco();
-        this.classificacao = c.getClassificacao();
+    /**
+     * Construtor de cópia
+     * @param carro
+     */
+    public Carro(Carro carro){
+        super(carro);
+        this.velocidadeMedia = carro.getVelocidadeMedia();
+        this.preco = carro.getPreco();
+        this.classificacao = carro.getClassificacao();
     }
 
-
+    /**
+     * getters-----------------------------------------------------------------------------------------------
+     * @return
+     */
     public int getPreco() {
         return preco;
     }
@@ -48,6 +70,10 @@ public abstract class Carro extends Veiculo {
         return classificacao;
     }
 
+    /**
+     * setters------------------------------------------------------------------------------------------------
+     * @param
+     */
     public void setClassificacao(int classificacao) {
         this.classificacao = classificacao;
     }

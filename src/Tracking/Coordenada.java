@@ -3,27 +3,48 @@ package Tracking;
 import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;
 import java.util.List;
-//class coordenadas, para simplicar calculos de distancias
-//acrescentei o setX, setY, clone, equals -- RAFA.
+
+/**
+ * Class Coordenada, para simplicar calculos de distancias
+ */
+
+
 public class Coordenada {
     private double x;
     private double y;
 
+    /**
+     * Construtores----------------------------------------------------------------------------------------
+     * Construtor default
+     */
     public Coordenada(){
         this.x = 0;
         this.y = 0;
     }
 
+    /**
+     * Construtor parameterizado
+     * @param x
+     * @param y
+     */
     public Coordenada(double x, double y){
         this.x = x;
         this.y = y;
     }
 
-    public Coordenada(Coordenada c){
-        this.x = c.getX();
-        this.y = c.getY();
+    /**
+     * Construtor de cópia
+     * @param coordenada
+     */
+    public Coordenada(Coordenada coordenada){
+        this.x = coordenada.getX();
+        this.y = coordenada.getY();
     }
 
+    /**
+     * Getters---------------------------------------------------------------------------------------------
+     * @return
+     */
     public double getY() {
         return y;
     }
@@ -32,6 +53,10 @@ public class Coordenada {
         return x;
     }
 
+    /**
+     * Setters---------------------------------------------------------------------------------------------
+     * @param cx
+     */
     public void setX(double cx){
         this.x = cx;
     }
@@ -40,10 +65,19 @@ public class Coordenada {
         this.y = cy;
     }
 
+    /**
+     * metodo clone
+     * @return
+     */
     public Coordenada clone(){
         return new Coordenada(this);
     }
 
+    /**
+     * metodo equals
+     * @param o
+     * @return
+     */
     public boolean equals(Object o){
         if(this == o){
             return true;
@@ -54,14 +88,22 @@ public class Coordenada {
         Coordenada aux = (Coordenada) o;
         return this.equals(aux);
     }
-    
 
+    /**
+     * Calcula a distancia até a coordenada c
+     * @param c
+     * @return
+     */
     public double distancia(Coordenada c){
         return sqrt(pow(this.x -c.getX(), 2) + pow(this.y - c.getY(), 2));
     }
 
 
-    
+    /**
+     * Calcula a coordenada mais perto
+     * @param cor : List<Coordenada>
+     * @return
+     */
     public Coordenada maisPerto(List<Coordenada> cor){
         Coordenada corPerto = new Coordenada();
         double dist = Double.MAX_VALUE;

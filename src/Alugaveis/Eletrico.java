@@ -4,12 +4,19 @@ import Tracking.Coordenada;
 
 import java.util.List;
 
+/**
+ * Classe eletrico dá extend da classe carro
+ */
 public class Eletrico extends Carro {
     private String tipo;
     private int capacidadeBateria;
     private int bateriaAtual;
     private int consumoMedio;
 
+    /**
+     * Construtores------------------------------------------------------------------------------------------
+     * Construtor default
+     */
     public Eletrico(){
         super();
         this.bateriaAtual = 0;
@@ -17,21 +24,44 @@ public class Eletrico extends Carro {
         this.consumoMedio = 0;
         tipo = "eletrico";
     }
-    public Eletrico(int id, int vm, int p,int cb, int ba, int cm, List<String> a , int c, Coordenada cd){
-        super(id,vm,p,a,c,cd);
-        this.bateriaAtual = ba;
-        this.capacidadeBateria = cb;
-        this.consumoMedio = cm;
-        this.tipo = "eletrico";
-    }
-    public Eletrico(Eletrico c){
-        super(c);
-        this.consumoMedio = c.getConsumoMedio();
-        this.capacidadeBateria = c.getCapacidadeBateria();
-        this.bateriaAtual = c.getBateriaAtual();
+
+    /**
+     * Construtor parameterizado
+     * @param id
+     * @param velocidademedia
+     * @param preco
+     * @param capacidadeBateria
+     * @param bateriaAtual
+     * @param consumoMedio
+     * @param alugueres
+     * @param classificacao
+     * @param coordenada
+     */
+    public Eletrico(int id, int velocidademedia, int preco,int capacidadeBateria, int bateriaAtual,
+                    int consumoMedio, List<String> alugueres , int classificacao, Coordenada coordenada){
+        super(id,velocidademedia,preco,alugueres,classificacao,coordenada);
+        this.bateriaAtual = bateriaAtual;
+        this.capacidadeBateria = capacidadeBateria;
+        this.consumoMedio = consumoMedio;
         this.tipo = "eletrico";
     }
 
+    /**
+     * Construtor de cópia
+     * @param eletrico
+     */
+    public Eletrico(Eletrico eletrico){
+        super(eletrico);
+        this.consumoMedio = eletrico.getConsumoMedio();
+        this.capacidadeBateria = eletrico.getCapacidadeBateria();
+        this.bateriaAtual = eletrico.getBateriaAtual();
+        this.tipo = "eletrico";
+    }
+
+    /**
+     * Getters ----------------------------------------------------------------------------------------------
+     * @return
+     */
     public String getTipo() {
         return tipo;
     }
@@ -48,6 +78,10 @@ public class Eletrico extends Carro {
         return consumoMedio;
     }
 
+    /**
+     * Setters ----------------------------------------------------------------------------------------------
+     * @param
+     */
     public void setBateriaAtual(int bateriaAtual) {
         this.bateriaAtual = bateriaAtual;
     }

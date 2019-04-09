@@ -1,46 +1,71 @@
-package Alugaveis;/*Classe base para tudo oq possa ser alugado,
- desta forma é possivel a modelação e expansão da aplicação para além dos carros.
-*/
+package Alugaveis;
 
 import Tracking.Coordenada;
 
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Classe Veiculo, classe abstrata fundamental
+ */
 public abstract class Veiculo {
-    private Coordenada coordenada;//tudo oq é alugavel precisa de uma localização.
+    private Coordenada coordenada;
     private int id;
     private List<String> alugueres;
+
+    /**
+     * Construtores--------------------------------------------------------------------------------------------
+     * Construtor default
+     */
+
     public Veiculo(){
         this.id = 0;
         this.alugueres = new ArrayList<>();
         this.coordenada = new Coordenada();
     }
 
-    public Veiculo(Coordenada c, int id, List<String> a){
-        this.coordenada = c.clone();
+    /**
+     * Construtor parameterizado
+     * @param coordenada
+     * @param id
+     * @param alugueres
+     */
+    public Veiculo(Coordenada coordenada, int id, List<String> alugueres){
+        this.coordenada = coordenada.clone();
         this.id = id;
-        this.alugueres = new ArrayList<String>(a);
+        this.alugueres = new ArrayList<String>(alugueres);
     }
 
-    public Veiculo(Veiculo v){
-        this.id = v.getId();
-        this.coordenada = v.getCoordenada();
+    /**
+     * Construtor de cópia
+     * @param veiculo
+     */
+    public Veiculo(Veiculo veiculo){
+        this.id = veiculo.getId();
+        this.coordenada = veiculo.getCoordenada();
         this.alugueres = getAlugueres();
     }
 
+    /**
+     * Getters----------------------------------------------------------------------------------------------
+     * @return
+     */
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public List<String> getAlugueres() {
         return new ArrayList<>(this.alugueres);
     }
 
+    public Coordenada getCoordenada() {
+        return coordenada;
+    }
+
+    /**
+     * Setters-----------------------------------------------------------------------------------------------
+     * @param
+     */
     public void setAlugueres(List<String> alugueres) {
         this.alugueres = new ArrayList<>(alugueres);
     }
@@ -49,7 +74,7 @@ public abstract class Veiculo {
         this.coordenada = new Coordenada(coordenada);
     }
 
-    public Coordenada getCoordenada() {
-        return coordenada;
+    public void setId(int id) {
+        this.id = id;
     }
 }

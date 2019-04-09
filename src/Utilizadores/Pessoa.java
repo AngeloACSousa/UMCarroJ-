@@ -2,7 +2,9 @@ package Utilizadores;
 
 import java.time.LocalDate;
 
-
+/**
+ * Classe Pessoa, classe abstrata fundamental
+ */
 public abstract class Pessoa {
     private String email;
     private String nome;
@@ -11,6 +13,10 @@ public abstract class Pessoa {
     private LocalDate nascimento;
     private int nif;
 
+    /**
+     * Cosntrutores--------------------------------------------------------------------------------------
+     * Construtor default
+     */
     public Pessoa(){
         this.nome = "";
         this.email = "";
@@ -20,6 +26,10 @@ public abstract class Pessoa {
         this.nif = 0;
     }
 
+    /**
+     * Construtor de cópia
+     * @param p
+     */
     public Pessoa(Pessoa p){
         this.nome = p.getNome();
         this.email = p.getEmail();
@@ -29,6 +39,15 @@ public abstract class Pessoa {
         this.nif = p.getNif();
     }
 
+    /**
+     * Construtor parameterizado
+     * @param nif
+     * @param email
+     * @param nome
+     * @param pass
+     * @param morada
+     * @param nascimento
+     */
     public Pessoa(int nif, String email, String nome, String pass, String morada, LocalDate nascimento){
         this.email = email;
         this.nome = nome;
@@ -38,6 +57,10 @@ public abstract class Pessoa {
         this.nif = nif;
     }
 
+    /**
+     * Getters-------------------------------------------------------------------------------------------
+     * @return
+     */
     public String getNome() {
         return nome;
     }
@@ -62,6 +85,10 @@ public abstract class Pessoa {
         return nascimento;
     }
 
+    /**
+     * Setters-------------------------------------------------------------------------------------------
+     * @param
+     */
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -85,6 +112,12 @@ public abstract class Pessoa {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    /**
+     * Metodo equals
+     * @param o
+     * @return
+     */
 
     public boolean equals(Object o){
         if(this == o){

@@ -70,10 +70,10 @@ public class Alugueres
         return this.idVeiculo;
     }
     public Coordenada getCoordenadaI(){
-        return this.coordIni;
+        return this.coordIni.clone();
     }
      public Coordenada getCoordenadaF(){
-        return this.coordFin;
+        return this.coordFin.clone();
     }
     public double getTempoViagem(){
         return this.tempoViagem;

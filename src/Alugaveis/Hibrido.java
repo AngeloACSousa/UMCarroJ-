@@ -4,6 +4,9 @@ import Tracking.Coordenada;
 
 import java.util.List;
 
+/**
+ * Classe hibrido dá extend a carro
+ */
 public class Hibrido extends Carro {
     private String tipo;
     private int consumoMedioBateria;
@@ -13,31 +16,64 @@ public class Hibrido extends Carro {
     private int capacidadeBateria;
     private int bateriaAtual;
 
+    /**
+     * Construtores------------------------------------------------------------------------------------------
+     * Construtor default
+     */
     public Hibrido(){
         super();
         tipo = "hibrido";
     }
-    public Hibrido(int id, int vm, int p, int cmb, int cmc, int ct, int ca, int cb, int ba, List<String> a , int c, Coordenada cd){
-        super(id,vm,p,a,c,cd);
-        this.consumoMedioBateria = cmb;
-        this.consumoMedioCombustivel = cmc;
-        this.capacidadeAtual = ca;
-        this.bateriaAtual = ba;
-        this.capacidadeTanque = ct;
-        this.capacidadeBateria = cb;
-        this.tipo = "hibrido";
-    }
-    public Hibrido(Hibrido c){
-        super(c);
-        this.consumoMedioBateria = c.getConsumoMedioBateria();
-        this.consumoMedioCombustivel = c.getConsumoMedioCombustivel();
-        this.capacidadeAtual = c.getCapacidadeAtual();
-        this.bateriaAtual = c.getBateriaAtual();
-        this.capacidadeTanque = c.getCapacidadeTanque();
-        this.capacidadeBateria = c.getCapacidadeBateria();
+
+    /**
+     * Construtor parameterizado
+     * @param id
+     * @param velocidademedia
+     * @param preco
+     * @param consumoMedioBateria
+     * @param consumoMedioCombustivel
+     * @param capacidadeTanque
+     * @param capacidadeAtual
+     * @param capacidadeBateria
+     * @param bateriaAtual
+     * @param alugueres
+     * @param classificacao
+     * @param coordenada
+     */
+
+    public Hibrido(int id, int velocidademedia, int preco, int consumoMedioBateria,
+                   int consumoMedioCombustivel, int capacidadeTanque, int capacidadeAtual,
+                   int capacidadeBateria, int bateriaAtual, List<String> alugueres ,
+                   int classificacao, Coordenada coordenada){
+        super(id,velocidademedia,preco,alugueres,classificacao,coordenada);
+        this.consumoMedioBateria = consumoMedioBateria;
+        this.consumoMedioCombustivel = consumoMedioCombustivel;
+        this.capacidadeAtual = capacidadeAtual;
+        this.bateriaAtual = bateriaAtual;
+        this.capacidadeTanque = capacidadeTanque;
+        this.capacidadeBateria = capacidadeBateria;
         this.tipo = "hibrido";
     }
 
+    /**
+     * Construtor de cópia
+     * @param hibrido
+     */
+    public Hibrido(Hibrido hibrido){
+        super(hibrido);
+        this.consumoMedioBateria = hibrido.getConsumoMedioBateria();
+        this.consumoMedioCombustivel = hibrido.getConsumoMedioCombustivel();
+        this.capacidadeAtual = hibrido.getCapacidadeAtual();
+        this.bateriaAtual = hibrido.getBateriaAtual();
+        this.capacidadeTanque = hibrido.getCapacidadeTanque();
+        this.capacidadeBateria = hibrido.getCapacidadeBateria();
+        this.tipo = "hibrido";
+    }
+
+    /**
+     * Getters----------------------------------------------------------------------------------------------
+     * @return
+     */
     public String getTipo() {
         return tipo;
     }
@@ -66,6 +102,10 @@ public class Hibrido extends Carro {
         return consumoMedioCombustivel;
     }
 
+    /**
+     * Setters-----------------------------------------------------------------------------------------------
+     * @param
+     */
     public void setCapacidadeBateria(int capacidadeBateria) {
         this.capacidadeBateria = capacidadeBateria;
     }
