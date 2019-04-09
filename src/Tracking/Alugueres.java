@@ -1,15 +1,10 @@
-
+package Tracking;
 /**
- * Write a description of class Alugueres here.
+ * Write a description of class Tracking.Alugueres here.
  *
  * @author (your name)
  * @version (a version number or a date)
  */
-
-import Tracking.Coordenada;
-import Utilizadores.Cliente;
-import Utilizadores.Proprietario;
-import Alugaveis.Carro;
 
 public class Alugueres
 {
