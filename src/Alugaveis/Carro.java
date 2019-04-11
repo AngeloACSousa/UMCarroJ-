@@ -85,4 +85,27 @@ public abstract class Carro extends Veiculo {
     public void setPreco(int preco) {
         this.preco = preco;
     }
+
+    /**
+     * metodos------------------------------------------------------------------------------------------------
+     */
+
+    /**
+     * isto nao funciona, porque o metodo que compara as coordenadas, recebe uma lista.
+     * é preciso por as coordenadas dos carros numa lista?, mas depois perdemos de qual carro
+     * é a coordenada.
+     * @param carroList Lista de carros disponiveis para aluguer.
+     * @return Carro mais perto.
+     */
+    public Carro Solicitar_mais_perto(List<Carro> carroList){
+        Carro res;
+        for (Carro c : carroList){
+            if (c.getCoordenda()this.getCoordenada()){
+                res = this.clone();
+            }
+        }
+        return res;
+    }
+
+
 }
