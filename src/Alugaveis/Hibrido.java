@@ -22,7 +22,13 @@ public class Hibrido extends Carro {
      */
     public Hibrido(){
         super();
-        tipo = "hibrido";
+        this.tipo = "hibrido";
+        this.consumoMedioBateria = 0;
+        this.consumoMedioCombustivel = 0;
+        this.capacidadeTanque = 0;
+        this.capacidadeAtual = 0;
+        this.capacidadeBateria = 0;
+        this.bateriaAtual = 0;
     }
 
     /**

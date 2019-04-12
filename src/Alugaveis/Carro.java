@@ -17,7 +17,6 @@ public abstract class Carro extends Veiculo {
      * Construtores --------------------------------------------------------------------------------------
      * Construtor default da classe
      */
-
     public Carro(){
     super();
     this.velocidadeMedia = 0;
@@ -34,7 +33,6 @@ public abstract class Carro extends Veiculo {
      * @param classificacao
      * @param coordenada
      */
-
     public Carro(int id, int velocidadeMedia, int preco,
                  List<String> alugueres, int classificacao, Coordenada coordenada){
         super(coordenada, id, alugueres);
@@ -94,6 +92,7 @@ public abstract class Carro extends Veiculo {
      * isto nao funciona, porque o metodo que compara as coordenadas, recebe uma lista.
      * é preciso por as coordenadas dos carros numa lista?, mas depois perdemos de qual carro
      * é a coordenada.
+     * aparentemente é so mudar o metodo das coordenas para receber um map de carros.
      * @param carroList Lista de carros disponiveis para aluguer.
      * @return Carro mais perto.
      */
@@ -106,6 +105,8 @@ public abstract class Carro extends Veiculo {
         }
         return res;
     }
+
+
 
 
 }

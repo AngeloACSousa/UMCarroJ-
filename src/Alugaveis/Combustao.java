@@ -1,6 +1,6 @@
 package Alugaveis;
 
-import Tracking.Coordenada;
+//import Tracking.Coordenada;
 
 import java.util.List;
 
@@ -20,7 +20,10 @@ public class Combustao extends Carro {
 
     public Combustao(){
         super();
-        tipo = "combustao";
+        this.tipo = "combustao";
+        this.capacidadeTanque = 0;
+        this.capacidadeAtual = 0;
+        this.consumoMedio = 0;
     }
 
     /**

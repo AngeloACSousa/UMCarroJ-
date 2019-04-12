@@ -19,10 +19,10 @@ public class Eletrico extends Carro {
      */
     public Eletrico(){
         super();
-        this.bateriaAtual = 0;
+        this.tipo = "eletrico";
         this.capacidadeBateria = 0;
+        this.bateriaAtual = 0;
         this.consumoMedio = 0;
-        tipo = "eletrico";
     }
 
     /**
