@@ -96,6 +96,7 @@ public abstract class Carro extends Veiculo {
      * @param carroList Lista de carros disponiveis para aluguer.
      * @return Carro mais perto.
      */
+    /*
     public Carro Solicitar_mais_perto(List<Carro> carroList){
         Carro res;
         for (Carro c : carroList){
@@ -105,7 +106,7 @@ public abstract class Carro extends Veiculo {
         }
         return res;
     }
-
+*/
 
 
 

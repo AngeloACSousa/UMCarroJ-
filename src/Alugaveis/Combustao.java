@@ -2,6 +2,8 @@ package Alugaveis;
 
 //import Tracking.Coordenada;
 
+import Tracking.Coordenada;
+
 import java.util.List;
 
 /**
