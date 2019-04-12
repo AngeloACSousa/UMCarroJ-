@@ -11,7 +11,7 @@ import java.util.List;
 public abstract class Veiculo {
     private Coordenada coordenada;
     private int id;
-    private List<String> alugueres;
+    private List<Integer> alugueres;
 
     /**
      * Construtores--------------------------------------------------------------------------------------------
@@ -30,10 +30,10 @@ public abstract class Veiculo {
      * @param id
      * @param alugueres
      */
-    public Veiculo(Coordenada coordenada, int id, List<String> alugueres){
+    public Veiculo(Coordenada coordenada, int id, List<Integer> alugueres){
         this.coordenada = coordenada.clone();
         this.id = id;
-        this.alugueres = new ArrayList<String>(alugueres);
+        this.alugueres = new ArrayList<Integer>(alugueres);
     }
 
     /**
@@ -54,7 +54,7 @@ public abstract class Veiculo {
         return id;
     }
 
-    public List<String> getAlugueres() {
+    public List<Integer> getAlugueres() {
         return new ArrayList<>(this.alugueres);
     }
 
@@ -66,7 +66,7 @@ public abstract class Veiculo {
      * Setters-----------------------------------------------------------------------------------------------
      * @param
      */
-    public void setAlugueres(List<String> alugueres) {
+    public void setAlugueres(List<Integer> alugueres) {
         this.alugueres = new ArrayList<>(alugueres);
     }
 

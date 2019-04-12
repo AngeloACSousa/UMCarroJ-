@@ -16,7 +16,7 @@ public class Cliente extends Pessoa {
 
     private Coordenada coordenada;
 
-    private List<String> alugueres;
+    private List<Integer> alugueres;
 
     /**
      * Construtores--------------------------------------------------------------------------------
@@ -39,7 +39,9 @@ public class Cliente extends Pessoa {
      * @param c
      * @param a
      */
-    public Cliente(int nif, String email, String nome, String pass, String morada, LocalDate nascimento, Coordenada c, List<String> a){
+    public Cliente(int nif, String email, String nome, String pass, String morada,
+                   LocalDate nascimento, Coordenada c, List<Integer> a){
+
         super(nif, email, nome, pass, morada, nascimento);
         this.coordenada = new Coordenada(c);
         this.alugueres = new ArrayList<>(a);
@@ -63,11 +65,8 @@ public class Cliente extends Pessoa {
         return new Coordenada(this.coordenada.getX(),this.coordenada.getY());
     }
 
-    public List<String> getAlugueres(){
-        ArrayList<String> res = new ArrayList<>();
-        for(String a : this.alugueres)
-            res.add(a);
-        return res;
+    public List<Integer> getAlugueres(){
+        return new ArrayList<>(this.alugueres);
     }
 
     /**
@@ -78,7 +77,7 @@ public class Cliente extends Pessoa {
         this.coordenada = new Coordenada(coordenada);
     }
 
-    public void setAlugueres(List<String> alugueres) {
+    public void setAlugueres(List<Integer> alugueres) {
         this.alugueres = alugueres;
     }
 

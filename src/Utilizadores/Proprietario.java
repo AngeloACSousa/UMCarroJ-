@@ -11,8 +11,8 @@ import java.util.List;
  */
 public class Proprietario extends Pessoa {
     //está como lista de strings porque a class aluguer ainda não está definida
-    private List<String> alugueres;
-    private List<Veiculo> veiculos;
+    private List<Integer> alugueres;
+    private List<Integer> veiculos;
     private int classificacao;
 
     /**
@@ -38,7 +38,8 @@ public class Proprietario extends Pessoa {
      * @param a
      * @param v
      */
-    public Proprietario(int nif, String email, String nome, String pass, String morada, LocalDate nascimento, int c, List<String> a, List<Veiculo> v){
+    public Proprietario(int nif, String email, String nome, String pass, String morada,
+                        LocalDate nascimento, int c, List<Integer> a, List<Integer> v){
         super(nif, email, nome, pass, morada, nascimento);
         this.alugueres = new ArrayList<>(a);
         this.veiculos = new ArrayList<>(v);
@@ -60,11 +61,8 @@ public class Proprietario extends Pessoa {
      * Getters-------------------------------------------------------------------------------------------
      * @return
      */
-    public List<String> getAlugueres(){
-        ArrayList<String> res = new ArrayList<>();
-        for(String a : this.alugueres)
-            res.add(a);
-        return res;
+    public List<Integer> getAlugueres(){
+        return new ArrayList<>(this.alugueres);
     }
 
     public int getClassificacao() {
@@ -72,7 +70,7 @@ public class Proprietario extends Pessoa {
     }
 
 
-    public List<Veiculo> getVeiculos() {
+    public List<Integer> getVeiculos() {
         return new ArrayList<>(this.veiculos);
     }
 
@@ -80,11 +78,11 @@ public class Proprietario extends Pessoa {
      * Setters-------------------------------------------------------------------------------------------
      * @param
      */
-    public void setVeiculos(List<Veiculo> veiculos) {
+    public void setVeiculos(List<Integer> veiculos) {
         this.veiculos = new ArrayList<>(veiculos);
     }
 
-    public void setAlugueres(List<String> alugueres) {
+    public void setAlugueres(List<Integer> alugueres) {
         this.alugueres = alugueres;
     }
 
