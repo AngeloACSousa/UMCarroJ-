@@ -9,6 +9,7 @@ import Tracking.Coordenada;
  */
 
 public abstract class Carro extends Veiculo {
+
     private int velocidadeMedia;
     private int preco;
     private int classificacao;
@@ -106,8 +107,20 @@ public abstract class Carro extends Veiculo {
         }
         return res;
     }
-*/
 
 
 
+    /**
+     *
+     * @param mcarros Hashmap de carros
+     * @return
+     */
+    public carro Solicitar_mais_barato(HashMap<Carro> mcarros){
+        Map<Carro> me = new HashMap<Carro>();
+        Carro res = new Carro();
+        return res;
+    }
+
+
+    */
 }

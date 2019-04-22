@@ -60,7 +60,7 @@ public class UmCarroJa {
                 }
         }
     }
-    /*
+    /**
      * Construtor parameterizado
      * @param nif
      * @param email
@@ -81,7 +81,7 @@ public class UmCarroJa {
         clienteRes.setNascimento(LocalDate.parse(cliente[6]));
         return clienteRes;
     }
-    /*
+    /**
      * @param id
      * @param velocidademedia
      * @param preco
@@ -96,7 +96,11 @@ public class UmCarroJa {
         return null;
     }
 
-    private Combustao criarCombustao(String[] combustao){return null;}
+    private Combustao criarCombustao(String[] combustao){
+        return null;
+    }
 
-    private Hibrido criarHibrido(String[] hibrido){return null;}
+    private Hibrido criarHibrido(String[] hibrido){
+        return null;
+    }
 }

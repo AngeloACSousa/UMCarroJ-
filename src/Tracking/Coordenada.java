@@ -117,4 +117,23 @@ public class Coordenada {
         }
         return corPerto;
     }
+
+    /**
+     * Calcula o carro mais perto do cliente.
+     * @param car hashmap de carros
+     * @return carro mais perto
+     */
+    public Carro maisPerto(Map<String,Carro> car){
+        Carro carPerto = new Carro();
+        double dist = Double.MAX_VALUE;
+        for(Carro c : car.values()){
+            double dist_temp = this.distancia(c.getCoordenada());
+            if(dist_temp < dist){
+                dist = dist_temp;
+                carPerto = c.clone();
+            }
+        }
+        return corPerto;
+    }
+
 }
