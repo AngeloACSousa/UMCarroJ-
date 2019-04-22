@@ -94,4 +94,28 @@ public class Eletrico extends Carro {
     public void setCapacidadeBateria(int capacidadeBateria) {
         this.capacidadeBateria = capacidadeBateria;
     }
+
+    /**
+     * Método clone
+     * @return clone de Eletrico
+     */
+    public Eletrico clone(){
+        return new Eletrico(this);
+    }
+
+    /**
+     * Método equals
+     * @param o
+     * @return true ou false
+     */
+    public boolean equals(Object o){
+        if(this == o){
+            return true;
+        }
+        if (o == null || o.getClass() != this.getClass()) {
+            return false;
+        }
+        Eletrico aux = (Eletrico) o;
+        return this.equals(aux);
+    }
 }

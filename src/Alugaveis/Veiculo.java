@@ -77,4 +77,28 @@ public abstract class Veiculo {
     public void setId(int id) {
         this.id = id;
     }
+
+    /**
+     * Método clone
+     * @return clone do veiculo
+     */
+    public Veiculo clone(){
+        return new Veiculo(this);
+    }
+
+    /**
+     * Método equals
+     * @param o
+     * @return true ou false
+     */
+    public boolean equals(Object o){
+        if(this == o){
+            return true;
+        }
+        if (o == null || o.getClass() != this.getClass()) {
+            return false;
+        }
+        Veiculo aux = (Veiculo) o;
+        return this.equals(aux);
+    }
 }

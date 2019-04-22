@@ -85,6 +85,32 @@ public abstract class Carro extends Veiculo {
         this.preco = preco;
     }
 
+
+    /**
+     * Método clone
+     * @return clone do carro
+     */
+    public Carro clone(){
+        return new Carro(this);
+    }
+
+    /**
+     * Método equals
+     * @param o
+     * @return true ou false
+     */
+    public boolean equals(Object o){
+        if(this == o){
+            return true;
+        }
+        if (o == null || o.getClass() != this.getClass()) {
+            return false;
+        }
+        Carro aux = (Carro) o;
+        return this.equals(aux);
+    }
+
+
     /**
      * metodos------------------------------------------------------------------------------------------------
      */

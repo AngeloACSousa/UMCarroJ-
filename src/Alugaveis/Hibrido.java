@@ -136,4 +136,28 @@ public class Hibrido extends Carro {
     public void setConsumoMedioCombustivel(int consumoMedioCombustivel) {
         this.consumoMedioCombustivel = consumoMedioCombustivel;
     }
+
+    /**
+     * Método clone
+     * @return clone de Eletrico
+     */
+    public Hibrido clone(){
+        return new Hibrido(this);
+    }
+
+    /**
+     * Método equals
+     * @param o
+     * @return true ou false
+     */
+    public boolean equals(Object o){
+        if(this == o){
+            return true;
+        }
+        if (o == null || o.getClass() != this.getClass()) {
+            return false;
+        }
+        Hibrido aux = (Hibrido) o;
+        return this.equals(aux);
+    }
 }

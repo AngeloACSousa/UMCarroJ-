@@ -98,4 +98,28 @@ public class Combustao extends Carro {
     public void setCapacidadeTanque(int capacidadeTanque) {
         this.capacidadeTanque = capacidadeTanque;
     }
+
+    /**
+     * Método clone
+     * @return clone de combustao
+     */
+    public Combustao clone(){
+        return new Combustao(this);
+    }
+
+    /**
+     * Método equals
+     * @param o
+     * @return true ou false
+     */
+    public boolean equals(Object o){
+        if(this == o){
+            return true;
+        }
+        if (o == null || o.getClass() != this.getClass()) {
+            return false;
+        }
+        Combustao aux = (Combustao) o;
+        return this.equals(aux);
+    }
 }
