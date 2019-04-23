@@ -144,6 +144,7 @@ public class Alugueres {
      * @param o
      * @return
      */
+
     public boolean equals(Object o){
         if(this == o){
             return true;
@@ -152,7 +153,14 @@ public class Alugueres {
             return false;
         }
         Alugueres aux = (Alugueres) o;
-        return this.equals(aux);
+        return this.idCliente == aux.getIdCliente()
+                && this.idProprietario == aux.getIdProprietario()
+                && this.idAluguer == aux.getIdAluguer()
+                && this.idCliente == aux.getIdCliente()
+                && this.coordIni.equals(aux.getCoordenadaI())
+                && this.coordFin.equals(aux.getCoordenadaF())
+                && this.tempoViagem == aux.getTempoViagem()
+                && this.classMedia == aux.getClassMedia();
     }
 
     /**

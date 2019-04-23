@@ -119,6 +119,22 @@ public class Eletrico extends Carro {
         return this.equals(aux);
     }
 
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("Tipo: ");
+        sb.append(this.getTipo()+"\n");
+        sb.append("Capacidade da Bateria: ");
+        sb.append(this.getCapacidadeBateria()+"\n");
+        sb.append("Bateria Atual: ");
+        sb.append(this.getBateriaAtual()+"\n");
+        sb.append("Consumo Médio: ");
+        sb.append(this.getConsumoMedio()+"\n");
+
+
+        return super.toString() + sb.toString();
+    }
+
     //Metodos--------------------------------------------------------------------------------------------------------
 
 

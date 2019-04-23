@@ -69,6 +69,7 @@ public class Coordenada {
         this.y = cy;
     }
 
+
     /**
      * metodo clone
      * @return
@@ -90,9 +91,11 @@ public class Coordenada {
             return false;
         }
         Coordenada aux = (Coordenada) o;
-        return this.equals(aux);
+        return this.x == aux.getX() && this.y == aux.getY();
     }
 
+
+    //Métodos ---------------------------------------------------------------------------------------------------------
     /**
      * Calcula a distancia até a coordenada c
      * @param c
@@ -100,26 +103,6 @@ public class Coordenada {
      */
     public double distancia(Coordenada c){
         return sqrt(pow(this.x -c.getX(), 2) + pow(this.y - c.getY(), 2));
-    }
-
-
-    /**
-     * Calcula a coordenada mais perto
-     * @param cor : List<Coordenada>
-     * @return
-     */
-    public Coordenada maisPerto(List<Coordenada> cor){
-        Coordenada corPerto = new Coordenada();
-        double dist = Double.MAX_VALUE;
-        for(Coordenada c : cor){
-
-            if(this.distancia(c) < dist){
-                dist = this.distancia(c);
-                corPerto.setX(c.getX());
-                corPerto.setY(c.getY());
-            }
-        }
-        return corPerto;
     }
 
 

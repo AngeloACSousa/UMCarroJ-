@@ -161,6 +161,27 @@ public class Hibrido extends Carro {
         return this.equals(aux);
     }
 
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("Tipo: ");
+        sb.append(this.getTipo()+"\n");
+        sb.append("Capacidade do Tanque: ");
+        sb.append(this.getCapacidadeTanque()+"\n");
+        sb.append("Capacidade Atual: ");
+        sb.append(this.getCapacidadeAtual()+"\n");
+        sb.append("Capacidade da Bateria: ");
+        sb.append(this.getCapacidadeBateria()+"\n");
+        sb.append("Bateria Atual: ");
+        sb.append(this.getBateriaAtual()+"\n");
+        sb.append("Consumo Médio de Combustivel: ");
+        sb.append(this.getConsumoMedioCombustivel()+"\n");
+        sb.append("Consumo Médio de Bateria: ");
+        sb.append(this.getConsumoMedioBateria()+"\n");
+
+
+        return super.toString() + sb.toString();
+    }
     //Metodos ----------------------------------------------------------------------------------------------------------
 
     /**

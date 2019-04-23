@@ -122,7 +122,21 @@ public class Combustao extends Carro {
         Combustao aux = (Combustao) o;
         return this.equals(aux);
     }
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
 
+        sb.append("Tipo: ");
+        sb.append(this.getTipo()+"\n");
+        sb.append("Capacidade do Tanque: ");
+        sb.append(this.getCapacidadeTanque()+"\n");
+        sb.append("Capacidade Atual: ");
+        sb.append(this.getCapacidadeAtual()+"\n");
+        sb.append("Consumo Médio: ");
+        sb.append(this.getConsumoMedio()+"\n");
+
+
+        return super.toString() + sb.toString();
+    }
     //Metodos----------------------------------------------------------------------------------------------------------
 
     /**

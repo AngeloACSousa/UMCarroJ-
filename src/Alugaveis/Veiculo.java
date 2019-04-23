@@ -104,4 +104,16 @@ public abstract class Veiculo {
         Veiculo aux = (Veiculo) o;
         return this.equals(aux);
     }
+
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("Id: ");
+        sb.append(this.getId()+"\n");
+        sb.append(this.getCoordenada().toString()+"\n");
+        sb.append("Alugueres: ");
+        sb.append(this.getAlugueres().toString()+"\n");
+
+        return sb.toString();
+    }
 }

@@ -113,7 +113,18 @@ public abstract class Carro extends Veiculo {
         return this.equals(aux);
     }
 
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
 
+        sb.append("Velocidade Média: ");
+        sb.append(this.getVelocidadeMedia()+"\n");
+        sb.append("Preco: ");
+        sb.append(this.getPreco()+"\n");
+        sb.append("Classificacao: ");
+        sb.append(this.getClassificacao());
+
+        return super.toString()+ sb.toString();
+    }
     /**
      * metodos------------------------------------------------------------------------------------------------
      */
