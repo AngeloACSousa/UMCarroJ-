@@ -13,7 +13,7 @@ import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
 
-public class UmCarroJa {
+public class UmCarroJa{
     private Map<Integer, Cliente> clientes;
     private Map<Integer, Proprietario> proprietarios;
     private Map<Integer, Veiculo> veiculos;
@@ -33,26 +33,26 @@ public class UmCarroJa {
         String line = "";
         while((line = br.readLine()) != null){
             String[] split = line.split("[,]");
-            if(split.length > 0)
-                switch (split[0]){
-                    case "NovoCliente" :
-                        Cliente cliente = criarCliente(split);
-                        clientes.put(cliente.getNif(),cliente);
-                        break;
-                    case "NovoCarro" :
-                        switch (split[1]) {
-                            case "eletrico":
-                                Eletrico eletrico = criarEletrico(split);
-                                veiculos.put(eletrico.getId(), eletrico);
-                                break;
-                            case "gasolina":
-                                Combustao combustao = criarCombustao(split);
-                                veiculos.put(combustao.getId(),combustao);
-                                break;
-                            case "hibrido":
-                                Hibrido hibrido = criarHibrido(split);
-                                veiculos.put(hibrido.getId(),hibrido);
-                                break;
+                            if(split.length > 0)
+                                switch (split[0]){
+                                    case "NovoCliente" :
+                                        Cliente cliente = criarCliente(split);
+                                        clientes.put(cliente.getNif(),cliente);
+                                        break;
+                                    case "NovoCarro" :
+                                        switch (split[1]) {
+                                            case "eletrico":
+                                                Eletrico eletrico = criarEletrico(split);
+                                                veiculos.put(eletrico.getId(), eletrico);
+                                                break;
+                                            case "gasolina":
+                                                Combustao combustao = criarCombustao(split);
+                                                veiculos.put(combustao.getId(),combustao);
+                                                break;
+                                            case "hibrido":
+                                                Hibrido hibrido = criarHibrido(split);
+                                                veiculos.put(hibrido.getId(),hibrido);
+                                                break;
 
                         }
                     default : System.out.println("Comando não encontrado " + split[0]);
@@ -60,17 +60,7 @@ public class UmCarroJa {
                 }
         }
     }
-    /**
-     * Construtor parameterizado
-     * @param nif
-     * @param email
-     * @param nome
-     * @param pass
-     * @param morada
-     * @param nascimento
-     * @param c
-     * @param a
-     */
+
     private Cliente criarCliente(String[] cliente){
         Cliente clienteRes = new Cliente();
         clienteRes.setNome(cliente[1]);
@@ -81,17 +71,7 @@ public class UmCarroJa {
         clienteRes.setNascimento(LocalDate.parse(cliente[6]));
         return clienteRes;
     }
-    /**
-     * @param id
-     * @param velocidademedia
-     * @param preco
-     * @param capacidadeBateria
-     * @param bateriaAtual
-     * @param consumoMedio
-     * @param alugueres
-     * @param classificacao
-     * @param coordenada
-     */
+
     private Eletrico criarEletrico(String[] eletrico){
         return null;
     }

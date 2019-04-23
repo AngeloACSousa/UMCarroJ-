@@ -40,7 +40,8 @@ public class Alugueres {
      * @param tempoViagem
      * @param classMedia
      */
-    public Alugueres(int idAluguer,int idCliente,int idProprietario,int idVeiculo,Coordenada a,Coordenada b, double tempoViagem,double classMedia){
+    public Alugueres(int idAluguer,int idCliente,int idProprietario,int idVeiculo,
+                     Coordenada a,Coordenada b, double tempoViagem,double classMedia){
         this.idAluguer = idAluguer;
         this.idCliente = idCliente;
         this.idProprietario = idProprietario;

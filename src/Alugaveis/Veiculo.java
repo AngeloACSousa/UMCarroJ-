@@ -82,10 +82,11 @@ public abstract class Veiculo {
      * Método clone
      * @return clone do veiculo
      */
+    /*
     public Veiculo clone(){
-        return new Veiculo(this);
+        return new Veiculo(this); //isto nao pode ser feito assim classes abstratas
     }
-
+    */
     /**
      * Método equals
      * @param o

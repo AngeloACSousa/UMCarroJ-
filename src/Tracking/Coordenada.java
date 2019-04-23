@@ -1,8 +1,11 @@
 package Tracking;
 
+import Alugaveis.Carro;
+
 import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Class Coordenada, para simplicar calculos de distancias
@@ -123,17 +126,21 @@ public class Coordenada {
      * @param car hashmap de carros
      * @return carro mais perto
      */
+
     public Carro maisPerto(Map<String,Carro> car){
-        Carro carPerto = new Carro();
+        Carro carPerto = null;
         double dist = Double.MAX_VALUE;
         for(Carro c : car.values()){
             double dist_temp = this.distancia(c.getCoordenada());
             if(dist_temp < dist){
                 dist = dist_temp;
-                carPerto = c.clone();
+                carPerto = c;//isto está a passar a referencia por enquanto(NUNCA FAZER ISTO)
+                // falta os clones do carro
+
             }
         }
-        return corPerto;
+        return carPerto;
     }
+
 
 }
