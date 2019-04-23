@@ -118,39 +118,7 @@ public abstract class Carro extends Veiculo {
      * metodos------------------------------------------------------------------------------------------------
      */
 
-    /**
-     * isto nao funciona, porque o metodo que compara as coordenadas, recebe uma lista.
-     * é preciso por as coordenadas dos carros numa lista?, mas depois perdemos de qual carro
-     * é a coordenada.
-     * aparentemente é so mudar o metodo das coordenas para receber um map de carros.
-     * @param carroList Lista de carros disponiveis para aluguer.
-     * @return Carro mais perto.
-     */
-    /*
-    public Carro Solicitar_mais_perto(List<Carro> carroList){
-        Carro res;
-        for (Carro c : carroList){
-            if (c.getCoordenda()this.getCoordenada()){
-                res = this.clone();
-            }
-        }
-        return res;
-    }
+    //calculo da autonomia(se consegue realizar uma viagem)
+    public abstract Boolean autonomia(Coordenada destino);
 
-
-
-    /**
-     *
-     * @param mcarros Hashmap de carros
-     * @return
-     */
-    /*
-    public carro Solicitar_mais_barato(HashMap<Carro> mcarros){
-        Map<Carro> me = new HashMap<Carro>();
-        Carro res = new Carro();
-        return res;
-    }
-
-
-    */
 }

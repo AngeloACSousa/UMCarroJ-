@@ -160,4 +160,20 @@ public class Hibrido extends Carro {
         Hibrido aux = (Hibrido) o;
         return this.equals(aux);
     }
+
+    //Metodos ----------------------------------------------------------------------------------------------------------
+
+    /**
+     * calculo da possibilidade de fazer a viagem
+     * @param destino
+     * @return
+     */
+    @Override
+    public Boolean autonomia(Coordenada destino) {
+        return (getBateriaAtual()/consumoMedioBateria >= getCoordenada().distancia(destino) &&
+                getCapacidadeAtual()/consumoMedioCombustivel >= getCoordenada().distancia(destino));
+    }
+
+
+
 }

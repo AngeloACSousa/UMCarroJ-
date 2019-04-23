@@ -122,4 +122,16 @@ public class Combustao extends Carro {
         Combustao aux = (Combustao) o;
         return this.equals(aux);
     }
+
+    //Metodos----------------------------------------------------------------------------------------------------------
+
+    /**
+     * calculo da possibilidade de viagem
+     * @param destino
+     * @return bool
+     */
+
+    public Boolean autonomia(Coordenada destino){
+        return (getCapacidadeAtual()/getConsumoMedio() >= getCoordenada().distancia(destino));
+    }
 }

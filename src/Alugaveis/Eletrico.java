@@ -118,4 +118,16 @@ public class Eletrico extends Carro {
         Eletrico aux = (Eletrico) o;
         return this.equals(aux);
     }
+
+    //Metodos--------------------------------------------------------------------------------------------------------
+
+
+    /**
+     * calculo da possibilidade de fazer a viagem
+     * @param destino
+     * @return bool
+     */
+    public Boolean autonomia(Coordenada destino){
+        return (getBateriaAtual()/getConsumoMedio() >= getCoordenada().distancia(destino));
+    }
 }
