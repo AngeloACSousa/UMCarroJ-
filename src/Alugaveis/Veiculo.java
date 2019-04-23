@@ -102,7 +102,9 @@ public abstract class Veiculo {
             return false;
         }
         Veiculo aux = (Veiculo) o;
-        return this.equals(aux);
+        return this.coordenada.equals(aux.getCoordenada())
+                && this.id == aux.getId()
+                && this.alugueres.equals(aux.getAlugueres());
     }
 
     public String toString(){

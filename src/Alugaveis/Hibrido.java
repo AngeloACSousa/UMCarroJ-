@@ -158,7 +158,13 @@ public class Hibrido extends Carro {
             return false;
         }
         Hibrido aux = (Hibrido) o;
-        return this.equals(aux);
+        return super.equals(aux) && this.tipo.equals(aux.getTipo())
+                && this.consumoMedioBateria == aux.getConsumoMedioBateria()
+                && this.consumoMedioCombustivel == aux.getConsumoMedioCombustivel()
+                && this.capacidadeTanque == aux.getCapacidadeTanque()
+                && this.capacidadeAtual == aux.getCapacidadeAtual()
+                && this.capacidadeBateria == aux.getCapacidadeBateria()
+                && this.bateriaAtual == aux.getBateriaAtual();
     }
 
     public String toString(){

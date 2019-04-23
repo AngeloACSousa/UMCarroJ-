@@ -41,10 +41,10 @@ public class Cliente extends Pessoa {
      * @param c
      * @param a
      */
-    public Cliente(int nif, String email, String nome, String pass, String morada,
-                   LocalDate nascimento, Coordenada c, List<Integer> a){
+    public Cliente(String email, String nome, String pass, String morada,
+                   LocalDate nascimento, int nif,  Coordenada c, List<Integer> a){
 
-        super(nif, email, nome, pass, morada, nascimento);
+        super(email, nome, pass, morada, nascimento, nif);
         this.coordenada = new Coordenada(c);
         this.alugueres = new ArrayList<>(a);
     }
@@ -104,7 +104,8 @@ public class Cliente extends Pessoa {
             return false;
         }
         Cliente aux = (Cliente) o;
-        return this.equals(aux);
+        return super.equals(aux) && this.coordenada.equals(aux.getCoordenada())
+                && this.alugueres.equals(aux.getAlugueres());
     }
 
 
@@ -149,6 +150,22 @@ public class Cliente extends Pessoa {
             }
         }
         return carroRes;
+    }
+
+
+    /**
+     * Método StringBuilder
+     * @return
+     */
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("Coordenada: ");
+        sb.append(this.getCoordenada().toString()+"\n");
+        sb.append("Alugueres: ");
+        sb.append(this.alugueres.toString()+"\n");
+
+        return super.toString() + sb.toString();
     }
 
 }

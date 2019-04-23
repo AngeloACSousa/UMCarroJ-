@@ -94,6 +94,23 @@ public class Coordenada {
         return this.x == aux.getX() && this.y == aux.getY();
     }
 
+    /**
+     * Método StringBuilder
+     * @return
+     */
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("Coordenada: ");
+        sb.append("(");
+        sb.append(this.getX());
+        sb.append(",");
+        sb.append(this.getY());
+        sb.append(")");
+
+        return sb.toString();
+    }
+
 
     //Métodos ---------------------------------------------------------------------------------------------------------
     /**

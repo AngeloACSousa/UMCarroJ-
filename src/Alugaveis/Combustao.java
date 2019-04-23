@@ -120,7 +120,10 @@ public class Combustao extends Carro {
             return false;
         }
         Combustao aux = (Combustao) o;
-        return this.equals(aux);
+        return super.equals(aux) && this.tipo.equals(aux.getTipo())
+                && this.capacidadeTanque == aux.getCapacidadeTanque()
+                && this.capacidadeAtual == aux.getCapacidadeAtual()
+                && this.consumoMedio == aux.getConsumoMedio();
     }
     public String toString(){
         StringBuilder sb = new StringBuilder();

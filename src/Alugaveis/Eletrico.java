@@ -116,7 +116,10 @@ public class Eletrico extends Carro {
             return false;
         }
         Eletrico aux = (Eletrico) o;
-        return this.equals(aux);
+        return super.equals(aux) && this.tipo.equals(aux.getTipo())
+                && this.capacidadeBateria == aux.getCapacidadeBateria()
+                && this.bateriaAtual == aux.getBateriaAtual()
+                && this.consumoMedio == aux.getConsumoMedio();
     }
 
     public String toString(){

@@ -110,7 +110,9 @@ public abstract class Carro extends Veiculo {
             return false;
         }
         Carro aux = (Carro) o;
-        return this.equals(aux);
+        return super.equals(aux) && this.velocidadeMedia == aux.getVelocidadeMedia()
+                && this.preco == aux.getPreco()
+                && this.classificacao == aux.getClassificacao();
     }
 
     public String toString(){

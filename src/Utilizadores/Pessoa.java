@@ -48,7 +48,7 @@ public abstract class Pessoa {
      * @param morada
      * @param nascimento
      */
-    public Pessoa(int nif, String email, String nome, String pass, String morada, LocalDate nascimento){
+    public Pessoa(String email, String nome, String pass, String morada, LocalDate nascimento, int nif){
         this.email = email;
         this.nome = nome;
         this.password = pass;
@@ -115,12 +115,12 @@ public abstract class Pessoa {
 
     //classe abstrata metodo clone abstrato
     public abstract Pessoa clone();
+
     /**
      * Metodo equals
      * @param o
      * @return
      */
-
     public boolean equals(Object o){
         if(this == o){
             return true;
@@ -129,6 +129,32 @@ public abstract class Pessoa {
             return false;
         }
         Pessoa aux = (Pessoa) o;
-        return this.equals(aux);
+        return this.email.equals(aux.getEmail()) && this.nome.equals(aux.getNome())
+                && this.password.equals(aux.getPassword()) && this.morada.equals(aux.getMorada())
+                && this.nascimento.equals(aux.getNascimento()) && this.nif == aux.getNif();
+    }
+
+
+    /**
+     * Método StringBuilder
+     * @return
+     */
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("Email: ");
+        sb.append(this.getEmail()+"\n");
+        sb.append("Nome: ");
+        sb.append(this.getNome()+"\n");
+        sb.append("Password: ");
+        sb.append(this.getPassword()+"\n");
+        sb.append("Morada: ");
+        sb.append(this.getMorada()+"\n");
+        sb.append("Data de nascimento: ");
+        sb.append(this.getNascimento()+"\n");
+        sb.append("NIF: ");
+        sb.append(this.getNif()+"\n");
+
+        return sb.toString();
     }
 }

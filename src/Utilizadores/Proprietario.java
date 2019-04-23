@@ -38,9 +38,9 @@ public class Proprietario extends Pessoa {
      * @param a
      * @param v
      */
-    public Proprietario(int nif, String email, String nome, String pass, String morada,
-                        LocalDate nascimento, int c, List<Integer> a, List<Integer> v){
-        super(nif, email, nome, pass, morada, nascimento);
+    public Proprietario(String email, String nome, String pass, String morada,
+                        LocalDate nascimento, int nif, int c, List<Integer> a, List<Integer> v){
+        super(email, nome, pass, morada, nascimento, nif);
         this.alugueres = new ArrayList<>(a);
         this.veiculos = new ArrayList<>(v);
         this.classificacao = c;
@@ -112,6 +112,25 @@ public class Proprietario extends Pessoa {
             return false;
         }
         Proprietario aux = (Proprietario) o;
-        return this.equals(aux);
+        return super.equals(aux) && this.alugueres.equals(aux.getAlugueres())
+                && this.veiculos.equals(aux.getVeiculos()) && this.classificacao == aux.getClassificacao();
+    }
+
+
+    /**
+     * Método StringBuilder
+     * @return
+     */
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("Alugueres: ");
+        sb.append(this.alugueres.toString()+"\n");
+        sb.append("Veiculos: ");
+        sb.append(this.veiculos.toString()+"\n");
+        sb.append("Classificação: ");
+        sb.append(this.getClassificacao()+"\n");
+
+        return super.toString() + sb.toString();
     }
 }
