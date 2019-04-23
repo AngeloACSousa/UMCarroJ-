@@ -113,6 +113,8 @@ public abstract class Pessoa {
         this.password = password;
     }
 
+    //classe abstrata metodo clone abstrato
+    public abstract Pessoa clone();
     /**
      * Metodo equals
      * @param o

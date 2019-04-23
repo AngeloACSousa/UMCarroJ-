@@ -3,11 +3,13 @@ package Utilizadores;
 
 
 
+import Alugaveis.Carro;
 import Tracking.Coordenada;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Classe Cliente dá extend a Pessoa
@@ -104,4 +106,49 @@ public class Cliente extends Pessoa {
         Cliente aux = (Cliente) o;
         return this.equals(aux);
     }
+
+
+
+    //metodos de procura de carros--------------------------------------------------------------------------------------
+
+
+    /**
+     * Calcula o carro mais perto do cliente.
+     * @param car hashmap de carros
+     * @return carro mais perto
+     */
+
+    public Carro maisPerto(Map<String,Carro> car){
+        Carro carPerto = null;
+        double dist = Double.MAX_VALUE;
+        for(Carro c : car.values()){
+            double dist_temp = getCoordenada().distancia(c.getCoordenada());
+            if(dist_temp < dist){
+                dist = dist_temp;
+                carPerto = c.clone(); //não sei se isto pode ser assim
+            }
+        }
+        return carPerto;
+    }
+
+    /**Calcula carro mais barato usando o destino da viagem como referencia
+     *
+     * @param carros hashmap
+     * @param destino Coordenada
+     * @return carro mais barato
+     */
+
+    public Carro maisBarato(Map<String,Carro> carros, Coordenada destino){
+        Carro carroRes = null;
+        double preco = Double.MAX_VALUE;
+        for(Carro c : carros.values()){
+            double precoTeste = c.getPreco() * getCoordenada().distancia(destino);
+            if(precoTeste < preco){
+                preco = precoTeste;
+                carroRes = c.clone();
+            }
+        }
+        return carroRes;
+    }
+
 }

@@ -90,11 +90,13 @@ public abstract class Carro extends Veiculo {
      * Método clone
      * @return clone do carro
      */
-    /*
-    public Carro clone(){
-        return new Carro(this); //isto não pode ser feito assim(classes abstratas)
+
+    public abstract Carro clone(); //classe abstrata metodo clone abstrato
+
+      /*  return new Carro(this); //isto não pode ser feito assim(classes abstratas)
     }
     */
+
     /**
      * Método equals
      * @param o

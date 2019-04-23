@@ -1,6 +1,7 @@
 package Tracking;
 
 import Alugaveis.Carro;
+import Alugaveis.Eletrico;
 
 import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;
@@ -119,27 +120,6 @@ public class Coordenada {
             }
         }
         return corPerto;
-    }
-
-    /**
-     * Calcula o carro mais perto do cliente.
-     * @param car hashmap de carros
-     * @return carro mais perto
-     */
-
-    public Carro maisPerto(Map<String,Carro> car){
-        Carro carPerto = null;
-        double dist = Double.MAX_VALUE;
-        for(Carro c : car.values()){
-            double dist_temp = this.distancia(c.getCoordenada());
-            if(dist_temp < dist){
-                dist = dist_temp;
-                carPerto = c;//isto está a passar a referencia por enquanto(NUNCA FAZER ISTO)
-                // falta os clones do carro
-
-            }
-        }
-        return carPerto;
     }
 
 
