@@ -151,4 +151,11 @@ public class Combustao extends Carro {
     public Boolean autonomia(Coordenada destino){
         return (getCapacidadeAtual()/getConsumoMedio() >= getCoordenada().distancia(destino));
     }
+    /**
+    *calculo da autonomia em km
+    */
+    public double autonomiaKm(Combustao c){
+        return (c.getCapacidadeAtual()/c.getConsumoMedio());
+    }
+    
 }
