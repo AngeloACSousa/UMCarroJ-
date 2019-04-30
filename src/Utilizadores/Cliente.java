@@ -151,7 +151,56 @@ public class Cliente extends Pessoa {
         }
         return carroRes;
     }
-
+    /**Calcula carro mais barato dentro de uma distancia que
+     * o Cliente pode ir a pe
+     * 
+     * @param carros hashmap
+     * @param distancia maxima
+     * @return carro mais barato
+     */
+    public Carro maisBaratoAPe (Map<String,Carro> carros, double km){
+        Carro carroRes = null;
+        double preco =Double.MAX_VALUE;
+        for(Carro c : carros.values()){
+            double precoTeste = c.getPreco();
+            
+            if(precoTeste < preco && getCoordenada().distancia(c.getCoordenada())< km ){
+                preco=precoTeste;
+                carroRes=c.clone();
+            }
+        }
+        
+        return carroRes;
+    }
+    /**Calcula carro mais barato dentro de um tempo que
+     * o Cliente quer andar a pe
+     * 
+     * @param carros hashmap
+     * @param tempo maximo
+     * @return carro mais barato
+     */
+    
+    /**
+     *transforma dstancia em minutos 
+     *
+     */
+    public double time(double dist){
+        return dist*60/4;
+    }
+    public Carro maisBaratoTempo (Map<String,Carro> carros, double tempo){
+        Carro carroRes = null;
+        double preco =Double.MAX_VALUE;
+        for(Carro c : carros.values()){
+            double precoTeste = c.getPreco();
+            
+            if(precoTeste < preco && time(getCoordenada().distancia(c.getCoordenada()))< tempo ){
+                preco=precoTeste;
+                carroRes=c.clone();
+            }
+        }
+        
+        return carroRes;
+    }
 
     /**
      * Método StringBuilder
