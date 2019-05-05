@@ -43,7 +43,7 @@ public abstract class Veiculo {
     public Veiculo(Veiculo veiculo){
         this.id = veiculo.getId();
         this.coordenada = veiculo.getCoordenada();
-        this.alugueres = getAlugueres();
+        this.alugueres = veiculo.getAlugueres();
     }
 
     /**
