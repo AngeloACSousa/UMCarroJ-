@@ -9,12 +9,12 @@ import java.util.List;
  */
 public class Hibrido extends Carro {
     private String tipo;
-    private int consumoMedioBateria;
-    private int consumoMedioCombustivel;
-    private int capacidadeTanque;
-    private int capacidadeAtual;
-    private int capacidadeBateria;
-    private int bateriaAtual;
+    private double consumoMedioBateria;
+    private double consumoMedioCombustivel;
+    private double capacidadeTanque;
+    private double capacidadeAtual;
+    private double capacidadeBateria;
+    private double bateriaAtual;
 
     /**
      * Construtores------------------------------------------------------------------------------------------
@@ -46,10 +46,10 @@ public class Hibrido extends Carro {
      * @param classificacao
      * @param coordenada
      */
-    public Hibrido(int id, int velocidademedia, int preco, int consumoMedioBateria,
-                   int consumoMedioCombustivel, int capacidadeTanque, int capacidadeAtual,
-                   int capacidadeBateria, int bateriaAtual, List<Integer> alugueres ,
-                   int classificacao, Coordenada coordenada){
+    public Hibrido(int id, int velocidademedia, double preco, double consumoMedioBateria,
+                   double consumoMedioCombustivel, double capacidadeTanque, double capacidadeAtual,
+                   double capacidadeBateria, double bateriaAtual, List<Integer> alugueres ,
+                   double classificacao, Coordenada coordenada){
 
         super(id, velocidademedia, preco, classificacao, alugueres, coordenada);
         this.consumoMedioBateria = consumoMedioBateria;
@@ -84,27 +84,27 @@ public class Hibrido extends Carro {
         return tipo;
     }
 
-    public int getCapacidadeBateria() {
+    public double getCapacidadeBateria() {
         return capacidadeBateria;
     }
 
-    public int getCapacidadeAtual() {
+    public double getCapacidadeAtual() {
         return capacidadeAtual;
     }
 
-    public int getCapacidadeTanque() {
+    public double getCapacidadeTanque() {
         return capacidadeTanque;
     }
 
-    public int getBateriaAtual() {
+    public double getBateriaAtual() {
         return bateriaAtual;
     }
 
-    public int getConsumoMedioBateria() {
+    public double getConsumoMedioBateria() {
         return consumoMedioBateria;
     }
 
-    public int getConsumoMedioCombustivel() {
+    public double getConsumoMedioCombustivel() {
         return consumoMedioCombustivel;
     }
 
@@ -203,10 +203,19 @@ public class Hibrido extends Carro {
 
     /**
      * Calculo da autonomia do veiculo Hobrido (combustivel + bateria)
-     * isto vai estar mal, esta media deve ser calculada de outra maneira.
+     * verifica qual dos dois (bateria ou deposito) terá menos autonomia e devolve essa.
      */
     public double getAutonomia(){
-        return ((this.getCapacidadeTanque() + this.getCapacidadeBateria()) / (this.getConsumoMedioCombustivel() + this.getConsumoMedioBateria())); //qual era a diferença se fosse só this.capacidade?
+        double res;
+        double autComb = (this.getCapacidadeTanque() / this.getConsumoMedioCombustivel());
+        double autBat = (this.getCapacidadeBateria() / this.getCapacidadeBateria());
+        if(autComb >= autBat){
+            res = autComb;
+        }
+        else{
+            res = autBat;
+        }
+        return res;
     }
 
 }

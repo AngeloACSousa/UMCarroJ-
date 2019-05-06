@@ -1,8 +1,5 @@
-import Alugaveis.Combustao;
-import Alugaveis.Eletrico;
-import Alugaveis.Hibrido;
-import Alugaveis.Veiculo;
-import Tracking.Alugueres;
+import Alugaveis.*;
+import Tracking.Aluguer;
 import Utilizadores.Cliente;
 import Utilizadores.Pessoa;
 import Utilizadores.Proprietario;
@@ -11,13 +8,15 @@ import Utilizadores.Proprietario;
 import java.io.*;
 import java.time.LocalDate;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class UmCarroJa{
     private Map<Integer, Cliente> clientes;
     private Map<Integer, Proprietario> proprietarios;
-    private Map<Integer, Veiculo> veiculos;
-    private Map<Integer, Alugueres> alugueres;
+    public Map<Integer, Veiculo> veiculos;
+    private Map<Integer, Aluguer> alugueres;
 
     public UmCarroJa(){
         this.clientes = new HashMap<>();
@@ -84,5 +83,7 @@ public class UmCarroJa{
         return null;
     }
 
-
+    public List<Integer> getCarrosdoTipo(String tipo) {
+        return veiculos.values().stream().filter(c -> c.getTipo() == tipo).map(Veiculo::getId).collect(Collectors.toList());
+    }
 }

@@ -65,6 +65,7 @@ public abstract class Veiculo {
     public double getPreco(){
         return this.preco;
     }
+    public abstract String getTipo();
 
     public double getClassificacao(){
         return this.classificacao;

@@ -9,7 +9,7 @@ import Tracking.Coordenada;
  */
 
 public abstract class Carro extends Veiculo {
-
+    private String tipo;
     private int velocidadeMedia;
 
     /**
@@ -53,6 +53,7 @@ public abstract class Carro extends Veiculo {
         return velocidadeMedia;
     }
 
+    public abstract String getTipo();
 
     /**
      * setters------------------------------------------------------------------------------------------------
