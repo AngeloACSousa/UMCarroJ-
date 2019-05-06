@@ -158,11 +158,11 @@ public class Cliente extends Pessoa {
      * @param distancia maxima
      * @return carro mais barato
      */
-    public Carro maisBaratoAPe (Map<String,Carro> carros, double km){
+    public Carro maisBaratoAPe (Map<String,Carro> carros, double km, Coordenada destino){
         Carro carroRes = null;
         double preco =Double.MAX_VALUE;
         for(Carro c : carros.values()){
-            double precoTeste = c.getPreco();
+            double precoTeste = c.precoViagem(destino);
             
             if(precoTeste < preco && getCoordenada().distancia(c.getCoordenada())< km ){
                 preco=precoTeste;
@@ -187,11 +187,11 @@ public class Cliente extends Pessoa {
     public double time(double dist){
         return dist*60/4;
     }
-    public Carro maisBaratoTempo (Map<String,Carro> carros, double tempo){
+    public Carro maisBaratoTempo (Map<String,Carro> carros, double tempo, Coordenada destino){
         Carro carroRes = null;
         double preco =Double.MAX_VALUE;
         for(Carro c : carros.values()){
-            double precoTeste = c.getPreco();
+            double precoTeste = c.precoViagem(destino);
             
             if(precoTeste < preco && time(getCoordenada().distancia(c.getCoordenada()))< tempo ){
                 preco=precoTeste;
