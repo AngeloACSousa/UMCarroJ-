@@ -100,6 +100,7 @@ public class Combustao extends Carro {
     }
 
     /**
+     * Metodos----------------------------------------------------------------------------------------------------------
      * Método clone
      * @return clone de combustao
      */
@@ -140,8 +141,6 @@ public class Combustao extends Carro {
 
         return super.toString() + sb.toString();
     }
-    //Metodos----------------------------------------------------------------------------------------------------------
-
     /**
      * calculo da possibilidade de viagem
      * @param destino
