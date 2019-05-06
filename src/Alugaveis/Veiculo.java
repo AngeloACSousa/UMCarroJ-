@@ -11,6 +11,8 @@ import java.util.List;
 public abstract class Veiculo {
     private Coordenada coordenada;
     private int id;
+    private double preco;
+    private double classificacao;
     private List<Integer> alugueres;
 
     /**
@@ -20,6 +22,8 @@ public abstract class Veiculo {
 
     public Veiculo(){
         this.id = 0;
+        this.preco = 0;
+        this.classificacao = 0;
         this.alugueres = new ArrayList<>();
         this.coordenada = new Coordenada();
     }
@@ -30,9 +34,11 @@ public abstract class Veiculo {
      * @param id
      * @param alugueres
      */
-    public Veiculo(Coordenada coordenada, int id, List<Integer> alugueres){
+    public Veiculo(Coordenada coordenada, int id, double preco, double classificacao, List<Integer> alugueres){
         this.coordenada = coordenada.clone();
         this.id = id;
+        this.preco = preco;
+        this.classificacao = classificacao;
         this.alugueres = new ArrayList<Integer>(alugueres);
     }
 
@@ -42,6 +48,8 @@ public abstract class Veiculo {
      */
     public Veiculo(Veiculo veiculo){
         this.id = veiculo.getId();
+        this.preco = veiculo.getPreco();
+        this.classificacao = veiculo.getClassificacao();
         this.coordenada = veiculo.getCoordenada();
         this.alugueres = veiculo.getAlugueres();
     }
@@ -52,6 +60,14 @@ public abstract class Veiculo {
      */
     public int getId() {
         return id;
+    }
+
+    public double getPreco(){
+        return this.preco;
+    }
+
+    public double getClassificacao(){
+        return this.classificacao;
     }
 
     public List<Integer> getAlugueres() {
@@ -76,6 +92,14 @@ public abstract class Veiculo {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public void setPreco(double preco){
+        this.preco = preco;
+    }
+
+    public void setClassificacao(double classificacao){
+        this.classificacao = classificacao;
     }
 
     /**
@@ -104,6 +128,8 @@ public abstract class Veiculo {
         Veiculo aux = (Veiculo) o;
         return this.coordenada.equals(aux.getCoordenada())
                 && this.id == aux.getId()
+                && this.preco == aux.getPreco()
+                && this.classificacao == aux.getClassificacao()
                 && this.alugueres.equals(aux.getAlugueres());
     }
 
@@ -112,6 +138,10 @@ public abstract class Veiculo {
 
         sb.append("Id: ");
         sb.append(this.getId()+"\n");
+        sb.append("Preço: ");
+        sb.append(this.getPreco()+"\n");
+        sb.append("Classificação: ");
+        sb.append(this.getClassificacao()+"\n");
         sb.append(this.getCoordenada().toString()+"\n");
         sb.append("Alugueres: ");
         sb.append(this.getAlugueres().toString()+"\n");

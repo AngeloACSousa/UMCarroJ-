@@ -37,10 +37,10 @@ public class Eletrico extends Carro {
      * @param classificacao
      * @param coordenada
      */
-    public Eletrico(int id, int velocidademedia, int preco,int capacidadeBateria, int bateriaAtual,
-                    int consumoMedio, List<Integer> alugueres , int classificacao, Coordenada coordenada){
+    public Eletrico(int id, int velocidademedia, double preco,int capacidadeBateria, int bateriaAtual,
+                    int consumoMedio, List<Integer> alugueres , double classificacao, Coordenada coordenada){
 
-        super(id,velocidademedia,preco,alugueres,classificacao,coordenada);
+        super(id,velocidademedia,preco,classificacao,alugueres,coordenada);
         this.bateriaAtual = bateriaAtual;
         this.capacidadeBateria = capacidadeBateria;
         this.consumoMedio = consumoMedio;
@@ -148,5 +148,12 @@ public class Eletrico extends Carro {
      */
     public Boolean autonomia(Coordenada destino){
         return (getBateriaAtual()/getConsumoMedio() >= getCoordenada().distancia(destino));
+    }
+
+    /**
+     * Calculo da autonomia do veiculo eletrico
+     */
+    public double getAutonomia(){
+        return (this.getCapacidadeBateria() / this.getConsumoMedio()); //qual era a diferença se fosse só this.capacidade?
     }
 }

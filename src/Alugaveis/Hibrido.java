@@ -46,13 +46,12 @@ public class Hibrido extends Carro {
      * @param classificacao
      * @param coordenada
      */
-
     public Hibrido(int id, int velocidademedia, int preco, int consumoMedioBateria,
                    int consumoMedioCombustivel, int capacidadeTanque, int capacidadeAtual,
                    int capacidadeBateria, int bateriaAtual, List<Integer> alugueres ,
                    int classificacao, Coordenada coordenada){
 
-        super(id,velocidademedia,preco,alugueres,classificacao,coordenada);
+        super(id, velocidademedia, preco, classificacao, alugueres, coordenada);
         this.consumoMedioBateria = consumoMedioBateria;
         this.consumoMedioCombustivel = consumoMedioCombustivel;
         this.capacidadeAtual = capacidadeAtual;
@@ -202,5 +201,12 @@ public class Hibrido extends Carro {
     }
 
 
+    /**
+     * Calculo da autonomia do veiculo Hobrido (combustivel + bateria)
+     * isto vai estar mal, esta media deve ser calculada de outra maneira.
+     */
+    public double getAutonomia(){
+        return ((this.getCapacidadeTanque() + this.getCapacidadeBateria()) / (this.getConsumoMedioCombustivel() + this.getConsumoMedioBateria())); //qual era a diferença se fosse só this.capacidade?
+    }
 
 }
