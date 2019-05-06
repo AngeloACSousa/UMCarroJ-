@@ -11,9 +11,9 @@ import java.util.List;
  */
 public class Combustao extends Carro {
     private String tipo;
-    private double capacidadeTanque;
-    private double capacidadeAtual;
-    private double consumoMedio;
+    private int capacidadeTanque;
+    private int capacidadeAtual;
+    private int consumoMedio;
 
     /**
      * Construtores------------------------------------------------------------------------------------------
@@ -44,7 +44,7 @@ public class Combustao extends Carro {
     public Combustao(int id, int velocidademedia, int preco,int capacidadeAtual, int capacidadeTanque,
                      int consumoMedio, List<Integer> alugueres , int classificacao, Coordenada coordenada){
 
-        super(id,velocidademedia,preco,classificacao,alugueres,coordenada);
+        super(id,velocidademedia,preco,alugueres,classificacao,coordenada);
         this.tipo = "combustao";
         this.capacidadeAtual = capacidadeAtual;
         this.capacidadeTanque = capacidadeTanque;
@@ -71,15 +71,15 @@ public class Combustao extends Carro {
         return tipo;
     }
 
-    public double getConsumoMedio() {
+    public int getConsumoMedio() {
         return consumoMedio;
     }
 
-    public double getCapacidadeTanque() {
+    public int getCapacidadeTanque() {
         return capacidadeTanque;
     }
 
-    public double getCapacidadeAtual() {
+    public int getCapacidadeAtual() {
         return capacidadeAtual;
     }
 
@@ -154,15 +154,7 @@ public class Combustao extends Carro {
     /**
     *calculo da autonomia em km
     */
-    public double autonomiaKm(Combustao c){
-        return (c.getCapacidadeAtual()/c.getConsumoMedio());
+    public double autonomiaKm(){
+        return (getCapacidadeAtual()/getConsumoMedio());
     }
-
-    /**
-     * Calculo da autonomia do veiculo de Combustao (gasolina / gasoleo)
-     */
-    public double getAutonomia(){
-        return (this.getCapacidadeTanque() / this.getConsumoMedio());
-    }
-    
 }
