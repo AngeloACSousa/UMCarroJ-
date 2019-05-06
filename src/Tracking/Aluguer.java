@@ -4,7 +4,7 @@ package Tracking;
  * Classe Alugueres
  */
 
-public class Alugueres {
+public class Aluguer {
     private int idAluguer;
     private int idCliente;
     private int idProprietario;
@@ -18,7 +18,7 @@ public class Alugueres {
      * Construtores --------------------------------------------------------------------------------------
      * Construtor default da classe
      */
-    public Alugueres(){
+    public Aluguer(){
         this.idAluguer = 0;
         this.idCliente = 0;
         this.idProprietario = 0;
@@ -40,7 +40,7 @@ public class Alugueres {
      * @param tempoViagem
      * @param classMedia
      */
-    public Alugueres(int idAluguer,int idCliente,int idProprietario,int idVeiculo,
+    public Aluguer(int idAluguer,int idCliente,int idProprietario,int idVeiculo,
                      Coordenada a,Coordenada b, double tempoViagem,double classMedia){
         this.idAluguer = idAluguer;
         this.idCliente = idCliente;
@@ -48,15 +48,15 @@ public class Alugueres {
         this.idVeiculo = idVeiculo;
         this.coordIni = new Coordenada(a);
         this.coordFin = new Coordenada(b);
-        this.tempoViagem = 0.0;
-        this.classMedia = 0.0;
+        this.tempoViagem = tempoViagem;
+        this.classMedia = classMedia;
     }
 
     /**
      * construtor cópia
      * @param v
      */
-    public Alugueres(Alugueres v){
+    public Aluguer(Aluguer v){
         this.idAluguer = v.getIdAluguer();
         this.idCliente = v.getIdCliente();
         this.idProprietario = v.getIdProprietario();
@@ -152,7 +152,7 @@ public class Alugueres {
         if (o == null || o.getClass() != this.getClass()) {
             return false;
         }
-        Alugueres aux = (Alugueres) o;
+        Aluguer aux = (Aluguer) o;
         return this.idCliente == aux.getIdCliente()
                 && this.idProprietario == aux.getIdProprietario()
                 && this.idAluguer == aux.getIdAluguer()
@@ -167,8 +167,8 @@ public class Alugueres {
      * Método clone
      * @return
      */
-     public Alugueres clone(){
-        return new Alugueres(this);
+     public Aluguer clone(){
+        return new Aluguer(this);
     }
 
 

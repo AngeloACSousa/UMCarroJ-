@@ -155,7 +155,6 @@ public class Cliente extends Pessoa {
      * o Cliente pode ir a pe
      * 
      * @param carros hashmap
-     * @param distancia maxima
      * @return carro mais barato
      */
     public Carro maisBaratoAPe (Map<String,Carro> carros, double km, Coordenada destino){
@@ -216,5 +215,7 @@ public class Cliente extends Pessoa {
 
         return super.toString() + sb.toString();
     }
+
+
 
 }
