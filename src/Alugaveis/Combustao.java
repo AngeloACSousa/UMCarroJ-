@@ -138,7 +138,6 @@ public class Combustao extends Carro {
         sb.append("Consumo Médio: ");
         sb.append(this.getConsumoMedio()+"\n");
 
-
         return super.toString() + sb.toString();
     }
     /**
