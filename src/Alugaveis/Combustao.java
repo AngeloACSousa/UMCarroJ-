@@ -154,8 +154,7 @@ public class Combustao extends Carro {
     /**
     *calculo da autonomia em km
     */
-    public double autonomiaKm(Combustao c){
-        return (c.getCapacidadeAtual()/c.getConsumoMedio());
+    public double autonomiaKm(){
+        return (getCapacidadeAtual()/getConsumoMedio());
     }
-    
 }

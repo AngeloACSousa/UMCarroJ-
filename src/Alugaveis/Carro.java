@@ -134,4 +134,8 @@ public abstract class Carro extends Veiculo {
     //calculo da autonomia(se consegue realizar uma viagem)
     public abstract Boolean autonomia(Coordenada destino);
 
+    //calcula o preço da viagem
+    public double precoViagem(Coordenada destino){
+        return getCoordenada().distancia(destino) * getPreco();
+    }
 }
