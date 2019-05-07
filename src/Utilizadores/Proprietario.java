@@ -125,4 +125,6 @@ public class Proprietario extends Pessoa {
 
         return super.toString() + sb.toString();
     }
+
+
 }

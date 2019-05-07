@@ -15,6 +15,7 @@ public abstract class Veiculo {
     private double classificacao;
     private List<Integer> alugueres;
     private Boolean disponivel;
+    private int idProprietario;
 
     /**
      * Construtores--------------------------------------------------------------------------------------------
@@ -28,6 +29,7 @@ public abstract class Veiculo {
         this.alugueres = new ArrayList<>();
         this.coordenada = new Coordenada();
         this.disponivel = true;
+        this.idProprietario = 0;
     }
 
     /**
@@ -36,13 +38,15 @@ public abstract class Veiculo {
      * @param id
      * @param alugueres
      */
-    public Veiculo(Coordenada coordenada, int id, double preco, double classificacao, List<Integer> alugueres, Boolean b){
+    public Veiculo(Coordenada coordenada, int id, double preco, double classificacao, List<Integer> alugueres,
+                   Boolean b, int idProprietario){
         this.coordenada = coordenada.clone();
         this.id = id;
         this.preco = preco;
         this.classificacao = classificacao;
         this.alugueres = new ArrayList<Integer>(alugueres);
         this.disponivel = b;
+        this.idProprietario = idProprietario;
     }
 
     /**
@@ -56,6 +60,7 @@ public abstract class Veiculo {
         this.coordenada = veiculo.getCoordenada();
         this.alugueres = veiculo.getAlugueres();
         this.disponivel = veiculo.isDisponivel();
+        this.idProprietario = veiculo.getIdProprietario();
     }
 
     /**
@@ -87,6 +92,10 @@ public abstract class Veiculo {
         return disponivel;
     }
 
+    public int getIdProprietario() {
+        return idProprietario;
+    }
+
     /**
      * Setters-----------------------------------------------------------------------------------------------
      * @param
@@ -113,6 +122,10 @@ public abstract class Veiculo {
 
     public void setDisponivel(boolean disponivel) {
         this.disponivel = disponivel;
+    }
+
+    public void setIdProprietario(int idProprietario) {
+        this.idProprietario = idProprietario;
     }
 
     /**
@@ -144,7 +157,8 @@ public abstract class Veiculo {
                 && this.preco == aux.getPreco()
                 && this.classificacao == aux.getClassificacao()
                 && this.alugueres.equals(aux.getAlugueres())
-                && this.disponivel.equals(aux.isDisponivel());
+                && this.disponivel.equals(aux.isDisponivel())
+                && this.idProprietario == aux.getIdProprietario();
     }
 
     public String toString(){

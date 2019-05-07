@@ -86,4 +86,10 @@ public class UmCarroJa{
     public List<Integer> getCarrosdoTipo(String tipo) {
         return veiculos.values().stream().filter(c -> c.getTipo() == tipo).map(Veiculo::getId).collect(Collectors.toList());
     }
+
+    //mudar preco de um carro
+
+    public void alteraPreco(int idCarro, int idProp, double precoNovo){
+
+    }
 }
