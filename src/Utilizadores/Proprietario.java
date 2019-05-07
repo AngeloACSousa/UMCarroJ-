@@ -13,7 +13,7 @@ public class Proprietario extends Pessoa {
     //está como lista de strings porque a class aluguer ainda não está definida
     private List<Integer> alugueres;
     private List<Integer> veiculos;
-    private int classificacao;
+
 
     /**
      * Construtores-------------------------------------------------------------------------------------
@@ -23,7 +23,7 @@ public class Proprietario extends Pessoa {
         super();
         this.alugueres = new ArrayList<>();
         this.veiculos = new ArrayList<>();
-        this.classificacao = 0;
+
     }
 
     /**
@@ -39,11 +39,11 @@ public class Proprietario extends Pessoa {
      * @param v
      */
     public Proprietario(String email, String nome, String pass, String morada,
-                        LocalDate nascimento, int nif, int c, List<Integer> a, List<Integer> v){
-        super(email, nome, pass, morada, nascimento, nif);
+                        LocalDate nascimento, int nif, int c, List<Integer> a, List<Integer> v, double classificacao){
+        super(email, nome, pass, morada, nascimento, nif, classificacao);
         this.alugueres = new ArrayList<>(a);
         this.veiculos = new ArrayList<>(v);
-        this.classificacao = c;
+
     }
 
     /**
@@ -53,7 +53,6 @@ public class Proprietario extends Pessoa {
     public Proprietario(Proprietario c){
         super(c);
         this.alugueres = c .getAlugueres();
-        this.classificacao = c.getClassificacao();
         this.veiculos = c.getVeiculos();
     }
 
@@ -65,9 +64,7 @@ public class Proprietario extends Pessoa {
         return new ArrayList<>(this.alugueres);
     }
 
-    public int getClassificacao() {
-        return classificacao;
-    }
+
 
 
     public List<Integer> getVeiculos() {
@@ -87,9 +84,6 @@ public class Proprietario extends Pessoa {
     }
 
 
-    public void setClassificacao(int c){
-        this.classificacao = c;
-    }
 
     /**
      * Metodo clone
@@ -113,7 +107,7 @@ public class Proprietario extends Pessoa {
         }
         Proprietario aux = (Proprietario) o;
         return super.equals(aux) && this.alugueres.equals(aux.getAlugueres())
-                && this.veiculos.equals(aux.getVeiculos()) && this.classificacao == aux.getClassificacao();
+                && this.veiculos.equals(aux.getVeiculos());
     }
 
 
@@ -128,8 +122,6 @@ public class Proprietario extends Pessoa {
         sb.append(this.alugueres.toString()+"\n");
         sb.append("Veiculos: ");
         sb.append(this.veiculos.toString()+"\n");
-        sb.append("Classificação: ");
-        sb.append(this.getClassificacao()+"\n");
 
         return super.toString() + sb.toString();
     }

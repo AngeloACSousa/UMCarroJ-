@@ -10,7 +10,7 @@ import Tracking.Coordenada;
 
 public abstract class Carro extends Veiculo {
     private String tipo;
-    private int velocidadeMedia;
+    private double velocidadeMedia;
 
     /**
      * Construtores --------------------------------------------------------------------------------------
@@ -29,7 +29,7 @@ public abstract class Carro extends Veiculo {
      * @param alugueres
      * @param coordenada
      */
-    public Carro(int id, int velocidadeMedia, double preco, double classificacao,
+    public Carro(int id, double velocidadeMedia, double preco, double classificacao,
                  List<Integer> alugueres, Coordenada coordenada, Boolean disponivel){
         super(coordenada, id, preco, classificacao,  alugueres, disponivel);
         this.velocidadeMedia = velocidadeMedia;
@@ -49,7 +49,7 @@ public abstract class Carro extends Veiculo {
      * @return
      */
 
-    public int getVelocidadeMedia() {
+    public double getVelocidadeMedia() {
         return velocidadeMedia;
     }
 

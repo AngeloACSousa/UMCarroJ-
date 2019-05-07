@@ -11,9 +11,9 @@ import java.util.List;
  */
 public class Combustao extends Carro {
     private String tipo;
-    private int capacidadeTanque;
-    private int capacidadeAtual;
-    private int consumoMedio;
+    private double capacidadeTanque;
+    private double capacidadeAtual;
+    private double consumoMedio;
 
     /**
      * Construtores------------------------------------------------------------------------------------------
@@ -41,8 +41,8 @@ public class Combustao extends Carro {
      * @param coordenada
      */
 
-    public Combustao(int id, int velocidademedia, int preco,int capacidadeAtual, int capacidadeTanque,
-                     int consumoMedio, List<Integer> alugueres , int classificacao, Coordenada coordenada, Boolean disponivel){
+    public Combustao(int id, double velocidademedia, double preco,double capacidadeAtual, double capacidadeTanque,
+                     double consumoMedio, List<Integer> alugueres , double classificacao, Coordenada coordenada, Boolean disponivel){
 
         super(id,velocidademedia,preco,classificacao,alugueres,coordenada,disponivel);
         this.tipo = "combustao";
@@ -71,15 +71,15 @@ public class Combustao extends Carro {
         return tipo;
     }
 
-    public int getConsumoMedio() {
+    public double getConsumoMedio() {
         return consumoMedio;
     }
 
-    public int getCapacidadeTanque() {
+    public double getCapacidadeTanque() {
         return capacidadeTanque;
     }
 
-    public int getCapacidadeAtual() {
+    public double getCapacidadeAtual() {
         return capacidadeAtual;
     }
 
@@ -87,15 +87,15 @@ public class Combustao extends Carro {
      * Setters-----------------------------------------------------------------------------------------------
      * @param
      */
-    public void setConsumoMedio(int consumoMedio) {
+    public void setConsumoMedio(double consumoMedio) {
         this.consumoMedio = consumoMedio;
     }
 
-    public void setCapacidadeAtual(int capacidadeAtual) {
+    public void setCapacidadeAtual(double capacidadeAtual) {
         this.capacidadeAtual = capacidadeAtual;
     }
 
-    public void setCapacidadeTanque(int capacidadeTanque) {
+    public void setCapacidadeTanque(double capacidadeTanque) {
         this.capacidadeTanque = capacidadeTanque;
     }
 

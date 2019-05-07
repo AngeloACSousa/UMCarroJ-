@@ -12,6 +12,7 @@ public abstract class Pessoa {
     private String morada;
     private LocalDate nascimento;
     private int nif;
+    private double classificacao;
 
     /**
      * Cosntrutores--------------------------------------------------------------------------------------
@@ -24,6 +25,7 @@ public abstract class Pessoa {
         this.morada = "";
         this.nascimento = null;
         this.nif = 0;
+        this.classificacao = 0;
     }
 
     /**
@@ -37,6 +39,7 @@ public abstract class Pessoa {
         this.morada = p.getMorada();
         this.nascimento = p.getNascimento();
         this.nif = p.getNif();
+        this.classificacao = p.getClassificacao();
     }
 
     /**
@@ -48,13 +51,14 @@ public abstract class Pessoa {
      * @param morada
      * @param nascimento
      */
-    public Pessoa(String email, String nome, String pass, String morada, LocalDate nascimento, int nif){
+    public Pessoa(String email, String nome, String pass, String morada, LocalDate nascimento, int nif, double classificacao){
         this.email = email;
         this.nome = nome;
         this.password = pass;
         this.morada = morada;
         this.nascimento = nascimento;
         this.nif = nif;
+        this.classificacao = classificacao;
     }
 
     /**
@@ -85,6 +89,10 @@ public abstract class Pessoa {
         return nascimento;
     }
 
+    public double getClassificacao() {
+        return classificacao;
+    }
+
     /**
      * Setters-------------------------------------------------------------------------------------------
      * @param
@@ -113,6 +121,10 @@ public abstract class Pessoa {
         this.password = password;
     }
 
+    public void setClassificacao(double classificacao) {
+        this.classificacao = classificacao;
+    }
+
     //classe abstrata metodo clone abstrato
     public abstract Pessoa clone();
 
@@ -131,7 +143,8 @@ public abstract class Pessoa {
         Pessoa aux = (Pessoa) o;
         return this.email.equals(aux.getEmail()) && this.nome.equals(aux.getNome())
                 && this.password.equals(aux.getPassword()) && this.morada.equals(aux.getMorada())
-                && this.nascimento.equals(aux.getNascimento()) && this.nif == aux.getNif();
+                && this.nascimento.equals(aux.getNascimento()) && this.nif == aux.getNif()
+                && this.classificacao == aux.getClassificacao();
     }
 
 

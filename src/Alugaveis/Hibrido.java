@@ -46,7 +46,7 @@ public class Hibrido extends Carro {
      * @param classificacao
      * @param coordenada
      */
-    public Hibrido(int id, int velocidademedia, double preco, double consumoMedioBateria,
+    public Hibrido(int id, double velocidademedia, double preco, double consumoMedioBateria,
                    double consumoMedioCombustivel, double capacidadeTanque, double capacidadeAtual,
                    double capacidadeBateria, double bateriaAtual, List<Integer> alugueres ,
                    double classificacao, Coordenada coordenada, Boolean disponivel){
@@ -112,27 +112,27 @@ public class Hibrido extends Carro {
      * Setters-----------------------------------------------------------------------------------------------
      * @param
      */
-    public void setCapacidadeBateria(int capacidadeBateria) {
+    public void setCapacidadeBateria(double capacidadeBateria) {
         this.capacidadeBateria = capacidadeBateria;
     }
 
-    public void setCapacidadeAtual(int capacidadeAtual) {
+    public void setCapacidadeAtual(double capacidadeAtual) {
         this.capacidadeAtual = capacidadeAtual;
     }
 
-    public void setCapacidadeTanque(int capacidadeTanque) {
+    public void setCapacidadeTanque(double capacidadeTanque) {
         this.capacidadeTanque = capacidadeTanque;
     }
 
-    public void setBateriaAtual(int bateriaAtual) {
+    public void setBateriaAtual(double bateriaAtual) {
         this.bateriaAtual = bateriaAtual;
     }
 
-    public void setConsumoMedioBateria(int consumoMedioBateria) {
+    public void setConsumoMedioBateria(double consumoMedioBateria) {
         this.consumoMedioBateria = consumoMedioBateria;
     }
 
-    public void setConsumoMedioCombustivel(int consumoMedioCombustivel) {
+    public void setConsumoMedioCombustivel(double consumoMedioCombustivel) {
         this.consumoMedioCombustivel = consumoMedioCombustivel;
     }
 

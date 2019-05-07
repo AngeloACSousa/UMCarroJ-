@@ -9,9 +9,9 @@ import java.util.List;
  */
 public class Eletrico extends Carro {
     private String tipo;
-    private int capacidadeBateria;
-    private int bateriaAtual;
-    private int consumoMedio;
+    private double capacidadeBateria;
+    private double bateriaAtual;
+    private double consumoMedio;
 
     /**
      * Construtores------------------------------------------------------------------------------------------
@@ -37,8 +37,8 @@ public class Eletrico extends Carro {
      * @param classificacao
      * @param coordenada
      */
-    public Eletrico(int id, int velocidademedia, double preco,int capacidadeBateria, int bateriaAtual,
-                    int consumoMedio, List<Integer> alugueres , double classificacao, Coordenada coordenada, Boolean disponivel){
+    public Eletrico(int id, double velocidademedia, double preco,double capacidadeBateria, double bateriaAtual,
+                    double consumoMedio, List<Integer> alugueres , double classificacao, Coordenada coordenada, Boolean disponivel){
 
         super(id,velocidademedia,preco,classificacao,alugueres,coordenada,disponivel);
         this.bateriaAtual = bateriaAtual;
@@ -67,15 +67,15 @@ public class Eletrico extends Carro {
         return tipo;
     }
 
-    public int getBateriaAtual() {
+    public double getBateriaAtual() {
         return bateriaAtual;
     }
 
-    public int getCapacidadeBateria() {
+    public double getCapacidadeBateria() {
         return capacidadeBateria;
     }
 
-    public int getConsumoMedio() {
+    public double getConsumoMedio() {
         return consumoMedio;
     }
 
@@ -83,15 +83,15 @@ public class Eletrico extends Carro {
      * Setters ----------------------------------------------------------------------------------------------
      * @param
      */
-    public void setBateriaAtual(int bateriaAtual) {
+    public void setBateriaAtual(double bateriaAtual) {
         this.bateriaAtual = bateriaAtual;
     }
 
-    public void setConsumoMedio(int consumoMedio) {
+    public void setConsumoMedio(double consumoMedio) {
         this.consumoMedio = consumoMedio;
     }
 
-    public void setCapacidadeBateria(int capacidadeBateria) {
+    public void setCapacidadeBateria(double capacidadeBateria) {
         this.capacidadeBateria = capacidadeBateria;
     }
 
