@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 
 public class UmCarroJa{
     private Map<Integer, Cliente> clientes;
-    private Map<Integer, Proprietario> proprietarios;
+    public Map<Integer, Proprietario> proprietarios;
     public Map<Integer, Veiculo> veiculos;
     private Map<Integer, Aluguer> alugueres;
 
@@ -90,6 +90,8 @@ public class UmCarroJa{
     //mudar preco de um carro
 
     public void alteraPreco(int idCarro, int idProp, double precoNovo){
-
+        if(veiculos.get(idCarro).getIdProprietario() == idProp){
+            veiculos.get(idCarro).setPreco(precoNovo);
+        }
     }
 }

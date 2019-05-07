@@ -42,9 +42,9 @@ public class Cliente extends Pessoa {
      * @param a
      */
     public Cliente(String email, String nome, String pass, String morada,
-                   LocalDate nascimento, int nif,  Coordenada c, List<Integer> a){
+                   LocalDate nascimento, int nif,  Coordenada c, List<Integer> a, double classificacao){
 
-        super(email, nome, pass, morada, nascimento, nif);
+        super(email, nome, pass, morada, nascimento, nif, classificacao);
         this.coordenada = new Coordenada(c);
         this.alugueres = new ArrayList<>(a);
     }
