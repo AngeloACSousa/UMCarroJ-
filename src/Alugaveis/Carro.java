@@ -30,8 +30,8 @@ public abstract class Carro extends Veiculo {
      * @param coordenada
      */
     public Carro(int id, int velocidadeMedia, double preco, double classificacao,
-                 List<Integer> alugueres, Coordenada coordenada){
-        super(coordenada, id, preco, classificacao,  alugueres);
+                 List<Integer> alugueres, Coordenada coordenada, Boolean disponivel){
+        super(coordenada, id, preco, classificacao,  alugueres, disponivel);
         this.velocidadeMedia = velocidadeMedia;
     }
 

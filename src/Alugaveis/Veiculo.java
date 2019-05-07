@@ -14,6 +14,7 @@ public abstract class Veiculo {
     private double preco;
     private double classificacao;
     private List<Integer> alugueres;
+    private Boolean disponivel;
 
     /**
      * Construtores--------------------------------------------------------------------------------------------
@@ -26,6 +27,7 @@ public abstract class Veiculo {
         this.classificacao = 0;
         this.alugueres = new ArrayList<>();
         this.coordenada = new Coordenada();
+        this.disponivel = true;
     }
 
     /**
@@ -34,12 +36,13 @@ public abstract class Veiculo {
      * @param id
      * @param alugueres
      */
-    public Veiculo(Coordenada coordenada, int id, double preco, double classificacao, List<Integer> alugueres){
+    public Veiculo(Coordenada coordenada, int id, double preco, double classificacao, List<Integer> alugueres, Boolean b){
         this.coordenada = coordenada.clone();
         this.id = id;
         this.preco = preco;
         this.classificacao = classificacao;
         this.alugueres = new ArrayList<Integer>(alugueres);
+        this.disponivel = b;
     }
 
     /**
@@ -52,6 +55,7 @@ public abstract class Veiculo {
         this.classificacao = veiculo.getClassificacao();
         this.coordenada = veiculo.getCoordenada();
         this.alugueres = veiculo.getAlugueres();
+        this.disponivel = veiculo.isDisponivel();
     }
 
     /**
@@ -79,6 +83,10 @@ public abstract class Veiculo {
         return coordenada;
     }
 
+    public boolean isDisponivel() {
+        return disponivel;
+    }
+
     /**
      * Setters-----------------------------------------------------------------------------------------------
      * @param
@@ -101,6 +109,10 @@ public abstract class Veiculo {
 
     public void setClassificacao(double classificacao){
         this.classificacao = classificacao;
+    }
+
+    public void setDisponivel(boolean disponivel) {
+        this.disponivel = disponivel;
     }
 
     /**
@@ -131,7 +143,8 @@ public abstract class Veiculo {
                 && this.id == aux.getId()
                 && this.preco == aux.getPreco()
                 && this.classificacao == aux.getClassificacao()
-                && this.alugueres.equals(aux.getAlugueres());
+                && this.alugueres.equals(aux.getAlugueres())
+                && this.disponivel.equals(aux.isDisponivel());
     }
 
     public String toString(){
@@ -146,6 +159,8 @@ public abstract class Veiculo {
         sb.append(this.getCoordenada().toString()+"\n");
         sb.append("Alugueres: ");
         sb.append(this.getAlugueres().toString()+"\n");
+        sb.append("Disponivel:");
+        sb.append(this.isDisponivel());
 
         return sb.toString();
     }

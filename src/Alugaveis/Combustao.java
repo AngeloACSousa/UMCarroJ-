@@ -42,9 +42,9 @@ public class Combustao extends Carro {
      */
 
     public Combustao(int id, int velocidademedia, int preco,int capacidadeAtual, int capacidadeTanque,
-                     int consumoMedio, List<Integer> alugueres , int classificacao, Coordenada coordenada){
+                     int consumoMedio, List<Integer> alugueres , int classificacao, Coordenada coordenada, Boolean disponivel){
 
-        super(id,velocidademedia,preco,classificacao,alugueres,coordenada);
+        super(id,velocidademedia,preco,classificacao,alugueres,coordenada,disponivel);
         this.tipo = "combustao";
         this.capacidadeAtual = capacidadeAtual;
         this.capacidadeTanque = capacidadeTanque;

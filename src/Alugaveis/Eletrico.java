@@ -38,9 +38,9 @@ public class Eletrico extends Carro {
      * @param coordenada
      */
     public Eletrico(int id, int velocidademedia, double preco,int capacidadeBateria, int bateriaAtual,
-                    int consumoMedio, List<Integer> alugueres , double classificacao, Coordenada coordenada){
+                    int consumoMedio, List<Integer> alugueres , double classificacao, Coordenada coordenada, Boolean disponivel){
 
-        super(id,velocidademedia,preco,classificacao,alugueres,coordenada);
+        super(id,velocidademedia,preco,classificacao,alugueres,coordenada,disponivel);
         this.bateriaAtual = bateriaAtual;
         this.capacidadeBateria = capacidadeBateria;
         this.consumoMedio = consumoMedio;
