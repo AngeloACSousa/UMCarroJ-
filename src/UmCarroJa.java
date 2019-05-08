@@ -94,4 +94,14 @@ public class UmCarroJa{
             veiculos.get(idCarro).setPreco(precoNovo);
         }
     }
+
+    //assinalar disponibilidade do carro
+
+    public void alteraDisponibilidade(int idCarro,int idProp,Boolean disponibilidade) {
+        if (veiculos.get(idCarro).getIdProprietario() == idProp) {
+            veiculos.get(idCarro).setDisponivel(disponibilidade);
+        }
+    }
+
+
 }
