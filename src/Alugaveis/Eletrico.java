@@ -157,4 +157,15 @@ public class Eletrico extends Carro {
     public double getAutonomia(){
         return (this.getCapacidadeBateria() / this.getConsumoMedio()); //qual era a diferença se fosse só this.capacidade?
     }
+
+    /**
+     * tambem conhecido como verifica deposito.
+     * metodo a ser usado no fim de uma viajem.
+     * caso o deposito esta a menos de 20% e esteja disponivel, entao é reabastecido.
+     */
+    public void Abastecer(){
+        if(this.getBateriaAtual() <= (this.getCapacidadeBateria() * 0.20) && this.isDisponivel()){
+            this.setBateriaAtual(getCapacidadeBateria());
+        }
+    }
 }

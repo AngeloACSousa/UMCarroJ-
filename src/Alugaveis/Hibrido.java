@@ -218,4 +218,17 @@ public class Hibrido extends Carro {
         return res;
     }
 
+    /**
+     * tambem conhecido como verifica deposito.
+     * metodo a ser usado no fim de uma viajem.
+     * caso o deposito esta a menos de 20% e esteja disponivel, entao é reabastecido.
+     */
+    public void Abastecer(){
+        if(this.isDisponivel() && this.getCapacidadeAtual() <= (this.getCapacidadeTanque() * 0.20) ||
+                this.getBateriaAtual() <= (this.getCapacidadeBateria() * 0.20)){
+            this.setCapacidadeAtual(getCapacidadeTanque());
+            this.setBateriaAtual(getCapacidadeBateria());
+        }
+    }
+
 }

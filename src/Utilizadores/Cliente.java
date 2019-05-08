@@ -212,6 +212,8 @@ public class Cliente extends Pessoa {
         sb.append(this.getCoordenada().toString()+"\n");
         sb.append("Alugueres: ");
         sb.append(this.alugueres.toString()+"\n");
+        sb.append("Classificação: ");
+        sb.append(this.getClassificacao()+"\n");
 
         return super.toString() + sb.toString();
     }

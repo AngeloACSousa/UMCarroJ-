@@ -156,4 +156,16 @@ public class Combustao extends Carro {
     public double autonomiaKm(){
         return (getCapacidadeAtual()/getConsumoMedio());
     }
+
+
+    /**
+     * tambem conhecido como verifica deposito.
+     * metodo a ser usado no fim de uma viajem.
+     * caso o deposito esta a menos de 20% e esteja disponivel, entao é reabastecido.
+     */
+    public void Abastecer(){
+        if(this.getCapacidadeAtual() <= (this.getCapacidadeTanque() * 0.20) && this.isDisponivel()){
+            this.setCapacidadeAtual(getCapacidadeTanque());
+        }
+    }
 }

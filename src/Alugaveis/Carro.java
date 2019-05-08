@@ -9,6 +9,7 @@ import Tracking.Coordenada;
  */
 
 public abstract class Carro extends Veiculo {
+
     private String tipo;
     private double velocidadeMedia;
 
@@ -104,11 +105,22 @@ public abstract class Carro extends Veiculo {
      * metodos------------------------------------------------------------------------------------------------
      */
 
-    //calculo da autonomia(se consegue realizar uma viagem)
+    /**
+     * calculo da autonomia(se consegue realizar uma viagem)
+     */
     public abstract Boolean autonomia(Coordenada destino);
 
-    //calcula o preço da viagem
+    /**
+     * calcula o preço da viagem
+     * @param destino
+     * @return
+     */
     public double precoViagem(Coordenada destino){
         return getCoordenada().distancia(destino) * getPreco();
     }
+
+    /**
+     * Tambem conhecido como funçao que reabastece os carros
+     */
+    public abstract void Abastecer();
 }
