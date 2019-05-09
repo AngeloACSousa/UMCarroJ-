@@ -24,15 +24,15 @@ public abstract class Carro extends Veiculo {
 
     /**
      * Construtor Parameterizado
-     * @param id
+     * @param matricula
      * @param velocidadeMedia
      * @param preco
      * @param alugueres
      * @param coordenada
      */
-    public Carro(int id, double velocidadeMedia, double preco, double classificacao,
+    public Carro(String matricula, double velocidadeMedia, double preco, double classificacao,
                  List<Integer> alugueres, Coordenada coordenada, Boolean disponivel, int idProprietario){
-        super(coordenada, id, preco, classificacao,  alugueres, disponivel, idProprietario);
+        super(coordenada, matricula, preco, classificacao,  alugueres, disponivel, idProprietario);
         this.velocidadeMedia = velocidadeMedia;
     }
 

@@ -46,12 +46,12 @@ public class Hibrido extends Carro {
      * @param classificacao
      * @param coordenada
      */
-    public Hibrido(int id, double velocidademedia, double preco, double consumoMedioBateria,
+    public Hibrido(String matricula, double velocidademedia, double preco, double consumoMedioBateria,
                    double consumoMedioCombustivel, double capacidadeTanque, double capacidadeAtual,
                    double capacidadeBateria, double bateriaAtual, List<Integer> alugueres ,
                    double classificacao, Coordenada coordenada, Boolean disponivel, int idProprietario){
 
-        super(id, velocidademedia, preco, classificacao, alugueres, coordenada, disponivel, idProprietario);
+        super(matricula, velocidademedia, preco, classificacao, alugueres, coordenada, disponivel, idProprietario);
         this.consumoMedioBateria = consumoMedioBateria;
         this.consumoMedioCombustivel = consumoMedioCombustivel;
         this.capacidadeAtual = capacidadeAtual;

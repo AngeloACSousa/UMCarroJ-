@@ -12,7 +12,7 @@ import java.util.List;
 public class Proprietario extends Pessoa {
     //está como lista de strings porque a class aluguer ainda não está definida
     private List<Integer> alugueres;
-    private List<Integer> veiculos;
+    private List<String> veiculos;
 
 
     /**
@@ -34,12 +34,12 @@ public class Proprietario extends Pessoa {
      * @param pass
      * @param morada
      * @param nascimento
-     * @param c
+     * @param classificacao
      * @param a
      * @param v
      */
     public Proprietario(String email, String nome, String pass, String morada,
-                        LocalDate nascimento, int nif, int c, List<Integer> a, List<Integer> v, double classificacao){
+                        LocalDate nascimento, int nif, List<Integer> a, List<String> v, double classificacao){
         super(email, nome, pass, morada, nascimento, nif, classificacao);
         this.alugueres = new ArrayList<>(a);
         this.veiculos = new ArrayList<>(v);
@@ -67,7 +67,7 @@ public class Proprietario extends Pessoa {
 
 
 
-    public List<Integer> getVeiculos() {
+    public List<String> getVeiculos() {
         return new ArrayList<>(this.veiculos);
     }
 
@@ -75,7 +75,7 @@ public class Proprietario extends Pessoa {
      * Setters-------------------------------------------------------------------------------------------
      * @param
      */
-    public void setVeiculos(List<Integer> veiculos) {
+    public void setVeiculos(List<String> veiculos) {
         this.veiculos = new ArrayList<>(veiculos);
     }
 

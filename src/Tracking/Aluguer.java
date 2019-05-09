@@ -8,7 +8,7 @@ public class Aluguer {
     private int idAluguer;
     private int idCliente;
     private int idProprietario;
-    private int idVeiculo;
+    private String idVeiculo;
     private Coordenada coordIni;
     private Coordenada coordFin;
     private double tempoViagem;   
@@ -22,7 +22,7 @@ public class Aluguer {
         this.idAluguer = 0;
         this.idCliente = 0;
         this.idProprietario = 0;
-        this.idVeiculo = 0;
+        this.idVeiculo = "";
         this.coordIni = new Coordenada();
         this.coordFin = new Coordenada();
         this.tempoViagem = 0.0;
@@ -40,7 +40,7 @@ public class Aluguer {
      * @param tempoViagem
      * @param classMedia
      */
-    public Aluguer(int idAluguer,int idCliente,int idProprietario,int idVeiculo,
+    public Aluguer(int idAluguer,int idCliente,int idProprietario,String idVeiculo,
                      Coordenada a,Coordenada b, double tempoViagem,double classMedia){
         this.idAluguer = idAluguer;
         this.idCliente = idCliente;
@@ -83,7 +83,7 @@ public class Aluguer {
         return this.idProprietario;
     }
 
-    public int getIdVeiculo(){
+    public String getIdVeiculo(){
         return this.idVeiculo;
     }
 
@@ -119,7 +119,7 @@ public class Aluguer {
         this.idProprietario = p;
     }
 
-    public void setIdVeiculo(int v){
+    public void setIdVeiculo(String v){
        this.idVeiculo = v;
     }
 

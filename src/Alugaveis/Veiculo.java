@@ -10,7 +10,7 @@ import java.util.List;
  */
 public abstract class Veiculo {
     private Coordenada coordenada;
-    private int id;
+    private String matricula;
     private double preco;
     private double classificacao;
     private List<Integer> alugueres;
@@ -23,7 +23,7 @@ public abstract class Veiculo {
      */
 
     public Veiculo(){
-        this.id = 0;
+        this.matricula = "";
         this.preco = 0;
         this.classificacao = 0;
         this.alugueres = new ArrayList<>();
@@ -35,13 +35,13 @@ public abstract class Veiculo {
     /**
      * Construtor parameterizado
      * @param coordenada
-     * @param id
+     * @param matricula
      * @param alugueres
      */
-    public Veiculo(Coordenada coordenada, int id, double preco, double classificacao, List<Integer> alugueres,
+    public Veiculo(Coordenada coordenada, String matricula, double preco, double classificacao, List<Integer> alugueres,
                    Boolean b, int idProprietario){
         this.coordenada = coordenada.clone();
-        this.id = id;
+        this.matricula = matricula;
         this.preco = preco;
         this.classificacao = classificacao;
         this.alugueres = new ArrayList<Integer>(alugueres);
@@ -54,7 +54,7 @@ public abstract class Veiculo {
      * @param veiculo
      */
     public Veiculo(Veiculo veiculo){
-        this.id = veiculo.getId();
+        this.matricula = veiculo.getMatricula();
         this.preco = veiculo.getPreco();
         this.classificacao = veiculo.getClassificacao();
         this.coordenada = veiculo.getCoordenada();
@@ -67,8 +67,8 @@ public abstract class Veiculo {
      * Getters----------------------------------------------------------------------------------------------
      * @return
      */
-    public int getId() {
-        return id;
+    public String getMatricula() {
+        return matricula;
     }
 
     public double getPreco(){
@@ -108,8 +108,8 @@ public abstract class Veiculo {
         this.coordenada = new Coordenada(coordenada);
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
     }
 
     public void setPreco(double preco){
@@ -153,7 +153,7 @@ public abstract class Veiculo {
         }
         Veiculo aux = (Veiculo) o;
         return this.coordenada.equals(aux.getCoordenada())
-                && this.id == aux.getId()
+                && this.matricula == aux.getMatricula()
                 && this.preco == aux.getPreco()
                 && this.classificacao == aux.getClassificacao()
                 && this.alugueres.equals(aux.getAlugueres())
@@ -164,8 +164,8 @@ public abstract class Veiculo {
     public String toString(){
         StringBuilder sb = new StringBuilder();
 
-        sb.append("Id: ");
-        sb.append(this.getId()+"\n");
+        sb.append("Matricula: ");
+        sb.append(this.getMatricula()+"\n");
         sb.append("Preço: ");
         sb.append(this.getPreco()+"\n");
         sb.append("Classificação: ");
@@ -174,7 +174,7 @@ public abstract class Veiculo {
         sb.append("Alugueres: ");
         sb.append(this.getAlugueres().toString()+"\n");
         sb.append("Disponivel:");
-        sb.append(this.isDisponivel());
+        sb.append(this.isDisponivel()+"\n");
 
         return sb.toString();
     }
