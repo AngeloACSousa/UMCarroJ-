@@ -20,7 +20,7 @@ public class UmCarroJa{
 
     private Map<Integer, Cliente> clientes;
     public Map<Integer, Proprietario> proprietarios;
-    public Map<Integer, Veiculo> veiculos;
+    public Map<String, Veiculo> veiculos;
     private Map<Integer, Aluguer> alugueres;
 
     public UmCarroJa(){
@@ -51,7 +51,7 @@ public class UmCarroJa{
                                         switch (split[1]) {
                                             case "eletrico":
                                                 Eletrico eletrico = criarEletrico(split);
-                                                veiculos.put(eletrico.getId(), eletrico);
+                                                veiculos.put(eletrico.getMatricula(), eletrico);
                                                 break;
                                             case "gasolina":
                                                 Combustao combustao = criarCombustao(split);
@@ -97,8 +97,8 @@ public class UmCarroJa{
         return null;
     }
 
-    public List<Integer> getCarrosdoTipo(String tipo) {
-        return veiculos.values().stream().filter(c -> c.getTipo() == tipo).map(Veiculo::getId).collect(Collectors.toList());
+    public List<String> getCarrosdoTipo(String tipo) {
+        return veiculos.values().stream().filter(c -> c.getTipo() == tipo).map(Veiculo::getMatricula).collect(Collectors.toList());
     }
 
     //mudar preco de um carro

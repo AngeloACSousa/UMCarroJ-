@@ -11,7 +11,7 @@ public class Aluguer {
     private String idVeiculo;
     private Coordenada coordIni;
     private Coordenada coordFin;
-    private double tempoViagem;   
+    private double tempoViagem;
     private double classMedia;
 
     /**
