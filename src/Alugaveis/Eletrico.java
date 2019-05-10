@@ -163,9 +163,8 @@ public class Eletrico extends Carro {
      * metodo a ser usado no fim de uma viajem.
      * caso o deposito esta a menos de 20% e esteja disponivel, entao é reabastecido.
      */
-    public void Abastecer(){
-        if(this.getBateriaAtual() <= (this.getCapacidadeBateria() * 0.20) && this.isDisponivel()){
-            this.setBateriaAtual(getCapacidadeBateria());
-        }
+
+    public void Abastecer(double quantidadeC, double quantidadeB){
+        this.setBateriaAtual(getBateriaAtual() + quantidadeB);
     }
 }

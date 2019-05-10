@@ -30,7 +30,7 @@ public class Combustao extends Carro {
 
     /**
      * Construtor parameterizado
-     * @param id
+     * @param matricula
      * @param velocidademedia
      * @param preco
      * @param capacidadeAtual
@@ -163,9 +163,9 @@ public class Combustao extends Carro {
      * metodo a ser usado no fim de uma viajem.
      * caso o deposito esta a menos de 20% e esteja disponivel, entao é reabastecido.
      */
-    public void Abastecer(){
-        if(this.getCapacidadeAtual() <= (this.getCapacidadeTanque() * 0.20) && this.isDisponivel()){
-            this.setCapacidadeAtual(getCapacidadeTanque());
-        }
+
+    public void Abastecer(double quantidadeC, double quantidadeB){
+        this.setCapacidadeAtual(getCapacidadeAtual() + quantidadeC);
+
     }
 }

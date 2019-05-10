@@ -8,10 +8,8 @@ import Utilizadores.Proprietario;
 
 import java.io.*;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.time.format.DateTimeFormatter;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class UmCarroJa{
@@ -55,11 +53,11 @@ public class UmCarroJa{
                                                 break;
                                             case "gasolina":
                                                 Combustao combustao = criarCombustao(split);
-                                                veiculos.put(combustao.getId(), combustao);
+                                                veiculos.put(combustao.getMatricula(), combustao);
                                                 break;
                                             case "hibrido":
                                                 Hibrido hibrido = criarHibrido(split);
-                                                veiculos.put(hibrido.getId(), hibrido);
+                                                veiculos.put(hibrido.getMatricula(), hibrido);
                                                 break;
 
                                         }
@@ -117,5 +115,206 @@ public class UmCarroJa{
         }
     }
 
+    /*
+    -++-+-+-+-+-+--+--+-+-+-+-++-+-+++++++ INTERFACE -+++++++++++++++++++-+-+-+-+-+-+-+------+-+-+-+-+-+-+-+-+-+-+-+
+     */
+
+    private int opcao;
+    private Scanner sc = new Scanner(System.in);
+    private String email, mail, nome, pass, morada, nascimento, cor[];
+    private int nif;
+    private double classf;
+
+    DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+
+    public void menu(){
+        System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
+        System.out.println("-                                      Menu                                                +");
+        System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
+        System.out.println("1. Login                                                                                   +");
+        System.out.println("2. Registo                                                                                 +");
+        System.out.println("3. Voltar                                                                                  +");
+        System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
+    }
+
+
+    public void registar(){
+        System.out.println("Registar como:");
+        System.out.println("1. Proprietario");
+        System.out.println("2. Cliente");
+        System.out.println("3. Voltar");
+        System.out.println("4. Sair");
+    }
+
+    public Cliente getCliente(Map<Integer, Cliente> clientes, int nif){
+        for(Integer n : clientes.keySet()){
+            if (n == nif){
+                return clientes.get(nif).clone();
+            }
+        }
+        return null;
+    }
+
+    /**
+     * private String email;
+     *     private String nome;
+     *     private String password;
+     *     private String morada;
+     *     private LocalDate nascimento;
+     *     private int nif;
+     *     private double classificacao;
+     *
+     *
+     *      public Cliente(String email, String nome, String pass, String morada,
+     *                    LocalDate nascimento, int nif,  Coordenada c, List<Integer> a, double classificacao){
+     *
+     *      public Proprietario(String email, String nome, String pass, String morada,
+     *                         LocalDate nascimento, int nif, List<Integer> a, List<String> v, double classificacao){
+     */
+    public void start(){
+        this.opcao = 0;
+        while (opcao == 0){
+            menu();
+            this.opcao = sc.nextInt();
+
+            switch (opcao){
+                case 1:
+                    System.out.println("NIF:");
+                    nif = sc.nextInt();
+                    if(clientes.containsKey(nif)){ //ainda por testar o anyMatch()
+                        //agora verifica a pass;
+                        Cliente clitemp = getCliente(clientes, nif).clone();
+                        System.out.println("Pass:");
+                        pass = sc.nextLine();
+                        //imprime Cliente : "Nome do cliente"
+                    }
+
+                    break;
+
+                case 2:
+                    registar();
+                    int opcao2 = sc.nextInt();
+                    switch (opcao2){
+                        case 1:
+                            System.out.println("Insira o seu email:");
+                            mail = sc.next();
+                            sc.nextLine();
+                            System.out.println("Insira o seu nome:");
+                            nome = sc.nextLine();
+                            System.out.println("Insira uma password:");
+                            pass = sc.next();
+                            sc.nextLine();
+                            System.out.println("Insira a sua morada:");
+                            morada = sc.nextLine();
+                            System.out.println("Insira a sua data de nascimento (dia/mes/ano - Exemplo: 12/11/1998):");
+                            nascimento = sc.next();
+                            sc.nextLine();
+                            System.out.println("Insira o seu NIF:");
+                            nif = sc.nextInt();
+                            sc.nextLine();
+
+                            if(proprietarios.containsKey(nif)){
+                                System.out.println("Ja existe um Proprietário com esse NIF");
+                                System.out.println("Registo anulado!");
+                                this.opcao = 0;
+                                break;
+                            }
+
+                            Proprietario Ptemp = new Proprietario();
+                            Ptemp.setEmail(mail);
+                            Ptemp.setNome(nome);
+                            Ptemp.setPassword(pass);
+                            Ptemp.setMorada(morada);
+                            try {
+                                Ptemp.setNascimento(LocalDate.parse(nascimento, format));
+                            }
+                            catch (Exception e){
+                                System.out.println("Data em formato Incalido: " +e);
+                                System.out.println("Registo Invalido, tente de novo!");
+                                this.opcao = 0;
+                                break;
+                            }
+                            Ptemp.setNif(nif);
+
+                            proprietarios.put(Ptemp.getNif(), Ptemp);
+                            System.out.println("Proprietario adicionado ao sistema!!");
+                            this.opcao = 0;
+                            break;
+                        case 2:
+                            System.out.println("Insira o seu email:");
+                            mail = sc.next();
+                            sc.nextLine();
+                            System.out.println("Insira o seu nome:");
+                            nome = sc.nextLine();
+                            System.out.println("Insira uma password:");
+                            pass = sc.next();
+                            sc.nextLine();
+                            System.out.println("Insira a sua morada:");
+                            morada = sc.nextLine();
+                            System.out.println("Insira a sua data de nascimento (dia/mes/ano - Exemplo: 12/11/98):");
+                            nascimento = sc.next();
+                            sc.nextLine();
+                            System.out.println("Insira o seu NIF:");
+                            nif = sc.nextInt();
+                            sc.nextLine();
+                            System.out.println("Insira as suas coordenadas:");
+                            double x = sc.nextDouble();
+                            double y = sc.nextDouble();
+                            sc.nextLine();
+
+                            if(clientes.containsKey(nif)){
+                                System.out.println("Ja existe um Cliente com esse NIF!");
+                                System.out.println("Registo anulado!");
+                                this.opcao = 0;
+                                break;
+                            }
+
+                            Cliente Ctemp = new Cliente();
+                            Ctemp.setEmail(mail);
+                            Ctemp.setNome(nome);
+                            Ctemp.setPassword(pass);
+                            Ctemp.setMorada(morada);
+                            try {
+                                Ctemp.setNascimento(LocalDate.parse(nascimento, format));
+                            }
+                            catch (Exception e){
+                                System.out.println("Data em formato Incalido: " +e);
+                                System.out.println("Registo Invalido, tente de novo!");
+                                this.opcao = 0;
+                                break;
+                            }
+                            Ctemp.setNif(nif);
+                            Ctemp.setCoordenada(new Coordenada(x, y));
+
+                            clientes.put(Ctemp.getNif(), Ctemp);
+                            System.out.println("Cliente adicionado ao sistema!");
+                            this.opcao = 0;
+                            break;
+                        case 3:
+                            //volta ao menu inicial
+                            this.opcao = 0;
+                            break;
+                        case 4:
+                            System.exit(0);
+                            break;
+                    }
+                    break;
+
+                case 3:
+                    System.out.println("A sair do programa!!");
+                    System.exit(0);
+                    break;
+
+                 default:
+                     System.out.println("opcao errada bitch, tenta de nvo!!!");
+                     this.opcao = 0;
+                     break;
+            }
+        }
+    }
+
+    void menuAluguer(){
+        //depois de um cliente ou um proprietario efectur o login, vêm parar aqui!! :D
+    }
 
 }

@@ -122,5 +122,6 @@ public abstract class Carro extends Veiculo {
     /**
      * Tambem conhecido como funçao que reabastece os carros
      */
-    public abstract void Abastecer();
+    public abstract void Abastecer(double quantidadeC, double quantidadeB);
+
 }
