@@ -41,7 +41,7 @@ public class Eletrico extends Carro {
                     double consumoMedio, List<Integer> alugueres , double classificacao, Coordenada coordenada,
                     Boolean disponivel, int idProprietario, String marca){
 
-        super(matricula, velocidademedia,preco,classificacao,alugueres,coordenada,disponivel,idProprietario);
+        super(matricula, velocidademedia,preco,classificacao,alugueres,coordenada,disponivel,idProprietario, marca);
         this.bateriaAtual = bateriaAtual;
         this.capacidadeBateria = capacidadeBateria;
         this.consumoMedio = consumoMedio;

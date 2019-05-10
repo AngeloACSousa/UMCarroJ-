@@ -39,7 +39,7 @@ public class UmCarroJa{
                                 String[] split2 = split[1].split("[,]");
                                 switch (split[0]) {
                                     case "NovoProp":
-                                        Proprietario proprietario = criarProp(split);
+                                        Proprietario proprietario = criarProprietario(split);
                                         proprietarios.put(proprietario.getNif(),proprietario);
                                     case "NovoCliente":
                                         Cliente cliente = criarCliente(split);
@@ -216,7 +216,9 @@ public class UmCarroJa{
 
                 case 2:
                     registar();
-                    int opcao2 = sc.nextInt();
+                    int opcao2;
+                    opcao2 = sc.nextInt();
+
                     switch (opcao2){
                         case 1:
                             System.out.println("Insira o seu email:");
@@ -233,8 +235,16 @@ public class UmCarroJa{
                             nascimento = sc.next();
                             sc.nextLine();
                             System.out.println("Insira o seu NIF:");
-                            nif = sc.nextInt();
-                            sc.nextLine();
+                            //nif = sc.nextInt();
+                            try{
+                                nif = sc.nextInt();
+                            }
+                            catch (Exception e){
+                                System.out.println("Input invalido "+e);
+                                System.out.println("Registo anulado!");
+                                this.opcao = 0;
+                                break;
+                            }
 
                             if(proprietarios.containsKey(nif)){
                                 System.out.println("Ja existe um Proprietário com esse NIF");
@@ -278,8 +288,16 @@ public class UmCarroJa{
                             nascimento = sc.next();
                             sc.nextLine();
                             System.out.println("Insira o seu NIF:");
-                            nif = sc.nextInt();
-                            sc.nextLine();
+                            //nif = sc.nextInt();
+                            try{
+                                nif = sc.nextInt();
+                            }
+                            catch (Exception e){
+                                System.out.println("Input invalido "+e);
+                                System.out.println("Registo anulado!");
+                                this.opcao = 0;
+                                break;
+                            }
                             System.out.println("Insira as suas coordenadas:");
                             double x = sc.nextDouble();
                             double y = sc.nextDouble();
@@ -329,7 +347,7 @@ public class UmCarroJa{
                     break;
 
                  default:
-                     System.out.println("opcao errada bitch, tenta de nvo!!!");
+                     System.out.println("opção não existe, tente de novo!!");
                      this.opcao = 0;
                      break;
             }
