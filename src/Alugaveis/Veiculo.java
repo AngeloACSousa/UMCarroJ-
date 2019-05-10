@@ -16,6 +16,7 @@ public abstract class Veiculo {
     private List<Integer> alugueres;
     private Boolean disponivel;
     private int idProprietario;
+    private String marca;
 
     /**
      * Construtores--------------------------------------------------------------------------------------------
@@ -30,6 +31,7 @@ public abstract class Veiculo {
         this.coordenada = new Coordenada();
         this.disponivel = true;
         this.idProprietario = 0;
+        this.marca = "";
     }
 
     /**
@@ -39,7 +41,7 @@ public abstract class Veiculo {
      * @param alugueres
      */
     public Veiculo(Coordenada coordenada, String matricula, double preco, double classificacao, List<Integer> alugueres,
-                   Boolean b, int idProprietario){
+                   Boolean b, int idProprietario, String marca){
         this.coordenada = coordenada.clone();
         this.matricula = matricula;
         this.preco = preco;
@@ -47,6 +49,7 @@ public abstract class Veiculo {
         this.alugueres = new ArrayList<Integer>(alugueres);
         this.disponivel = b;
         this.idProprietario = idProprietario;
+        this.marca = marca;
     }
 
     /**
@@ -61,12 +64,19 @@ public abstract class Veiculo {
         this.alugueres = veiculo.getAlugueres();
         this.disponivel = veiculo.isDisponivel();
         this.idProprietario = veiculo.getIdProprietario();
+        this.marca = veiculo.getMarca();
     }
+
+
 
     /**
      * Getters----------------------------------------------------------------------------------------------
      * @return
      */
+    public String getMarca() {
+        return marca;
+    }
+
     public String getMatricula() {
         return matricula;
     }
@@ -96,10 +106,16 @@ public abstract class Veiculo {
         return idProprietario;
     }
 
+
+
     /**
      * Setters-----------------------------------------------------------------------------------------------
      * @param
      */
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
     public void setAlugueres(List<Integer> alugueres) {
         this.alugueres = new ArrayList<>(alugueres);
     }
@@ -153,12 +169,13 @@ public abstract class Veiculo {
         }
         Veiculo aux = (Veiculo) o;
         return this.coordenada.equals(aux.getCoordenada())
-                && this.matricula == aux.getMatricula()
+                && this.matricula.equals(aux.getMatricula())
                 && this.preco == aux.getPreco()
                 && this.classificacao == aux.getClassificacao()
                 && this.alugueres.equals(aux.getAlugueres())
                 && this.disponivel.equals(aux.isDisponivel())
-                && this.idProprietario == aux.getIdProprietario();
+                && this.idProprietario == aux.getIdProprietario()
+                && this.marca.equals(aux.getMarca());
     }
 
     public String toString(){
@@ -166,6 +183,8 @@ public abstract class Veiculo {
 
         sb.append("Matricula: ");
         sb.append(this.getMatricula()+"\n");
+        sb.append("Marca: ");
+        sb.append(this.getMarca()+"\n");
         sb.append("Preço: ");
         sb.append(this.getPreco()+"\n");
         sb.append("Classificação: ");
