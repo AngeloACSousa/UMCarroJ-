@@ -50,6 +50,7 @@ public class Proprietario extends Pessoa {
      * Construtor de cópia
      * @param c
      */
+
     public Proprietario(Proprietario c){
         super(c);
         this.alugueres = c .getAlugueres();

@@ -43,7 +43,7 @@ public class Combustao extends Carro {
 
     public Combustao(String matricula, double velocidademedia, double preco,double capacidadeAtual, double capacidadeTanque,
                      double consumoMedio, List<Integer> alugueres , double classificacao, Coordenada coordenada,
-                     Boolean disponivel,int idProprietario){
+                     Boolean disponivel,int idProprietario, String marca){
 
         super(matricula,velocidademedia,preco,classificacao,alugueres,coordenada,disponivel,idProprietario);
         this.tipo = "combustao";

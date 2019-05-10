@@ -68,37 +68,60 @@ public class UmCarroJa{
                             }
         }
     }
-
+    //CRIACAO DE ENTIDADES------------------------------------------------------------------------------------------------
+    //nome,nif,email,morada,X,Y
+    //String email, String nome, String pass, String morada,
+    //                   LocalDate nascimento, int nif,  Coordenada c, List<Integer> a, double classificacao)
     private Cliente criarCliente(String[] cliente){
-       return new Cliente(cliente[2], cliente[0], "", cliente[3],
-               LocalDate.parse("00-00-00"), Integer.parseInt(cliente[1]),
-               new Coordenada(Double.parseDouble(cliente[4]),Double.parseDouble(cliente[5])),
-               new ArrayList<>(), 0);
+        return new Cliente(cliente[2],cliente[0],"",cliente[3],LocalDate.parse("00-00-00"), Integer.parseInt(cliente[1]),
+                new Coordenada(Double.parseDouble(cliente[4]),Double.parseDouble(cliente[5])), new ArrayList<Integer>(),0);
     }
-
-    private Proprietario criarProp(String[] proprietario){
-        return new Proprietario(proprietario[2], proprietario[0], "", proprietario[3],
-                LocalDate.parse("00-00-00"), Integer.parseInt(proprietario[1]),
-                new ArrayList<>(), new ArrayList<>(), 0);
-
+    //(String email, String nome, String pass, String morada,
+    //                        LocalDate nascimento, int nif, int c, List<Integer> a, List<Integer> v, double classificacao)
+    private Proprietario criarProprietario(String[] prop){
+        return new Proprietario(prop[2],prop[0],"",prop[3],LocalDate.parse("00-00-00"),Integer.parseInt(prop[1]),
+                new ArrayList<Integer>(),new ArrayList<String>(), 0);
     }
+/*(String id, double velocidademedia, double preco,double capacidadeBateria, double bateriaAtual,
+    double consumoMedio, List<Integer> alugueres , double classificacao, Coordenada coordenada,
+    Boolean disponivel, int idProprietario){*/
+   // NovoCarro:tipo0,marca1,matricula2,nif3,velocidade media4,preço por km5, consumo por km6, autonomia7, X8, Y9
 
     private Eletrico criarEletrico(String[] eletrico){
-        return null;
+        double capacidade = Double.parseDouble(eletrico[7]) / Double.parseDouble(eletrico[6]);
+        return new Eletrico(eletrico[2],Double.parseDouble(eletrico[4]),Double.parseDouble(eletrico[5]),
+                capacidade,capacidade,Double.parseDouble(eletrico[6]), new ArrayList<Integer>(),0,
+                new Coordenada(Double.parseDouble(eletrico[8]),Double.parseDouble(eletrico[9])),
+                true,Integer.parseInt(eletrico[3]),eletrico[1]);
     }
 
     private Combustao criarCombustao(String[] combustao){
-        return null;
+        double capacidade = Double.parseDouble(combustao[7])/Double.parseDouble(combustao[6]);
+        return new Combustao(combustao[2],Double.parseDouble(combustao[4]),Double.parseDouble(combustao[5]),
+                capacidade,capacidade,Double.parseDouble(combustao[6]), new ArrayList<Integer>(),0,
+                new Coordenada(Double.parseDouble(combustao[8]),Double.parseDouble(combustao[9])),
+                true,Integer.parseInt(combustao[3]),combustao[1]);
     }
-
+/*
+                   (String id, double velocidademedia, double preco, double consumoMedioBateria,
+                   double consumoMedioCombustivel, double capacidadeTanque, double capacidadeAtual,
+                   double capacidadeBateria, double bateriaAtual, List<Integer> alugueres ,
+                   double classificacao, Coordenada coordenada, Boolean disponivel, int idProprietario)
+                   */
     private Hibrido criarHibrido(String[] hibrido){
-        return null;
+       /* int plugin = 10 + (int)(Math.random() * ((40 - 10) + 1));
+        double consumo = Double.parseDouble(hibrido[6]);
+        int autonomia = Integer.parseInt(hibrido[7]);
+        double consumoMB =
+        return new Hibrido(hibrido[2],Double.parseDouble(hibrido[4]),);*/
+       return null;
     }
 
     public List<String> getCarrosdoTipo(String tipo) {
-        return veiculos.values().stream().filter(c -> c.getTipo() == tipo).map(Veiculo::getMatricula).collect(Collectors.toList());
+        return veiculos.values().stream().filter(c -> c.getTipo() == tipo).
+                map(Veiculo::getMatricula).collect(Collectors.toList());
     }
-
+    //METODOS-----------------------------------------------------------------------------------------------------------
     //mudar preco de um carro
 
     public void alteraPreco(int idCarro, int idProp, double precoNovo){

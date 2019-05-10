@@ -49,7 +49,7 @@ public class Hibrido extends Carro {
     public Hibrido(String matricula, double velocidademedia, double preco, double consumoMedioBateria,
                    double consumoMedioCombustivel, double capacidadeTanque, double capacidadeAtual,
                    double capacidadeBateria, double bateriaAtual, List<Integer> alugueres ,
-                   double classificacao, Coordenada coordenada, Boolean disponivel, int idProprietario){
+                   double classificacao, Coordenada coordenada, Boolean disponivel, int idProprietario, String marca){
 
         super(matricula, velocidademedia, preco, classificacao, alugueres, coordenada, disponivel, idProprietario);
         this.consumoMedioBateria = consumoMedioBateria;
