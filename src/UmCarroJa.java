@@ -139,7 +139,7 @@ public class UmCarroJa{
     }
 
     /*
-    -++-+-+-+-+-+--+--+-+-+-+-++-+-+++++++ INTERFACE -+++++++++++++++++++-+-+-+-+-+-+-+------+-+-+-+-+-+-+-+-+-+-+-+
+    -++-+-+-+-+-+--+--+-+-+-+-++-+-+++++++ INTERFACE MENU -+++++++++++++++++++-+-+-+-+-+-+-+------+-+-+-+-+-+-+-+-+-+-+-+
      */
 
     private int opcao;
@@ -148,7 +148,7 @@ public class UmCarroJa{
     private int nif;
     private double classf;
 
-    DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+    DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yy");
 
     public void menu(){
         System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
@@ -156,7 +156,7 @@ public class UmCarroJa{
         System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
         System.out.println("1. Login                                                                                   +");
         System.out.println("2. Registo                                                                                 +");
-        System.out.println("3. Voltar                                                                                  +");
+        System.out.println("3. Sair                                                                                    +");
         System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
     }
 
@@ -170,12 +170,7 @@ public class UmCarroJa{
     }
 
     public Cliente getCliente(Map<Integer, Cliente> clientes, int nif){
-        for(Integer n : clientes.keySet()){
-            if (n == nif){
-                return clientes.get(nif).clone();
-            }
-        }
-        return null;
+        return clientes.get(nif);
     }
 
     /**
@@ -200,26 +195,49 @@ public class UmCarroJa{
             menu();
             this.opcao = sc.nextInt();
 
-            switch (opcao){
+            switch (opcao) {
+                //login
                 case 1:
                     System.out.println("NIF:");
-                    nif = sc.nextInt();
-                    if(clientes.containsKey(nif)){ //ainda por testar o anyMatch()
+                    nif = sc.nextInt(); //tem uma excepçao aqui que nao tou a saber corrigir... (em caso do nuemro ser muito grande)
+                    sc.nextLine();
+                    if (clientes.containsKey(nif)) { //ainda por testar o anyMatch()
+                        System.out.println("é um cliente :D");
                         //agora verifica a pass;
-                        Cliente clitemp = getCliente(clientes, nif).clone();
-                        System.out.println("Pass:");
-                        pass = sc.nextLine();
-                        //imprime Cliente : "Nome do cliente"
+                        Cliente clitemp = getCliente(clientes, nif);
+                        if (clitemp != null) {
+                            System.out.println("Pass:");
+                            pass = sc.nextLine();
+                            if (clitemp.getPassword().equals(pass)) {
+                                System.out.println("ACCESS GRANTED");
+                                //AGORA ENTRA NO MENU DE ALUGUERES.
+                            }
+                            else {
+                                System.out.println("Pass errada!");
+                            }
+                        }
+                        //System.out.println("Pass:");
+                        //pass = sc.nextLine();
+                        //if (clitemp.getPassword() == pass){
+                        //    System.out.println("ACCESS GRANTED");
+                        //AGORA ENTRA NO MENU DE ALUGUERES.
+                        //}
+
                     }
-
+                    //imprime Cliente : "Nome do cliente"
+                    if (proprietarios.containsKey(nif)) {
+                        System.out.println("é um propriétario :D");
+                    }
+                    System.out.println("Não se encontra registado, por favor efectue o registo!");
+                    this.opcao = 0;
                     break;
-
+                //registo
                 case 2:
                     registar();
                     int opcao2;
                     opcao2 = sc.nextInt();
 
-                    switch (opcao2){
+                    switch (opcao2) {
                         case 1:
                             System.out.println("Insira o seu email:");
                             mail = sc.next();
@@ -231,22 +249,22 @@ public class UmCarroJa{
                             sc.nextLine();
                             System.out.println("Insira a sua morada:");
                             morada = sc.nextLine();
-                            System.out.println("Insira a sua data de nascimento (dia/mes/ano - Exemplo: 12/11/1998):");
+                            System.out.println("Insira a sua data de nascimento (dia-mes-ano - Exemplo: 12-11-98):");
                             nascimento = sc.next();
                             sc.nextLine();
                             System.out.println("Insira o seu NIF:");
                             //nif = sc.nextInt();
-                            try{
+                            try {
                                 nif = sc.nextInt();
-                            }
-                            catch (Exception e){
-                                System.out.println("Input invalido "+e);
+                            } catch (Exception e) {
+                                System.out.println("Input invalido " + e);
                                 System.out.println("Registo anulado!");
                                 this.opcao = 0;
+                                sc.nextLine();
                                 break;
                             }
 
-                            if(proprietarios.containsKey(nif)){
+                            if (proprietarios.containsKey(nif)) {
                                 System.out.println("Ja existe um Proprietário com esse NIF");
                                 System.out.println("Registo anulado!");
                                 this.opcao = 0;
@@ -260,9 +278,8 @@ public class UmCarroJa{
                             Ptemp.setMorada(morada);
                             try {
                                 Ptemp.setNascimento(LocalDate.parse(nascimento, format));
-                            }
-                            catch (Exception e){
-                                System.out.println("Data em formato Incalido: " +e);
+                            } catch (Exception e) {
+                                System.out.println("Data em formato Incalido: " + e);
                                 System.out.println("Registo Invalido, tente de novo!");
                                 this.opcao = 0;
                                 break;
@@ -289,13 +306,13 @@ public class UmCarroJa{
                             sc.nextLine();
                             System.out.println("Insira o seu NIF:");
                             //nif = sc.nextInt();
-                            try{
+                            try {
                                 nif = sc.nextInt();
-                            }
-                            catch (Exception e){
-                                System.out.println("Input invalido "+e);
+                            } catch (Exception e) {
+                                System.out.println("Input invalido " + e);
                                 System.out.println("Registo anulado!");
                                 this.opcao = 0;
+                                sc.nextLine();
                                 break;
                             }
                             System.out.println("Insira as suas coordenadas:");
@@ -303,7 +320,7 @@ public class UmCarroJa{
                             double y = sc.nextDouble();
                             sc.nextLine();
 
-                            if(clientes.containsKey(nif)){
+                            if (clientes.containsKey(nif)) {
                                 System.out.println("Ja existe um Cliente com esse NIF!");
                                 System.out.println("Registo anulado!");
                                 this.opcao = 0;
@@ -317,9 +334,8 @@ public class UmCarroJa{
                             Ctemp.setMorada(morada);
                             try {
                                 Ctemp.setNascimento(LocalDate.parse(nascimento, format));
-                            }
-                            catch (Exception e){
-                                System.out.println("Data em formato Incalido: " +e);
+                            } catch (Exception e) {
+                                System.out.println("Data em formato Incalido: " + e);
                                 System.out.println("Registo Invalido, tente de novo!");
                                 this.opcao = 0;
                                 break;
@@ -336,26 +352,27 @@ public class UmCarroJa{
                             this.opcao = 0;
                             break;
                         case 4:
+                            System.out.println("A sair do programa!!");
                             System.exit(0);
                             break;
                     }
                     break;
-
+                //sair
                 case 3:
                     System.out.println("A sair do programa!!");
                     System.exit(0);
                     break;
 
-                 default:
-                     System.out.println("opção não existe, tente de novo!!");
-                     this.opcao = 0;
-                     break;
+                default:
+                    System.out.println("opção não existe, tente de novo!!");
+                    this.opcao = 0;
+                    break;
+                }
             }
         }
-    }
 
     void menuAluguer(){
-        //depois de um cliente ou um proprietario efectur o login, vêm parar aqui!! :D
+
     }
 
 }
