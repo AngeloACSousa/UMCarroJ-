@@ -116,6 +116,7 @@ public class UmCarroJa{
                 map(Veiculo::getMatricula).collect(Collectors.toList());
     }
 
+
     public Map<Integer, Cliente> getClientes() {
         return clientes;
     }

@@ -87,7 +87,7 @@ public class Menu {
                             if (clitemp.getPassword().equals(pass)) {
                                 System.out.println("ACCESS GRANTED");
                                 //AGORA ENTRA NO MENU DE ALUGUERES.
-                                menuAluguerCliente();
+                                menuAluguerCliente(clitemp.getNif());
                             }
                             else {
                                 System.out.println("Pass errada!");
@@ -262,6 +262,7 @@ public class Menu {
             }
         }
     }
+/*
     void opcaoMenu(ArrayList<String> optionsMsg, ArrayList<Runnable> actions) throws Exception{
         if(optionsMsg.size() != actions.size()) throw new Exception("Erro na interface");
         int opcao = -1;
@@ -281,45 +282,52 @@ public class Menu {
         }
         actions.get(opcao-1).run();
     }
-
-    void menuPrincipal() throws Exception{
-        ArrayList<String> options = new ArrayList<>();
-        ArrayList<Runnable> actions = new ArrayList<>();
-
-        options.add("Click Me");
-        actions.add(this::menuAluguerCliente);
-
-        opcaoMenu(options, actions);
-    }
+*/
 
 
 
     /**
      * Contem os menus de alugueres para o cliente.
      */
-    void menuAluguerCliente(){
+    void menuAluguerCliente(int idCliente){
 
-        ArrayList<String> options = new ArrayList<>();
-        ArrayList<Runnable> actions = new ArrayList<>();
         System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
         System.out.println("-                                Menu de Cliente                                           +");
         System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
+        System.out.println("1. Ver histórico de Alugueres                                                              +");
+        System.out.println("2. Fazer Aluguer                                                                           +");
+        System.out.println("3. Voltar                                                                                  +");
+        System.out.println("4. Sair                                                                                    +");
+        System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
+        int opcaoc = -1;
+        while(opcaoc == -1) {
+            try {
+                opcaoc = sc.nextInt();
+                if (opcaoc < 1 || opcaoc > 1) opcao = -1;
+            } catch (Exception e) {
+                System.out.println("Opcao nao existe");
+                sc.next();
+            }
+        }
+        switch (opcaoc){
+            case 1:
+                opcaoc = 0;
+                break;
 
-        options.add("Registo dos Alugueres                                                                   +");
-        options.add("Fazer Aluguer                                                                           +");
-        options.add("Sair                                                                                    +");
-
-        actions.add(this::naoFeito);
-        actions.add(this::naoFeito);
-        actions.add(this::naoFeito);
-
-       try {
-           opcaoMenu(options,actions);
-       }
-       catch (Exception e){
-           System.out.println(e.getMessage());
-       }
-
+            case 2:
+                naoFeito();
+                opcaoc = 0;
+                break;
+            case 3:
+                naoFeito();
+                System.out.println("entrei opcao 3\n");
+                opcaoc = 0;
+                break;
+            case 4:
+                naoFeito();
+                opcaoc = -1;
+                break;
+        }
     }
 
     void naoFeito(){
@@ -374,7 +382,6 @@ public class Menu {
     }
 
     public static void main(String args[]) throws Exception{
-        Menu m = new Menu();
-        m.menuPrincipal();
+
     }
 }
