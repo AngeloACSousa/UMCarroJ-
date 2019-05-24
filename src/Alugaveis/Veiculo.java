@@ -41,13 +41,13 @@ public abstract class Veiculo {
      * @param alugueres
      */
     public Veiculo(Coordenada coordenada, String matricula, double preco, double classificacao, List<Integer> alugueres,
-                   Boolean b, int idProprietario, String marca){
+                   Boolean disponivel, int idProprietario, String marca){
         this.coordenada = coordenada.clone();
         this.matricula = matricula;
         this.preco = preco;
         this.classificacao = classificacao;
         this.alugueres = new ArrayList<Integer>(alugueres);
-        this.disponivel = b;
+        this.disponivel = disponivel;
         this.idProprietario = idProprietario;
         this.marca = marca;
     }

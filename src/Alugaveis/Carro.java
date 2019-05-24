@@ -61,7 +61,7 @@ public abstract class Carro extends Veiculo {
      * @param
      */
 
-    public void setVelocidadeMedia(int velocidadeMedia) {
+    public void setVelocidadeMedia(double velocidadeMedia) {
         this.velocidadeMedia = velocidadeMedia;
     }
 

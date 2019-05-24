@@ -15,10 +15,10 @@ import java.util.stream.Collectors;
 public class UmCarroJa{
 
 
-    private Map<Integer, Cliente> clientes;
+    public Map<Integer, Cliente> clientes;
     public Map<Integer, Proprietario> proprietarios;
     public Map<String, Veiculo> veiculos;
-    private Map<Integer, Aluguer> alugueres;
+    public Map<Integer, Aluguer> alugueres;
 
     public UmCarroJa(){
         this.clientes = new HashMap<>();
@@ -116,14 +116,6 @@ public class UmCarroJa{
                 map(Veiculo::getMatricula).collect(Collectors.toList());
     }
 
-
-    public Map<Integer, Cliente> getClientes() {
-        return clientes;
-    }
-
-    public Map<Integer, Proprietario> getProprietarios() {
-        return proprietarios;
-    }
     //METODOS-----------------------------------------------------------------------------------------------------------
     //mudar preco de um carro
 
@@ -151,6 +143,15 @@ public class UmCarroJa{
             System.out.println("Matricula: " +aluguer.getIdVeiculo());
             System.out.println("Data: " + aluguer.getData().toString());
             System.out.println("Preço: " +aluguer.getPreco());
+        }
+    }
+
+    //Metodo de visualizar alugueres
+    public void visualizarCarrosProprietario(int id){
+        List<String> carros = proprietarios.get(id).getVeiculos();
+        for(String c : carros){
+            System.out.println("Marca: " +this.veiculos.get(c).getMarca());
+            System.out.println("Matricula: " +this.veiculos.get(c).getMatricula());
         }
     }
 

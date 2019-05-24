@@ -1,3 +1,4 @@
+import Alugaveis.*;
 import Tracking.Coordenada;
 import Utilizadores.Cliente;
 import Utilizadores.Proprietario;
@@ -15,7 +16,9 @@ public class Menu {
     private UmCarroJa master;
     private int opcao;
     private Scanner sc = new Scanner(System.in);
-    private String email, mail, nome, pass, morada, nascimento, cor[];
+    private String email, mail, nome, pass, morada, nascimento, cor[], matricula, marca;
+    private double velociademedia, preco, capacidadeatual, capacidadetanque, consumomedio, combustivel, bateria, x, y;
+    private double capaciadebateria, bateriaatual, consumomediobateria;
     private int nif;
     private double classf;
 
@@ -39,6 +42,14 @@ public class Menu {
         System.out.println("2. Cliente");
         System.out.println("3. Voltar");
         System.out.println("4. Sair");
+    }
+
+    public void registarCarro(){
+        System.out.println("Registar Veiculo:");
+        System.out.println("1. Carro a Combustão");
+        System.out.println("2. Carro Eletrico");
+        System.out.println("3. Carro Hibrido");
+        System.out.println("4. Voltar");
     }
 
     public Cliente getCliente(Map<Integer, Cliente> clientes, int nif){
@@ -77,10 +88,10 @@ public class Menu {
                     System.out.println("NIF:");
                     nif = sc.nextInt(); //tem uma excepçao aqui que nao tou a saber corrigir... (em caso do nuemro ser muito grande)
                     sc.nextLine();
-                    if (master.getClientes().containsKey(nif)) { //ainda por testar o anyMatch()
+                    if (master.clientes.containsKey(nif)) { //ainda por testar o anyMatch()
                         System.out.println("é um cliente :D");
                         //agora verifica a pass;
-                        Cliente clitemp = getCliente(master.getClientes(), nif);
+                        Cliente clitemp = getCliente(master.clientes, nif);
                         if (clitemp != null) {
                             System.out.println("Pass:");
                             pass = sc.nextLine();
@@ -96,17 +107,17 @@ public class Menu {
                     }
 
                     //Login de proprietarios
-                    if (master.getProprietarios().containsKey(nif)) {
+                    if (master.proprietarios.containsKey(nif)) {
                         System.out.println("é um propriétario :D");
                         //agora verifica a pass;
-                        Proprietario proptemp = getProprietario(master.getProprietarios(), nif);
+                        Proprietario proptemp = getProprietario(master.proprietarios, nif);
                         if (proptemp != null) {
                             System.out.println("Pass:");
                             pass = sc.nextLine();
                             if (proptemp.getPassword().equals(pass)) {
                                 System.out.println("ACCESS GRANTED");
                                 //AGORA ENTRA NO MENU DE ALUGUERES.
-                                menuAluguerProprietario();
+                                menuAluguerProprietario(proptemp.getNif());
                             }
                             else {
                                 System.out.println("Pass errada!");
@@ -140,6 +151,7 @@ public class Menu {
                             sc.nextLine();
                             System.out.println("Insira o seu NIF:");
                             //nif = sc.nextInt();
+                            //System.out.println("chego aqui1\n");
                             try {
                                 nif = sc.nextInt();
                             } catch (Exception e) {
@@ -149,14 +161,16 @@ public class Menu {
                                 sc.nextLine();
                                 break;
                             }
-
-                            if (master.getProprietarios().containsKey(nif)) {
+                            System.out.println("chego aqui2\n");
+                            //DA ERRO NESTE IF ....
+                            if (master.proprietarios.containsKey(nif)) {
                                 System.out.println("Ja existe um Proprietário com esse NIF");
                                 System.out.println("Registo anulado!");
                                 this.opcao = 0;
                                 break;
                             }
-
+                            //NESTE IF, AQUI ACIMA...
+                            System.out.println("chego aqui3\n");
                             Proprietario Ptemp = new Proprietario();
                             Ptemp.setEmail(mail);
                             Ptemp.setNome(nome);
@@ -171,8 +185,8 @@ public class Menu {
                                 break;
                             }
                             Ptemp.setNif(nif);
-
-                            master.getProprietarios().put(Ptemp.getNif(), Ptemp);
+                            System.out.println("chego aqui4\n");
+                            master.proprietarios.put(Ptemp.getNif(), Ptemp);
                             System.out.println("Proprietario adicionado ao sistema!!");
                             this.opcao = 0;
                             break;
@@ -208,7 +222,7 @@ public class Menu {
                             double y = sc.nextDouble();
                             sc.nextLine();
 
-                            if (master.getClientes().containsKey(nif)) {
+                            if (master.clientes.containsKey(nif)) {
                                 System.out.println("Ja existe um Cliente com esse NIF!");
                                 System.out.println("Registo anulado!");
                                 this.opcao = 0;
@@ -231,7 +245,7 @@ public class Menu {
                             Ctemp.setNif(nif);
                             Ctemp.setCoordenada(new Coordenada(x, y));
 
-                            master.getClientes().put(Ctemp.getNif(), Ctemp);
+                            master.clientes.put(Ctemp.getNif(), Ctemp);
                             System.out.println("Cliente adicionado ao sistema!");
                             this.opcao = 0;
                             break;
@@ -289,7 +303,7 @@ public class Menu {
     /**
      * Contem os menus de alugueres para o cliente.
      */
-    void menuAluguerCliente(int idCliente){
+    public void menuAluguerCliente(int idCliente){
         int opcaoc = -1;
         while(opcaoc == -1) {
         System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
@@ -338,7 +352,7 @@ public class Menu {
     /**
      * Contem os menus de alugueres para o proprietarios.
      */
-    void menuAluguerProprietario(){
+    public void menuAluguerProprietario(int idProprietario){
         int opcaoc = 0;
         while (opcaoc == 0) {
             System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
@@ -352,21 +366,187 @@ public class Menu {
             System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
 
             //Apartir de aqui, é so chamar as funçoes necessarias dentro de um Switch
-            this.opcao = sc.nextInt();
+            opcaoc = sc.nextInt();
 
-            switch (opcaoc){
+            switch (opcaoc) {
                 case 1:
                     //Registar novo veiculo, caso ja exista um com esse id, da erro!
+                    registarCarro();
+                    int opcaoReg = 0;
+                    opcaoReg = sc.nextInt();
+                    switch (opcaoReg) {
+                        case 1:
+                            //Combustao
+                            Combustao temp = new Combustao();
+                            System.out.println("Matricula:");
+                            matricula = sc.next();
+                            sc.nextLine();
+                            System.out.println("Marca do carro:");
+                            matricula = sc.next();
+                            sc.nextLine();
+                            System.out.println("Velocidade Média:");
+                            velociademedia = sc.nextDouble();
+                            System.out.println("Preço:");
+                            preco = sc.nextDouble();
+                            System.out.println("Quantidade de combustivel no tanque:");
+                            capacidadeatual = sc.nextDouble();
+                            System.out.println("Capacidade do tanque:");
+                            capacidadetanque = sc.nextDouble();
+                            System.out.println("Comsumo médio de Combustivel:");
+                            consumomedio = sc.nextDouble();
+                            System.out.println("Coordenadas do carro:");
+                            x = sc.nextDouble();
+                            y = sc.nextDouble();
+                            sc.nextLine();
+
+                            temp.setMatricula(matricula);
+                            temp.setMarca(marca);
+                            temp.setVelocidadeMedia(velociademedia);
+                            temp.setPreco(preco);
+                            temp.setCapacidadeAtual(capacidadeatual);
+                            temp.setCapacidadeTanque(capacidadetanque);
+                            temp.setConsumoMedio(consumomedio);
+                            temp.setCoordenada(new Coordenada(x, y));
+                            temp.setIdProprietario(idProprietario);
+
+                            master.veiculos.put(temp.getMatricula(), temp);
+                            System.out.println("Veiculo adicionado com sucesso!");
+
+                            break;
+                        case 2:
+                            //Eletrico
+                            Eletrico eletemp = new Eletrico();
+                            System.out.println("Matricula:");
+                            matricula = sc.next();
+                            sc.nextLine();
+                            System.out.println("Marca do carro:");
+                            matricula = sc.next();
+                            sc.nextLine();
+                            System.out.println("Velocidade Média:");
+                            velociademedia = sc.nextDouble();
+                            System.out.println("Preço:");
+                            preco = sc.nextDouble();
+                            System.out.println("Quantidade de bateria:");
+                            bateriaatual = sc.nextDouble();
+                            System.out.println("Capacidade da bateria:");
+                            capaciadebateria = sc.nextDouble();
+                            System.out.println("Comsumo médio de bateria:");
+                            consumomediobateria = sc.nextDouble();
+                            System.out.println("Coordenadas do carro:");
+                            x = sc.nextDouble();
+                            y = sc.nextDouble();
+                            sc.nextLine();
+
+                            eletemp.setMatricula(matricula);
+                            eletemp.setMarca(marca);
+                            eletemp.setVelocidadeMedia(velociademedia);
+                            eletemp.setPreco(preco);
+                            eletemp.setBateriaAtual(bateriaatual);
+                            eletemp.setCapacidadeBateria(capaciadebateria);
+                            eletemp.setConsumoMedio(consumomediobateria);
+                            eletemp.setCoordenada(new Coordenada(x, y));
+                            eletemp.setIdProprietario(idProprietario);
+
+                            master.veiculos.put(eletemp.getMatricula(), eletemp);
+                            System.out.println("Veiculo adicionado com sucesso!");
+                            break;
+                        case 3:
+                            //Hibrido
+                            Hibrido htemp = new Hibrido();
+                            System.out.println("Matricula:");
+                            matricula = sc.next();
+                            sc.nextLine();
+                            System.out.println("Marca do carro:");
+                            matricula = sc.next();
+                            sc.nextLine();
+                            System.out.println("Velocidade Média:");
+                            velociademedia = sc.nextDouble();
+                            System.out.println("Preço:");
+                            preco = sc.nextDouble();
+                            System.out.println("Quantidade de combustivel no tanque:");
+                            capacidadeatual = sc.nextDouble();
+                            System.out.println("Capacidade do tanque:");
+                            capacidadetanque = sc.nextDouble();
+                            System.out.println("Comsumo médio de Combustivel:");
+                            consumomedio = sc.nextDouble();
+                            System.out.println("Quantidade de bateria:");
+                            bateriaatual = sc.nextDouble();
+                            System.out.println("Capacidade da bateria:");
+                            capaciadebateria = sc.nextDouble();
+                            System.out.println("Comsumo médio de bateria:");
+                            consumomediobateria = sc.nextDouble();
+                            System.out.println("Coordenadas do carro:");
+                            x = sc.nextDouble();
+                            y = sc.nextDouble();
+                            sc.nextLine();
+
+                            htemp.setMatricula(matricula);
+                            htemp.setMarca(marca);
+                            htemp.setVelocidadeMedia(velociademedia);
+                            htemp.setPreco(preco);
+                            htemp.setCapacidadeAtual(capacidadeatual);
+                            htemp.setCapacidadeTanque(capacidadetanque);
+                            htemp.setConsumoMedioCombustivel(consumomedio);
+                            htemp.setBateriaAtual(bateriaatual);
+                            htemp.setCapacidadeBateria(capaciadebateria);
+                            htemp.setConsumoMedioBateria(consumomediobateria);
+                            htemp.setCoordenada(new Coordenada(x, y));
+                            htemp.setIdProprietario(idProprietario);
+
+                            master.veiculos.put(htemp.getMatricula(), htemp);
+                            System.out.println("Veiculo adicionado com sucesso!");
+
+                            break;
+                        case 4:
+                            opcaoc = 0;
+                            break;
+                        }
+
                     opcaoc = 0;
                     break;
 
                 case 2:
                     //Abastecer um certo veiculo (deve receber ?matricula? do carro)
+                    System.out.println("Matricula:");
+                    matricula = sc.next();
+                    sc.nextLine();
+                    Carro te = (Carro) master.veiculos.get(matricula);
+                    if(te == null){
+                        System.out.println("Nao existe um carro com esta matricula na base de dados!");
+                        opcaoc = 0;
+                        break;
+                    }
+                    if(te.getTipo().equals("combustao")){
+                        Combustao c = (Combustao) te; //ISTO FAZ SENTIDO? SENAO NAO POSSO IMPRIMIR A QUANTIDADE DE COMBUSTIVEL ACTUAL.
+                        System.out.println("Quantidade de Combustivel a abastecer:");
+                        combustivel = sc.nextDouble();
+                        c.Abastecer(combustivel, 0);
+                        System.out.println("Abastecimento com sucesso");
+                        System.out.println("Combustivel actual: "+c.getCapacidadeTanque());
+                    }
+                    if(te.getTipo().equals("eletrico")){
+                        Eletrico e = (Eletrico) te; //ISTO FAZ SENTIDO? SENAO NAO POSSO IMPRIMIR A QUANTIDADE DE COMBUSTIVEL ACTUAL.
+                        System.out.println("Quantidade de Bateria a abastecer:");
+                        bateria = sc.nextDouble();
+                        e.Abastecer(0, bateria);
+                        System.out.println("Abastecimento com sucesso");
+                        System.out.println("Bateria actual: "+e.getBateriaAtual());
+                    }
+                    if(te.getTipo().equals("hibrido")){
+                        Hibrido h = (Hibrido) te;
+                        System.out.println("Quantidade de Combustivel a abastecer:");
+                        combustivel = sc.nextDouble();
+                        System.out.println("Quantidade de Bateria a abastecer:");
+                        bateria = sc.nextDouble();
+                        h.Abastecer(combustivel, bateria);
+                        System.out.println("Abastecimento com sucesso");
+                        System.out.println("Combustivel e Bateria actual: "+h.getCapacidadeAtual()+"  "+h.getBateriaAtual());
+                    }
                     opcaoc = 0;
                     break;
                 case 3:
                     //Imprimir lista de carros do proprietario
-                    System.out.println("entrei opcao 3\n");
+                    master.visualizarCarrosProprietario(idProprietario);
                     opcaoc = 0;
                     break;
                 case 4:
@@ -381,6 +561,8 @@ public class Menu {
             }
         }
     }
+
+
 
     public static void main(String args[]) throws Exception{
 
