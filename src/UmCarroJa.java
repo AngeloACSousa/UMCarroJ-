@@ -144,13 +144,14 @@ public class UmCarroJa{
     //Metodo de visualizar alugueres
     public void visualizarAlugueresCliente(int id){
         List<Integer> alugueres = clientes.get(id).getAlugueres();
-        Aluguer aluguer = new Aluguer();
+        Aluguer aluguer;
         for(int a : alugueres){
             aluguer = this.alugueres.get(a);
             System.out.println("Marca: " +this.veiculos.get(aluguer.getIdVeiculo()));
             System.out.println("Matricula: " +aluguer.getIdVeiculo());
             System.out.println("Data: " + aluguer.getData().toString());
             System.out.println("Preço: " +aluguer.getPreco());
+            System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
         }
     }
 
