@@ -42,6 +42,10 @@ public class Menu {
         return clientes.get(nif);
     }
 
+    public Proprietario getProprietario(Map<Integer, Proprietario> proprietarios, int nif){
+        return proprietarios.get(nif);
+    }
+
     /**
      * private String email;
      *     private String nome;
@@ -80,22 +84,31 @@ public class Menu {
                             if (clitemp.getPassword().equals(pass)) {
                                 System.out.println("ACCESS GRANTED");
                                 //AGORA ENTRA NO MENU DE ALUGUERES.
+                                menuAluguerCliente();
                             }
                             else {
                                 System.out.println("Pass errada!");
                             }
                         }
-                        //System.out.println("Pass:");
-                        //pass = sc.nextLine();
-                        //if (clitemp.getPassword() == pass){
-                        //    System.out.println("ACCESS GRANTED");
-                        //AGORA ENTRA NO MENU DE ALUGUERES.
-                        //}
-
                     }
-                    //imprime Cliente : "Nome do cliente"
+
+                    //Login de proprietarios
                     if (master.getProprietarios().containsKey(nif)) {
                         System.out.println("é um propriétario :D");
+                        //agora verifica a pass;
+                        Proprietario proptemp = getProprietario(master.getProprietarios(), nif);
+                        if (proptemp != null) {
+                            System.out.println("Pass:");
+                            pass = sc.nextLine();
+                            if (proptemp.getPassword().equals(pass)) {
+                                System.out.println("ACCESS GRANTED");
+                                //AGORA ENTRA NO MENU DE ALUGUERES.
+                                menuAluguerProprietario();
+                            }
+                            else {
+                                System.out.println("Pass errada!");
+                            }
+                        }
                     }
                     System.out.println("Não se encontra registado, por favor efectue o registo!");
                     this.opcao = 0;
@@ -107,6 +120,7 @@ public class Menu {
                     opcao2 = sc.nextInt();
 
                     switch (opcao2) {
+                        //Registo de Proprietarios
                         case 1:
                             System.out.println("Insira o seu email:");
                             mail = sc.next();
@@ -159,6 +173,8 @@ public class Menu {
                             System.out.println("Proprietario adicionado ao sistema!!");
                             this.opcao = 0;
                             break;
+
+                        //Registo de Clientes
                         case 2:
                             System.out.println("Insira o seu email:");
                             mail = sc.next();
@@ -246,9 +262,45 @@ public class Menu {
 
 
     /**
-     * Contem os menus de alugueres para o proprietario e para o cliente.
+     * Contem os menus de alugueres para o cliente.
      */
-    void menuAluguer(){
+    void menuAluguerCliente(){
+        System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
+        System.out.println("-                                Menu de Cliente                                           +");
+        System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
+        System.out.println("1. Login                                                                                   +");
+        System.out.println("2. Registo                                                                                 +");
+        System.out.println("3. Carregar Ficheiro                                                                       +");
+        System.out.println("4. Sair                                                                                    +");
+        System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
 
+        //Apartir de aqui, é so chamar as funçoes necessarias dentro de um Switch
+    }
+
+    /**
+     * Contem os menus de alugueres para o proprietarios.
+     */
+    void menuAluguerProprietario(){
+        System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
+        System.out.println("-                              Menu de Proprietario                                        +");
+        System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
+        System.out.println("1. Login                                                                                   +");
+        System.out.println("2. Registo                                                                                 +");
+        System.out.println("3. Carregar Ficheiro                                                                       +");
+        System.out.println("4. Sair                                                                                    +");
+        System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
+
+        //Apartir de aqui, é so chamar as funçoes necessarias dentro de um Switch
+        int opcaoc = 0;
+        switch (opcaoc){
+            case 1:
+                //
+                break;
+
+            case 2:
+
+                break;
+
+        }
     }
 }
