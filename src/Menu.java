@@ -186,7 +186,7 @@ public class Menu {
                             sc.nextLine();
                             System.out.println("Insira a sua morada:");
                             morada = sc.nextLine();
-                            System.out.println("Insira a sua data de nascimento (dia/mes/ano - Exemplo: 12/11/98):");
+                            System.out.println("Insira a sua data de nascimento (dia/mes/ano - Exemplo: 12-11-98):");
                             nascimento = sc.next();
                             sc.nextLine();
                             System.out.println("Insira o seu NIF:");
@@ -281,26 +281,46 @@ public class Menu {
      * Contem os menus de alugueres para o proprietarios.
      */
     void menuAluguerProprietario(){
-        System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
-        System.out.println("-                              Menu de Proprietario                                        +");
-        System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
-        System.out.println("1. Login                                                                                   +");
-        System.out.println("2. Registo                                                                                 +");
-        System.out.println("3. Carregar Ficheiro                                                                       +");
-        System.out.println("4. Sair                                                                                    +");
-        System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
-
-        //Apartir de aqui, é so chamar as funçoes necessarias dentro de um Switch
         int opcaoc = 0;
-        switch (opcaoc){
-            case 1:
-                //
-                break;
+        while (opcaoc == 0) {
+            System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
+            System.out.println("-                              Menu de Proprietario                                        +");
+            System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
+            System.out.println("1. Registar veiculo                                                                        +");
+            System.out.println("2. Abastecer Veiculo                                                                       +");
+            System.out.println("3. Lista de Veiculos                                                                       +");
+            System.out.println("4. Voltar                                                                                  +");
+            System.out.println("5. Sair                                                                                    +");
+            System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
 
-            case 2:
+            //Apartir de aqui, é so chamar as funçoes necessarias dentro de um Switch
+            this.opcao = sc.nextInt();
 
-                break;
+            switch (opcaoc){
+                case 1:
+                    //Registar novo veiculo, caso ja exista um com esse id, da erro!
+                    opcaoc = 0;
+                    break;
 
+                case 2:
+                    //Abastecer um certo veiculo (deve receber ?matricula? do carro)
+                    opcaoc = 0;
+                    break;
+                case 3:
+                    //Imprimir lista de carros do proprietario
+                    System.out.println("entrei opcao 3\n");
+                    opcaoc = 0;
+                    break;
+                case 4:
+                    //Voltar ao menu anterior
+                    opcaoc = -1;
+                    break;
+                case 5:
+                    //sair
+                    System.out.println("A sair do programa!!");
+                    System.exit(0);
+                    break;
+            }
         }
     }
 }
