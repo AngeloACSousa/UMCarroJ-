@@ -33,7 +33,6 @@ public class Hibrido extends Carro {
 
     /**
      * Construtor parameterizado
-     * @param id
      * @param velocidademedia
      * @param preco
      * @param consumoMedioBateria

@@ -2,10 +2,13 @@ import Tracking.Coordenada;
 import Utilizadores.Cliente;
 import Utilizadores.Proprietario;
 
+import java.lang.reflect.Array;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.concurrent.Callable;
 
 public class Menu {
 
@@ -259,22 +262,68 @@ public class Menu {
             }
         }
     }
+    void opcaoMenu(ArrayList<String> optionsMsg, ArrayList<Runnable> actions) throws Exception{
+        if(optionsMsg.size() != actions.size()) throw new Exception("Erro na interface");
+        int opcao = -1;
+        int i = 1;
+        for(String s : optionsMsg){
+            System.out.println(i + ". " + s);
+            i++;
+        }
+        System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
+        while(opcao == -1){
+            try{
+                opcao = sc.nextInt();
+                if(opcao < 1 || opcao > optionsMsg.size() + 1) opcao = -1;
+            }catch (Exception e){
+                System.out.println("Opcao nao existe");
+            }
+        }
+        actions.get(opcao-1).run();
+    }
+
+    void menuPrincipal() throws Exception{
+        ArrayList<String> options = new ArrayList<>();
+        ArrayList<Runnable> actions = new ArrayList<>();
+
+        options.add("Click Me");
+        actions.add(this::menuAluguerCliente);
+
+        opcaoMenu(options, actions);
+    }
+
 
 
     /**
      * Contem os menus de alugueres para o cliente.
      */
     void menuAluguerCliente(){
+
+        ArrayList<String> options = new ArrayList<>();
+        ArrayList<Runnable> actions = new ArrayList<>();
         System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
         System.out.println("-                                Menu de Cliente                                           +");
         System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
-        System.out.println("1. Login                                                                                   +");
-        System.out.println("2. Registo                                                                                 +");
-        System.out.println("3. Carregar Ficheiro                                                                       +");
-        System.out.println("4. Sair                                                                                    +");
-        System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
 
-        //Apartir de aqui, é so chamar as funçoes necessarias dentro de um Switch
+        options.add("Registo dos Alugueres                                                                   +");
+        options.add("Fazer Aluguer                                                                           +");
+        options.add("Sair                                                                                    +");
+
+        actions.add(this::naoFeito);
+        actions.add(this::naoFeito);
+        actions.add(this::naoFeito);
+
+       try {
+           opcaoMenu(options,actions);
+       }
+       catch (Exception e){
+           System.out.println(e.getMessage());
+       }
+
+    }
+
+    void naoFeito(){
+        System.out.println("nao ta feito");
     }
 
     /**
@@ -322,5 +371,10 @@ public class Menu {
                     break;
             }
         }
+    }
+
+    public static void main(String args[]) throws Exception{
+        Menu m = new Menu();
+        m.menuPrincipal();
     }
 }
