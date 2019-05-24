@@ -141,6 +141,20 @@ public class UmCarroJa{
         }
     }
 
+    //Metodo de visualizar alugueres
+    public void visualizarAlugueresCliente(int id){
+        List<Integer> alugueres = clientes.get(id).getAlugueres();
+        Aluguer aluguer = new Aluguer();
+        for(int a : alugueres){
+            aluguer = this.alugueres.get(a);
+            System.out.println("Marca: " +this.veiculos.get(aluguer.getIdVeiculo()));
+            System.out.println("Matricula: " +aluguer.getIdVeiculo());
+            System.out.println("Data: " + aluguer.getData().toString());
+            System.out.println("Preço: " +aluguer.getPreco());
+        }
+    }
+
+    // ESTADO DO PROGRAMA ////////////////////////////////////////////
     public void gravarEstado(String filename) throws IOException {
         ObjectOutputStream oout = new ObjectOutputStream(new FileOutputStream(filename));
         oout.writeObject(this);
@@ -156,5 +170,6 @@ public class UmCarroJa{
 
         return umCarroJa;
     }
+
 
 }

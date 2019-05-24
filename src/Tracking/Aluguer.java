@@ -1,5 +1,7 @@
 package Tracking;
 
+import java.time.LocalDate;
+
 /**
  * Classe Alugueres
  */
@@ -13,6 +15,8 @@ public class Aluguer {
     private Coordenada coordFin;
     private double tempoViagem;
     private double classMedia;
+    private LocalDate data;
+    private double preco;
 
     /**
      * Construtores --------------------------------------------------------------------------------------
@@ -27,6 +31,8 @@ public class Aluguer {
         this.coordFin = new Coordenada();
         this.tempoViagem = 0.0;
         this.classMedia = 0.0;
+        this.data = LocalDate.now();
+        this.preco = 0;
     }
 
     /**
@@ -41,7 +47,7 @@ public class Aluguer {
      * @param classMedia
      */
     public Aluguer(int idAluguer,int idCliente,int idProprietario,String idVeiculo,
-                     Coordenada a,Coordenada b, double tempoViagem,double classMedia){
+                     Coordenada a,Coordenada b, double tempoViagem,double classMedia,LocalDate data,double preco){
         this.idAluguer = idAluguer;
         this.idCliente = idCliente;
         this.idProprietario = idProprietario;
@@ -50,6 +56,8 @@ public class Aluguer {
         this.coordFin = new Coordenada(b);
         this.tempoViagem = tempoViagem;
         this.classMedia = classMedia;
+        this.data = LocalDate.of(data.getYear(),data.getMonth(),data.getDayOfMonth());
+        this.preco = preco;
     }
 
     /**
@@ -65,6 +73,8 @@ public class Aluguer {
         this.coordFin = v.getCoordenadaF();
         this.tempoViagem = v.getTempoViagem();
         this.classMedia = v.getClassMedia();
+        this.data = v.getData();
+        this.preco = v.getPreco();
     }
 
     /**
@@ -103,6 +113,14 @@ public class Aluguer {
         return this.classMedia;
     }
 
+    public LocalDate getData() {
+        return LocalDate.of(data.getYear(),data.getMonth(),data.getDayOfMonth());
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
     /**
      * setters------------------------------------------------------------------------------------------------
      * @param a
@@ -137,6 +155,14 @@ public class Aluguer {
 
     public void setClassMedia(double cm){
         this.classMedia = cm;
+    }
+
+    public void setData(LocalDate data) {
+        this.data = LocalDate.of(data.getYear(),data.getMonth(),data.getDayOfMonth());
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
     }
 
     /**
@@ -195,6 +221,11 @@ public class Aluguer {
         sb.append(this.tempoViagem+"\n");
         sb.append("Calssificacao da utilizacao: "); //Classificacao do veiculo?
         sb.append(this.classMedia+"\n");
+        sb.append("Data: ");
+        sb.append(this.data.toString()+"\n");
+        sb.append("Preco: ");
+        sb.append(this.preco+ "\n");
+
         
         return sb.toString();
     }

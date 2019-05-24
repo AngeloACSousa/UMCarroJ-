@@ -290,7 +290,8 @@ public class Menu {
      * Contem os menus de alugueres para o cliente.
      */
     void menuAluguerCliente(int idCliente){
-
+        int opcaoc = -1;
+        while(opcaoc == -1) {
         System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
         System.out.println("-                                Menu de Cliente                                           +");
         System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
@@ -299,8 +300,8 @@ public class Menu {
         System.out.println("3. Voltar                                                                                  +");
         System.out.println("4. Sair                                                                                    +");
         System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
-        int opcaoc = -1;
-        while(opcaoc == -1) {
+
+
             try {
                 opcaoc = sc.nextInt();
                 if (opcaoc < 1 || opcaoc > 1) opcao = -1;
