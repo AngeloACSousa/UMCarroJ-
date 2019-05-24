@@ -24,7 +24,8 @@ public class Menu {
         System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
         System.out.println("1. Login                                                                                   +");
         System.out.println("2. Registo                                                                                 +");
-        System.out.println("3. Sair                                                                                    +");
+        System.out.println("3. Carregar Ficheiro                                                                       +");
+        System.out.println("4. Sair                                                                                    +");
         System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
     }
 
@@ -227,6 +228,10 @@ public class Menu {
                     break;
                 //sair
                 case 3:
+                    //
+                    System.out.println("");
+                    break;
+                case 4:
                     System.out.println("A sair do programa!!");
                     System.exit(0);
                     break;
