@@ -232,33 +232,7 @@ public class Menu {
                                 }
                             }
                             System.out.println("Insira as suas coordenadas:");
-                            op = 0;
-                            while (op == 0) {
-                                try {
-                                    x = sc.nextDouble();
-                                    sc.nextLine();
-                                    if (x < 1) op = 0;
-                                    else op = 1;
-                                } catch (Exception e) {
-                                    System.out.println("Input invalido ");
-                                    sc.nextLine();
-                                    op = 0;
-                                }
-                            }
-
-                            op = 0;
-                            while (op == 0) {
-                                try {
-                                    y = sc.nextDouble();
-                                    sc.nextLine();
-                                    if (y < 1) op = 0;
-                                    else op = 1;
-                                } catch (Exception e) {
-                                    System.out.println("Input invalido ");
-                                    sc.nextLine();
-                                    op = 0;
-                                }
-                            }
+                            Coordenada c = getCoordenada();
                             if (master.clientes.containsKey(nif)) {
                                 System.out.println("Ja existe um Cliente com esse NIF!");
                                 System.out.println("Registo anulado!");
@@ -272,7 +246,7 @@ public class Menu {
                             Ctemp.setPassword(pass);
                             Ctemp.setMorada(morada);
                             Ctemp.setNif(nif);
-                            Ctemp.setCoordenada(new Coordenada(x, y));
+                            Ctemp.setCoordenada(new Coordenada(c));
 
                             master.clientes.put(Ctemp.getNif(), Ctemp);
                             System.out.println("Cliente adicionado ao sistema!");
@@ -333,46 +307,85 @@ public class Menu {
      * Contem os menus de alugueres para o cliente.
      */
     public void menuAluguerCliente(int idCliente){
-        int opcaoc = -1;
-        while(opcaoc == -1) {
-        System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
-        System.out.println("-                                Menu de Cliente                                           +");
-        System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
-        System.out.println("1. Ver histórico de Alugueres                                                              +");
-        System.out.println("2. Fazer Aluguer                                                                           +");
-        System.out.println("3. Voltar                                                                                  +");
-        System.out.println("4. Sair                                                                                    +");
-        System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
+        int opcaoc = 0;
+        while(opcaoc == 0) {
+            System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
+            System.out.println("-                                Menu de Cliente                                           +");
+            System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
+            System.out.println("1. Ver histórico de Alugueres                                                              +");
+            System.out.println("2. Fazer Aluguer                                                                           +");
+            System.out.println("3. Voltar                                                                                  +");
+            System.out.println("4. Sair                                                                                    +");
+            System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
 
 
             try {
                 opcaoc = sc.nextInt();
-                if (opcaoc < 1 || opcaoc > 1) opcaoc = -1;
+                if (opcaoc < 1) opcaoc = 0;
             } catch (Exception e) {
                 System.out.println("Opcao nao existe");
                 sc.next();
             }
-        }
-        switch (opcaoc){
-            case 1:
-                master.visualizarAlugueresCliente(idCliente);
-                opcaoc = 0;
-                break;
 
-            case 2:
-                naoFeito();
-                opcaoc = 0;
-                break;
-            case 3:
-                naoFeito();
-                System.out.println("entrei opcao 3\n");
-                opcaoc = 0;
-                break;
-            case 4:
-                naoFeito();
-                opcaoc = -1;
-                break;
+            switch (opcaoc) {
+                case 1:
+                    master.visualizarAlugueresCliente(idCliente);
+                    opcaoc = 0;
+                    break;
+
+                case 2:
+                    naoFeito();
+                    opcaoc = 0;
+                    break;
+                case 3:
+                    opcaoc = -1;
+                    break;
+                case 4:
+                    System.out.println("A sair");
+                    System.exit(0);
+                    break;
+            }
         }
+    }
+    void aluguer() {
+        int opcaoc = 0;
+        while (opcaoc == 0) {
+            System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
+            System.out.println("-                              Menu de Aluguer                                             +");
+            System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
+            System.out.println("Indique as Coordenadas para onde pretende deslocar-se                                     +");
+            int op = 0;
+
+        }
+    }
+
+    public Coordenada getCoordenada(){
+        while (op == 0) {
+            try {
+                x = sc.nextDouble();
+                sc.nextLine();
+                if (x < 1) op = 0;
+                else op = 1;
+            } catch (Exception e) {
+                System.out.println("Input invalido ");
+                sc.nextLine();
+                op = 0;
+            }
+        }
+        op = 0;
+        while (op == 0) {
+            try {
+                y = sc.nextDouble();
+                sc.nextLine();
+                if (y < 1) op = 0;
+                else op = 1;
+            } catch (Exception e) {
+                System.out.println("Input invalido ");
+                sc.nextLine();
+                op = 0;
+            }
+        }
+        return new Coordenada(x,y);
     }
 
     void naoFeito(){
@@ -574,33 +587,7 @@ public class Menu {
             }
         }
         System.out.println("Coordenadas do carro:");
-        op = 0;
-        while (op == 0) {
-            try {
-                x = sc.nextDouble();
-                sc.nextLine();
-                if (x < 1) op = 0;
-                else op = 1;
-            } catch (Exception e) {
-                System.out.println("Input invalido ");
-                sc.nextLine();
-                op = 0;
-            }
-        }
-
-        op = 0;
-        while (op == 0) {
-            try {
-                y = sc.nextDouble();
-                sc.nextLine();
-                if (y < 1) op = 0;
-                else op = 1;
-            } catch (Exception e) {
-                System.out.println("Input invalido ");
-                sc.nextLine();
-                op = 0;
-            }
-        }
+        Coordenada c = getCoordenada();
 
         ctemp.setMatricula(matricula);
         ctemp.setMarca(marca);
@@ -609,12 +596,12 @@ public class Menu {
         ctemp.setCapacidadeAtual(capacidadeatual);
         ctemp.setCapacidadeTanque(capacidadetanque);
         ctemp.setConsumoMedio(consumomedio);
-        ctemp.setCoordenada(new Coordenada(x, y));
+        ctemp.setCoordenada(new Coordenada(c));
         ctemp.setIdProprietario(idProprietario);
         master.veiculos.put(ctemp.getMatricula(), ctemp);
-        List<String> c = new ArrayList<>(master.proprietarios.get(idProprietario).getVeiculos());
-        c.add(matricula);
-        master.proprietarios.get(idProprietario).setVeiculos(c);
+        List<String> ca = new ArrayList<>(master.proprietarios.get(idProprietario).getVeiculos());
+        ca.add(matricula);
+        master.proprietarios.get(idProprietario).setVeiculos(ca);
         System.out.println("Veiculo adicionado com sucesso!");
     }
 
@@ -692,33 +679,7 @@ public class Menu {
             }
         }
         System.out.println("Coordenadas do carro:");
-        op = 0;
-        while (op == 0) {
-            try {
-                x = sc.nextDouble();
-                sc.nextLine();
-                if (x < 1) op = 0;
-                else op = 1;
-            } catch (Exception e) {
-                System.out.println("Input invalido ");
-                sc.nextLine();
-                op = 0;
-            }
-        }
-
-        op = 0;
-        while (op == 0) {
-            try {
-                y = sc.nextDouble();
-                sc.nextLine();
-                if (y < 1) op = 0;
-                else op = 1;
-            } catch (Exception e) {
-                System.out.println("Input invalido ");
-                sc.nextLine();
-                op = 0;
-            }
-        }
+        Coordenada c = getCoordenada();
 
         eletemp.setMatricula(matricula);
         eletemp.setMarca(marca);
@@ -727,7 +688,7 @@ public class Menu {
         eletemp.setBateriaAtual(bateriaatual);
         eletemp.setCapacidadeBateria(capaciadebateria);
         eletemp.setConsumoMedio(consumomediobateria);
-        eletemp.setCoordenada(new Coordenada(x, y));
+        eletemp.setCoordenada(new Coordenada(c));
         eletemp.setIdProprietario(idProprietario);
 
         master.veiculos.put(eletemp.getMatricula(), eletemp);
@@ -854,33 +815,7 @@ public class Menu {
             }
         }
         System.out.println("Coordenadas do carro:");
-        op = 0;
-        while (op == 0) {
-            try {
-                x = sc.nextDouble();
-                sc.nextLine();
-                if (x < 1) op = 0;
-                else op = 1;
-            } catch (Exception e) {
-                System.out.println("Input invalido ");
-                sc.nextLine();
-                op = 0;
-            }
-        }
-
-        op = 0;
-        while (op == 0) {
-            try {
-                y = sc.nextDouble();
-                sc.nextLine();
-                if (y < 1 ) op = 0;
-                else op = 1;
-            } catch (Exception e) {
-                System.out.println("Input invalido ");
-                sc.nextLine();
-                op = 0;
-            }
-        }
+        Coordenada c = getCoordenada();
 
         htemp.setMatricula(matricula);
         htemp.setMarca(marca);
@@ -892,7 +827,7 @@ public class Menu {
         htemp.setBateriaAtual(bateriaatual);
         htemp.setCapacidadeBateria(capaciadebateria);
         htemp.setConsumoMedioBateria(consumomediobateria);
-        htemp.setCoordenada(new Coordenada(x, y));
+        htemp.setCoordenada(new Coordenada(c));
         htemp.setIdProprietario(idProprietario);
 
         master.veiculos.put(htemp.getMatricula(), htemp);

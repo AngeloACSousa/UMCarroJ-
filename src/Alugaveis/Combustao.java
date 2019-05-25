@@ -166,6 +166,5 @@ public class Combustao extends Carro {
 
     public void Abastecer(double quantidadeC, double quantidadeB){
         this.setCapacidadeAtual(getCapacidadeAtual() + quantidadeC);
-
     }
 }

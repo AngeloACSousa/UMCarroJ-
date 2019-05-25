@@ -136,6 +136,9 @@ public class UmCarroJa{
     //Metodo de visualizar Alugueres
     public void visualizarAlugueresCliente(int id){
         List<Integer> alugueres = clientes.get(id).getAlugueres();
+        if(alugueres.isEmpty()){
+            System.out.println("Não existe registo de alugueres");
+        }
         Aluguer aluguer;
         for(int a : alugueres){
             aluguer = this.alugueres.get(a);
@@ -144,6 +147,25 @@ public class UmCarroJa{
             System.out.println("Matricula: " +aluguer.getIdVeiculo());
             System.out.println("Data: " + aluguer.getData().toString());
             System.out.println("Preço: " +aluguer.getPreco()+"\n");
+            System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
+        }
+    }
+
+    public void visualizarAlugueresProprietario(int id){
+        List<Integer> alugueres = proprietarios.get(id).getAlugueres();
+        Aluguer aluguer;
+        if(alugueres.isEmpty()){
+            System.out.println("Não existe registo de alugueres");
+            return;
+        }
+        for(int a : alugueres){
+            aluguer = this.alugueres.get(a);
+            System.out.println("Marca: " +this.veiculos.get(aluguer.getIdVeiculo()).getMarca());
+            System.out.println("Tipo: "+ this.veiculos.get(aluguer.getIdVeiculo()).getTipo());
+            System.out.println("Matricula: " +aluguer.getIdVeiculo());
+            System.out.println("Data: " + aluguer.getData().toString());
+            System.out.println("Preço: " +aluguer.getPreco()+"\n");
+            System.out.println("Cliente: "+clientes.get(aluguer.getIdCliente()).getNome());
             System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
         }
     }
@@ -251,7 +273,7 @@ public class UmCarroJa{
     }
 
     //Metodo de realizar Alugueres
-    public void fazerAluguer(int idCliente){
+    public void fazerAluguer(int idCliente, int opcao){
 
     }
 
