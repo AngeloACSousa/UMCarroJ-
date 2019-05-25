@@ -7,6 +7,7 @@ import java.lang.reflect.Array;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.concurrent.Callable;
@@ -380,7 +381,7 @@ public class Menu {
                             matricula = sc.next();
                             sc.nextLine();
                             System.out.println("Marca do carro:");
-                            matricula = sc.next();
+                            marca = sc.next();
                             sc.nextLine();
                             System.out.println("Velocidade Média:");
                             velociademedia = sc.nextDouble();
@@ -406,11 +407,13 @@ public class Menu {
                             ctemp.setConsumoMedio(consumomedio);
                             ctemp.setCoordenada(new Coordenada(x, y));
                             ctemp.setIdProprietario(idProprietario);
-
                             master.veiculos.put(ctemp.getMatricula(), ctemp);
-                            master.proprietarios.get(idProprietario).getVeiculos().add(ctemp.getMatricula());
+                            List<String> c = new ArrayList<>(master.proprietarios.get(idProprietario).getVeiculos());
+                            c.add(matricula);
+                            master.proprietarios.get(idProprietario).setVeiculos(c);
+                            System.out.println(master.veiculos.get(matricula).toString());
+                            System.out.println(master.proprietarios.get(idProprietario).toString());
                             System.out.println("Veiculo adicionado com sucesso!");
-                            System.out.println(master.proprietarios.get(idProprietario).getVeiculos().toString());
                             break;
                         case 2:
                             //Eletrico
@@ -419,7 +422,7 @@ public class Menu {
                             matricula = sc.next();
                             sc.nextLine();
                             System.out.println("Marca do carro:");
-                            matricula = sc.next();
+                            marca = sc.next();
                             sc.nextLine();
                             System.out.println("Velocidade Média:");
                             velociademedia = sc.nextDouble();
@@ -456,7 +459,7 @@ public class Menu {
                             matricula = sc.next();
                             sc.nextLine();
                             System.out.println("Marca do carro:");
-                            matricula = sc.next();
+                            marca = sc.next();
                             sc.nextLine();
                             System.out.println("Velocidade Média:");
                             velociademedia = sc.nextDouble();
