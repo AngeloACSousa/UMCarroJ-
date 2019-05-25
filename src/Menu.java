@@ -183,7 +183,6 @@ public class Menu {
                                 break;
                             }
                             Ptemp.setNif(nif);
-                            System.out.println("chego aqui4\n");
                             master.proprietarios.put(Ptemp.getNif(), Ptemp);
                             System.out.println("Proprietario adicionado ao sistema!!");
                             this.opcao = 0;
@@ -376,7 +375,7 @@ public class Menu {
                     switch (opcaoReg) {
                         case 1:
                             //Combustao
-                            Combustao temp = new Combustao();
+                            Combustao ctemp = new Combustao();
                             System.out.println("Matricula:");
                             matricula = sc.next();
                             sc.nextLine();
@@ -398,19 +397,20 @@ public class Menu {
                             y = sc.nextDouble();
                             sc.nextLine();
 
-                            temp.setMatricula(matricula);
-                            temp.setMarca(marca);
-                            temp.setVelocidadeMedia(velociademedia);
-                            temp.setPreco(preco);
-                            temp.setCapacidadeAtual(capacidadeatual);
-                            temp.setCapacidadeTanque(capacidadetanque);
-                            temp.setConsumoMedio(consumomedio);
-                            temp.setCoordenada(new Coordenada(x, y));
-                            temp.setIdProprietario(idProprietario);
+                            ctemp.setMatricula(matricula);
+                            ctemp.setMarca(marca);
+                            ctemp.setVelocidadeMedia(velociademedia);
+                            ctemp.setPreco(preco);
+                            ctemp.setCapacidadeAtual(capacidadeatual);
+                            ctemp.setCapacidadeTanque(capacidadetanque);
+                            ctemp.setConsumoMedio(consumomedio);
+                            ctemp.setCoordenada(new Coordenada(x, y));
+                            ctemp.setIdProprietario(idProprietario);
 
-                            master.veiculos.put(temp.getMatricula(), temp);
+                            master.veiculos.put(ctemp.getMatricula(), ctemp);
+                            master.proprietarios.get(idProprietario).getVeiculos().add(ctemp.getMatricula());
                             System.out.println("Veiculo adicionado com sucesso!");
-
+                            System.out.println(master.proprietarios.get(idProprietario).getVeiculos().toString());
                             break;
                         case 2:
                             //Eletrico
@@ -460,7 +460,7 @@ public class Menu {
                             sc.nextLine();
                             System.out.println("Velocidade Média:");
                             velociademedia = sc.nextDouble();
-                            System.out.println("Preço:");
+                            System.out.println("Preço: (por exemplo 1,5€)");
                             preco = sc.nextDouble();
                             System.out.println("Quantidade de combustivel no tanque:");
                             capacidadeatual = sc.nextDouble();
