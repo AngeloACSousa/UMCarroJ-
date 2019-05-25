@@ -177,7 +177,7 @@ public abstract class Veiculo {
                 && this.idProprietario == aux.getIdProprietario()
                 && this.marca.equals(aux.getMarca());
     }
-
+    public abstract double precoViagem(Coordenada c);
     public String toString(){
         StringBuilder sb = new StringBuilder();
 

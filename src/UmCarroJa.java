@@ -133,13 +133,14 @@ public class UmCarroJa{
         }
     }
 
-    //Metodo de visualizar alugueres
+    //Metodo de visualizar Alugueres
     public void visualizarAlugueresCliente(int id){
         List<Integer> alugueres = clientes.get(id).getAlugueres();
         Aluguer aluguer;
         for(int a : alugueres){
             aluguer = this.alugueres.get(a);
-            System.out.println("Marca: " +this.veiculos.get(aluguer.getIdVeiculo()));
+            System.out.println("Marca: " +this.veiculos.get(aluguer.getIdVeiculo()).getMarca());
+            System.out.println("Tipo: "+ this.veiculos.get(aluguer.getIdVeiculo()).getTipo());
             System.out.println("Matricula: " +aluguer.getIdVeiculo());
             System.out.println("Data: " + aluguer.getData().toString());
             System.out.println("Preço: " +aluguer.getPreco());
@@ -147,13 +148,111 @@ public class UmCarroJa{
         }
     }
 
-    //Metodo de visualizar alugueres
+    //Metodo de visualizar Carros
     public void visualizarCarrosProprietario(int id){
         List<String> carros = proprietarios.get(id).getVeiculos();
         for(String c : carros){
             System.out.println("Marca: " +this.veiculos.get(c).getMarca());
+            System.out.println("Tipo: "+ this.veiculos.get(c).getTipo());
             System.out.println("Matricula: " +this.veiculos.get(c).getMatricula());
         }
+    }
+
+    //metodos de procura de carros--------------------------------------------------------------------------------------
+
+
+    /**
+     * Calcula o carro mais perto do cliente.
+     * @param idCliente
+     * @return carro mais perto
+     */
+
+    public Veiculo maisPerto(int idCliente){
+        Veiculo res = null;
+        double dist = Double.MAX_VALUE;
+        for(Veiculo c : veiculos.values()){
+            double dist_temp = clientes.get(idCliente).getCoordenada().distancia(c.getCoordenada());
+            if(dist_temp < dist){
+                dist = dist_temp;
+                res = c.clone(); //não sei se isto pode ser assim
+            }
+        }
+        return res;
+    }
+
+    /**Calcula carro mais barato usando o destino da viagem como referencia
+     * @param destino Coordenada
+     * @param idCliente
+     * @return carro mais barato
+     */
+
+    public Veiculo maisBarato(int idCliente, Coordenada destino){
+        Veiculo res = null;
+        double preco = Double.MAX_VALUE;
+        for(Veiculo c : this.veiculos.values()){
+            double precoTeste = c.getPreco() * clientes.get(idCliente).getCoordenada().distancia(destino);
+            if(precoTeste < preco){
+                preco = precoTeste;
+                res = c.clone();
+            }
+        }
+        return res;
+    }
+
+    /**Calcula carro mais barato dentro de uma distancia que
+     * o Cliente pode ir a pe
+     *
+     * @return carro mais barato
+     */
+    public Veiculo maisBaratoAPe (int idCliente,double km, Coordenada destino){
+        Veiculo carroRes = null;
+        double preco =Double.MAX_VALUE;
+        for(Veiculo c : veiculos.values()){
+            double precoTeste = c.precoViagem(destino);
+
+            if(precoTeste < preco && clientes.get(idCliente).getCoordenada().distancia(c.getCoordenada())< km ){
+                preco=precoTeste;
+                carroRes=c.clone();
+            }
+        }
+
+        return carroRes;
+    }
+
+    /**Calcula carro mais barato dentro de um tempo que
+     * o Cliente quer andar a pe
+     *
+     * @param carros hashmap
+     * @param tempo maximo
+     * @return carro mais barato
+     */
+
+    /**
+     *transforma dstancia em minutos
+     *
+     */
+    public double time(double dist){
+        return dist*60/4;
+    }
+
+    public Veiculo maisBaratoTempo (int idCliente, double tempo, Coordenada destino){
+        Veiculo res = null;
+        double preco =Double.MAX_VALUE;
+        for(Veiculo c : veiculos.values()){
+            double precoTeste = c.precoViagem(destino);
+
+            if(precoTeste < preco && time(clientes.get(idCliente).getCoordenada().distancia(c.getCoordenada()))< tempo){
+                preco=precoTeste;
+                res=c.clone();
+            }
+        }
+
+        return res;
+    }
+
+    //Metodo de realizar Alugueres
+    public void fazerAluguer(int idCliente){
+
     }
 
     // ESTADO DO PROGRAMA ////////////////////////////////////////////

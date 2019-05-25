@@ -324,6 +324,7 @@ public class Menu {
         }
         switch (opcaoc){
             case 1:
+                master.visualizarAlugueresCliente(idCliente);
                 opcaoc = 0;
                 break;
 
