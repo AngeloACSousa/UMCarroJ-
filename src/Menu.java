@@ -149,6 +149,7 @@ public class Menu {
                             System.out.println("Insira a sua morada:");
                             morada = sc.nextLine();
                             System.out.println("Insira a sua data de nascimento (dia-mes-ano - Exemplo: 12-11-98):");
+                            op = 0;
                             while(op == 0){
                                 try{
                                     nascimento = sc.next();
@@ -156,7 +157,7 @@ public class Menu {
                                     op = 1;
                                 }catch(Exception e){
                                     System.out.println("Data em formato invalido, insira novamente no formato dia-mes-ano");
-                                    this.opcao = 0;
+                                    op = 0;
                                 }
                             }
                             sc.nextLine();
@@ -167,6 +168,7 @@ public class Menu {
                                 try {
                                     nif = sc.nextInt();
                                     if (nif < 1) op = 0;
+                                    else op = 1;
                                 } catch (Exception e) {
                                     System.out.println("Input invalido ");
                                     sc.next();
@@ -204,7 +206,16 @@ public class Menu {
                             System.out.println("Insira a sua morada:");
                             morada = sc.nextLine();
                             System.out.println("Insira a sua data de nascimento (dia/mes/ano - Exemplo: 12-11-98):");
-                            nascimento = sc.next();
+                            while(op == 0){
+                                try{
+                                    nascimento = sc.next();
+                                    LocalDate n = LocalDate.parse(nascimento,format);
+                                    op = 1;
+                                }catch(Exception e){
+                                    System.out.println("Data em formato invalido, insira novamente no formato dia-mes-ano");
+                                    op = 0;
+                                }
+                            }
                             sc.nextLine();
                             System.out.println("Insira o seu NIF:");
                             //nif = sc.nextInt();
@@ -212,12 +223,12 @@ public class Menu {
                             while (op == 0) {
                                 try {
                                     nif = sc.nextInt();
-                                    if (nif < 1 || nif > 1) op = 1;
+                                    if (nif < 1) op = 0;
+                                    else op = 1;
                                 } catch (Exception e) {
                                     System.out.println("Input invalido");
                                     sc.nextLine();
                                     op = 0;
-                                    break;
                                 }
                             }
                             System.out.println("Insira as suas coordenadas:");
@@ -226,12 +237,12 @@ public class Menu {
                                 try {
                                     x = sc.nextDouble();
                                     sc.nextLine();
-                                    if (x < 1 || x > 1) op = 1;
+                                    if (x < 1) op = 0;
+                                    else op = 1;
                                 } catch (Exception e) {
                                     System.out.println("Input invalido ");
                                     sc.nextLine();
                                     op = 0;
-                                    break;
                                 }
                             }
 
@@ -240,12 +251,12 @@ public class Menu {
                                 try {
                                     y = sc.nextDouble();
                                     sc.nextLine();
-                                    if (y < 1 || y > 1) op = 1;
+                                    if (y < 1) op = 0;
+                                    else op = 1;
                                 } catch (Exception e) {
                                     System.out.println("Input invalido ");
                                     sc.nextLine();
                                     op = 0;
-                                    break;
                                 }
                             }
                             if (master.clientes.containsKey(nif)) {
@@ -260,14 +271,6 @@ public class Menu {
                             Ctemp.setNome(nome);
                             Ctemp.setPassword(pass);
                             Ctemp.setMorada(morada);
-                            try {
-                                Ctemp.setNascimento(LocalDate.parse(nascimento, format));
-                            } catch (Exception e) {
-                                System.out.println("Data em formato Incalido: " + e);
-                                System.out.println("Registo Invalido, tente de novo!");
-                                this.opcao = 0;
-                                break;
-                            }
                             Ctemp.setNif(nif);
                             Ctemp.setCoordenada(new Coordenada(x, y));
 
@@ -388,8 +391,10 @@ public class Menu {
             System.out.println("1. Registar veiculo                                                                        +");
             System.out.println("2. Abastecer Veiculo                                                                       +");
             System.out.println("3. Lista de Veiculos                                                                       +");
-            System.out.println("4. Voltar                                                                                  +");
-            System.out.println("5. Sair                                                                                    +");
+            System.out.println("4. Lista de Alugueres                                                                      +");
+            System.out.println("4. Visualizar Veiculo especifico                                                           +");
+            System.out.println("5. Voltar                                                                                  +");
+            System.out.println("6. Sair                                                                                    +");
             System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
 
             //Apartir de aqui, é so chamar as funçoes necessarias dentro de um Switch
@@ -427,12 +432,12 @@ public class Menu {
                                 try {
                                     x = sc.nextDouble();
                                     sc.nextLine();
-                                    if (x < 1 || x > 1) op = 1;
+                                    if (x < 1) op = 0;
+                                    else op = 1;
                                 } catch (Exception e) {
                                     System.out.println("Input invalido ");
                                     sc.nextLine();
                                     op = 0;
-                                    break;
                                 }
                             }
 
@@ -441,12 +446,12 @@ public class Menu {
                                 try {
                                     y = sc.nextDouble();
                                     sc.nextLine();
-                                    if (y < 1 || y > 1) op = 1;
+                                    if (y < 1) op = 0;
+                                    else op = 1;
                                 } catch (Exception e) {
                                     System.out.println("Input invalido ");
                                     sc.nextLine();
                                     op = 0;
-                                    break;
                                 }
                             }
 
@@ -490,12 +495,12 @@ public class Menu {
                                 try {
                                     x = sc.nextDouble();
                                     sc.nextLine();
-                                    if (x < 1 || x > 1) op = 1;
+                                    if (x < 1) op = 0;
+                                    else op = 1;
                                 } catch (Exception e) {
                                     System.out.println("Input invalido ");
                                     sc.nextLine();
                                     op = 0;
-                                    break;
                                 }
                             }
 
@@ -504,12 +509,12 @@ public class Menu {
                                 try {
                                     y = sc.nextDouble();
                                     sc.nextLine();
-                                    if (y < 1 || y > 1) op = 1;
+                                    if (y < 1) op = 0;
+                                    else op = 1;
                                 } catch (Exception e) {
                                     System.out.println("Input invalido ");
                                     sc.nextLine();
                                     op = 0;
-                                    break;
                                 }
                             }
 
@@ -560,12 +565,12 @@ public class Menu {
                                 try {
                                     x = sc.nextDouble();
                                     sc.nextLine();
-                                    if (x < 1 || x > 1) op = 1;
+                                    if (x < 1) op = 0;
+                                    else op = 1;
                                 } catch (Exception e) {
                                     System.out.println("Input invalido ");
                                     sc.nextLine();
                                     op = 0;
-                                    break;
                                 }
                             }
 
@@ -574,12 +579,12 @@ public class Menu {
                                 try {
                                     y = sc.nextDouble();
                                     sc.nextLine();
-                                    if (y < 1 || y > 1) op = 1;
+                                    if (y < 1 ) op = 0;
+                                    else op = 1;
                                 } catch (Exception e) {
                                     System.out.println("Input invalido ");
                                     sc.nextLine();
                                     op = 0;
-                                    break;
                                 }
                             }
 
@@ -655,11 +660,21 @@ public class Menu {
                     master.visualizarCarrosProprietario(idProprietario);
                     opcaoc = 0;
                     break;
+
+
                 case 4:
+                    //visualizar carro especifico (imprime todos os detalhes do carro)
+                    break;
+
+                case 5:
+                    //imprimir lista de algueres
+                    break;
+
+                case 6:
                     //Voltar ao menu anterior
                     opcaoc = -1;
                     break;
-                case 5:
+                case 7:
                     //sair
                     System.out.println("A sair do programa!!");
                     System.exit(0);
