@@ -35,13 +35,13 @@ public class Teste {
         carroMap.put("4",carro4);
         carroMap.put("5",carro5);
 
-        Cliente pessoa1 = new Cliente("email", "nome", "pass", "moradaaa", tempo, 15, c1, ar, 3);
-        System.out.println(pessoa1.toString());
+        //Cliente pessoa1 = new Cliente("email", "nome", "pass", "moradaaa", tempo, 15, c1, ar, 3);
+        //System.out.println(pessoa1.toString());
 
-        UmCarroJa carroJa = new UmCarroJa();
-        carroJa.veiculos = carroMap;
+        //UmCarroJa carroJa = new UmCarroJa();
+        //carroJa.veiculos = carroMap;
 
-        System.out.println(carroJa.getCarrosdoTipo("hibrido"));
+        //System.out.println(carroJa.getCarrosdoTipo("hibrido"));
 
         Menu menu = new Menu();
         menu.start();

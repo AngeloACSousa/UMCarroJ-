@@ -77,6 +77,7 @@ public class Menu {
      *                         LocalDate nascimento, int nif, List<Integer> a, List<String> v, double classificacao){
      */
     public void start(){
+        master = new UmCarroJa();
         this.opcao = 0;
         while (opcao == 0){
             menu();
@@ -151,7 +152,6 @@ public class Menu {
                             sc.nextLine();
                             System.out.println("Insira o seu NIF:");
                             //nif = sc.nextInt();
-                            //System.out.println("chego aqui1\n");
                             try {
                                 nif = sc.nextInt();
                             } catch (Exception e) {
@@ -161,7 +161,6 @@ public class Menu {
                                 sc.nextLine();
                                 break;
                             }
-                            System.out.println("chego aqui2\n");
                             //DA ERRO NESTE IF ....
                             if (master.proprietarios.containsKey(nif)) {
                                 System.out.println("Ja existe um Proprietário com esse NIF");
@@ -170,7 +169,6 @@ public class Menu {
                                 break;
                             }
                             //NESTE IF, AQUI ACIMA...
-                            System.out.println("chego aqui3\n");
                             Proprietario Ptemp = new Proprietario();
                             Ptemp.setEmail(mail);
                             Ptemp.setNome(nome);
