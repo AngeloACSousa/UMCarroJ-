@@ -347,7 +347,7 @@ public class Menu {
 
             try {
                 opcaoc = sc.nextInt();
-                if (opcaoc < 1 || opcaoc > 1) opcao = -1;
+                if (opcaoc < 1 || opcaoc > 1) opcaoc = -1;
             } catch (Exception e) {
                 System.out.println("Opcao nao existe");
                 sc.next();
@@ -409,203 +409,15 @@ public class Menu {
                     switch (opcaoReg) {
                         case 1:
                             //Combustao
-                            Combustao ctemp = new Combustao();
-                            System.out.println("Matricula:");
-                            matricula = sc.next();
-                            sc.nextLine();
-                            System.out.println("Marca do carro:");
-                            marca = sc.next();
-                            sc.nextLine();
-                            System.out.println("Velocidade Média:");
-                            velociademedia = sc.nextDouble();
-                            System.out.println("Preço:");
-                            preco = sc.nextDouble();
-                            System.out.println("Quantidade de combustivel no tanque:");
-                            capacidadeatual = sc.nextDouble();
-                            System.out.println("Capacidade do tanque:");
-                            capacidadetanque = sc.nextDouble();
-                            System.out.println("Comsumo médio de Combustivel:");
-                            consumomedio = sc.nextDouble();
-                            System.out.println("Coordenadas do carro:");
-                            op = 0;
-                            while (op == 0) {
-                                try {
-                                    x = sc.nextDouble();
-                                    sc.nextLine();
-                                    if (x < 1) op = 0;
-                                    else op = 1;
-                                } catch (Exception e) {
-                                    System.out.println("Input invalido ");
-                                    sc.nextLine();
-                                    op = 0;
-                                }
-                            }
-
-                            op = 0;
-                            while (op == 0) {
-                                try {
-                                    y = sc.nextDouble();
-                                    sc.nextLine();
-                                    if (y < 1) op = 0;
-                                    else op = 1;
-                                } catch (Exception e) {
-                                    System.out.println("Input invalido ");
-                                    sc.nextLine();
-                                    op = 0;
-                                }
-                            }
-
-                            ctemp.setMatricula(matricula);
-                            ctemp.setMarca(marca);
-                            ctemp.setVelocidadeMedia(velociademedia);
-                            ctemp.setPreco(preco);
-                            ctemp.setCapacidadeAtual(capacidadeatual);
-                            ctemp.setCapacidadeTanque(capacidadetanque);
-                            ctemp.setConsumoMedio(consumomedio);
-                            ctemp.setCoordenada(new Coordenada(x, y));
-                            ctemp.setIdProprietario(idProprietario);
-                            master.veiculos.put(ctemp.getMatricula(), ctemp);
-                            List<String> c = new ArrayList<>(master.proprietarios.get(idProprietario).getVeiculos());
-                            c.add(matricula);
-                            master.proprietarios.get(idProprietario).setVeiculos(c);
-                            System.out.println("Veiculo adicionado com sucesso!");
+                            registarCombustao(idProprietario);
                             break;
                         case 2:
                             //Eletrico
-                            Eletrico eletemp = new Eletrico();
-                            System.out.println("Matricula:");
-                            matricula = sc.next();
-                            sc.nextLine();
-                            System.out.println("Marca do carro:");
-                            marca = sc.next();
-                            sc.nextLine();
-                            System.out.println("Velocidade Média:");
-                            velociademedia = sc.nextDouble();
-                            System.out.println("Preço:");
-                            preco = sc.nextDouble();
-                            System.out.println("Quantidade de bateria:");
-                            bateriaatual = sc.nextDouble();
-                            System.out.println("Capacidade da bateria:");
-                            capaciadebateria = sc.nextDouble();
-                            System.out.println("Comsumo médio de bateria:");
-                            consumomediobateria = sc.nextDouble();
-                            System.out.println("Coordenadas do carro:");
-                            op = 0;
-                            while (op == 0) {
-                                try {
-                                    x = sc.nextDouble();
-                                    sc.nextLine();
-                                    if (x < 1) op = 0;
-                                    else op = 1;
-                                } catch (Exception e) {
-                                    System.out.println("Input invalido ");
-                                    sc.nextLine();
-                                    op = 0;
-                                }
-                            }
-
-                            op = 0;
-                            while (op == 0) {
-                                try {
-                                    y = sc.nextDouble();
-                                    sc.nextLine();
-                                    if (y < 1) op = 0;
-                                    else op = 1;
-                                } catch (Exception e) {
-                                    System.out.println("Input invalido ");
-                                    sc.nextLine();
-                                    op = 0;
-                                }
-                            }
-
-                            eletemp.setMatricula(matricula);
-                            eletemp.setMarca(marca);
-                            eletemp.setVelocidadeMedia(velociademedia);
-                            eletemp.setPreco(preco);
-                            eletemp.setBateriaAtual(bateriaatual);
-                            eletemp.setCapacidadeBateria(capaciadebateria);
-                            eletemp.setConsumoMedio(consumomediobateria);
-                            eletemp.setCoordenada(new Coordenada(x, y));
-                            eletemp.setIdProprietario(idProprietario);
-
-                            master.veiculos.put(eletemp.getMatricula(), eletemp);
-                            List<String> c2 = new ArrayList<>(master.proprietarios.get(idProprietario).getVeiculos());
-                            c2.add(matricula);
-                            master.proprietarios.get(idProprietario).setVeiculos(c2);
-                            System.out.println("Veiculo adicionado com sucesso!");
+                            registarEletrico(idProprietario);
                             break;
                         case 3:
                             //Hibrido
-                            Hibrido htemp = new Hibrido();
-                            System.out.println("Matricula:");
-                            matricula = sc.next();
-                            sc.nextLine();
-                            System.out.println("Marca do carro:");
-                            marca = sc.next();
-                            sc.nextLine();
-                            System.out.println("Velocidade Média:");
-                            velociademedia = sc.nextDouble();
-                            System.out.println("Preço: (por exemplo 1,5€)");
-                            preco = sc.nextDouble();
-                            System.out.println("Quantidade de combustivel no tanque:");
-                            capacidadeatual = sc.nextDouble();
-                            System.out.println("Capacidade do tanque:");
-                            capacidadetanque = sc.nextDouble();
-                            System.out.println("Comsumo médio de Combustivel:");
-                            consumomedio = sc.nextDouble();
-                            System.out.println("Quantidade de bateria:");
-                            bateriaatual = sc.nextDouble();
-                            System.out.println("Capacidade da bateria:");
-                            capaciadebateria = sc.nextDouble();
-                            System.out.println("Comsumo médio de bateria:");
-                            consumomediobateria = sc.nextDouble();
-                            System.out.println("Coordenadas do carro:");
-                            op = 0;
-                            while (op == 0) {
-                                try {
-                                    x = sc.nextDouble();
-                                    sc.nextLine();
-                                    if (x < 1) op = 0;
-                                    else op = 1;
-                                } catch (Exception e) {
-                                    System.out.println("Input invalido ");
-                                    sc.nextLine();
-                                    op = 0;
-                                }
-                            }
-
-                            op = 0;
-                            while (op == 0) {
-                                try {
-                                    y = sc.nextDouble();
-                                    sc.nextLine();
-                                    if (y < 1 ) op = 0;
-                                    else op = 1;
-                                } catch (Exception e) {
-                                    System.out.println("Input invalido ");
-                                    sc.nextLine();
-                                    op = 0;
-                                }
-                            }
-
-                            htemp.setMatricula(matricula);
-                            htemp.setMarca(marca);
-                            htemp.setVelocidadeMedia(velociademedia);
-                            htemp.setPreco(preco);
-                            htemp.setCapacidadeAtual(capacidadeatual);
-                            htemp.setCapacidadeTanque(capacidadetanque);
-                            htemp.setConsumoMedioCombustivel(consumomedio);
-                            htemp.setBateriaAtual(bateriaatual);
-                            htemp.setCapacidadeBateria(capaciadebateria);
-                            htemp.setConsumoMedioBateria(consumomediobateria);
-                            htemp.setCoordenada(new Coordenada(x, y));
-                            htemp.setIdProprietario(idProprietario);
-
-                            master.veiculos.put(htemp.getMatricula(), htemp);
-                            List<String> c3 = new ArrayList<>(master.proprietarios.get(idProprietario).getVeiculos());
-                            c3.add(matricula);
-                            master.proprietarios.get(idProprietario).setVeiculos(c3);
-                            System.out.println("Veiculo adicionado com sucesso!");
+                            registarHibrido(idProprietario);
 
                             break;
                         case 4:
@@ -688,8 +500,406 @@ public class Menu {
      * -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+- FUNÇOES DO MENU -+-+-+-+-+-+-+-++-++-+-+-+-+-+-+-+-+-+-++-+-+-+-+--+
      */
 
-    void registarCliente(){
+    void registarCombustao(int idProprietario){
+        Combustao ctemp = new Combustao();
+        System.out.println("Matricula:");
+        matricula = sc.next();
+        sc.nextLine();
+        System.out.println("Marca do carro:");
+        marca = sc.next();
+        sc.nextLine();
+        System.out.println("Velocidade Média:");
+        while (op == 0) {
+            try {
+                velociademedia = sc.nextDouble();
+                sc.nextLine();
+                if (velociademedia < 1) op = 0;
+                else op = 1;
+            } catch (Exception e) {
+                System.out.println("Input invalido ");
+                sc.nextLine();
+                op = 0;
+            }
+        }
+        System.out.println("Preço:");
+        while (op == 0) {
+            try {
+                preco = sc.nextDouble();
+                sc.nextLine();
+                if (preco < 1) op = 0;
+                else op = 1;
+            } catch (Exception e) {
+                System.out.println("Input invalido ");
+                sc.nextLine();
+                op = 0;
+            }
+        }
+        System.out.println("Quantidade de combustivel no tanque:");
+        while (op == 0) {
+            try {
+                capacidadeatual = sc.nextDouble();
+                sc.nextLine();
+                if (capacidadeatual < 1) op = 0;
+                else op = 1;
+            } catch (Exception e) {
+                System.out.println("Input invalido ");
+                sc.nextLine();
+                op = 0;
+            }
+        }
+        System.out.println("Capacidade do tanque:");
+        while (op == 0) {
+            try {
+                capacidadetanque = sc.nextDouble();
+                sc.nextLine();
+                if (capacidadetanque < 1) op = 0;
+                else op = 1;
+            } catch (Exception e) {
+                System.out.println("Input invalido ");
+                sc.nextLine();
+                op = 0;
+            }
+        }
+        System.out.println("Comsumo médio de Combustivel:");
+        while (op == 0) {
+            try {
+                consumomedio = sc.nextDouble();
+                sc.nextLine();
+                if (consumomedio < 1) op = 0;
+                else op = 1;
+            } catch (Exception e) {
+                System.out.println("Input invalido ");
+                sc.nextLine();
+                op = 0;
+            }
+        }
+        System.out.println("Coordenadas do carro:");
+        op = 0;
+        while (op == 0) {
+            try {
+                x = sc.nextDouble();
+                sc.nextLine();
+                if (x < 1) op = 0;
+                else op = 1;
+            } catch (Exception e) {
+                System.out.println("Input invalido ");
+                sc.nextLine();
+                op = 0;
+            }
+        }
 
+        op = 0;
+        while (op == 0) {
+            try {
+                y = sc.nextDouble();
+                sc.nextLine();
+                if (y < 1) op = 0;
+                else op = 1;
+            } catch (Exception e) {
+                System.out.println("Input invalido ");
+                sc.nextLine();
+                op = 0;
+            }
+        }
+
+        ctemp.setMatricula(matricula);
+        ctemp.setMarca(marca);
+        ctemp.setVelocidadeMedia(velociademedia);
+        ctemp.setPreco(preco);
+        ctemp.setCapacidadeAtual(capacidadeatual);
+        ctemp.setCapacidadeTanque(capacidadetanque);
+        ctemp.setConsumoMedio(consumomedio);
+        ctemp.setCoordenada(new Coordenada(x, y));
+        ctemp.setIdProprietario(idProprietario);
+        master.veiculos.put(ctemp.getMatricula(), ctemp);
+        List<String> c = new ArrayList<>(master.proprietarios.get(idProprietario).getVeiculos());
+        c.add(matricula);
+        master.proprietarios.get(idProprietario).setVeiculos(c);
+        System.out.println("Veiculo adicionado com sucesso!");
+    }
+
+    void registarEletrico(int idProprietario){
+        Eletrico eletemp = new Eletrico();
+        System.out.println("Matricula:");
+        matricula = sc.next();
+        sc.nextLine();
+        System.out.println("Marca do carro:");
+        marca = sc.next();
+        sc.nextLine();
+        System.out.println("Velocidade Média:");
+        while (op == 0) {
+            try {
+                velociademedia = sc.nextDouble();
+                sc.nextLine();
+                if (velociademedia < 1) op = 0;
+                else op = 1;
+            } catch (Exception e) {
+                System.out.println("Input invalido ");
+                sc.nextLine();
+                op = 0;
+            }
+        }
+        System.out.println("Preço:");
+        while (op == 0) {
+            try {
+                preco = sc.nextDouble();
+                sc.nextLine();
+                if (preco < 1) op = 0;
+                else op = 1;
+            } catch (Exception e) {
+                System.out.println("Input invalido ");
+                sc.nextLine();
+                op = 0;
+            }
+        }
+        System.out.println("Quantidade de bateria:");
+        while (op == 0) {
+            try {
+                bateriaatual = sc.nextDouble();
+                sc.nextLine();
+                if (bateriaatual < 1) op = 0;
+                else op = 1;
+            } catch (Exception e) {
+                System.out.println("Input invalido ");
+                sc.nextLine();
+                op = 0;
+            }
+        }
+        System.out.println("Capacidade da bateria:");
+        while (op == 0) {
+            try {
+                capaciadebateria = sc.nextDouble();
+                sc.nextLine();
+                if (capaciadebateria < 1) op = 0;
+                else op = 1;
+            } catch (Exception e) {
+                System.out.println("Input invalido ");
+                sc.nextLine();
+                op = 0;
+            }
+        }
+        System.out.println("Comsumo médio de bateria:");
+        while (op == 0) {
+            try {
+                consumomediobateria = sc.nextDouble();
+                sc.nextLine();
+                if (consumomediobateria < 1) op = 0;
+                else op = 1;
+            } catch (Exception e) {
+                System.out.println("Input invalido ");
+                sc.nextLine();
+                op = 0;
+            }
+        }
+        System.out.println("Coordenadas do carro:");
+        op = 0;
+        while (op == 0) {
+            try {
+                x = sc.nextDouble();
+                sc.nextLine();
+                if (x < 1) op = 0;
+                else op = 1;
+            } catch (Exception e) {
+                System.out.println("Input invalido ");
+                sc.nextLine();
+                op = 0;
+            }
+        }
+
+        op = 0;
+        while (op == 0) {
+            try {
+                y = sc.nextDouble();
+                sc.nextLine();
+                if (y < 1) op = 0;
+                else op = 1;
+            } catch (Exception e) {
+                System.out.println("Input invalido ");
+                sc.nextLine();
+                op = 0;
+            }
+        }
+
+        eletemp.setMatricula(matricula);
+        eletemp.setMarca(marca);
+        eletemp.setVelocidadeMedia(velociademedia);
+        eletemp.setPreco(preco);
+        eletemp.setBateriaAtual(bateriaatual);
+        eletemp.setCapacidadeBateria(capaciadebateria);
+        eletemp.setConsumoMedio(consumomediobateria);
+        eletemp.setCoordenada(new Coordenada(x, y));
+        eletemp.setIdProprietario(idProprietario);
+
+        master.veiculos.put(eletemp.getMatricula(), eletemp);
+        List<String> c2 = new ArrayList<>(master.proprietarios.get(idProprietario).getVeiculos());
+        c2.add(matricula);
+        master.proprietarios.get(idProprietario).setVeiculos(c2);
+        System.out.println("Veiculo adicionado com sucesso!");
+    }
+
+
+    void registarHibrido(int idProprietario){
+        //Hibrido
+        Hibrido htemp = new Hibrido();
+        System.out.println("Matricula:");
+        matricula = sc.next();
+        sc.nextLine();
+        System.out.println("Marca do carro:");
+        marca = sc.next();
+        sc.nextLine();
+        System.out.println("Velocidade Média:");
+        while (op == 0) {
+            try {
+                velociademedia = sc.nextDouble();
+                sc.nextLine();
+                if (velociademedia < 1) op = 0;
+                else op = 1;
+            } catch (Exception e) {
+                System.out.println("Input invalido ");
+                sc.nextLine();
+                op = 0;
+            }
+        }
+        System.out.println("Preço: (por exemplo 1,5€)");
+        while (op == 0) {
+            try {
+                preco = sc.nextDouble();
+                sc.nextLine();
+                if (preco < 1) op = 0;
+                else op = 1;
+            } catch (Exception e) {
+                System.out.println("Input invalido ");
+                sc.nextLine();
+                op = 0;
+            }
+        }
+        System.out.println("Quantidade de combustivel no tanque:");
+        while (op == 0) {
+            try {
+                capacidadeatual = sc.nextDouble();
+                sc.nextLine();
+                if (capacidadeatual < 1) op = 0;
+                else op = 1;
+            } catch (Exception e) {
+                System.out.println("Input invalido ");
+                sc.nextLine();
+                op = 0;
+            }
+        }
+        System.out.println("Capacidade do tanque:");
+        while (op == 0) {
+            try {
+                capacidadetanque = sc.nextDouble();
+                sc.nextLine();
+                if (capacidadetanque < 1) op = 0;
+                else op = 1;
+            } catch (Exception e) {
+                System.out.println("Input invalido ");
+                sc.nextLine();
+                op = 0;
+            }
+        }
+        System.out.println("Comsumo médio de Combustivel:");
+        consumomedio = sc.nextDouble();
+        while (op == 0) {
+            try {
+                consumomedio = sc.nextDouble();
+                sc.nextLine();
+                if (consumomedio < 1) op = 0;
+                else op = 1;
+            } catch (Exception e) {
+                System.out.println("Input invalido ");
+                sc.nextLine();
+                op = 0;
+            }
+        }
+        System.out.println("Quantidade de bateria:");
+        while (op == 0) {
+            try {
+                bateriaatual = sc.nextDouble();
+                sc.nextLine();
+                if (bateriaatual < 1) op = 0;
+                else op = 1;
+            } catch (Exception e) {
+                System.out.println("Input invalido ");
+                sc.nextLine();
+                op = 0;
+            }
+        }
+        System.out.println("Capacidade da bateria:");
+        while (op == 0) {
+            try {
+                capaciadebateria = sc.nextDouble();
+                sc.nextLine();
+                if (capaciadebateria < 1) op = 0;
+                else op = 1;
+            } catch (Exception e) {
+                System.out.println("Input invalido ");
+                sc.nextLine();
+                op = 0;
+            }
+        }
+        System.out.println("Comsumo médio de bateria:");
+        consumomediobateria = sc.nextDouble();
+        while (op == 0) {
+            try {
+                consumomedio = sc.nextDouble();
+                sc.nextLine();
+                if (consumomedio < 1) op = 0;
+                else op = 1;
+            } catch (Exception e) {
+                System.out.println("Input invalido ");
+                sc.nextLine();
+                op = 0;
+            }
+        }
+        System.out.println("Coordenadas do carro:");
+        op = 0;
+        while (op == 0) {
+            try {
+                x = sc.nextDouble();
+                sc.nextLine();
+                if (x < 1) op = 0;
+                else op = 1;
+            } catch (Exception e) {
+                System.out.println("Input invalido ");
+                sc.nextLine();
+                op = 0;
+            }
+        }
+
+        op = 0;
+        while (op == 0) {
+            try {
+                y = sc.nextDouble();
+                sc.nextLine();
+                if (y < 1 ) op = 0;
+                else op = 1;
+            } catch (Exception e) {
+                System.out.println("Input invalido ");
+                sc.nextLine();
+                op = 0;
+            }
+        }
+
+        htemp.setMatricula(matricula);
+        htemp.setMarca(marca);
+        htemp.setVelocidadeMedia(velociademedia);
+        htemp.setPreco(preco);
+        htemp.setCapacidadeAtual(capacidadeatual);
+        htemp.setCapacidadeTanque(capacidadetanque);
+        htemp.setConsumoMedioCombustivel(consumomedio);
+        htemp.setBateriaAtual(bateriaatual);
+        htemp.setCapacidadeBateria(capaciadebateria);
+        htemp.setConsumoMedioBateria(consumomediobateria);
+        htemp.setCoordenada(new Coordenada(x, y));
+        htemp.setIdProprietario(idProprietario);
+
+        master.veiculos.put(htemp.getMatricula(), htemp);
+        List<String> c3 = new ArrayList<>(master.proprietarios.get(idProprietario).getVeiculos());
+        c3.add(matricula);
+        master.proprietarios.get(idProprietario).setVeiculos(c3);
+        System.out.println("Veiculo adicionado com sucesso!");
     }
 
     public static void main(String args[]) throws Exception{
