@@ -143,7 +143,7 @@ public class UmCarroJa{
             System.out.println("Tipo: "+ this.veiculos.get(aluguer.getIdVeiculo()).getTipo());
             System.out.println("Matricula: " +aluguer.getIdVeiculo());
             System.out.println("Data: " + aluguer.getData().toString());
-            System.out.println("Preço: " +aluguer.getPreco());
+            System.out.println("Preço: " +aluguer.getPreco()+"\n");
             System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
         }
     }
@@ -154,7 +154,7 @@ public class UmCarroJa{
         for(String c : carros){
             System.out.println("Marca: " +this.veiculos.get(c).getMarca());
             System.out.println("Tipo: "+ this.veiculos.get(c).getTipo());
-            System.out.println("Matricula: " +this.veiculos.get(c).getMatricula());
+            System.out.println("Matricula: " +this.veiculos.get(c).getMatricula()+"\n");
         }
     }
 

@@ -20,7 +20,7 @@ public class Menu {
     private String email, mail, nome, pass, morada, nascimento, cor[], matricula, marca;
     private double velociademedia, preco, capacidadeatual, capacidadetanque, consumomedio, combustivel, bateria, x, y;
     private double capaciadebateria, bateriaatual, consumomediobateria;
-    private int nif;
+    private int nif, op;
     private double classf;
 
     DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yy");
@@ -153,23 +153,24 @@ public class Menu {
                             sc.nextLine();
                             System.out.println("Insira o seu NIF:");
                             //nif = sc.nextInt();
-                            try {
-                                nif = sc.nextInt();
-                            } catch (Exception e) {
-                                System.out.println("Input invalido " + e);
-                                System.out.println("Registo anulado!");
-                                this.opcao = 0;
-                                sc.nextLine();
-                                break;
+                            op = 0;
+                            while (op == 0) {
+                                try {
+                                    nif = sc.nextInt();
+                                    if (nif < 1 || nif > 1) op = 1;
+                                } catch (Exception e) {
+                                    System.out.println("Input invalido ");
+                                    sc.nextLine();
+                                    op = 0;
+                                    break;
+                                }
                             }
-                            //DA ERRO NESTE IF ....
                             if (master.proprietarios.containsKey(nif)) {
                                 System.out.println("Ja existe um Proprietário com esse NIF");
                                 System.out.println("Registo anulado!");
                                 this.opcao = 0;
                                 break;
                             }
-                            //NESTE IF, AQUI ACIMA...
                             Proprietario Ptemp = new Proprietario();
                             Ptemp.setEmail(mail);
                             Ptemp.setNome(nome);
@@ -206,20 +207,46 @@ public class Menu {
                             sc.nextLine();
                             System.out.println("Insira o seu NIF:");
                             //nif = sc.nextInt();
-                            try {
-                                nif = sc.nextInt();
-                            } catch (Exception e) {
-                                System.out.println("Input invalido " + e);
-                                System.out.println("Registo anulado!");
-                                this.opcao = 0;
-                                sc.nextLine();
-                                break;
+                            op = 0;
+                            while (op == 0) {
+                                try {
+                                    nif = sc.nextInt();
+                                    if (nif < 1 || nif > 1) op = 1;
+                                } catch (Exception e) {
+                                    System.out.println("Input invalido");
+                                    sc.nextLine();
+                                    op = 0;
+                                    break;
+                                }
                             }
                             System.out.println("Insira as suas coordenadas:");
-                            double x = sc.nextDouble();
-                            double y = sc.nextDouble();
-                            sc.nextLine();
+                            op = 0;
+                            while (op == 0) {
+                                try {
+                                    x = sc.nextDouble();
+                                    sc.nextLine();
+                                    if (x < 1 || x > 1) op = 1;
+                                } catch (Exception e) {
+                                    System.out.println("Input invalido ");
+                                    sc.nextLine();
+                                    op = 0;
+                                    break;
+                                }
+                            }
 
+                            op = 0;
+                            while (op == 0) {
+                                try {
+                                    y = sc.nextDouble();
+                                    sc.nextLine();
+                                    if (y < 1 || y > 1) op = 1;
+                                } catch (Exception e) {
+                                    System.out.println("Input invalido ");
+                                    sc.nextLine();
+                                    op = 0;
+                                    break;
+                                }
+                            }
                             if (master.clientes.containsKey(nif)) {
                                 System.out.println("Ja existe um Cliente com esse NIF!");
                                 System.out.println("Registo anulado!");
@@ -394,9 +421,33 @@ public class Menu {
                             System.out.println("Comsumo médio de Combustivel:");
                             consumomedio = sc.nextDouble();
                             System.out.println("Coordenadas do carro:");
-                            x = sc.nextDouble();
-                            y = sc.nextDouble();
-                            sc.nextLine();
+                            op = 0;
+                            while (op == 0) {
+                                try {
+                                    x = sc.nextDouble();
+                                    sc.nextLine();
+                                    if (x < 1 || x > 1) op = 1;
+                                } catch (Exception e) {
+                                    System.out.println("Input invalido ");
+                                    sc.nextLine();
+                                    op = 0;
+                                    break;
+                                }
+                            }
+
+                            op = 0;
+                            while (op == 0) {
+                                try {
+                                    y = sc.nextDouble();
+                                    sc.nextLine();
+                                    if (y < 1 || y > 1) op = 1;
+                                } catch (Exception e) {
+                                    System.out.println("Input invalido ");
+                                    sc.nextLine();
+                                    op = 0;
+                                    break;
+                                }
+                            }
 
                             ctemp.setMatricula(matricula);
                             ctemp.setMarca(marca);
@@ -411,8 +462,6 @@ public class Menu {
                             List<String> c = new ArrayList<>(master.proprietarios.get(idProprietario).getVeiculos());
                             c.add(matricula);
                             master.proprietarios.get(idProprietario).setVeiculos(c);
-                            System.out.println(master.veiculos.get(matricula).toString());
-                            System.out.println(master.proprietarios.get(idProprietario).toString());
                             System.out.println("Veiculo adicionado com sucesso!");
                             break;
                         case 2:
@@ -435,9 +484,33 @@ public class Menu {
                             System.out.println("Comsumo médio de bateria:");
                             consumomediobateria = sc.nextDouble();
                             System.out.println("Coordenadas do carro:");
-                            x = sc.nextDouble();
-                            y = sc.nextDouble();
-                            sc.nextLine();
+                            op = 0;
+                            while (op == 0) {
+                                try {
+                                    x = sc.nextDouble();
+                                    sc.nextLine();
+                                    if (x < 1 || x > 1) op = 1;
+                                } catch (Exception e) {
+                                    System.out.println("Input invalido ");
+                                    sc.nextLine();
+                                    op = 0;
+                                    break;
+                                }
+                            }
+
+                            op = 0;
+                            while (op == 0) {
+                                try {
+                                    y = sc.nextDouble();
+                                    sc.nextLine();
+                                    if (y < 1 || y > 1) op = 1;
+                                } catch (Exception e) {
+                                    System.out.println("Input invalido ");
+                                    sc.nextLine();
+                                    op = 0;
+                                    break;
+                                }
+                            }
 
                             eletemp.setMatricula(matricula);
                             eletemp.setMarca(marca);
@@ -450,6 +523,9 @@ public class Menu {
                             eletemp.setIdProprietario(idProprietario);
 
                             master.veiculos.put(eletemp.getMatricula(), eletemp);
+                            List<String> c2 = new ArrayList<>(master.proprietarios.get(idProprietario).getVeiculos());
+                            c2.add(matricula);
+                            master.proprietarios.get(idProprietario).setVeiculos(c2);
                             System.out.println("Veiculo adicionado com sucesso!");
                             break;
                         case 3:
@@ -478,9 +554,33 @@ public class Menu {
                             System.out.println("Comsumo médio de bateria:");
                             consumomediobateria = sc.nextDouble();
                             System.out.println("Coordenadas do carro:");
-                            x = sc.nextDouble();
-                            y = sc.nextDouble();
-                            sc.nextLine();
+                            op = 0;
+                            while (op == 0) {
+                                try {
+                                    x = sc.nextDouble();
+                                    sc.nextLine();
+                                    if (x < 1 || x > 1) op = 1;
+                                } catch (Exception e) {
+                                    System.out.println("Input invalido ");
+                                    sc.nextLine();
+                                    op = 0;
+                                    break;
+                                }
+                            }
+
+                            op = 0;
+                            while (op == 0) {
+                                try {
+                                    y = sc.nextDouble();
+                                    sc.nextLine();
+                                    if (y < 1 || y > 1) op = 1;
+                                } catch (Exception e) {
+                                    System.out.println("Input invalido ");
+                                    sc.nextLine();
+                                    op = 0;
+                                    break;
+                                }
+                            }
 
                             htemp.setMatricula(matricula);
                             htemp.setMarca(marca);
@@ -496,6 +596,9 @@ public class Menu {
                             htemp.setIdProprietario(idProprietario);
 
                             master.veiculos.put(htemp.getMatricula(), htemp);
+                            List<String> c3 = new ArrayList<>(master.proprietarios.get(idProprietario).getVeiculos());
+                            c3.add(matricula);
+                            master.proprietarios.get(idProprietario).setVeiculos(c3);
                             System.out.println("Veiculo adicionado com sucesso!");
 
                             break;
@@ -565,6 +668,13 @@ public class Menu {
     }
 
 
+    /**
+     * -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+- FUNÇOES DO MENU -+-+-+-+-+-+-+-++-++-+-+-+-+-+-+-+-+-+-++-+-+-+-+--+
+     */
+
+    void registarCliente(){
+
+    }
 
     public static void main(String args[]) throws Exception{
 
