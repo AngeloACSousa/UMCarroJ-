@@ -149,7 +149,16 @@ public class Menu {
                             System.out.println("Insira a sua morada:");
                             morada = sc.nextLine();
                             System.out.println("Insira a sua data de nascimento (dia-mes-ano - Exemplo: 12-11-98):");
-                            nascimento = sc.next();
+                            while(op == 0){
+                                try{
+                                    nascimento = sc.next();
+                                    LocalDate n = LocalDate.parse(nascimento,format);
+                                    op = 1;
+                                }catch(Exception e){
+                                    System.out.println("Data em formato invalido, insira novamente no formato dia-mes-ano");
+                                    this.opcao = 0;
+                                }
+                            }
                             sc.nextLine();
                             System.out.println("Insira o seu NIF:");
                             //nif = sc.nextInt();
@@ -157,12 +166,11 @@ public class Menu {
                             while (op == 0) {
                                 try {
                                     nif = sc.nextInt();
-                                    if (nif < 1 || nif > 1) op = 1;
+                                    if (nif < 1) op = 0;
                                 } catch (Exception e) {
                                     System.out.println("Input invalido ");
-                                    sc.nextLine();
+                                    sc.next();
                                     op = 0;
-                                    break;
                                 }
                             }
                             if (master.proprietarios.containsKey(nif)) {
@@ -176,14 +184,7 @@ public class Menu {
                             Ptemp.setNome(nome);
                             Ptemp.setPassword(pass);
                             Ptemp.setMorada(morada);
-                            try {
-                                Ptemp.setNascimento(LocalDate.parse(nascimento, format));
-                            } catch (Exception e) {
-                                System.out.println("Data em formato Incalido: " + e);
-                                System.out.println("Registo Invalido, tente de novo!");
-                                this.opcao = 0;
-                                break;
-                            }
+                            Ptemp.setNascimento(LocalDate.parse(nascimento, format));
                             Ptemp.setNif(nif);
                             master.proprietarios.put(Ptemp.getNif(), Ptemp);
                             System.out.println("Proprietario adicionado ao sistema!!");
