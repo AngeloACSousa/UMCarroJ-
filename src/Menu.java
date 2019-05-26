@@ -264,7 +264,12 @@ public class Menu {
                     break;
                 //sair
                 case 3:
-                    //
+                    try {
+                        master.lerFicheiro("logsteste.txt");
+                    }
+                    catch (Exception e){
+                        System.out.println("Erro no carregamento");
+                    }
                     System.out.println("");
                     break;
                 case 4:

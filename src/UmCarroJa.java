@@ -27,10 +27,32 @@ public class UmCarroJa{
         this.alugueres = new HashMap<>();
     }
     //Leitura de Logs, Carregamento Inicial
-    public void lerFicheiro(String filePath)throws Exception{
-        File file = new File(filePath);
-        FileReader fr = new FileReader(file);
-        BufferedReader br = new BufferedReader(fr);
+    public void lerFicheiro(String filePath) throws Exception{
+        System.out.println("Cheguei aqui1");
+        File file;
+        FileReader fr;
+        BufferedReader br;
+        try{
+            file = new File(filePath);
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+            return;
+        }
+        try{
+            fr = new FileReader(file);
+            System.out.println("Cheguei aqui2");
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+            return;
+        }
+        try{
+            System.out.println("Cheguei aqui3");
+            br = new BufferedReader(fr);
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+            return;
+        }
+        System.out.println("Cheguei aqui4");
         String line = "";
         while((line = br.readLine()) != null){
             String[] split = line.split("[:]");
