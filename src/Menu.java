@@ -101,6 +101,20 @@ public class Menu implements Serializable {
                 //login
                 case 1:
                     System.out.println("NIF:");
+                    //nif = sc.nextInt();
+                    //sc.nextLine();
+                    op = 0;
+                    while (op == 0) {
+                        try {
+                            nif = sc.nextInt();
+                            if (nif < 1) op = 0;
+                            else op = 1;
+                        } catch (Exception e) {
+                            System.out.println("Input invalido!");
+                            sc.nextLine();
+                            op = 0;
+                        }
+                    }
                     sc.nextLine();
                     if (master.clientes.containsKey(nif)) { //ainda por testar o anyMatch()
                         System.out.println("é um cliente :D");
@@ -152,7 +166,7 @@ public class Menu implements Serializable {
                             if (opcao2 < 1) op = 0;
                             else op = 1;
                         } catch (Exception e) {
-                            System.out.println("Input invalido!");
+                            System.out.println("Input invalido!!");
                             sc.next();
                             op = 0;
                         }
