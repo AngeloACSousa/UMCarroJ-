@@ -14,7 +14,6 @@ public class Aluguer {
     private Coordenada coordIni;
     private Coordenada coordFin;
     private double tempoViagem;
-    private double classMedia;
     private LocalDate data;
     private double preco;
     private String pref;
@@ -31,7 +30,6 @@ public class Aluguer {
         this.coordIni = new Coordenada();
         this.coordFin = new Coordenada();
         this.tempoViagem = 0.0;
-        this.classMedia = 0.0;
         this.data = LocalDate.now();
         this.preco = 0;
         this.pref = "";
@@ -46,10 +44,9 @@ public class Aluguer {
      * @param a
      * @param b
      * @param tempoViagem
-     * @param classMedia
      */
     public Aluguer(int idAluguer,int idCliente,int idProprietario,String idVeiculo,
-                     Coordenada a,Coordenada b, double tempoViagem,double classMedia,LocalDate data,double preco,String pref){
+                     Coordenada a,Coordenada b, double tempoViagem,LocalDate data,double preco,String pref){
         this.idAluguer = idAluguer;
         this.idCliente = idCliente;
         this.idProprietario = idProprietario;
@@ -57,7 +54,7 @@ public class Aluguer {
         this.coordIni = new Coordenada(a);
         this.coordFin = new Coordenada(b);
         this.tempoViagem = tempoViagem;
-        this.classMedia = classMedia;
+
         this.data = LocalDate.of(data.getYear(),data.getMonth(),data.getDayOfMonth());
         this.preco = preco;
         this.pref = pref;
@@ -75,7 +72,6 @@ public class Aluguer {
         this.coordIni = v.getCoordenadaI();
         this.coordFin = v.getCoordenadaF();
         this.tempoViagem = v.getTempoViagem();
-        this.classMedia = v.getClassMedia();
         this.data = v.getData();
         this.preco = v.getPreco();
         this.pref = v.getPref();
@@ -113,9 +109,6 @@ public class Aluguer {
         return this.tempoViagem;
     }
 
-    public double getClassMedia(){
-        return this.classMedia;
-    }
 
     public LocalDate getData() {
         return LocalDate.of(data.getYear(),data.getMonth(),data.getDayOfMonth());
@@ -161,9 +154,6 @@ public class Aluguer {
         this.tempoViagem = t;
     }
 
-    public void setClassMedia(double cm){
-        this.classMedia = cm;
-    }
 
     public void setData(LocalDate data) {
         this.data = LocalDate.of(data.getYear(),data.getMonth(),data.getDayOfMonth());
@@ -197,8 +187,7 @@ public class Aluguer {
                 && this.idCliente == aux.getIdCliente()
                 && this.coordIni.equals(aux.getCoordenadaI())
                 && this.coordFin.equals(aux.getCoordenadaF())
-                && this.tempoViagem == aux.getTempoViagem()
-                && this.classMedia == aux.getClassMedia();
+                && this.tempoViagem == aux.getTempoViagem();
     }
 
     /**
@@ -231,8 +220,6 @@ public class Aluguer {
         sb.append(this.coordFin+"\n");
         sb.append("Tempo de viagem: ");
         sb.append(this.tempoViagem+"\n");
-        sb.append("Calssificacao da utilizacao: "); //Classificacao do veiculo?
-        sb.append(this.classMedia+"\n");
         sb.append("Data: ");
         sb.append(this.data.toString()+"\n");
         sb.append("Preco: ");
