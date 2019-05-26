@@ -332,21 +332,28 @@ public class UmCarroJa implements Serializable{
         for(Integer a : alugueresl){
             alu = alugueres.get(a);
             if(alu.isClassificado() == false){
-                System.out.println("Classifique este cliente: "+alu.getIdCliente());
+                alu.setClassificado(true);
+                System.out.println("Classifique este cliente: "+ clientes.get(alu.getIdCliente()).getNome());
+                System.out.println("Carro utilizado: "+veiculos.get(alu.getIdVeiculo()).getMatricula());
+                System.out.println("Preço da viagem: " +alu.getPreco());
+                System.out.println("Data: "+alu.getData().toString());
+                op = 0;
                 while (op == 0) {
+
                     try {
                         res = sc.nextDouble();
-                        sc.nextLine();
-                        if (res < 1) op = 0;
+                        if (res < 0 || res >100) op = 0;
                         else op = 1;
                     } catch (Exception e) {
                         System.out.println("Input invalido ");
                         sc.nextLine();
                         op = 0;
                     }
+                    sc.nextLine();
                 }
             }
             clasc = clientes.get(alu.getIdCliente()).getClassificacao();
+
             if(clasc == 0){
                 clientes.get(alu.getIdCliente()).setClassificacao(res);
             }
@@ -484,7 +491,20 @@ public class UmCarroJa implements Serializable{
         clientes.get(idCliente).setCoordenada(destino.clone());
         veiculos.get(idVeiculo).setCoordenada(destino.clone());
     }
+    public void top10(){
+        Set<Cliente> top = new TreeSet<>(new ComparadorTop10());
+        for(Cliente c : clientes.values()){
+            top.add(c.clone());
+        }
+        int i = 1;
+        for(Cliente c : top){
+            if (i>10) break;
+            System.out.println(i + ". " + c.getNome());
+            System.out.println("Alugueres: "+c.getAlugueres().size());
+            i++;
+        }
 
+    }
     // ESTADO DO PROGRAMA ////////////////////////////////////////////
     public void gravarEstado(String filename) throws IOException {
         ObjectOutputStream oout = new ObjectOutputStream(new FileOutputStream(filename));

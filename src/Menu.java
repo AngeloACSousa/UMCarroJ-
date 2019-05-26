@@ -34,7 +34,8 @@ public class Menu implements Serializable {
         System.out.println("2. Registo                                                                                 +");
         System.out.println("3. Carregar estado incial (logs)                                                           +");
         System.out.println("4. Carregar estado anterior                                                                +");
-        System.out.println("5. Sair                                                                                    +");
+        System.out.println("5. Top 10                                                                                  +");
+        System.out.println("6. Sair                                                                                    +");
         System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
     }
 
@@ -212,8 +213,8 @@ public class Menu implements Serializable {
                                     op = 0;
                                 }
                             }
-                            if (master.proprietarios.containsKey(nif)) {
-                                System.out.println("Ja existe um Proprietário com esse NIF");
+                            if (master.proprietarios.containsKey(nif) || master.clientes.containsKey(nif)) {
+                                System.out.println("Ja existe um utilizador com esse NIF");
                                 System.out.println("Registo anulado!");
                                 this.opcao = 0;
                                 break;
@@ -242,7 +243,8 @@ public class Menu implements Serializable {
                             sc.nextLine();
                             System.out.println("Insira a sua morada:");
                             morada = sc.nextLine();
-                            System.out.println("Insira a sua data de nascimento (dia/mes/ano - Exemplo: 12-11-98):");
+                            System.out.println("Insira a sua data de nascimento (dia-mes-ano - Exemplo: 12-11-98):");
+                            op = 0;
                             while(op == 0){
                                 try{
                                     nascimento = sc.next();
@@ -270,7 +272,7 @@ public class Menu implements Serializable {
                             }
                             System.out.println("Insira as suas coordenadas:");
                             Coordenada c = getCoordenada();
-                            if (master.clientes.containsKey(nif)) {
+                            if (master.clientes.containsKey(nif)||master.proprietarios.containsKey(nif)) {
                                 System.out.println("Ja existe um Cliente com esse NIF!");
                                 System.out.println("Registo anulado!");
                                 this.opcao = 0;
@@ -304,31 +306,39 @@ public class Menu implements Serializable {
                             System.out.println("A sair");
                             System.exit(0);
                             break;
+                        default:
+                            System.out.println("Opcao Invalida");
+                            opcao = 0;
+                            break;
                     }
                     break;
-                //sair
+                //carregar estado
                 case 3:
                     try {
-                        master.lerFicheiro("/Users/andre/Desktop/POO/UMCarroJ-/src/logsteste.txt");
+                        master.lerFicheiro("C:\\Users\\angel\\Desktop\\UMCarroJ-\\src\\logs.bak");
                     }
                     catch (Exception e){
                         System.out.println("Erro no carregamento");
                     }
                     this.opcao = 0;
                     break;
-
+                //recuperar estado
                 case 4:
                     System.out.println("A recuperar estado anterior!");
                     try{
-                        master = master.recuperarEstado("/Users/andre/Desktop/POO/UMCarroJ-/guardado");
+                        master = master.recuperarEstado("C:\\Users\\angel\\Desktop\\UMCarroJ-\\src\\guardado");
                     }
                     catch (Exception e){
                         System.out.println(e.getMessage());
                     }
                     opcao = 0;
                     break;
-
+                //
                 case 5:
+                    master.top10();
+                    opcao = 0;
+                    break;
+                case 6:
                     System.out.println("A gravar estado");
                     try{
                         master.gravarEstado("guardado");
@@ -429,6 +439,10 @@ public class Menu implements Serializable {
                     System.out.println("A sair");
                     System.exit(0);
                     break;
+                default:
+                    System.out.println("Opcao não válida");
+                    opcaoc = 0;
+                    break;
             }
         }
     }
@@ -442,17 +456,18 @@ public class Menu implements Serializable {
     }
 
     void TipoAluguer(int idCliente, Coordenada x){
-        System.out.println("Indique o tipo de aluguer que pretende realizar                                                +");
-        System.out.println("1. Mais Barato                                                                                 +");
-        System.out.println("2. Mais Perto                                                                                  +");
-        System.out.println("3. Mais Barato a pé                                                                            +");
-        System.out.println("4. Mais Barato conforme o tempo a pé                                                           +");
-        System.out.println("5. Voltar                                                                                      +");
-        System.out.println("6. Sair                                                                                        +");
-        System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
+
         op = 0;
         int opcaoc = 0;
         while(op == 0) {
+            System.out.println("Indique o tipo de aluguer que pretende realizar                                                +");
+            System.out.println("1. Mais Barato                                                                                 +");
+            System.out.println("2. Mais Perto                                                                                  +");
+            System.out.println("3. Mais Barato a pé                                                                            +");
+            System.out.println("4. Mais Barato conforme o tempo a pé                                                           +");
+            System.out.println("5. Voltar                                                                                      +");
+            System.out.println("6. Sair                                                                                        +");
+            System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
             try {
                 opcaoc = sc.nextInt();
                 if (opcaoc < 1) op = 0;
@@ -619,6 +634,10 @@ public class Menu implements Serializable {
                     System.out.println("A sair");
                     System.exit(0);
                     break;
+                default:
+                    System.out.println("Opcao não valida");
+                    op = 0;
+                    break;
             }
         }
     }
@@ -687,8 +706,9 @@ public class Menu implements Serializable {
             System.out.println("3. Lista de Veiculos                                                                       +");
             System.out.println("4. Lista de Alugueres                                                                      +");
             System.out.println("5. Visualizar Veiculo especifico                                                           +");
-            System.out.println("6. Voltar                                                                                  +");
-            System.out.println("7. Sair                                                                                    +");
+            System.out.println("6. Classificar Alugueres                                                                   +");
+            System.out.println("7. Voltar                                                                                  +");
+            System.out.println("8. Sair                                                                                    +");
             System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
 
             //Apartir de aqui, é so chamar as funçoes necessarias dentro de um Switch
@@ -739,6 +759,10 @@ public class Menu implements Serializable {
                         case 4:
                             opcaoc = 0;
                             break;
+                        default:
+                            System.out.println("Opcao invalida");
+                            opcaoc = 0;
+                            break;
                         }
 
                     opcaoc = 0;
@@ -748,8 +772,15 @@ public class Menu implements Serializable {
                     //Abastecer um certo veiculo (deve receber ?matricula? do carro)
                     System.out.println("Matricula:");
                     matricula = sc.next();
+                    Carro te = null;
                     sc.nextLine();
-                    Carro te = (Carro) master.veiculos.get(matricula);
+                    if(master.veiculos.get(matricula).getIdProprietario() != idProprietario){
+                        System.out.println("Carro não pertence a este proprietario");
+                        opcaoc = 0;
+                        break;
+
+                    }
+                    te = (Carro) master.veiculos.get(matricula);
                     if(te == null){
                         System.out.println("Nao existe um carro com esta matricula na base de dados!");
                         opcaoc = 0;
@@ -809,12 +840,14 @@ public class Menu implements Serializable {
                     }
                     opcaoc = 0;
                     break;
-
-                case 6:
+                case 6://classificar alugueres
+                    opcaoc = 0;
+                    break;
+                case 7:
                     //Voltar ao menu anterior
                     opcaoc = -1;
                     break;
-                case 7:
+                case 8:
                     //sair
                     System.out.println("A gravar estado");
                     try{
@@ -825,6 +858,10 @@ public class Menu implements Serializable {
                     }
                     System.out.println("A sair");
                     System.exit(0);
+                    break;
+                default :
+                    System.out.println("Opcao Invalida");
+                    opcaoc = 0;
                     break;
             }
         }

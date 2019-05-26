@@ -15,7 +15,7 @@ import java.util.Map;
 /**
  * Classe Cliente dá extend a Pessoa
  */
-public class Cliente extends Pessoa implements Serializable {
+public class Cliente extends Pessoa implements Serializable{
 
     private Coordenada coordenada;
 
