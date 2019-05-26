@@ -384,11 +384,13 @@ public class UmCarroJa implements Serializable{
     public Veiculo maisPerto(int idCliente){
         Veiculo res = null;
         double dist = Double.MAX_VALUE;
-        for(Veiculo c : veiculos.values()){
+        for(Veiculo c : veiculos.values()) {
             double dist_temp = clientes.get(idCliente).getCoordenada().distancia(c.getCoordenada());
-            if(dist_temp < dist){
-                dist = dist_temp;
-                res = c.clone(); //não sei se isto pode ser assim
+            if (c.isDisponivel()) {
+                if (dist_temp < dist) {
+                    dist = dist_temp;
+                    res = c.clone(); //não sei se isto pode ser assim
+                }
             }
         }
         return res;
@@ -405,9 +407,11 @@ public class UmCarroJa implements Serializable{
         double preco = Double.MAX_VALUE;
         for(Veiculo c : this.veiculos.values()){
             double precoTeste = c.getPreco() * clientes.get(idCliente).getCoordenada().distancia(destino);
-            if(precoTeste < preco){
-                preco = precoTeste;
-                res = c.clone();
+            if(c.isDisponivel()) {
+                if (precoTeste < preco) {
+                    preco = precoTeste;
+                    res = c.clone();
+                }
             }
         }
         return res;
@@ -423,10 +427,11 @@ public class UmCarroJa implements Serializable{
         double preco =Double.MAX_VALUE;
         for(Veiculo c : veiculos.values()){
             double precoTeste = c.precoViagem(destino);
-
-            if(precoTeste < preco && clientes.get(idCliente).getCoordenada().distancia(c.getCoordenada())< km ){
-                preco=precoTeste;
-                carroRes=c.clone();
+            if(c.isDisponivel()) {
+                if (precoTeste < preco && clientes.get(idCliente).getCoordenada().distancia(c.getCoordenada()) < km) {
+                    preco = precoTeste;
+                    carroRes = c.clone();
+                }
             }
         }
 
@@ -454,10 +459,11 @@ public class UmCarroJa implements Serializable{
         double preco =Double.MAX_VALUE;
         for(Veiculo c : veiculos.values()){
             double precoTeste = c.precoViagem(destino);
-
-            if(precoTeste < preco && time(clientes.get(idCliente).getCoordenada().distancia(c.getCoordenada()))< tempo){
-                preco=precoTeste;
-                res=c.clone();
+            if(c.isDisponivel()) {
+                if (precoTeste < preco && time(clientes.get(idCliente).getCoordenada().distancia(c.getCoordenada())) < tempo) {
+                    preco = precoTeste;
+                    res = c.clone();
+                }
             }
         }
 
@@ -467,7 +473,7 @@ public class UmCarroJa implements Serializable{
     //                     Coordenada a,Coordenada b, double tempoViagem,LocalDate data,double preco,String pref,
     //                   boolean isClassificado
     //Metodo de realizar Alugueres
-    public void realizarAluguer(int idCliente, String pref, String idVeiculo, Coordenada destino){
+    public void realizarAluguer(int idCliente, String pref, String idVeiculo, Coordenada destino) throws Exception{
         int idAluguer = alugueres.size()+1;
         int idProp = veiculos.get(idVeiculo).getIdProprietario();
         Coordenada i = veiculos.get(idVeiculo).getCoordenada();
@@ -475,6 +481,48 @@ public class UmCarroJa implements Serializable{
         Carro c = (Carro) veiculos.get(idVeiculo);
         double tempo = i.distancia(destino)/c.getVelocidadeMedia();
         LocalDate data = LocalDate.now();
+        double combustivelConsumido = 0;
+        double energiaConsumida = 0;
+        if(c instanceof Combustao) {
+            if(c.autonomia(destino)) {
+                combustivelConsumido = ((Combustao) c).getConsumoMedio() * i.distancia(destino);
+                ((Combustao) veiculos.get(idVeiculo)).setCapacidadeAtual(((Combustao) veiculos.get(idVeiculo)).getCapacidadeAtual() - combustivelConsumido);
+                if(((Combustao) veiculos.get(idVeiculo)).getCapacidadeAtual()/((Combustao) veiculos.get(idVeiculo)).getCapacidadeTanque() < 0.1){
+                    veiculos.get(idVeiculo).setDisponivel(false);
+                }
+            }
+            else {
+                throw new Exception("Não tem combustivel");
+            }
+        }
+        if(c instanceof Eletrico) {
+            if (c.autonomia(destino)) {
+               energiaConsumida = ((Eletrico) c).getConsumoMedio() * i.distancia(destino);
+                ((Eletrico) veiculos.get(idVeiculo)).setBateriaAtual(((Eletrico) veiculos.get(idVeiculo)).getBateriaAtual() - energiaConsumida);
+                if(((Eletrico) veiculos.get(idVeiculo)).getBateriaAtual()/((Eletrico) veiculos.get(idVeiculo)).getCapacidadeBateria() < 0.1){
+                    veiculos.get(idVeiculo).setDisponivel(false);
+                }
+            }else{
+                throw new Exception("Não tem bateria");
+            }
+        }
+        if (c instanceof Hibrido){
+            if(c.autonomia(destino)){
+                energiaConsumida = ((Hibrido) c).getConsumoMedioBateria()*i.distancia(destino);
+                combustivelConsumido = ((Hibrido) c).getConsumoMedioCombustivel()*i.distancia(destino);
+                ((Hibrido) veiculos.get(idVeiculo)).setBateriaAtual(((Hibrido) veiculos.get(idVeiculo)).getBateriaAtual() - energiaConsumida);
+                if(((Hibrido) veiculos.get(idVeiculo)).getBateriaAtual()/((Hibrido) veiculos.get(idVeiculo)).getCapacidadeBateria() < 0.1){
+                    veiculos.get(idVeiculo).setDisponivel(false);
+                }
+                ((Hibrido) veiculos.get(idVeiculo)).setCapacidadeAtual(((Hibrido) veiculos.get(idVeiculo)).getCapacidadeAtual() - combustivelConsumido);
+                if(((Hibrido) veiculos.get(idVeiculo)).getCapacidadeAtual()/((Hibrido) veiculos.get(idVeiculo)).getCapacidadeTanque() < 0.1){
+                    veiculos.get(idVeiculo).setDisponivel(false);
+                }
+            }else{
+                throw new Exception("Não tem combustivel/bateria");
+            }
+        }
+
         Aluguer a = new Aluguer(idAluguer,idCliente,idProp,idVeiculo,i.clone(),destino.clone(),tempo,data,preco,pref,false);
 
         alugueres.put(idAluguer,a.clone());
@@ -496,6 +544,7 @@ public class UmCarroJa implements Serializable{
         //muda coordenadas do cliente e carro
         clientes.get(idCliente).setCoordenada(destino.clone());
         veiculos.get(idVeiculo).setCoordenada(destino.clone());
+
     }
     public void top10Clientes(){
         Set<Cliente> top = new TreeSet<>(new ComparadorTop10Clientes());

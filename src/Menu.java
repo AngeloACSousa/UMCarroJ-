@@ -492,10 +492,15 @@ public class Menu implements Serializable {
                         while(op == 0) {
                             String s = sc.next();
                             if (s.equals("y")) {
-                                master.realizarAluguer(idCliente,"MaisPerto",v.getMatricula(), x);
-                                System.out.println("Aluguer efectuado!");
-                                classificaAluguer(v.getMatricula());
-                                op = 1;
+                                try {
+                                    master.realizarAluguer(idCliente, "MaisBarato", v.getMatricula(), x);
+                                    System.out.println("Aluguer efectuado!");
+                                    classificaAluguer(v.getMatricula());
+                                    op = 1;
+                                }catch(Exception e){
+                                    System.out.println(e.getMessage());
+                                    op = 1;
+                                }
                             }
                             if(s.equals("n")) {
                                 op = 1;
@@ -519,10 +524,15 @@ public class Menu implements Serializable {
                         while(op == 0) {
                             String s = sc.next();
                             if (s.equals("y")) {
-                                master.realizarAluguer(idCliente,"MaisBarato",v.getMatricula(), x);
-                                System.out.println("Aluguer efectuado!");
-                                classificaAluguer(v.getMatricula());
-                                op = 1;
+                                try {
+                                    master.realizarAluguer(idCliente, "MaisPerto", v.getMatricula(), x);
+                                    System.out.println("Aluguer efectuado!");
+                                    classificaAluguer(v.getMatricula());
+                                    op = 1;
+                                }catch(Exception e){
+                                    System.out.println(e.getMessage());
+                                    op = 1;
+                                }
                             }
                             if(s.equals("n")){
                                 op = 1;
@@ -561,10 +571,15 @@ public class Menu implements Serializable {
                         while(op == 0) {
                             String s = sc.next();
                             if (s.equals("y")) {
-                                master.realizarAluguer(idCliente,"MaisBaratoDistAPe",v.getMatricula(), x);
-                                System.out.println("Aluguer efectuado!");
-                                classificaAluguer(v.getMatricula());
-                                op = 1;
+                                try {
+                                    master.realizarAluguer(idCliente, "MaisBaratoDistAPe", v.getMatricula(), x);
+                                    System.out.println("Aluguer efectuado!");
+                                    classificaAluguer(v.getMatricula());
+                                    op = 1;
+                                }catch(Exception e){
+                                    System.out.println(e.getMessage());
+                                    op = 1;
+                                }
                             }
                             if(s.equals("n")){
                                 op = 1;
@@ -604,10 +619,15 @@ public class Menu implements Serializable {
                         while(op == 0) {
                             String s = sc.next();
                             if (s.equals("y")) {
-                                master.realizarAluguer(idCliente,"MaisBaratoTempoAPe",v.getMatricula(), x);
-                                System.out.println("Aluguer efectuado!");
-                                classificaAluguer(v.getMatricula());
-                                op = 1;
+                                try {
+                                    master.realizarAluguer(idCliente, "MaisBaratoTempoAPe", v.getMatricula(), x);
+                                    System.out.println("Aluguer efectuado!");
+                                    classificaAluguer(v.getMatricula());
+                                    op = 1;
+                                }catch(Exception e){
+                                    System.out.println(e.getMessage());
+                                    op = 1;
+                                }
                             }
                             if(s.equals("n")){
                                 op = 1;
