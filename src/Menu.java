@@ -82,19 +82,8 @@ public class Menu {
         this.opcao = 0;
         while (opcao == 0){
             menu();
-            op = 0;
-            while (op == 0) {
-                try {
-                    this.opcao = sc.nextInt();
-                    sc.nextLine();
-                    if (this.opcao < 1) op = 0;
-                    else op = 1;
-                } catch (Exception e) {
-                    System.out.println("Input invalido ");
-                    sc.nextLine();
-                    op = 0;
-                }
-            }
+            this.opcao = sc.nextInt();
+
             switch (opcao) {
                 //login
                 case 1:
@@ -143,20 +132,8 @@ public class Menu {
                 //registo
                 case 2:
                     registar();
-                    int opcao2 = 0;
-                    op = 0;
-                    while (op == 0) {
-                        try {
-                            opcao2 = sc.nextInt();
-                            sc.nextLine();
-                            if (opcao2 < 1) op = 0;
-                            else op = 1;
-                        } catch (Exception e) {
-                            System.out.println("Input invalido ");
-                            sc.nextLine();
-                            op = 0;
-                        }
-                    }
+                    int opcao2;
+                    opcao2 = sc.nextInt();
 
                     switch (opcao2) {
                         //Registo de Proprietarios
@@ -283,20 +260,17 @@ public class Menu {
                             System.out.println("A sair do programa!!");
                             System.exit(0);
                             break;
-                        default:
-                            System.out.println("Opcao invalida.");
-                            this.opcao = 0;
                     }
                     break;
                 //sair
                 case 3:
                     try {
-                        master.lerFicheiro("/Users/andre/Desktop/POO/UMCarroJ-/src/logsteste.txt");
+                        master.lerFicheiro("logsteste.txt");
                     }
                     catch (Exception e){
                         System.out.println("Erro no carregamento");
                     }
-                    System.out.println("");
+                    this.opcao = 0;
                     break;
                 case 4:
                     System.out.println("A sair do programa!!");
@@ -437,14 +411,14 @@ public class Menu {
     }
 
     public Coordenada getCoordenada(){
-        op = 0;
         while (op == 0) {
             try {
                 x = sc.nextDouble();
                 sc.nextLine();
-                op = 1;
+                if (x < 1) op = 0;
+                else op = 1;
             } catch (Exception e) {
-                System.out.println("Input invalido para X");
+                System.out.println("Input invalido ");
                 sc.nextLine();
                 op = 0;
             }
@@ -454,9 +428,10 @@ public class Menu {
             try {
                 y = sc.nextDouble();
                 sc.nextLine();
-                op = 1;
+                if (y < 1) op = 0;
+                else op = 1;
             } catch (Exception e) {
-                System.out.println("Input invalido para Y");
+                System.out.println("Input invalido ");
                 sc.nextLine();
                 op = 0;
             }
@@ -481,10 +456,9 @@ public class Menu {
             System.out.println("2. Abastecer Veiculo                                                                       +");
             System.out.println("3. Lista de Veiculos                                                                       +");
             System.out.println("4. Lista de Alugueres                                                                      +");
-            System.out.println("5. Visualizar Veiculo especifico                                                           +");
-            System.out.println("6. Classificar viagens                                                                     +");
-            System.out.println("7. Voltar                                                                                  +");
-            System.out.println("8. Sair                                                                                    +");
+            System.out.println("4. Visualizar Veiculo especifico                                                           +");
+            System.out.println("5. Voltar                                                                                  +");
+            System.out.println("6. Sair                                                                                    +");
             System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
 
             //Apartir de aqui, é so chamar as funçoes necessarias dentro de um Switch
@@ -530,7 +504,7 @@ public class Menu {
                         break;
                     }
                     if(te.getTipo().equals("combustao")){
-                        Combustao c = (Combustao) te;
+                        Combustao c = (Combustao) te; //ISTO FAZ SENTIDO? SENAO NAO POSSO IMPRIMIR A QUANTIDADE DE COMBUSTIVEL ACTUAL.
                         System.out.println("Quantidade de Combustivel a abastecer:");
                         combustivel = sc.nextDouble();
                         c.Abastecer(combustivel, 0);
@@ -538,7 +512,7 @@ public class Menu {
                         System.out.println("Combustivel actual: "+c.getCapacidadeTanque());
                     }
                     if(te.getTipo().equals("eletrico")){
-                        Eletrico e = (Eletrico) te;
+                        Eletrico e = (Eletrico) te; //ISTO FAZ SENTIDO? SENAO NAO POSSO IMPRIMIR A QUANTIDADE DE COMBUSTIVEL ACTUAL.
                         System.out.println("Quantidade de Bateria a abastecer:");
                         bateria = sc.nextDouble();
                         e.Abastecer(0, bateria);
@@ -563,45 +537,24 @@ public class Menu {
                     opcaoc = 0;
                     break;
 
+
                 case 4:
-                    //imprimir lista de algueres
-                    master.visualizarAlugueresProprietario(idProprietario);
-                    opcaoc = 0;
+                    //visualizar carro especifico (imprime todos os detalhes do carro)
                     break;
 
                 case 5:
-                    //visualizar carro especifico (imprime todos os detalhes do carro)
-                    System.out.println("Matricula:");
-                    matricula = sc.next();
-                    sc.nextLine();
-                    try{
-                        master.visualizarCarro(matricula);
-                    }
-                    catch (Exception e){
-                        System.out.println("nao existe carro registado com esta matricula!");
-                    }
-                    opcaoc = 0;
+                    //imprimir lista de algueres
                     break;
-
 
                 case 6:
-                    //Classificar viagens do clientes!!
-                    master.classificarProprietario(idProprietario);
-                    opcaoc = 0;
-                    break;
-
-                case 7:
                     //Voltar ao menu anterior
                     opcaoc = -1;
                     break;
-                case 8:
+                case 7:
                     //sair
                     System.out.println("A sair do programa!!");
                     System.exit(0);
                     break;
-                default:
-                    System.out.println("Opcao invalida.");
-                    opcaoc = 0;
             }
         }
     }
@@ -620,7 +573,6 @@ public class Menu {
         marca = sc.next();
         sc.nextLine();
         System.out.println("Velocidade Média:");
-        op = 0;
         while (op == 0) {
             try {
                 velociademedia = sc.nextDouble();
@@ -634,7 +586,6 @@ public class Menu {
             }
         }
         System.out.println("Preço:");
-        op = 0;
         while (op == 0) {
             try {
                 preco = sc.nextDouble();
@@ -648,7 +599,6 @@ public class Menu {
             }
         }
         System.out.println("Quantidade de combustivel no tanque:");
-        op = 0;
         while (op == 0) {
             try {
                 capacidadeatual = sc.nextDouble();
@@ -662,7 +612,6 @@ public class Menu {
             }
         }
         System.out.println("Capacidade do tanque:");
-        op = 0;
         while (op == 0) {
             try {
                 capacidadetanque = sc.nextDouble();
@@ -676,7 +625,6 @@ public class Menu {
             }
         }
         System.out.println("Comsumo médio de Combustivel:");
-        op = 0;
         while (op == 0) {
             try {
                 consumomedio = sc.nextDouble();
@@ -717,7 +665,6 @@ public class Menu {
         marca = sc.next();
         sc.nextLine();
         System.out.println("Velocidade Média:");
-        op = 0;
         while (op == 0) {
             try {
                 velociademedia = sc.nextDouble();
@@ -731,7 +678,6 @@ public class Menu {
             }
         }
         System.out.println("Preço:");
-        op = 0;
         while (op == 0) {
             try {
                 preco = sc.nextDouble();
@@ -745,7 +691,6 @@ public class Menu {
             }
         }
         System.out.println("Quantidade de bateria:");
-        op = 0;
         while (op == 0) {
             try {
                 bateriaatual = sc.nextDouble();
@@ -759,7 +704,6 @@ public class Menu {
             }
         }
         System.out.println("Capacidade da bateria:");
-        op = 0;
         while (op == 0) {
             try {
                 capaciadebateria = sc.nextDouble();
@@ -773,7 +717,6 @@ public class Menu {
             }
         }
         System.out.println("Comsumo médio de bateria:");
-        op = 0;
         while (op == 0) {
             try {
                 consumomediobateria = sc.nextDouble();
@@ -817,7 +760,6 @@ public class Menu {
         marca = sc.next();
         sc.nextLine();
         System.out.println("Velocidade Média:");
-        op = 0;
         while (op == 0) {
             try {
                 velociademedia = sc.nextDouble();
@@ -831,7 +773,6 @@ public class Menu {
             }
         }
         System.out.println("Preço: (por exemplo 1,5€)");
-        op = 0;
         while (op == 0) {
             try {
                 preco = sc.nextDouble();
@@ -845,7 +786,6 @@ public class Menu {
             }
         }
         System.out.println("Quantidade de combustivel no tanque:");
-        op = 0;
         while (op == 0) {
             try {
                 capacidadeatual = sc.nextDouble();
@@ -859,7 +799,6 @@ public class Menu {
             }
         }
         System.out.println("Capacidade do tanque:");
-        op = 0;
         while (op == 0) {
             try {
                 capacidadetanque = sc.nextDouble();
@@ -874,7 +813,6 @@ public class Menu {
         }
         System.out.println("Comsumo médio de Combustivel:");
         consumomedio = sc.nextDouble();
-        op = 0;
         while (op == 0) {
             try {
                 consumomedio = sc.nextDouble();
@@ -888,7 +826,6 @@ public class Menu {
             }
         }
         System.out.println("Quantidade de bateria:");
-        op = 0;
         while (op == 0) {
             try {
                 bateriaatual = sc.nextDouble();
@@ -902,7 +839,6 @@ public class Menu {
             }
         }
         System.out.println("Capacidade da bateria:");
-        op = 0;
         while (op == 0) {
             try {
                 capaciadebateria = sc.nextDouble();
@@ -917,7 +853,6 @@ public class Menu {
         }
         System.out.println("Comsumo médio de bateria:");
         consumomediobateria = sc.nextDouble();
-        op = 0;
         while (op == 0) {
             try {
                 consumomedio = sc.nextDouble();
@@ -953,7 +888,7 @@ public class Menu {
         System.out.println("Veiculo adicionado com sucesso!");
     }
 
-    //public static void main(String args[]) throws Exception{
+    public static void main(String args[]) throws Exception{
 
-    //}
+    }
 }

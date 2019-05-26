@@ -55,39 +55,63 @@ public class UmCarroJa{
         System.out.println("Cheguei aqui4");
         String line = "";
         while((line = br.readLine()) != null){
+            System.out.println("Cheguei aqui5");
+            System.out.println(line);
             String[] split = line.split("[:]");
+            System.out.println("Cheguei aqui6");
                             if(split.length > 0) {
                                 String[] split2 = split[1].split("[,]");
+                                System.out.println("Cheguei aqui7");
                                 switch (split[0]) {
                                     case "NovoProp":
+                                        System.out.println("Cheguei aqui8");
                                         Proprietario proprietario = criarProprietario(split2);
+                                        System.out.println("Cheguei aqui9");
                                         proprietarios.put(proprietario.getNif(),proprietario);
-                                    case "NovoCliente":
+                                        System.out.println("cheguei aqui 10");
+                                        break;
+                                        case "NovoCliente":
+                                            System.out.println("Cheguei aqui 20");
                                         Cliente cliente = criarCliente(split2);
                                         clientes.put(cliente.getNif(), cliente);
                                         break;
                                     case "NovoCarro":
+                                        System.out.println("Cheguei aqui 30");
                                         switch (split2[0]) {
-                                            case "eletrico":
+                                            case "Electrico":
+                                                System.out.println("Cheguei aqui 31");
                                                 Eletrico eletrico = criarEletrico(split2);
+                                                System.out.println("Cheguei aqui 32");
                                                 veiculos.put(eletrico.getMatricula(), eletrico);
+                                                System.out.println("Cheguei aqui 33");
                                                 break;
-                                            case "gasolina":
+                                            case "Gasolina":
+                                                System.out.println("Cheguei aqui 34");
                                                 Combustao combustao = criarCombustao(split2);
+                                                System.out.println("Cheguei aqui 35");
                                                 veiculos.put(combustao.getMatricula(), combustao);
+                                                System.out.println("Cheguei aqui 36");
                                                 break;
-                                            case "hibrido":
+                                            case "Hibrido":
+                                                System.out.println("Cheguei aqui 37");
                                                 Hibrido hibrido = criarHibrido(split2);
+                                                System.out.println("Cheguei aqui 38");
                                                 veiculos.put(hibrido.getMatricula(), hibrido);
+                                                System.out.println("Cheguei aqui 39");
                                                 break;
-
                                         }
+                                        break;
                                     case "Aluguer":
+                                        System.out.println("Cheguei aluguer1");
                                         Aluguer aluguer = criarAluguer(split2);
+                                        System.out.println("Cheguei aluguer2");
                                         alugueres.put(aluguer.getIdAluguer(), aluguer);
+                                        System.out.println("Cheguei aluguer3");
                                         break;
                                     case "Classificar":
+                                        System.out.println("Cheguei classificar1");
                                         classificar(split2);
+                                        System.out.println("Cheguei classificar2");
                                         break;
                                     default:
                                         System.out.println("Comando não encontrado " + split[0]);
@@ -96,6 +120,7 @@ public class UmCarroJa{
                             }
         }
     }
+    //CLASSIFICAR
     private void classificar(String[] classificar){
         if (classificar[0].matches("[0-9]+") && classificar[0].length() > 2) {
             int nif = Integer.parseInt(classificar[0]);
@@ -104,15 +129,38 @@ public class UmCarroJa{
         }
         else veiculos.get(classificar[0]).setClassificacao(Integer.parseInt(classificar[1]));
     }
-    private Cliente criarCliente(String[] cliente){
-        return new Cliente(cliente[2],cliente[0],"",cliente[3],LocalDate.parse("00-00-00"), Integer.parseInt(cliente[1]),
-                new Coordenada(Double.parseDouble(cliente[4]),Double.parseDouble(cliente[5])), new ArrayList<Integer>(),0);
-    }
-    private Proprietario criarProprietario(String[] prop){
-        return new Proprietario(prop[2],prop[0],"",prop[3],LocalDate.parse("00-00-00"),Integer.parseInt(prop[1]),
-                new ArrayList<Integer>(),new ArrayList<String>(), 0);
-    }
 
+    //CRIAR PESSOAS
+    // public Cliente(String email, String nome, String pass, String morada,
+    //                   LocalDate nascimento, int nif,  Coordenada c, List<Integer> a, double classificacao)
+    private Cliente criarCliente(String[] cliente){
+        String mail = cliente[2];
+        String nome = cliente[0];
+        String pass = "";
+        String morada = cliente[3];
+        LocalDate data = LocalDate.now();
+        int nif = Integer.parseInt(cliente[1]);
+        List<Integer> a = new ArrayList<>();
+        List<String> v = new ArrayList<>();
+        Coordenada c = new Coordenada(Double.parseDouble(cliente[4]),Double.parseDouble(cliente[4]));
+        return new Cliente(mail,nome,pass,morada,data,nif,c,a,0);
+    }
+    //String email, String nome, String pass, String morada,
+    //                        LocalDate nascimento, int nif, List<Integer> a, List<String> v, double classificacao)
+
+
+    private Proprietario criarProprietario(String[] prop){
+        String mail = prop[2];
+        String nome = prop[0];
+        String pass = "";
+        String morada = prop[3];
+        LocalDate data = LocalDate.now();
+        int nif = Integer.parseInt(prop[1]);
+        List<Integer> a = new ArrayList<>();
+        List<String> v = new ArrayList<>();
+        return new Proprietario(mail,nome,pass,morada,data,nif,a,v,0);
+    }
+    //CRIAR VEICULOS
     private Eletrico criarEletrico(String[] eletrico){
         double capacidade = Double.parseDouble(eletrico[7]) / Double.parseDouble(eletrico[6]);
         return new Eletrico(eletrico[2],Double.parseDouble(eletrico[4]),Double.parseDouble(eletrico[5]),
@@ -146,11 +194,15 @@ public class UmCarroJa{
                new Coordenada(Double.parseDouble(hibrido[8]),Double.parseDouble(hibrido[9])),
                true,Integer.parseInt(hibrido[3]),hibrido[1]);
     }
+    //int idAluguer,int idCliente,int idProprietario,String idVeiculo,
+    //                     Coordenada a,Coordenada b, double tempoViagem,LocalDate data,double preco,String pref)
     //nif cliente, X destino, Y destino, tipoCombustivel , preferencia
     private Aluguer criarAluguer(String[] aluguer){
+        int idAluguer = alugueres.size()+1;
         int nif = Integer.parseInt(aluguer[0]);
-        Aluguer res = new Aluguer();
-        Coordenada c = new Coordenada(Integer.parseInt(aluguer[1]),Integer.parseInt(aluguer[2]));
+        double x = Double.parseDouble(aluguer[1]);
+        double y = Double.parseDouble(aluguer[2]);
+        Coordenada c = new Coordenada(x,y);
         String pref = aluguer[4];
         Carro v = null;
         switch (pref){
@@ -160,18 +212,37 @@ public class UmCarroJa{
             case "MaisPerto":
                 v = (Carro) maisPerto(nif);
         }
-        if (v == null) return res;
-        res.setIdAluguer(alugueres.size()+1);
-        res.setIdCliente(nif);
-        res.setCoordenadaI(clientes.get(nif).getCoordenada());
-        res.setCoordenadaF(c.clone());
-        res.setIdVeiculo(v.getMatricula());
-        res.setData(LocalDate.now());
-        res.setTempoViagem(c.distancia(res.getCoordenadaI())/v.getVelocidadeMedia());
-        res.setProprietario(v.getIdProprietario());
-        res.setPreco(v.precoViagem(res.getCoordenadaI()));
-        res.setPref(pref);
-        return res;
+
+        int idProp = v.getIdProprietario();
+        String matricula = v.getMatricula();
+        Coordenada i = clientes.get(nif).getCoordenada();
+        double tempo = c.distancia(clientes.get(nif).getCoordenada())/v.getVelocidadeMedia();
+        LocalDate data = LocalDate.now();
+        //if(v instanceof Hibrido) v = (Hibrido) v;
+        //if(v instanceof Eletrico) v = (Eletrico) v;
+        //if(v instanceof Combustao) v = (Combustao) v;
+        double preco = v.precoViagem(c);
+        System.out.println("ESTOU AQUI");
+
+        //addicionar no proprietario
+        List<Integer> p = proprietarios.get(idProp).getAlugueres();
+        p.add(idAluguer);
+        proprietarios.get(idProp).setAlugueres(new ArrayList<>(p));
+
+        //adicionar no cliente
+        List<Integer> cl =  clientes.get(nif).getAlugueres();
+        cl.add(idAluguer);
+        clientes.get(nif).setAlugueres(new ArrayList<>(cl));
+
+        //adicionar no veiculo
+        List<Integer> vl = veiculos.get(matricula).getAlugueres();
+        vl.add(idAluguer);
+        veiculos.get(matricula).setAlugueres(new ArrayList<>(vl));
+
+
+
+        return new Aluguer(idAluguer,nif,idProp,matricula,i,c,tempo,data,preco,pref,false);
+
     }
 
     public List<String> getCarrosdoTipo(String tipo) {
