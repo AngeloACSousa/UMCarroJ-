@@ -529,7 +529,7 @@ public class Menu implements Serializable {
             while (op == 0) {
                 try {
                     opcaoc = sc.nextInt();
-                    if (opcaoc < 1) op = 0;
+                    if (opcaoc < 0) op = 0;
                     else op = 1;
                 } catch (Exception e) {
                     System.out.println("Input invalido! ");
@@ -543,7 +543,6 @@ public class Menu implements Serializable {
                     //Registar novo veiculo, caso ja exista um com esse id, da erro!
                     registarCarro();
                     int opcaoReg = 0;
-                    opcaoReg = sc.nextInt();
                     op = 0;
                     while (op == 0) {
                         try {
