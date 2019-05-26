@@ -51,7 +51,7 @@ public class UmCarroJa implements Serializable{
         }
         String line = "";
         while((line = br.readLine()) != null){
-            System.out.println(line);
+
             String[] split = line.split("[:]");
                             if(split.length > 0) {
                                 String[] split2 = split[1].split("[,]");

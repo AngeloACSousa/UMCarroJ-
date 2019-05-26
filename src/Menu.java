@@ -118,7 +118,6 @@ public class Menu implements Serializable {
                     }
                     sc.nextLine();
                     if (master.clientes.containsKey(nif)) { //ainda por testar o anyMatch()
-                        System.out.println("é um cliente :D");
                         //agora verifica a pass;
                         Cliente clitemp = getCliente(master.clientes, nif);
                         if (clitemp != null) {
@@ -137,7 +136,6 @@ public class Menu implements Serializable {
 
                     //Login de proprietarios
                     if (master.proprietarios.containsKey(nif)) {
-                        System.out.println("é um propriétario :D");
                         //agora verifica a pass;
                         Proprietario proptemp = getProprietario(master.proprietarios, nif);
                         if (proptemp != null) {
@@ -326,7 +324,7 @@ public class Menu implements Serializable {
                 case 4:
                     System.out.println("A recuperar estado anterior!");
                     try{
-                        master = master.recuperarEstado("C:\\Users\\angel\\Desktop\\UMCarroJ-\\src\\guardado");
+                        master = master.recuperarEstado("C:\\Users\\angel\\Desktop\\UMCarroJ-\\guardado");
                     }
                     catch (Exception e){
                         System.out.println(e.getMessage());
