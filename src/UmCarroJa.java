@@ -28,7 +28,6 @@ public class UmCarroJa implements Serializable{
     }
     //Leitura de Logs, Carregamento Inicial
     public void lerFicheiro(String filePath) throws Exception{
-        System.out.println("Cheguei aqui1");
         File file;
         FileReader fr;
         BufferedReader br;
@@ -40,78 +39,53 @@ public class UmCarroJa implements Serializable{
         }
         try{
             fr = new FileReader(file);
-            System.out.println("Cheguei aqui2");
         }catch (Exception e){
             System.out.println(e.getMessage());
             return;
         }
         try{
-            System.out.println("Cheguei aqui3");
             br = new BufferedReader(fr);
         }catch(Exception e){
             System.out.println(e.getMessage());
             return;
         }
-        System.out.println("Cheguei aqui4");
         String line = "";
         while((line = br.readLine()) != null){
-            System.out.println("Cheguei aqui5");
             System.out.println(line);
             String[] split = line.split("[:]");
-            System.out.println("Cheguei aqui6");
                             if(split.length > 0) {
                                 String[] split2 = split[1].split("[,]");
-                                System.out.println("Cheguei aqui7");
                                 switch (split[0]) {
                                     case "NovoProp":
-                                        System.out.println("Cheguei aqui8");
                                         Proprietario proprietario = criarProprietario(split2);
-                                        System.out.println("Cheguei aqui9");
                                         proprietarios.put(proprietario.getNif(),proprietario);
-                                        System.out.println("cheguei aqui 10");
                                         break;
                                         case "NovoCliente":
-                                            System.out.println("Cheguei aqui 20");
                                         Cliente cliente = criarCliente(split2);
                                         clientes.put(cliente.getNif(), cliente);
                                         break;
                                     case "NovoCarro":
-                                        System.out.println("Cheguei aqui 30");
                                         switch (split2[0]) {
                                             case "Electrico":
-                                                System.out.println("Cheguei aqui 31");
                                                 Eletrico eletrico = criarEletrico(split2);
-                                                System.out.println("Cheguei aqui 32");
                                                 veiculos.put(eletrico.getMatricula(), eletrico);
-                                                System.out.println("Cheguei aqui 33");
                                                 break;
                                             case "Gasolina":
-                                                System.out.println("Cheguei aqui 34");
                                                 Combustao combustao = criarCombustao(split2);
-                                                System.out.println("Cheguei aqui 35");
                                                 veiculos.put(combustao.getMatricula(), combustao);
-                                                System.out.println("Cheguei aqui 36");
                                                 break;
                                             case "Hibrido":
-                                                System.out.println("Cheguei aqui 37");
                                                 Hibrido hibrido = criarHibrido(split2);
-                                                System.out.println("Cheguei aqui 38");
                                                 veiculos.put(hibrido.getMatricula(), hibrido);
-                                                System.out.println("Cheguei aqui 39");
                                                 break;
                                         }
                                         break;
                                     case "Aluguer":
-                                        System.out.println("Cheguei aluguer1");
                                         Aluguer aluguer = criarAluguer(split2);
-                                        System.out.println("Cheguei aluguer2");
                                         alugueres.put(aluguer.getIdAluguer(), aluguer);
-                                        System.out.println("Cheguei aluguer3");
                                         break;
                                     case "Classificar":
-                                        System.out.println("Cheguei classificar1");
                                         classificar(split2);
-                                        System.out.println("Cheguei classificar2");
                                         break;
                                     default:
                                         System.out.println("Comando não encontrado " + split[0]);
@@ -162,7 +136,15 @@ public class UmCarroJa implements Serializable{
     }
     //CRIAR VEICULOS
     private Eletrico criarEletrico(String[] eletrico){
+
         double capacidade = Double.parseDouble(eletrico[7]) / Double.parseDouble(eletrico[6]);
+
+        //adiciona veiculo ao prop
+        int nif = Integer.parseInt(eletrico[3]);
+        List<String> v = proprietarios.get(nif).getVeiculos();
+        v.add(eletrico[2]);
+        proprietarios.get(nif).setVeiculos(new ArrayList<>(v));
+
         return new Eletrico(eletrico[2],Double.parseDouble(eletrico[4]),Double.parseDouble(eletrico[5]),
                 capacidade,capacidade,Double.parseDouble(eletrico[6]), new ArrayList<Integer>(),0,
                 new Coordenada(Double.parseDouble(eletrico[8]),Double.parseDouble(eletrico[9])),
@@ -171,6 +153,13 @@ public class UmCarroJa implements Serializable{
 
     private Combustao criarCombustao(String[] combustao){
         double capacidade = Double.parseDouble(combustao[7])/Double.parseDouble(combustao[6]);
+
+        //adiciona veiculo ao prop
+        int nif = Integer.parseInt(combustao[3]);
+        List<String> v = proprietarios.get(nif).getVeiculos();
+        v.add(combustao[2]);
+        proprietarios.get(nif).setVeiculos(new ArrayList<>(v));
+
         return new Combustao(combustao[2],Double.parseDouble(combustao[4]),Double.parseDouble(combustao[5]),
                 capacidade,capacidade,Double.parseDouble(combustao[6]), new ArrayList<Integer>(),0,
                 new Coordenada(Double.parseDouble(combustao[8]),Double.parseDouble(combustao[9])),
@@ -189,6 +178,14 @@ public class UmCarroJa implements Serializable{
        double consumo = Double.parseDouble(hibrido[5]);
        double consumoT = consumo * 0.9;
        double consumoB = consumo * 0.1;
+
+        //adiciona veiculo ao prop
+       int nif = Integer.parseInt(hibrido[3]);
+        List<String> v = proprietarios.get(nif).getVeiculos();
+        v.add(hibrido[2]);
+        proprietarios.get(nif).setVeiculos(new ArrayList<>(v));
+
+
        return new Hibrido(hibrido[2],Double.parseDouble(hibrido[4]),consumoB,consumoT,
                capacidadeT,capacidadeT,capacidadeB,capacidadeB,Double.parseDouble(hibrido[6]), new ArrayList<Integer>(),0,
                new Coordenada(Double.parseDouble(hibrido[8]),Double.parseDouble(hibrido[9])),
@@ -222,7 +219,6 @@ public class UmCarroJa implements Serializable{
         //if(v instanceof Eletrico) v = (Eletrico) v;
         //if(v instanceof Combustao) v = (Combustao) v;
         double preco = v.precoViagem(c);
-        System.out.println("ESTOU AQUI");
 
         //addicionar no proprietario
         List<Integer> p = proprietarios.get(idProp).getAlugueres();

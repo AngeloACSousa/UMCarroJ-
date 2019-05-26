@@ -307,11 +307,12 @@ public class Menu implements Serializable {
                 case 4:
                     System.out.println("A recuperar estado anterior!");
                     try{
-                        master = master.recuperarEstado("guardado");
+                        master = master.recuperarEstado("C:\\Users\\angel\\Desktop\\UMCarroJ-\\guardado");
                     }
                     catch (Exception e){
                         System.out.println(e.getMessage());
                     }
+                    opcao = 0;
                     break;
 
                 case 5:
