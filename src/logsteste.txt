@@ -1,42 +1,42 @@
 NovoProp:Laurindo,558192493,558192493@gmail.com,Miranda do Douro
-NovoProp:Wesley,611843917,611843917@gmail.com,Fundão
+NovoProp:Wesley,611843917,611843917@gmail.com,Fundï¿½o
 NovoProp:Constantino,928862669,928862669@gmail.com,Castelo de Vide
 NovoProp:Telmo,239802040,239802040@gmail.com,Cuba
 NovoProp:Apani,298217279,298217279@gmail.com,Gouveia
-NovoProp:Anastácia,269742626,269742626@gmail.com,Chamusca
+NovoProp:Anastï¿½cia,269742626,269742626@gmail.com,Chamusca
 NovoProp:Marieta,704361300,704361300@gmail.com,Matosinhos
-NovoProp:Brian,760857827,760857827@gmail.com,Freixo de Espada à Cinta
+NovoProp:Brian,760857827,760857827@gmail.com,Freixo de Espada ï¿½ Cinta
 NovoProp:Alesia,418342005,418342005@gmail.com,Borba
 NovoProp:Gilsa,118492426,118492426@gmail.com,Sabrosa
 NovoProp:Mutaro,457129493,457129493@gmail.com,Sines
 NovoProp:Jon,790199398,790199398@gmail.com,Alcoutim
 NovoProp:Shariya,432796677,432796677@gmail.com,Cascais
 NovoProp:Raina,537380582,537380582@gmail.com,Marco de Canaveses
-NovoProp:Henzo,774388931,774388931@gmail.com,Grândola
+NovoProp:Henzo,774388931,774388931@gmail.com,Grï¿½ndola
 NovoProp:Valentyn,809384312,809384312@gmail.com,Cuba
 NovoProp:Vitor,139280802,139280802@gmail.com,Castro Verde
 NovoProp:Thayssa,866920963,866920963@gmail.com,Penalva do Castelo
 NovoProp:Camilla,101976155,101976155@gmail.com,Portel
-NovoProp:Amritjot,825166480,825166480@gmail.com,Paços de Ferreira
-NovoProp:Célio,674582495,674582495@gmail.com,Cadaval
+NovoProp:Amritjot,825166480,825166480@gmail.com,Paï¿½os de Ferreira
+NovoProp:Cï¿½lio,674582495,674582495@gmail.com,Cadaval
 NovoProp:Eduard,367595578,367595578@gmail.com,Estremoz
-NovoProp:Cinara,803010026,803010026@gmail.com,Grândola
+NovoProp:Cinara,803010026,803010026@gmail.com,Grï¿½ndola
 NovoProp:Jussara,613049352,613049352@gmail.com,Sernancelhe
-NovoProp:Taís,205259800,205259800@gmail.com,Penamacor
+NovoProp:Taï¿½s,205259800,205259800@gmail.com,Penamacor
 NovoProp:Rita,209512530,209512530@gmail.com,Oliveira do Hospital
-NovoProp:Malú,359425336,359425336@gmail.com,Vila de Rei
+NovoProp:Malï¿½,359425336,359425336@gmail.com,Vila de Rei
 NovoProp:Ribana,988337478,988337478@gmail.com,Ribeira de Pena
-NovoProp:Mladen,839706924,839706924@gmail.com,Sobral de Monte Agraço
+NovoProp:Mladen,839706924,839706924@gmail.com,Sobral de Monte Agraï¿½o
 NovoProp:Neyton,546886297,546886297@gmail.com,Crato
-NovoProp:Sílvia,598040345,598040345@gmail.com,Almodôvar
-NovoProp:Hélio,645698296,645698296@gmail.com,Coimbra
+NovoProp:Sï¿½lvia,598040345,598040345@gmail.com,Almodï¿½var
+NovoProp:Hï¿½lio,645698296,645698296@gmail.com,Coimbra
 NovoProp:Kentia,219243467,219243467@gmail.com,Viana do Castelo
-NovoProp:Óscar,240536003,240536003@gmail.com,Santa Marta de Penaguião
+NovoProp:ï¿½scar,240536003,240536003@gmail.com,Santa Marta de Penaguiï¿½o
 NovoProp:Kianna,448979697,448979697@gmail.com,Batalha
 NovoProp:Jennifer,845993715,845993715@gmail.com,Batalha
-NovoProp:Carlene,987665183,987665183@gmail.com,Mértola
+NovoProp:Carlene,987665183,987665183@gmail.com,Mï¿½rtola
 NovoProp:Theo,497965590,497965590@gmail.com,Pombal
-NovoProp:Dérick,929620901,929620901@gmail.com,Viseu
+NovoProp:Dï¿½rick,929620901,929620901@gmail.com,Viseu
 NovoProp:Tarciso,605240779,605240779@gmail.com,Elvas
 NovoProp:Giulhia,109328019,109328019@gmail.com,Avis
 NovoProp:Olivia,994148195,994148195@gmail.com,Monchique
@@ -44,34 +44,34 @@ NovoProp:Miranda,793834647,793834647@gmail.com,Anadia
 NovoProp:Teodora,992132857,992132857@gmail.com,Tomar
 NovoProp:Derick,301649622,301649622@gmail.com,Benavente
 NovoProp:Keyla,603506272,603506272@gmail.com,Murtosa
-NovoProp:Núbia,282265817,282265817@gmail.com,Faro
+NovoProp:Nï¿½bia,282265817,282265817@gmail.com,Faro
 NovoProp:Zi,656701557,656701557@gmail.com,Barcelos
 NovoProp:Mabel,986286459,986286459@gmail.com,Chamusca
 NovoProp:Harjot,220867195,220867195@gmail.com,Tomar
 NovoProp:Arnaldo,882766983,882766983@gmail.com,Penalva do Castelo
 NovoProp:Issa,112326119,112326119@gmail.com,Vouzela
-NovoProp:Miguela,553316775,553316775@gmail.com,Almodôvar
+NovoProp:Miguela,553316775,553316775@gmail.com,Almodï¿½var
 NovoProp:Liany,738474050,738474050@gmail.com,Oliveira de Frades
-NovoProp:Ava,578471849,578471849@gmail.com,Ansião
+NovoProp:Ava,578471849,578471849@gmail.com,Ansiï¿½o
 NovoProp:Gurvir,978481144,978481144@gmail.com,Viana do Alentejo
 NovoProp:Ibrahim,891820257,891820257@gmail.com,Boticas
-NovoProp:Zoé,424955116,424955116@gmail.com,Albergaria-a-Velha
+NovoProp:Zoï¿½,424955116,424955116@gmail.com,Albergaria-a-Velha
 NovoProp:Gulmira,538008854,538008854@gmail.com,Lousada
 NovoProp:Felipe,185063055,185063055@gmail.com,Palmela
-NovoProp:Daphne,892039354,892039354@gmail.com,São João da Madeira
+NovoProp:Daphne,892039354,892039354@gmail.com,Sï¿½o Joï¿½o da Madeira
 NovoProp:Rasan,749384925,749384925@gmail.com,Arcos de Valdevez
-NovoProp:Lourenço,989439715,989439715@gmail.com,Ferreira do Alentejo
+NovoProp:Lourenï¿½o,989439715,989439715@gmail.com,Ferreira do Alentejo
 NovoProp:Alexia,955297688,955297688@gmail.com,Salvaterra de Magos
-NovoProp:Letícia,320715593,320715593@gmail.com,Vidigueira
+NovoProp:Letï¿½cia,320715593,320715593@gmail.com,Vidigueira
 NovoProp:Melvyn,752760583,752760583@gmail.com,Portel
 NovoProp:Anurroi,493613259,493613259@gmail.com,Macedo de Cavaleiros
-NovoProp:Évelyn,755717914,755717914@gmail.com,Barrancos
+NovoProp:ï¿½velyn,755717914,755717914@gmail.com,Barrancos
 NovoProp:Dileison,273935137,273935137@gmail.com,Campo Maior
 NovoProp:Bryan,913540454,913540454@gmail.com,Ponte da Barca
-NovoProp:Anaísa,570408397,570408397@gmail.com,Mondim de Basto
+NovoProp:Anaï¿½sa,570408397,570408397@gmail.com,Mondim de Basto
 NovoProp:Olinda,169490243,169490243@gmail.com,Vila do Bispo
 NovoProp:Ygor,828606537,828606537@gmail.com,Amares
-NovoProp:Ian,803653346,803653346@gmail.com,Valpaços
+NovoProp:Ian,803653346,803653346@gmail.com,Valpaï¿½os
 NovoProp:Nahyma,242061285,242061285@gmail.com,Mealhada
 NovoProp:Martins,275960217,275960217@gmail.com,Castelo Branco
 NovoProp:Lorenza,694553488,694553488@gmail.com,Oeiras
@@ -80,24 +80,24 @@ NovoProp:Murodjon,232856205,232856205@gmail.com,Ponte de Lima
 NovoProp:Rayssa,552753267,552753267@gmail.com,Trancoso
 NovoProp:Filipe,674099206,674099206@gmail.com,Portalegre
 NovoProp:Lamarana,390128473,390128473@gmail.com,Vizela
-NovoProp:Diamantino,786534613,786534613@gmail.com,Peso da Régua
-NovoProp:Abrish,676558969,676558969@gmail.com,Cinfães
-NovoProp:Ivory,859245119,859245119@gmail.com,Tábua
+NovoProp:Diamantino,786534613,786534613@gmail.com,Peso da Rï¿½gua
+NovoProp:Abrish,676558969,676558969@gmail.com,Cinfï¿½es
+NovoProp:Ivory,859245119,859245119@gmail.com,Tï¿½bua
 NovoProp:Idjatu,604774980,604774980@gmail.com,Sesimbra
 NovoProp:Henry,923129982,923129982@gmail.com,Lamego
-NovoProp:Khadija,899246775,899246775@gmail.com,Golegã
+NovoProp:Khadija,899246775,899246775@gmail.com,Golegï¿½
 NovoProp:Cassandra,652901668,652901668@gmail.com,Ponte de Sor
 NovoProp:Naila,510099142,510099142@gmail.com,Sabrosa
 NovoProp:Rajina,973395870,973395870@gmail.com,Lagoa
-NovoProp:Cinthia,315667115,315667115@gmail.com,Mértola
+NovoProp:Cinthia,315667115,315667115@gmail.com,Mï¿½rtola
 NovoProp:Ruth,569316773,569316773@gmail.com,Fornos de Algodres
 NovoProp:Spencer,799216286,799216286@gmail.com,Moita
 NovoProp:Chloe,240644007,240644007@gmail.com,Vila Franca de Xira
-NovoProp:Papa-Ndiogou,494225544,494225544@gmail.com,Póvoa de Lanhoso
+NovoProp:Papa-Ndiogou,494225544,494225544@gmail.com,Pï¿½voa de Lanhoso
 NovoProp:Erik,389521613,389521613@gmail.com,Vidigueira
-NovoProp:Tércio,700171970,700171970@gmail.com,Alcácer do Sal
+NovoProp:Tï¿½rcio,700171970,700171970@gmail.com,Alcï¿½cer do Sal
 NovoProp:Cheila,515448952,515448952@gmail.com,Fafe
-NovoProp:Leandro,293855884,293855884@gmail.com,Ílhavo
+NovoProp:Leandro,293855884,293855884@gmail.com,ï¿½lhavo
 NovoProp:Sohany,967377059,967377059@gmail.com,Arronches
 NovoProp:Elaina,392606780,392606780@gmail.com,Montalegre
 NovoProp:Helen,847396779,847396779@gmail.com,Ovar
@@ -108,154 +108,154 @@ NovoProp:Savannah,270863057,270863057@gmail.com,Cascais
 NovoProp:Welnir,679359704,679359704@gmail.com,Caminha
 NovoProp:Ayla,272215786,272215786@gmail.com,Chaves
 NovoProp:Didier,966872622,966872622@gmail.com,Sabrosa
-NovoProp:Gláucio,199849769,199849769@gmail.com,Oliveira de Frades
+NovoProp:Glï¿½ucio,199849769,199849769@gmail.com,Oliveira de Frades
 NovoProp:Teodoro,497420305,497420305@gmail.com,Portel
 NovoProp:Kyllen,992542953,992542953@gmail.com,Ferreira do Alentejo
 NovoProp:Raul,158420138,158420138@gmail.com,Torre de Moncorvo
 NovoProp:Melissa,339067930,339067930@gmail.com,Arcos de Valdevez
-NovoProp:Macar,752475069,752475069@gmail.com,Santa Marta de Penaguião
+NovoProp:Macar,752475069,752475069@gmail.com,Santa Marta de Penaguiï¿½o
 NovoProp:Cassiano,229265790,229265790@gmail.com,Lousada
 NovoProp:Aarya,478405924,478405924@gmail.com,Chaves
-NovoProp:Tom,704619790,704619790@gmail.com,Fundão
-NovoProp:Edir,491728064,491728064@gmail.com,Vila Velha de Ródão
+NovoProp:Tom,704619790,704619790@gmail.com,Fundï¿½o
+NovoProp:Edir,491728064,491728064@gmail.com,Vila Velha de Rï¿½dï¿½o
 NovoProp:Marius,756024319,756024319@gmail.com,Miranda do Corvo
-NovoProp:Hélida,243785933,243785933@gmail.com,Alter do Chão
+NovoProp:Hï¿½lida,243785933,243785933@gmail.com,Alter do Chï¿½o
 NovoProp:Hawa,302176549,302176549@gmail.com,Almeirim
-NovoProp:Nélio,575175800,575175800@gmail.com,Peso da Régua
-NovoProp:Joseline,862810577,862810577@gmail.com,Tabuaço
-NovoProp:Flint,249950939,249950939@gmail.com,Pedrógão Grande
+NovoProp:Nï¿½lio,575175800,575175800@gmail.com,Peso da Rï¿½gua
+NovoProp:Joseline,862810577,862810577@gmail.com,Tabuaï¿½o
+NovoProp:Flint,249950939,249950939@gmail.com,Pedrï¿½gï¿½o Grande
 NovoProp:Anair,240740697,240740697@gmail.com,Mogadouro
 NovoProp:Kauana,779130241,779130241@gmail.com,Almeirim
 NovoProp:Manish,626391444,626391444@gmail.com,Mangualde
 NovoProp:Adriane,142081247,142081247@gmail.com,Arruda dos Vinhos
-NovoProp:Bibek,274213728,274213728@gmail.com,Póvoa de Varzim
-NovoProp:Flor,211010451,211010451@gmail.com,Golegã
+NovoProp:Bibek,274213728,274213728@gmail.com,Pï¿½voa de Varzim
+NovoProp:Flor,211010451,211010451@gmail.com,Golegï¿½
 NovoProp:Vinildo,497020030,497020030@gmail.com,Celorico de Basto
 NovoProp:Naksh,253743709,253743709@gmail.com,Trancoso
 NovoProp:Boqian,922857323,922857323@gmail.com,Palmela
-NovoProp:Julciane,144114961,144114961@gmail.com,Lousã
-NovoProp:Muntaha,991028894,991028894@gmail.com,Póvoa de Lanhoso
-NovoProp:Humaira,351215863,351215863@gmail.com,Valença
-NovoProp:Giacomo,751736489,751736489@gmail.com,Murça
+NovoProp:Julciane,144114961,144114961@gmail.com,Lousï¿½
+NovoProp:Muntaha,991028894,991028894@gmail.com,Pï¿½voa de Lanhoso
+NovoProp:Humaira,351215863,351215863@gmail.com,Valenï¿½a
+NovoProp:Giacomo,751736489,751736489@gmail.com,Murï¿½a
 NovoProp:Rosinda,901078777,901078777@gmail.com,Cartaxo
 NovoProp:Nair,525951257,525951257@gmail.com,Castro Verde
 NovoProp:Viviana,681767944,681767944@gmail.com,Reguengos de Monsaraz
-NovoProp:Cátia,861209519,861209519@gmail.com,Oliveira do Hospital
+NovoProp:Cï¿½tia,861209519,861209519@gmail.com,Oliveira do Hospital
 NovoProp:Ndiack,407294218,407294218@gmail.com,Fornos de Algodres
-NovoProp:Harsh,340174546,340174546@gmail.com,Góis
+NovoProp:Harsh,340174546,340174546@gmail.com,Gï¿½is
 NovoProp:Martino,801247670,801247670@gmail.com,Vila Nova da Barquinha
-NovoProp:Amaia,591799212,591799212@gmail.com,Sátão
-NovoProp:Rayna,674930911,674930911@gmail.com,Grândola
+NovoProp:Amaia,591799212,591799212@gmail.com,Sï¿½tï¿½o
+NovoProp:Rayna,674930911,674930911@gmail.com,Grï¿½ndola
 NovoProp:Ionut,953081805,953081805@gmail.com,Alvito
 NovoProp:Rafia,698075693,698075693@gmail.com,Serpa
 NovoProp:Kevin-Cosmin,780450906,780450906@gmail.com,Nisa
 NovoProp:Humberto,645069008,645069008@gmail.com,Monchique
-NovoProp:Neria,964813373,964813373@gmail.com,Vila Velha de Ródão
+NovoProp:Neria,964813373,964813373@gmail.com,Vila Velha de Rï¿½dï¿½o
 NovoProp:Ming,958205403,958205403@gmail.com,Elvas
-NovoProp:Flávia,734325849,734325849@gmail.com,Sintra
+NovoProp:Flï¿½via,734325849,734325849@gmail.com,Sintra
 NovoProp:Nelson,190384967,190384967@gmail.com,Vila Verde
-NovoProp:Jamie,281975931,281975931@gmail.com,São Pedro do Sul
+NovoProp:Jamie,281975931,281975931@gmail.com,Sï¿½o Pedro do Sul
 NovoProp:Vania,590936512,590936512@gmail.com,Porto
 NovoProp:Liana,218148008,218148008@gmail.com,Fafe
-NovoProp:Oziel,273938730,273938730@gmail.com,Covilhã
+NovoProp:Oziel,273938730,273938730@gmail.com,Covilhï¿½
 NovoProp:Zehan,309426576,309426576@gmail.com,Oeiras
 NovoProp:Solomiia,732312427,732312427@gmail.com,Ponte de Lima
 NovoProp:Ellen,742863492,742863492@gmail.com,Celorico da Beira
-NovoProp:June,345722551,345722551@gmail.com,Santa Comba Dão
+NovoProp:June,345722551,345722551@gmail.com,Santa Comba Dï¿½o
 NovoProp:Anastacia,577149024,577149024@gmail.com,Sousel
 NovoProp:Emilly,400145597,400145597@gmail.com,Aljustrel
 NovoProp:Mykail,289068463,289068463@gmail.com,Lousada
 NovoProp:Aiden,412918608,412918608@gmail.com,Sousel
 NovoProp:Marya,607791914,607791914@gmail.com,Vila do Conde
 NovoProp:Maura,982552627,982552627@gmail.com,Barrancos
-NovoProp:Claúdio,213940528,213940528@gmail.com,Guarda
-NovoProp:River,213290193,213290193@gmail.com,São João da Madeira
+NovoProp:Claï¿½dio,213940528,213940528@gmail.com,Guarda
+NovoProp:River,213290193,213290193@gmail.com,Sï¿½o Joï¿½o da Madeira
 NovoProp:Manteg,982033102,982033102@gmail.com,Montalegre
-NovoProp:Bidushi,265776490,265776490@gmail.com,Santa Marta de Penaguião
+NovoProp:Bidushi,265776490,265776490@gmail.com,Santa Marta de Penaguiï¿½o
 NovoProp:Fernanda,660616238,660616238@gmail.com,Vila Nova da Barquinha
 NovoProp:Isak,507924898,507924898@gmail.com,Celorico da Beira
 NovoProp:Kailany,859725588,859725588@gmail.com,Caminha
-NovoProp:Angélica,942100081,942100081@gmail.com,Lisboa
-NovoProp:Stella,705360268,705360268@gmail.com,Porto de Mós
-NovoProp:Élson,294017107,294017107@gmail.com,Leiria
+NovoProp:Angï¿½lica,942100081,942100081@gmail.com,Lisboa
+NovoProp:Stella,705360268,705360268@gmail.com,Porto de Mï¿½s
+NovoProp:ï¿½lson,294017107,294017107@gmail.com,Leiria
 NovoProp:Ali,275593226,275593226@gmail.com,Estremoz
-NovoProp:Josué,480356246,480356246@gmail.com,Marco de Canaveses
-NovoProp:Kiluanji,755694028,755694028@gmail.com,Águeda
+NovoProp:Josuï¿½,480356246,480356246@gmail.com,Marco de Canaveses
+NovoProp:Kiluanji,755694028,755694028@gmail.com,ï¿½gueda
 NovoProp:Nayra,237554858,237554858@gmail.com,Coimbra
 NovoProp:Yellen,378764531,378764531@gmail.com,Borba
 NovoProp:Manjot,993782331,993782331@gmail.com,Manteigas
 NovoProp:Fortunato,423942030,423942030@gmail.com,Almeida
 NovoProp:Laysla,557671987,557671987@gmail.com,Seia
-NovoProp:Asael,964145061,964145061@gmail.com,Pedrógão Grande
+NovoProp:Asael,964145061,964145061@gmail.com,Pedrï¿½gï¿½o Grande
 NovoProp:Djariato,677542664,677542664@gmail.com,Vendas Novas
 NovoProp:Smahir,616788282,616788282@gmail.com,Vila Franca de Xira
 NovoProp:Aarnav,262406436,262406436@gmail.com,Penela
 NovoProp:Jaycee,977785415,977785415@gmail.com,Vila do Conde
 NovoProp:Adame,237413845,237413845@gmail.com,Tomar
 NovoProp:Emma,773502926,773502926@gmail.com,Serpa
-NovoProp:Ábda,503510639,503510639@gmail.com,Alpiarça
-NovoProp:Éder,380420226,380420226@gmail.com,Ferreira do Zêzere
+NovoProp:ï¿½bda,503510639,503510639@gmail.com,Alpiarï¿½a
+NovoProp:ï¿½der,380420226,380420226@gmail.com,Ferreira do Zï¿½zere
 NovoProp:Jacqueline,785044006,785044006@gmail.com,Ribeira de Pena
-NovoProp:Wayiza,608545158,608545158@gmail.com,Setúbal
+NovoProp:Wayiza,608545158,608545158@gmail.com,Setï¿½bal
 NovoProp:Zahira,809415448,809415448@gmail.com,Manteigas
 NovoProp:Brahim,884858931,884858931@gmail.com,Barreiro
 NovoProp:Aleksandr,725775427,725775427@gmail.com,Moita
-NovoProp:Ella,780876675,780876675@gmail.com,Sobral de Monte Agraço
+NovoProp:Ella,780876675,780876675@gmail.com,Sobral de Monte Agraï¿½o
 NovoProp:Victoria,568156735,568156735@gmail.com,Fornos de Algodres
 NovoProp:Lisandra,628405538,628405538@gmail.com,Lamego
-NovoProp:Céline,108081369,108081369@gmail.com,Lagos
-NovoProp:Jéssica,608137123,608137123@gmail.com,Arouca
+NovoProp:Cï¿½line,108081369,108081369@gmail.com,Lagos
+NovoProp:Jï¿½ssica,608137123,608137123@gmail.com,Arouca
 NovoProp:Zihao,789098653,789098653@gmail.com,Alcochete
 NovoProp:Enzo,558403282,558403282@gmail.com,Amares
 NovoProp:Marcelo,126734778,126734778@gmail.com,Palmela
-NovoProp:Miroslava,529794153,529794153@gmail.com,Lousã
-NovoProp:Élis,771364247,771364247@gmail.com,Mêda
+NovoProp:Miroslava,529794153,529794153@gmail.com,Lousï¿½
+NovoProp:ï¿½lis,771364247,771364247@gmail.com,Mï¿½da
 NovoProp:Isys,537641826,537641826@gmail.com,Mealhada
 NovoProp:Ciyara,234951594,234951594@gmail.com,Palmela
-NovoProp:Raissa,666998789,666998789@gmail.com,Carrazeda de Ansiães
-NovoProp:Liz,442671481,442671481@gmail.com,Vila Real de Santo António
-NovoProp:Fiona,926029547,926029547@gmail.com,Óbidos
-NovoProp:Szymon,827526955,827526955@gmail.com,Guimarães
-NovoProp:Wildy,987660389,987660389@gmail.com,Vila Velha de Ródão
-NovoProp:Geralda,913805980,913805980@gmail.com,Mortágua
-NovoProp:Jeremias,971028985,971028985@gmail.com,Vila Nova de Foz Côa
-NovoProp:Jessé,511892584,511892584@gmail.com,Sines
+NovoProp:Raissa,666998789,666998789@gmail.com,Carrazeda de Ansiï¿½es
+NovoProp:Liz,442671481,442671481@gmail.com,Vila Real de Santo Antï¿½nio
+NovoProp:Fiona,926029547,926029547@gmail.com,ï¿½bidos
+NovoProp:Szymon,827526955,827526955@gmail.com,Guimarï¿½es
+NovoProp:Wildy,987660389,987660389@gmail.com,Vila Velha de Rï¿½dï¿½o
+NovoProp:Geralda,913805980,913805980@gmail.com,Mortï¿½gua
+NovoProp:Jeremias,971028985,971028985@gmail.com,Vila Nova de Foz Cï¿½a
+NovoProp:Jessï¿½,511892584,511892584@gmail.com,Sines
 NovoProp:Carmel,179000351,179000351@gmail.com,Armamar
 NovoProp:Gaspard,921278209,921278209@gmail.com,Mirandela
-NovoProp:Samaritana,321652500,321652500@gmail.com,Valença
-NovoProp:Helaine,339638192,339638192@gmail.com,Golegã
+NovoProp:Samaritana,321652500,321652500@gmail.com,Valenï¿½a
+NovoProp:Helaine,339638192,339638192@gmail.com,Golegï¿½
 NovoProp:Destiny,414181844,414181844@gmail.com,Carregal do Sal
 NovoProp:Chelsea,799653840,799653840@gmail.com,Oliveira do Hospital
-NovoProp:Elián,978311582,978311582@gmail.com,Amarante
+NovoProp:Eliï¿½n,978311582,978311582@gmail.com,Amarante
 NovoProp:Viviane,734571606,734571606@gmail.com,Batalha
-NovoProp:Inácio,547528536,547528536@gmail.com,Arouca
-NovoProp:Maya,899846246,899846246@gmail.com,Santa Comba Dão
+NovoProp:Inï¿½cio,547528536,547528536@gmail.com,Arouca
+NovoProp:Maya,899846246,899846246@gmail.com,Santa Comba Dï¿½o
 NovoProp:Suprajeet,334395767,334395767@gmail.com,Faro
 NovoProp:Tino,414249759,414249759@gmail.com,Estremoz
 NovoProp:Micah,992927875,992927875@gmail.com,Amadora
-NovoProp:Hélcia,661938308,661938308@gmail.com,Penafiel
+NovoProp:Hï¿½lcia,661938308,661938308@gmail.com,Penafiel
 NovoProp:Kadirkhan,329120942,329120942@gmail.com,Arouca
 NovoProp:Yogyadeep,261781520,261781520@gmail.com,Montemor-o-Velho
-NovoProp:Ahnaf,555631993,555631993@gmail.com,Gavião
+NovoProp:Ahnaf,555631993,555631993@gmail.com,Gaviï¿½o
 NovoProp:Jeovana,357277792,357277792@gmail.com,Sabrosa
 NovoProp:Lavonne,253994507,253994507@gmail.com,Oliveira de Frades
-NovoProp:Dierson,193287467,193287467@gmail.com,Baião
+NovoProp:Dierson,193287467,193287467@gmail.com,Baiï¿½o
 NovoProp:Keyson,850631440,850631440@gmail.com,Lisboa
 NovoProp:Noecris,305095764,305095764@gmail.com,Crato
-NovoProp:Ânia,135293144,135293144@gmail.com,Ribeira de Pena
+NovoProp:ï¿½nia,135293144,135293144@gmail.com,Ribeira de Pena
 NovoProp:Denis,225810676,225810676@gmail.com,Oleiros
-NovoProp:Hérmen,703820019,703820019@gmail.com,Vizela
-NovoProp:Fabiana,753344278,753344278@gmail.com,Alfândega da Fé
+NovoProp:Hï¿½rmen,703820019,703820019@gmail.com,Vizela
+NovoProp:Fabiana,753344278,753344278@gmail.com,Alfï¿½ndega da Fï¿½
 NovoProp:Ariana,807178752,807178752@gmail.com,Leiria
-NovoProp:Jivreet,166325858,166325858@gmail.com,Sertã
-NovoProp:Lobo,598530991,598530991@gmail.com,Pedrógão Grande
+NovoProp:Jivreet,166325858,166325858@gmail.com,Sertï¿½
+NovoProp:Lobo,598530991,598530991@gmail.com,Pedrï¿½gï¿½o Grande
 NovoProp:Seerat,167297110,167297110@gmail.com,Chamusca
-NovoProp:Mansirat,868267314,868267314@gmail.com,São Brás de Alportel
+NovoProp:Mansirat,868267314,868267314@gmail.com,Sï¿½o Brï¿½s de Alportel
 NovoProp:Otchali,684256903,684256903@gmail.com,Alvito
-NovoProp:Raíssa,825839829,825839829@gmail.com,Mourão
+NovoProp:Raï¿½ssa,825839829,825839829@gmail.com,Mourï¿½o
 NovoProp:Minhal,255907207,255907207@gmail.com,Ponte de Sor
 NovoProp:Elson,752963606,752963606@gmail.com,Borba
-NovoProp:Steven,711375066,711375066@gmail.com,Murça
+NovoProp:Steven,711375066,711375066@gmail.com,Murï¿½a
 NovoProp:Laya,533604478,533604478@gmail.com,Santo Tirso
 NovoProp:Melinda,387149329,387149329@gmail.com,Esposende
 NovoProp:Nilo,449837065,449837065@gmail.com,Moita
@@ -263,337 +263,337 @@ NovoProp:Harrison,556920503,556920503@gmail.com,Redondo
 NovoProp:Emanuelly,943937374,943937374@gmail.com,Santa Maria da Feira
 NovoProp:Brianna,766500089,766500089@gmail.com,Castro Verde
 NovoProp:Yudi,195121527,195121527@gmail.com,Abrantes
-NovoProp:Prudêncio,980862715,980862715@gmail.com,Caldas da Rainha
-NovoProp:Malia,226077144,226077144@gmail.com,São Pedro do Sul
+NovoProp:Prudï¿½ncio,980862715,980862715@gmail.com,Caldas da Rainha
+NovoProp:Malia,226077144,226077144@gmail.com,Sï¿½o Pedro do Sul
 NovoProp:Stanislawa,772631536,772631536@gmail.com,Fornos de Algodres
 NovoProp:Harsirat,314816541,314816541@gmail.com,Fronteira
 NovoProp:Niah,541846277,541846277@gmail.com,Nisa
-NovoProp:Florinda,982027240,982027240@gmail.com,Lourinhã
+NovoProp:Florinda,982027240,982027240@gmail.com,Lourinhï¿½
 NovoProp:Dinora,633026358,633026358@gmail.com,Crato
-NovoProp:Natasha,341663574,341663574@gmail.com,Constância
+NovoProp:Natasha,341663574,341663574@gmail.com,Constï¿½ncia
 NovoProp:Luinysa,209628486,209628486@gmail.com,Gouveia
-NovoProp:Vida,968269062,968269062@gmail.com,Marvão
+NovoProp:Vida,968269062,968269062@gmail.com,Marvï¿½o
 NovoProp:Jessie,889522694,889522694@gmail.com,Torres Vedras
-NovoProp:Bianca,113910333,113910333@gmail.com,Almodôvar
+NovoProp:Bianca,113910333,113910333@gmail.com,Almodï¿½var
 NovoProp:Evilly,440095191,440095191@gmail.com,Paredes de Coura
-NovoProp:Noelle,368657541,368657541@gmail.com,Marvão
-NovoProp:Palmira,107992990,107992990@gmail.com,Tábua
-NovoProp:Aida,374492240,374492240@gmail.com,Figueiró dos Vinhos
+NovoProp:Noelle,368657541,368657541@gmail.com,Marvï¿½o
+NovoProp:Palmira,107992990,107992990@gmail.com,Tï¿½bua
+NovoProp:Aida,374492240,374492240@gmail.com,Figueirï¿½ dos Vinhos
 NovoProp:Josemar,553241588,553241588@gmail.com,Nisa
 NovoProp:Marlon,736004751,736004751@gmail.com,Mira
-NovoProp:Mágui,450596484,450596484@gmail.com,Porto
+NovoProp:Mï¿½gui,450596484,450596484@gmail.com,Porto
 NovoProp:Aryana,275172836,275172836@gmail.com,Oliveira do Bairro
-NovoProp:Patrício,215329402,215329402@gmail.com,Resende
-NovoProp:Daércio,522043489,522043489@gmail.com,Armamar
+NovoProp:Patrï¿½cio,215329402,215329402@gmail.com,Resende
+NovoProp:Daï¿½rcio,522043489,522043489@gmail.com,Armamar
 NovoCliente:Rodrigo Tiago Oliveira Ferreira,176743524,176743524@gmail.com,Carregal do Sal,33.99243,77.844696
-NovoCliente:Márcia Filipa Vilela Oliveira Teixeira,822812565,822812565@gmail.com,Monforte,-33.68712,-32.72667
-NovoCliente:Ricardo Miguel da Silva Pereira,960431976,960431976@gmail.com,Mesão Frio,-7.120941,-10.399986
-NovoCliente:Pedro Miguel Amorim de Beir,499110377,499110377@gmail.com,Ferreira do Zêzere,57.736786,-27.055
-NovoCliente:José Nuno Martins da Costa,288204576,288204576@gmail.com,Felgueiras,-91.942665,91.791916
-NovoCliente:Daniel José Travessa Pereira,810361052,810361052@gmail.com,Gondomar,69.87247,-51.39742
-NovoCliente:Paulo Jorge da Silva Araújo,483425249,483425249@gmail.com,Mortágua,-58.464813,85.13138
+NovoCliente:Mï¿½rcia Filipa Vilela Oliveira Teixeira,822812565,822812565@gmail.com,Monforte,-33.68712,-32.72667
+NovoCliente:Ricardo Miguel da Silva Pereira,960431976,960431976@gmail.com,Mesï¿½o Frio,-7.120941,-10.399986
+NovoCliente:Pedro Miguel Amorim de Beir,499110377,499110377@gmail.com,Ferreira do Zï¿½zere,57.736786,-27.055
+NovoCliente:Josï¿½ Nuno Martins da Costa,288204576,288204576@gmail.com,Felgueiras,-91.942665,91.791916
+NovoCliente:Daniel Josï¿½ Travessa Pereira,810361052,810361052@gmail.com,Gondomar,69.87247,-51.39742
+NovoCliente:Paulo Jorge da Silva Araï¿½jo,483425249,483425249@gmail.com,Mortï¿½gua,-58.464813,85.13138
 NovoCliente:Filipa Alves dos Santos,693247586,693247586@gmail.com,Santa Maria da Feira,-15.582336,-78.55441
-NovoCliente:João Carlos Pereira Rodrigues,393345107,393345107@gmail.com,Nelas,-61.23966,-42.0882
+NovoCliente:Joï¿½o Carlos Pereira Rodrigues,393345107,393345107@gmail.com,Nelas,-61.23966,-42.0882
 NovoCliente:Alberto Rui Vilaverde Monteiro da Silva,279624672,279624672@gmail.com,Caminha,77.8923,-37.572502
 NovoCliente:Pedro Miguel Fernandes de Lima,972157419,972157419@gmail.com,Pombal,-75.089935,51.23929
 NovoCliente:Sara Maria Barreira Melo,980927587,980927587@gmail.com,Penacova,-21.992126,86.57744
-NovoCliente:Tiago Manuel Queirós Barata,667164611,667164611@gmail.com,Arraiolos,-47.71453,57.487076
-NovoCliente:Lázaro Donato Martins Pinheiro,690738979,690738979@gmail.com,Mangualde,-77.6787,-2.5614777
-NovoCliente:João Manuel Silva Antunes,959421069,959421069@gmail.com,Vendas Novas,-5.596924,-44.639824
-NovoCliente:André Rafael Olim Martins,151400754,151400754@gmail.com,Esposende,97.87305,-0.78926086
-NovoCliente:João Carlos de Amorim Figueiredo,480552175,480552175@gmail.com,Cadaval,-10.069214,-14.383316
+NovoCliente:Tiago Manuel Queirï¿½s Barata,667164611,667164611@gmail.com,Arraiolos,-47.71453,57.487076
+NovoCliente:Lï¿½zaro Donato Martins Pinheiro,690738979,690738979@gmail.com,Mangualde,-77.6787,-2.5614777
+NovoCliente:Joï¿½o Manuel Silva Antunes,959421069,959421069@gmail.com,Vendas Novas,-5.596924,-44.639824
+NovoCliente:Andrï¿½ Rafael Olim Martins,151400754,151400754@gmail.com,Esposende,97.87305,-0.78926086
+NovoCliente:Joï¿½o Carlos de Amorim Figueiredo,480552175,480552175@gmail.com,Cadaval,-10.069214,-14.383316
 NovoCliente:Lucas Leite Chaves Quintela,199182323,199182323@gmail.com,Arcos de Valdevez,0.9382019,74.03563
-NovoCliente:João Tiago Oliveira Sousa Nogueira Lopes,946730383,946730383@gmail.com,Borba,-92.20078,-69.59151
-NovoCliente:João Diogo Mendes Teixeira da Mota,756858773,756858773@gmail.com,Viseu,-44.97614,68.61113
+NovoCliente:Joï¿½o Tiago Oliveira Sousa Nogueira Lopes,946730383,946730383@gmail.com,Borba,-92.20078,-69.59151
+NovoCliente:Joï¿½o Diogo Mendes Teixeira da Mota,756858773,756858773@gmail.com,Viseu,-44.97614,68.61113
 NovoCliente:Nuno Filipe Maranhao dos Reis,863871047,863871047@gmail.com,Guarda,80.09955,-45.424225
-NovoCliente:Hugo André da Silva Veloso Moreira,288179726,288179726@gmail.com,Idanha-a-Nova,87.161835,-42.83886
-NovoCliente:Nélson Ramos Alves,102949691,102949691@gmail.com,Lagoa,40.616974,-54.020798
-NovoCliente:Gabriela Sá Martins,602559063,602559063@gmail.com,Felgueiras,21.756836,-44.45772
-NovoCliente:Ilda Raquel Durães Pinto,982821051,982821051@gmail.com,Montemor-o-Novo,-88.914444,-84.639206
+NovoCliente:Hugo Andrï¿½ da Silva Veloso Moreira,288179726,288179726@gmail.com,Idanha-a-Nova,87.161835,-42.83886
+NovoCliente:Nï¿½lson Ramos Alves,102949691,102949691@gmail.com,Lagoa,40.616974,-54.020798
+NovoCliente:Gabriela Sï¿½ Martins,602559063,602559063@gmail.com,Felgueiras,21.756836,-44.45772
+NovoCliente:Ilda Raquel Durï¿½es Pinto,982821051,982821051@gmail.com,Montemor-o-Novo,-88.914444,-84.639206
 NovoCliente:Rui Pedro da Cunha Monteiro,510180872,510180872@gmail.com,Montijo,86.42357,68.862595
 NovoCliente:Rui Nuno Borges Cruz Oliveira,913328791,913328791@gmail.com,Soure,43.64659,55.892822
 NovoCliente:Pedro Filipe Carvalho Barbosa,592691325,592691325@gmail.com,Penalva do Castelo,-39.99089,46.90941
 NovoCliente:Pedro Miguel da Rocha Ribeiro,856913858,856913858@gmail.com,Alenquer,-83.25169,97.73775
-NovoCliente:Fábio Fernandes Silva,566677362,566677362@gmail.com,Palmela,29.351181,-39.578342
-NovoCliente:António Manuel Carvalho Gonçalves,771595662,771595662@gmail.com,Lamego,65.98978,-44.314693
+NovoCliente:Fï¿½bio Fernandes Silva,566677362,566677362@gmail.com,Palmela,29.351181,-39.578342
+NovoCliente:Antï¿½nio Manuel Carvalho Gonï¿½alves,771595662,771595662@gmail.com,Lamego,65.98978,-44.314693
 NovoCliente:Diogo Filipe Ferreira Pereira Monteiro,458663409,458663409@gmail.com,Portalegre,69.166504,-41.44076
-NovoCliente:Diogo Paulo da Costa Pereira,391586321,391586321@gmail.com,Vila Nova de Famalicão,-27.856743,3.6708221
-NovoCliente:João Nuno Cardoso Gonçalves de Abreu,150125293,150125293@gmail.com,Seia,8.969154,69.798965
+NovoCliente:Diogo Paulo da Costa Pereira,391586321,391586321@gmail.com,Vila Nova de Famalicï¿½o,-27.856743,3.6708221
+NovoCliente:Joï¿½o Nuno Cardoso Gonï¿½alves de Abreu,150125293,150125293@gmail.com,Seia,8.969154,69.798965
 NovoCliente:Ricardo Filipe Dantas Costa,610398180,610398180@gmail.com,Peniche,-88.91512,-35.795036
-NovoCliente:Rafael Antunes Simões,430822126,430822126@gmail.com,Vila Real de Santo António,78.01181,-98.48328
-NovoCliente:Eduardo Semanas de Oliveira Araújo,183356469,183356469@gmail.com,Penela,-4.485466,19.059326
+NovoCliente:Rafael Antunes Simï¿½es,430822126,430822126@gmail.com,Vila Real de Santo Antï¿½nio,78.01181,-98.48328
+NovoCliente:Eduardo Semanas de Oliveira Araï¿½jo,183356469,183356469@gmail.com,Penela,-4.485466,19.059326
 NovoCliente:Pedro Nuno Fernandes Freitas,430637441,430637441@gmail.com,Porto,-3.245758,-83.96747
 NovoCliente:Hugo Filipe Duarte Carvalho,472984078,472984078@gmail.com,Arronches,-90.805305,-80.925285
-NovoCliente:Joel Alexandre Dias Ferreira,254853634,254853634@gmail.com,Alpiarça,42.665802,15.170273
+NovoCliente:Joel Alexandre Dias Ferreira,254853634,254853634@gmail.com,Alpiarï¿½a,42.665802,15.170273
 NovoCliente:Pedro Miguel Machado da Silva,237543427,237543427@gmail.com,Mondim de Basto,83.294266,-37.946
-NovoCliente:Daniela Eduarda Cruz Fernandes,325990775,325990775@gmail.com,Alcácer do Sal,52.985336,82.40294
-NovoCliente:Bernardo Maria Cortez Marques Nogueira da Graça,157170565,157170565@gmail.com,Bombarral,81.83188,-28.898346
+NovoCliente:Daniela Eduarda Cruz Fernandes,325990775,325990775@gmail.com,Alcï¿½cer do Sal,52.985336,82.40294
+NovoCliente:Bernardo Maria Cortez Marques Nogueira da Graï¿½a,157170565,157170565@gmail.com,Bombarral,81.83188,-28.898346
 NovoCliente:Maria Miguel Albuquerque Regueiras,840114229,840114229@gmail.com,Vendas Novas,25.221489,39.14975
-NovoCliente:Angélica Matos de Freitas,688784792,688784792@gmail.com,Vouzela,-38.258087,92.33247
-NovoCliente:Guilherme João Cerqueira da Mota Miranda,988912666,988912666@gmail.com,Penacova,-66.02475,-12.439026
+NovoCliente:Angï¿½lica Matos de Freitas,688784792,688784792@gmail.com,Vouzela,-38.258087,92.33247
+NovoCliente:Guilherme Joï¿½o Cerqueira da Mota Miranda,988912666,988912666@gmail.com,Penacova,-66.02475,-12.439026
 NovoCliente:Alexandre Esteves Miranda,843521828,843521828@gmail.com,Mogadouro,-10.636818,-23.821594
-NovoCliente:Tiago André Castro Rodrigues Sousa,700386292,700386292@gmail.com,Gavião,-69.683815,-50.01694
+NovoCliente:Tiago Andrï¿½ Castro Rodrigues Sousa,700386292,700386292@gmail.com,Gaviï¿½o,-69.683815,-50.01694
 NovoCliente:Pedro Filipe Costa Machado,950002895,950002895@gmail.com,Beja,-69.50671,71.42026
-NovoCliente:Joana Esteves Dantas,376464543,376464543@gmail.com,Alcobaça,44.78929,98.44791
-NovoCliente:João Nuno Brandão Silva,285435682,285435682@gmail.com,Vila Nova de Gaia,94.324356,15.540764
+NovoCliente:Joana Esteves Dantas,376464543,376464543@gmail.com,Alcobaï¿½a,44.78929,98.44791
+NovoCliente:Joï¿½o Nuno Brandï¿½o Silva,285435682,285435682@gmail.com,Vila Nova de Gaia,94.324356,15.540764
 NovoCliente:Ricardo Manuel Almeida Vieira de Castro,642123638,642123638@gmail.com,Castelo de Paiva,47.216476,39.27176
-NovoCliente:Luís Miguel Aquino Silva,797911329,797911329@gmail.com,Odemira,-54.520344,61.60948
+NovoCliente:Luï¿½s Miguel Aquino Silva,797911329,797911329@gmail.com,Odemira,-54.520344,61.60948
 NovoCliente:Nuno Alexandre Pereira Machado,446649306,446649306@gmail.com,Ponte da Barca,-26.15036,15.004852
-NovoCliente:Melânia Rafaela Sousa Pereira,936623444,936623444@gmail.com,Penacova,-2.3288116,-12.972137
+NovoCliente:Melï¿½nia Rafaela Sousa Pereira,936623444,936623444@gmail.com,Penacova,-2.3288116,-12.972137
 NovoCliente:Mateus Ferreira da Silva,137627492,137627492@gmail.com,Cabeceiras de Basto,10.898293,-39.158966
 NovoCliente:Tiago Esteves Rodrigues,626399842,626399842@gmail.com,Vale de Cambra,-88.56208,38.88243
-NovoCliente:Bruna Gonçalves Araújo,952460467,952460467@gmail.com,Mirandela,-97.92173,93.740616
+NovoCliente:Bruna Gonï¿½alves Araï¿½jo,952460467,952460467@gmail.com,Mirandela,-97.92173,93.740616
 NovoCliente:Pedro Miguel Machado Fernandes,724168962,724168962@gmail.com,Oeiras,-91.48767,-24.700806
-NovoCliente:Jorge Daniel Pereira da Silva,815989098,815989098@gmail.com,Fundão,96.811874,-73.856155
-NovoCliente:Eduardo Luís Vieira Pereira,340129484,340129484@gmail.com,Belmonte,62.969376,-11.409721
-NovoCliente:Bruno Miguel Faria Fernandes,367123079,367123079@gmail.com,Sobral de Monte Agraço,73.471115,-27.297821
-NovoCliente:Bruno Roberto Fernandes Freitas,139270146,139270146@gmail.com,Paços de Ferreira,92.99123,-34.366974
-NovoCliente:Helena Poças Martins,253291534,253291534@gmail.com,Ovar,8.790817,-22.728226
-NovoCliente:Andreia Martins Alves,135081586,135081586@gmail.com,Tabuaço,84.13425,80.74199
-NovoCliente:Luís Miguel Arrepia Ferreira,204447396,204447396@gmail.com,Mação,9.095703,-20.24665
+NovoCliente:Jorge Daniel Pereira da Silva,815989098,815989098@gmail.com,Fundï¿½o,96.811874,-73.856155
+NovoCliente:Eduardo Luï¿½s Vieira Pereira,340129484,340129484@gmail.com,Belmonte,62.969376,-11.409721
+NovoCliente:Bruno Miguel Faria Fernandes,367123079,367123079@gmail.com,Sobral de Monte Agraï¿½o,73.471115,-27.297821
+NovoCliente:Bruno Roberto Fernandes Freitas,139270146,139270146@gmail.com,Paï¿½os de Ferreira,92.99123,-34.366974
+NovoCliente:Helena Poï¿½as Martins,253291534,253291534@gmail.com,Ovar,8.790817,-22.728226
+NovoCliente:Andreia Martins Alves,135081586,135081586@gmail.com,Tabuaï¿½o,84.13425,80.74199
+NovoCliente:Luï¿½s Miguel Arrepia Ferreira,204447396,204447396@gmail.com,Maï¿½ï¿½o,9.095703,-20.24665
 NovoCliente:Eduardo Jorge Santos Teixeira,180721189,180721189@gmail.com,Alcoutim,-41.13915,7.014557
-NovoCliente:Ricardo José de Magalhães e Silva,406653061,406653061@gmail.com,Mêda,-48.141716,-70.24109
+NovoCliente:Ricardo Josï¿½ de Magalhï¿½es e Silva,406653061,406653061@gmail.com,Mï¿½da,-48.141716,-70.24109
 NovoCliente:Joana Castro e Sousa,590763671,590763671@gmail.com,Aljezur,35.08162,-47.117805
-NovoCliente:Susana Vitória Sá Silva Marques,148668176,148668176@gmail.com,Castelo de Paiva,-67.592514,2.9842987
-NovoCliente:Luis Filipe da Silva Costa,400008303,400008303@gmail.com,Melgaço,13.95565,-15.746796
-NovoCliente:Pedro Rafael Martins de Oliveira,226308187,226308187@gmail.com,Vila Velha de Ródão,-28.906647,2.5567322
-NovoCliente:André Miguel Lopes Salgado,630287270,630287270@gmail.com,Santarém,-58.81791,31.230896
-NovoCliente:Mafalda Colaco Parente Morais da Costa,878318989,878318989@gmail.com,São João da Madeira,-27.324554,25.94448
-NovoCliente:João Pedro Gonçalves Correia,253295479,253295479@gmail.com,Mourão,-77.63916,-86.23856
-NovoCliente:Gonçalo Nuno Fernandes e Ferreira,942527322,942527322@gmail.com,Alter do Chão,20.202927,-14.247826
+NovoCliente:Susana Vitï¿½ria Sï¿½ Silva Marques,148668176,148668176@gmail.com,Castelo de Paiva,-67.592514,2.9842987
+NovoCliente:Luis Filipe da Silva Costa,400008303,400008303@gmail.com,Melgaï¿½o,13.95565,-15.746796
+NovoCliente:Pedro Rafael Martins de Oliveira,226308187,226308187@gmail.com,Vila Velha de Rï¿½dï¿½o,-28.906647,2.5567322
+NovoCliente:Andrï¿½ Miguel Lopes Salgado,630287270,630287270@gmail.com,Santarï¿½m,-58.81791,31.230896
+NovoCliente:Mafalda Colaco Parente Morais da Costa,878318989,878318989@gmail.com,Sï¿½o Joï¿½o da Madeira,-27.324554,25.94448
+NovoCliente:Joï¿½o Pedro Gonï¿½alves Correia,253295479,253295479@gmail.com,Mourï¿½o,-77.63916,-86.23856
+NovoCliente:Gonï¿½alo Nuno Fernandes e Ferreira,942527322,942527322@gmail.com,Alter do Chï¿½o,20.202927,-14.247826
 NovoCliente:Maria Francisca Tavares Martins Fernandes,564497795,564497795@gmail.com,Seixal,84.42827,34.340637
-NovoCliente:Luísa Maria Carvalho Fernandes,883943258,883943258@gmail.com,Paredes de Coura,-38.80414,90.149445
+NovoCliente:Luï¿½sa Maria Carvalho Fernandes,883943258,883943258@gmail.com,Paredes de Coura,-38.80414,90.149445
 NovoCliente:Ricardo Loureiro da Silva,529873797,529873797@gmail.com,Condeixa-a-Nova,13.616798,-76.468636
-NovoCliente:João Duarte Vila Verde Silva,219778327,219778327@gmail.com,Arcos de Valdevez,-63.53407,-63.12821
-NovoCliente:Maria Luísa Faria Silva,808115281,808115281@gmail.com,Ferreira do Alentejo,-75.73049,-61.01166
-NovoCliente:André Bernardo Coelho Nunes,460450972,460450972@gmail.com,Alpiarça,-96.95199,-16.257324
+NovoCliente:Joï¿½o Duarte Vila Verde Silva,219778327,219778327@gmail.com,Arcos de Valdevez,-63.53407,-63.12821
+NovoCliente:Maria Luï¿½sa Faria Silva,808115281,808115281@gmail.com,Ferreira do Alentejo,-75.73049,-61.01166
+NovoCliente:Andrï¿½ Bernardo Coelho Nunes,460450972,460450972@gmail.com,Alpiarï¿½a,-96.95199,-16.257324
 NovoCliente:Bruno Miguel Fernandes Teixeira,531578136,531578136@gmail.com,Vila Real,73.78775,69.60019
-NovoCliente:Ângelo André Castro de Sousa,297408986,297408986@gmail.com,Vila Nova da Barquinha,88.272675,97.1192
+NovoCliente:ï¿½ngelo Andrï¿½ Castro de Sousa,297408986,297408986@gmail.com,Vila Nova da Barquinha,88.272675,97.1192
 NovoCliente:Miguel Moreira Montenegro da Silva,626204459,626204459@gmail.com,Vidigueira,74.01311,53.678116
-NovoCliente:João Pedro Dias Fernandes,792894242,792894242@gmail.com,Cadaval,23.427406,-31.920586
+NovoCliente:Joï¿½o Pedro Dias Fernandes,792894242,792894242@gmail.com,Cadaval,23.427406,-31.920586
 NovoCliente:Artur Bernardo da Silva Ribeiro,780456196,780456196@gmail.com,Vila do Bispo,-82.35408,39.95996
 NovoCliente:Daniel Martins Carvalho Ferreira,525995313,525995313@gmail.com,Cuba,86.6535,23.891739
 NovoCliente:Rui Pedro Neto Reis,524388233,524388233@gmail.com,Amarante,73.125,0.14239502
-NovoCliente:Moisés Araújo Antunes,137839807,137839807@gmail.com,Alandroal,-71.87871,91.81853
+NovoCliente:Moisï¿½s Araï¿½jo Antunes,137839807,137839807@gmail.com,Alandroal,-71.87871,91.81853
 NovoCliente:Ivo Dantas Pimenta,736833660,736833660@gmail.com,Monforte,-17.338303,-37.782097
 NovoCliente:Henrique Vilares Gomes,206735656,206735656@gmail.com,Vila Pouca de Aguiar,89.046234,-61.22391
 NovoCliente:Luis Filipe de Carvalho Bigas Arruda Ribeiro,269659675,269659675@gmail.com,Soure,-42.46037,-0.3776703
 NovoCliente:Jorge Manuel Loureiro Vieira,300003856,300003856@gmail.com,Figueira da Foz,19.68911,-17.30275
 NovoCliente:Shahzod Yusupov,859496289,859496289@gmail.com,Vila Nova da Barquinha,49.857178,2.4678192
-NovoCliente:Angélica Soares Cunha,150431975,150431975@gmail.com,Penela,-53.76624,-69.6703
-NovoCliente:Maria José Borges Pires,806714262,806714262@gmail.com,Ourique,50.012634,57.277832
-NovoCliente:João Paulo Silva Ferreira,398214957,398214957@gmail.com,Oliveira do Bairro,39.048416,21.582375
-NovoCliente:Gonçalo Pinto Nogueira,579606169,579606169@gmail.com,Idanha-a-Nova,-98.76037,-50.779785
-NovoCliente:José Manuel Pires Rodrigues,951890081,951890081@gmail.com,Mêda,90.50638,-83.45894
+NovoCliente:Angï¿½lica Soares Cunha,150431975,150431975@gmail.com,Penela,-53.76624,-69.6703
+NovoCliente:Maria Josï¿½ Borges Pires,806714262,806714262@gmail.com,Ourique,50.012634,57.277832
+NovoCliente:Joï¿½o Paulo Silva Ferreira,398214957,398214957@gmail.com,Oliveira do Bairro,39.048416,21.582375
+NovoCliente:Gonï¿½alo Pinto Nogueira,579606169,579606169@gmail.com,Idanha-a-Nova,-98.76037,-50.779785
+NovoCliente:Josï¿½ Manuel Pires Rodrigues,951890081,951890081@gmail.com,Mï¿½da,90.50638,-83.45894
 NovoCliente:Alexandre Jose Branco Ferreira,494258605,494258605@gmail.com,Terras de Bouro,23.724937,98.28175
 NovoCliente:Pedro Agostinho de Carvalho Henriques,180249986,180249986@gmail.com,Pinhel,73.93065,47.743805
-NovoCliente:Hugo André Coelho Cardoso,208611835,208611835@gmail.com,Ribeira de Pena,66.61247,78.48718
-NovoCliente:Filipe José da Silva Freitas,773240445,773240445@gmail.com,Penalva do Castelo,21.548271,-64.594955
+NovoCliente:Hugo Andrï¿½ Coelho Cardoso,208611835,208611835@gmail.com,Ribeira de Pena,66.61247,78.48718
+NovoCliente:Filipe Josï¿½ da Silva Freitas,773240445,773240445@gmail.com,Penalva do Castelo,21.548271,-64.594955
 NovoCliente:Tiago Gabriel Pereira da Silva,188312637,188312637@gmail.com,Vieira do Minho,41.38405,3.1036224
 NovoCliente:Pedro Miguel Queiros Gomes,137742878,137742878@gmail.com,Aljezur,-15.119339,-88.68595
-NovoCliente:Ana Patrícia Silva Faria,702543543,702543543@gmail.com,Monção,-21.765884,52.270737
-NovoCliente:João Aniceto Rodrigues Rocha,528122477,528122477@gmail.com,Mértola,-37.26512,-58.887924
-NovoCliente:Maria Inês de Azevedo Mouroa Alves,462836750,462836750@gmail.com,Constância,-80.27625,-55.401505
-NovoCliente:Simão Pedro Santa Cruz Oliveira,343783576,343783576@gmail.com,Condeixa-a-Nova,-96.488205,99.844055
-NovoCliente:André Sousa Figueiredo,937739104,937739104@gmail.com,Ovar,-3.2642136,-32.76529
-NovoCliente:Pedro Manuel Gonçalves de Oliveira,711937717,711937717@gmail.com,Vila Nova de Poiares,58.042816,-85.21498
-NovoCliente:Hugo Manuel Cunha,221026160,221026160@gmail.com,Melgaço,83.5387,-44.5248
-NovoCliente:Hugo André Silva Pereira,563214122,563214122@gmail.com,Amarante,23.236404,64.70999
+NovoCliente:Ana Patrï¿½cia Silva Faria,702543543,702543543@gmail.com,Monï¿½ï¿½o,-21.765884,52.270737
+NovoCliente:Joï¿½o Aniceto Rodrigues Rocha,528122477,528122477@gmail.com,Mï¿½rtola,-37.26512,-58.887924
+NovoCliente:Maria Inï¿½s de Azevedo Mouroa Alves,462836750,462836750@gmail.com,Constï¿½ncia,-80.27625,-55.401505
+NovoCliente:Simï¿½o Pedro Santa Cruz Oliveira,343783576,343783576@gmail.com,Condeixa-a-Nova,-96.488205,99.844055
+NovoCliente:Andrï¿½ Sousa Figueiredo,937739104,937739104@gmail.com,Ovar,-3.2642136,-32.76529
+NovoCliente:Pedro Manuel Gonï¿½alves de Oliveira,711937717,711937717@gmail.com,Vila Nova de Poiares,58.042816,-85.21498
+NovoCliente:Hugo Manuel Cunha,221026160,221026160@gmail.com,Melgaï¿½o,83.5387,-44.5248
+NovoCliente:Hugo Andrï¿½ Silva Pereira,563214122,563214122@gmail.com,Amarante,23.236404,64.70999
 NovoCliente:Pedro Varandas de Melo Barros,224813260,224813260@gmail.com,Fornos de Algodres,-84.04176,-29.34282
-NovoCliente:Pedro Gonçalo dos Santos Pires Pinheiro,838903483,838903483@gmail.com,Alter do Chão,43.26718,1.0476837
-NovoCliente:Diogo Paulo Lopes de Vasconcelos,902640628,902640628@gmail.com,Loulé,70.06993,-53.37626
-NovoCliente:Luís Pedro da Silva Vila,445923719,445923719@gmail.com,Almeirim,-44.5554,2.9020462
+NovoCliente:Pedro Gonï¿½alo dos Santos Pires Pinheiro,838903483,838903483@gmail.com,Alter do Chï¿½o,43.26718,1.0476837
+NovoCliente:Diogo Paulo Lopes de Vasconcelos,902640628,902640628@gmail.com,Loulï¿½,70.06993,-53.37626
+NovoCliente:Luï¿½s Pedro da Silva Vila,445923719,445923719@gmail.com,Almeirim,-44.5554,2.9020462
 NovoCliente:Jorge Gabriel Alves Cerqueira,259606682,259606682@gmail.com,Lisboa,52.58426,-42.127766
-NovoCliente:João Pedro Araújo Parente,801440419,801440419@gmail.com,Almada,38.048584,-96.58496
-NovoCliente:Tomás Salazar Valente,506973233,506973233@gmail.com,Torres Vedras,-38.57075,-27.065468
-NovoCliente:Paulo César Ribeirinho Henriques,490440150,490440150@gmail.com,Águeda,72.62718,-29.183784
+NovoCliente:Joï¿½o Pedro Araï¿½jo Parente,801440419,801440419@gmail.com,Almada,38.048584,-96.58496
+NovoCliente:Tomï¿½s Salazar Valente,506973233,506973233@gmail.com,Torres Vedras,-38.57075,-27.065468
+NovoCliente:Paulo Cï¿½sar Ribeirinho Henriques,490440150,490440150@gmail.com,ï¿½gueda,72.62718,-29.183784
 NovoCliente:Diogo Miguel Alves Rocha,342367056,342367056@gmail.com,Miranda do Douro,6.072487,-92.79637
 NovoCliente:Rui Filipe Traila de Sousa,578136683,578136683@gmail.com,Barrancos,12.436745,75.39238
-NovoCliente:José Carlos Leite Magalhães,608200909,608200909@gmail.com,Ourique,30.102188,-35.130653
-NovoCliente:Pedro Miguel Araújo Costa,253870302,253870302@gmail.com,Valongo,-82.95343,-89.2128
-NovoCliente:João Manuel da Silva Queirós,716180685,716180685@gmail.com,Porto,29.074509,16.81173
-NovoCliente:José Ricardo Sousa Mendes da Cunha,295758274,295758274@gmail.com,Almeirim,-87.81992,93.81847
-NovoCliente:Goncalo Nuno Esperança Quesado,363397970,363397970@gmail.com,Barreiro,14.095215,72.806366
+NovoCliente:Josï¿½ Carlos Leite Magalhï¿½es,608200909,608200909@gmail.com,Ourique,30.102188,-35.130653
+NovoCliente:Pedro Miguel Araï¿½jo Costa,253870302,253870302@gmail.com,Valongo,-82.95343,-89.2128
+NovoCliente:Joï¿½o Manuel da Silva Queirï¿½s,716180685,716180685@gmail.com,Porto,29.074509,16.81173
+NovoCliente:Josï¿½ Ricardo Sousa Mendes da Cunha,295758274,295758274@gmail.com,Almeirim,-87.81992,93.81847
+NovoCliente:Goncalo Nuno Esperanï¿½a Quesado,363397970,363397970@gmail.com,Barreiro,14.095215,72.806366
 NovoCliente:Carlos Manuel Marques Afonso,236270495,236270495@gmail.com,Salvaterra de Magos,-95.15053,-5.8538055
-NovoCliente:José Miguel Fernandes Madeira Pinto,177512346,177512346@gmail.com,Montemor-o-Velho,-39.80552,93.55913
+NovoCliente:Josï¿½ Miguel Fernandes Madeira Pinto,177512346,177512346@gmail.com,Montemor-o-Velho,-39.80552,93.55913
 NovoCliente:Filipe Barbosa Soares da Costa,339805681,339805681@gmail.com,Rio Maior,15.607544,-82.88587
 NovoCliente:Pedro Paulo Fontes Delgado,457994917,457994917@gmail.com,Campo Maior,-21.5345,17.651283
-NovoCliente:Tomás Francisco Cruz Costa,523741597,523741597@gmail.com,Reguengos de Monsaraz,25.793777,-35.543083
-NovoCliente:José Diogo Xavier Monteiro,878094676,878094676@gmail.com,Ribeira de Pena,8.205124,82.08722
-NovoCliente:José Pedro Amorim Gomes,984194129,984194129@gmail.com,Vieira do Minho,-58.224403,60.931625
-NovoCliente:José Filipe de Sousa Matos Ferreira,791244129,791244129@gmail.com,Lourinhã,-23.956146,84.943985
+NovoCliente:Tomï¿½s Francisco Cruz Costa,523741597,523741597@gmail.com,Reguengos de Monsaraz,25.793777,-35.543083
+NovoCliente:Josï¿½ Diogo Xavier Monteiro,878094676,878094676@gmail.com,Ribeira de Pena,8.205124,82.08722
+NovoCliente:Josï¿½ Pedro Amorim Gomes,984194129,984194129@gmail.com,Vieira do Minho,-58.224403,60.931625
+NovoCliente:Josï¿½ Filipe de Sousa Matos Ferreira,791244129,791244129@gmail.com,Lourinhï¿½,-23.956146,84.943985
 NovoCliente:Diogo Vicente Magalhaes Vilela Silva,483688949,483688949@gmail.com,Arcos de Valdevez,-76.66722,-92.15561
-NovoCliente:Manuel António Marinho Marques,762049385,762049385@gmail.com,Seixal,-15.1757965,-45.365536
+NovoCliente:Manuel Antï¿½nio Marinho Marques,762049385,762049385@gmail.com,Seixal,-15.1757965,-45.365536
 NovoCliente:Paulo Jorge Moreira Lima,158139738,158139738@gmail.com,Castro Verde,-22.294876,-84.868195
-NovoCliente:Pedro Dias Parente,727876229,727876229@gmail.com,Porto de Mós,67.94948,80.227066
-NovoCliente:Filipe da Cunha Faria Gajo,626897581,626897581@gmail.com,Constância,-15.249001,84.10805
-NovoCliente:Gonçalo José Azevedo Esteves,911426895,911426895@gmail.com,Vila Pouca de Aguiar,63.096573,91.90199
-NovoCliente:Ana Luísa Pereira de César,671474173,671474173@gmail.com,Vagos,86.196655,41.288437
-NovoCliente:Eduardo Lourenço da Conceição,270573173,270573173@gmail.com,Vila de Rei,-39.589226,-75.8298
-NovoCliente:Joaquim Francisco Barata Simões,105794740,105794740@gmail.com,Vila Nova da Barquinha,-81.71361,-74.013824
+NovoCliente:Pedro Dias Parente,727876229,727876229@gmail.com,Porto de Mï¿½s,67.94948,80.227066
+NovoCliente:Filipe da Cunha Faria Gajo,626897581,626897581@gmail.com,Constï¿½ncia,-15.249001,84.10805
+NovoCliente:Gonï¿½alo Josï¿½ Azevedo Esteves,911426895,911426895@gmail.com,Vila Pouca de Aguiar,63.096573,91.90199
+NovoCliente:Ana Luï¿½sa Pereira de Cï¿½sar,671474173,671474173@gmail.com,Vagos,86.196655,41.288437
+NovoCliente:Eduardo Lourenï¿½o da Conceiï¿½ï¿½o,270573173,270573173@gmail.com,Vila de Rei,-39.589226,-75.8298
+NovoCliente:Joaquim Francisco Barata Simï¿½es,105794740,105794740@gmail.com,Vila Nova da Barquinha,-81.71361,-74.013824
 NovoCliente:Joana Isabel Albuquerque Silva Matos,993825450,993825450@gmail.com,Vinhais,8.901772,60.420593
-NovoCliente:Ricardo José Santos Veloso,858971744,858971744@gmail.com,Sabrosa,-60.360764,-56.48242
+NovoCliente:Ricardo Josï¿½ Santos Veloso,858971744,858971744@gmail.com,Sabrosa,-60.360764,-56.48242
 NovoCliente:Alexandre Reis da Costa,199421921,199421921@gmail.com,Torres Vedras,-80.794945,-46.704853
-NovoCliente:Gonçalo Leal da Mota Meireles Moreira,179303777,179303777@gmail.com,Sever do Vouga,-20.25058,-20.819221
+NovoCliente:Gonï¿½alo Leal da Mota Meireles Moreira,179303777,179303777@gmail.com,Sever do Vouga,-20.25058,-20.819221
 NovoCliente:Jorge Francisco Teixeira Bastos da Mota,461289594,461289594@gmail.com,Vila Nova da Barquinha,95.61177,-86.19018
-NovoCliente:Ulisses Tiago Simões Araújo,369471449,369471449@gmail.com,Gondomar,15.180481,92.96982
+NovoCliente:Ulisses Tiago Simï¿½es Araï¿½jo,369471449,369471449@gmail.com,Gondomar,15.180481,92.96982
 NovoCliente:Rui Miguel Pimenta e Cunha,784090399,784090399@gmail.com,Vizela,-81.212906,-42.869293
-NovoCliente:Mário Rui Freitas Coelho,928818920,928818920@gmail.com,Fafe,92.82547,60.589233
+NovoCliente:Mï¿½rio Rui Freitas Coelho,928818920,928818920@gmail.com,Fafe,92.82547,60.589233
 NovoCliente:Ana Beatriz Castro Afonso,447663294,447663294@gmail.com,Macedo de Cavaleiros,13.224884,-34.472656
-NovoCliente:Duarte Manuel Vilar de Oliveira,872555428,872555428@gmail.com,Póvoa de Varzim,31.389343,-60.15879
-NovoCliente:Luís Alberto Diogo Pereira de Lima,537897684,537897684@gmail.com,Évora,-83.5812,54.74965
-NovoCliente:Pedro Simão Lemos Silva,155997163,155997163@gmail.com,Marvão,34.83127,-55.951427
-NovoCliente:João Bernardo Coutinho Barreiros de Freitas,527253091,527253091@gmail.com,Vila Velha de Ródão,-27.387047,-34.16777
-NovoCliente:Renato Jorge Cruzinha da Silva,875596436,875596436@gmail.com,Santa Marta de Penaguião,77.03729,34.88391
-NovoCliente:Bernardo José Barbosa Alves,273704408,273704408@gmail.com,Vila Real de Santo António,-52.111423,-10.933449
-NovoCliente:Bruna Francisca Capela Alvarães,464689600,464689600@gmail.com,Penafiel,23.32547,49.46335
+NovoCliente:Duarte Manuel Vilar de Oliveira,872555428,872555428@gmail.com,Pï¿½voa de Varzim,31.389343,-60.15879
+NovoCliente:Luï¿½s Alberto Diogo Pereira de Lima,537897684,537897684@gmail.com,ï¿½vora,-83.5812,54.74965
+NovoCliente:Pedro Simï¿½o Lemos Silva,155997163,155997163@gmail.com,Marvï¿½o,34.83127,-55.951427
+NovoCliente:Joï¿½o Bernardo Coutinho Barreiros de Freitas,527253091,527253091@gmail.com,Vila Velha de Rï¿½dï¿½o,-27.387047,-34.16777
+NovoCliente:Renato Jorge Cruzinha da Silva,875596436,875596436@gmail.com,Santa Marta de Penaguiï¿½o,77.03729,34.88391
+NovoCliente:Bernardo Josï¿½ Barbosa Alves,273704408,273704408@gmail.com,Vila Real de Santo Antï¿½nio,-52.111423,-10.933449
+NovoCliente:Bruna Francisca Capela Alvarï¿½es,464689600,464689600@gmail.com,Penafiel,23.32547,49.46335
 NovoCliente:Rui Filipe Moreira Mendes,569465887,569465887@gmail.com,Arraiolos,-48.990093,-21.47213
-NovoCliente:Gonçalo Rodrigues Pinto,787540970,787540970@gmail.com,Espinho,89.06627,-32.210907
-NovoCliente:João Pedro Magalhães Teixeira,550914217,550914217@gmail.com,Montijo,-17.902931,98.90007
-NovoCliente:Luís Tiago Machado Braga,103759625,103759625@gmail.com,São Brás de Alportel,25.95681,67.946945
-NovoCliente:Marco Alexandre Félix de Lima,144482188,144482188@gmail.com,Valpaços,-33.966316,-15.279839
+NovoCliente:Gonï¿½alo Rodrigues Pinto,787540970,787540970@gmail.com,Espinho,89.06627,-32.210907
+NovoCliente:Joï¿½o Pedro Magalhï¿½es Teixeira,550914217,550914217@gmail.com,Montijo,-17.902931,98.90007
+NovoCliente:Luï¿½s Tiago Machado Braga,103759625,103759625@gmail.com,Sï¿½o Brï¿½s de Alportel,25.95681,67.946945
+NovoCliente:Marco Alexandre Fï¿½lix de Lima,144482188,144482188@gmail.com,Valpaï¿½os,-33.966316,-15.279839
 NovoCliente:Miriam Miranda Pinto,313868185,313868185@gmail.com,Arganil,-88.58369,-18.746742
-NovoCliente:Rúben de Castro Rodrigues,228254086,228254086@gmail.com,Entroncamento,-61.692665,-29.410553
+NovoCliente:Rï¿½ben de Castro Rodrigues,228254086,228254086@gmail.com,Entroncamento,-61.692665,-29.410553
 NovoCliente:Beatriz Freitas Rocha,174433477,174433477@gmail.com,Chaves,-87.22142,81.51329
-NovoCliente:João Pedro Pereira Sampaio,949666630,949666630@gmail.com,Rio Maior,-55.55494,-44.32782
+NovoCliente:Joï¿½o Pedro Pereira Sampaio,949666630,949666630@gmail.com,Rio Maior,-55.55494,-44.32782
 NovoCliente:Margarida Alves Faria,264727304,264727304@gmail.com,Celorico de Basto,-53.584637,-70.29123
 NovoCliente:Pedro Santos Arezes Costa,340845729,340845729@gmail.com,Paredes,-29.899216,74.35623
 NovoCliente:Ricardo Nuno de Castro Cruz,961932079,961932079@gmail.com,Vinhais,-21.042564,-51.909195
-NovoCliente:Luís Paulo Freitas da Cunha,256594961,256594961@gmail.com,Lisboa,-57.93617,-83.45674
-NovoCliente:Áureo Joel Costa dos Santos Benedito,557240813,557240813@gmail.com,Montemor-o-Novo,-89.60912,-83.73392
+NovoCliente:Luï¿½s Paulo Freitas da Cunha,256594961,256594961@gmail.com,Lisboa,-57.93617,-83.45674
+NovoCliente:ï¿½ureo Joel Costa dos Santos Benedito,557240813,557240813@gmail.com,Montemor-o-Novo,-89.60912,-83.73392
 NovoCliente:Filipe Miguel Teixeira Freitas Guimaraes,735237953,735237953@gmail.com,Moimenta da Beira,23.867836,-41.83427
-NovoCliente:Pedro Gomes Machado Monteiro Fernandes,691351741,691351741@gmail.com,Gavião,-31.151344,72.3824
-NovoCliente:Filipe Emanuel Santos Fernandes,794273096,794273096@gmail.com,Almodôvar,5.342865,20.55001
-NovoCliente:André Miguel Raposo Fonseca,966648860,966648860@gmail.com,Caminha,-95.35143,-63.468075
+NovoCliente:Pedro Gomes Machado Monteiro Fernandes,691351741,691351741@gmail.com,Gaviï¿½o,-31.151344,72.3824
+NovoCliente:Filipe Emanuel Santos Fernandes,794273096,794273096@gmail.com,Almodï¿½var,5.342865,20.55001
+NovoCliente:Andrï¿½ Miguel Raposo Fonseca,966648860,966648860@gmail.com,Caminha,-95.35143,-63.468075
 NovoCliente:Daniel Assuncao Regado,654465864,654465864@gmail.com,Montemor-o-Novo,25.572601,69.35173
 NovoCliente:Filipa Barbosa Ferraz Silva,631282786,631282786@gmail.com,Celorico de Basto,-0.24333191,14.169693
-NovoCliente:David António Vieira dos Santos Moura Neto,124482642,124482642@gmail.com,Albufeira,27.779678,-16.304352
+NovoCliente:David Antï¿½nio Vieira dos Santos Moura Neto,124482642,124482642@gmail.com,Albufeira,27.779678,-16.304352
 NovoCliente:Ricardo Jorge Silva Ferreira,692918253,692918253@gmail.com,Pombal,-64.758194,79.9861
-NovoCliente:Rodrigo da Silva Pimentel,638512659,638512659@gmail.com,Santa Comba Dão,-4.032074,74.84149
+NovoCliente:Rodrigo da Silva Pimentel,638512659,638512659@gmail.com,Santa Comba Dï¿½o,-4.032074,74.84149
 NovoCliente:Catarina Freitas da Cruz,463062725,463062725@gmail.com,Monforte,-58.62645,4.6778107
 NovoCliente:Bruno Alves Martins Carvalho,183683301,183683301@gmail.com,Estremoz,30.72998,-30.830276
-NovoCliente:José Emanuel Silva Rodrigues,884344051,884344051@gmail.com,Vizela,-99.4285,4.236923
+NovoCliente:Josï¿½ Emanuel Silva Rodrigues,884344051,884344051@gmail.com,Vizela,-99.4285,4.236923
 NovoCliente:Bruno Alexandre Dias Novais de Sousa,241650605,241650605@gmail.com,Porto,-31.307556,2.1102524
-NovoCliente:Luís Manuel Azevedo Maia,605775084,605775084@gmail.com,Vila de Rei,-82.91219,20.428429
+NovoCliente:Luï¿½s Manuel Azevedo Maia,605775084,605775084@gmail.com,Vila de Rei,-82.91219,20.428429
 NovoCliente:Ricardo Nuno Alves Teixeira,142407072,142407072@gmail.com,Penamacor,-90.3463,65.98607
-NovoCliente:Francisco José Vilão Matos Queiróz Peixoto,659251980,659251980@gmail.com,Campo Maior,90.86525,0.25984192
+NovoCliente:Francisco Josï¿½ Vilï¿½o Matos Queirï¿½z Peixoto,659251980,659251980@gmail.com,Campo Maior,90.86525,0.25984192
 NovoCliente:Mariana Lino Lopes Costa,170927391,170927391@gmail.com,Moita,-86.9087,-30.936195
-NovoCliente:Pedro André Correia Neves Parpot,174355155,174355155@gmail.com,Alcoutim,-96.27042,87.9173
-NovoCliente:Ricardo Vieira Carvalho,225356514,225356514@gmail.com,Gavião,90.84314,-96.43822
+NovoCliente:Pedro Andrï¿½ Correia Neves Parpot,174355155,174355155@gmail.com,Alcoutim,-96.27042,87.9173
+NovoCliente:Ricardo Vieira Carvalho,225356514,225356514@gmail.com,Gaviï¿½o,90.84314,-96.43822
 NovoCliente:Joao Pedro Rodrigues Azevedo,355646698,355646698@gmail.com,Castelo de Paiva,-25.094131,35.940826
-NovoCliente:José Pedro Oliveira Silva,184479524,184479524@gmail.com,Penafiel,16.3937,-94.720146
+NovoCliente:Josï¿½ Pedro Oliveira Silva,184479524,184479524@gmail.com,Penafiel,16.3937,-94.720146
 NovoCliente:Ana Catarina Cardoso Gil,846490772,846490772@gmail.com,Resende,32.642212,10.950279
-NovoCliente:Carlos João Vieira Sousa Beiramar,346844011,346844011@gmail.com,Marvão,-69.142654,95.834885
+NovoCliente:Carlos Joï¿½o Vieira Sousa Beiramar,346844011,346844011@gmail.com,Marvï¿½o,-69.142654,95.834885
 NovoCliente:Henrique Veiga da Paz,879979648,879979648@gmail.com,Chamusca,-8.93203,48.14537
 NovoCliente:Marco Antonio Rodrigues Sampaio,621820787,621820787@gmail.com,Chaves,49.874786,69.16846
-NovoCliente:Tiago Henrique de Oliveira Magalhães,987709509,987709509@gmail.com,Vieira do Minho,-82.67356,29.138
+NovoCliente:Tiago Henrique de Oliveira Magalhï¿½es,987709509,987709509@gmail.com,Vieira do Minho,-82.67356,29.138
 NovoCliente:Hugo Filipe Oliveira de Sousa Faria,749921382,749921382@gmail.com,Esposende,97.012955,3.1458511
-NovoCliente:Luís Daniel da Silva Félix,121245860,121245860@gmail.com,Castro Verde,-96.60981,-56.628822
-NovoCliente:Mário Sérgio Duarte Machado da Silva,520928209,520928209@gmail.com,Cinfães,-54.92989,-85.77321
+NovoCliente:Luï¿½s Daniel da Silva Fï¿½lix,121245860,121245860@gmail.com,Castro Verde,-96.60981,-56.628822
+NovoCliente:Mï¿½rio Sï¿½rgio Duarte Machado da Silva,520928209,520928209@gmail.com,Cinfï¿½es,-54.92989,-85.77321
 NovoCliente:Rui Pedro Oliveira Serrano Morais,205671444,205671444@gmail.com,Amarante,7.5841064,-11.029366
-NovoCliente:João Nuno Costa Neves,565317853,565317853@gmail.com,Sintra,-71.92018,-27.815857
+NovoCliente:Joï¿½o Nuno Costa Neves,565317853,565317853@gmail.com,Sintra,-71.92018,-27.815857
 NovoCliente:Hugo Miguel Teles Silva,752572556,752572556@gmail.com,Arruda dos Vinhos,23.794983,-33.49003
 NovoCliente:Leonardo Barbosa Maia,922015724,922015724@gmail.com,Montalegre,-64.79282,84.5569
 NovoCliente:Pedro Miguel Borges Rodrigues,807118425,807118425@gmail.com,Valongo,-4.652115,36.19284
-NovoCliente:Ivo dos Santos Oliveira,423460675,423460675@gmail.com,Mortágua,13.049278,55.7769
+NovoCliente:Ivo dos Santos Oliveira,423460675,423460675@gmail.com,Mortï¿½gua,13.049278,55.7769
 NovoCliente:Maria Moutinho Figueiredo da Silva,448381918,448381918@gmail.com,Oliveira de Frades,75.82274,16.63382
-NovoCliente:Nelson Miguel de Oliveira Estevão,904556127,904556127@gmail.com,Barrancos,-93.41428,11.38221
-NovoCliente:João Carlos Viana Pereira Marques,943279063,943279063@gmail.com,Resende,37.264008,-88.12046
-NovoCliente:Artur Drohobytskyy,798134755,798134755@gmail.com,Alijó,33.358536,-30.330704
-NovoCliente:Joan Manuel Cedeño Rodriguez,182228995,182228995@gmail.com,Barreiro,-32.981346,94.47014
-NovoCliente:Filipe Gonçalves de Macedo,940783616,940783616@gmail.com,Figueiró dos Vinhos,90.421814,-66.99016
-NovoCliente:Luís Filipe Simões de Abreu,760495132,760495132@gmail.com,Cartaxo,-49.59929,-93.682465
-NovoCliente:Filipe Pitrez Pereira Henriques,686160555,686160555@gmail.com,Ferreira do Zêzere,50.8981,29.619995
+NovoCliente:Nelson Miguel de Oliveira Estevï¿½o,904556127,904556127@gmail.com,Barrancos,-93.41428,11.38221
+NovoCliente:Joï¿½o Carlos Viana Pereira Marques,943279063,943279063@gmail.com,Resende,37.264008,-88.12046
+NovoCliente:Artur Drohobytskyy,798134755,798134755@gmail.com,Alijï¿½,33.358536,-30.330704
+NovoCliente:Joan Manuel Cedeï¿½o Rodriguez,182228995,182228995@gmail.com,Barreiro,-32.981346,94.47014
+NovoCliente:Filipe Gonï¿½alves de Macedo,940783616,940783616@gmail.com,Figueirï¿½ dos Vinhos,90.421814,-66.99016
+NovoCliente:Luï¿½s Filipe Simï¿½es de Abreu,760495132,760495132@gmail.com,Cartaxo,-49.59929,-93.682465
+NovoCliente:Filipe Pitrez Pereira Henriques,686160555,686160555@gmail.com,Ferreira do Zï¿½zere,50.8981,29.619995
 NovoCliente:Tiago Taveira Gomes,333542161,333542161@gmail.com,Viana do Castelo,24.69207,75.1492
-NovoCliente:João Miguel Fernandes Cerqueira Soares,579321851,579321851@gmail.com,Oliveira do Hospital,-31.996132,-41.713776
-NovoCliente:Simão Freitas Monteiro,354797512,354797512@gmail.com,Gouveia,-11.906639,61.276764
-NovoCliente:Válter Ferreira Picas Carvalho,651720683,651720683@gmail.com,Mealhada,37.284424,37.020386
-NovoCliente:Pedro Alexandre Gonçalves Ribeiro,151156721,151156721@gmail.com,Manteigas,-1.3324966,-75.65466
-NovoCliente:Luís Pedro Barbosa Ferreira,508281331,508281331@gmail.com,Sintra,21.24311,-20.91832
-NovoCliente:Rafael Inácio Lourenço,409327131,409327131@gmail.com,Portel,-43.608463,44.24498
+NovoCliente:Joï¿½o Miguel Fernandes Cerqueira Soares,579321851,579321851@gmail.com,Oliveira do Hospital,-31.996132,-41.713776
+NovoCliente:Simï¿½o Freitas Monteiro,354797512,354797512@gmail.com,Gouveia,-11.906639,61.276764
+NovoCliente:Vï¿½lter Ferreira Picas Carvalho,651720683,651720683@gmail.com,Mealhada,37.284424,37.020386
+NovoCliente:Pedro Alexandre Gonï¿½alves Ribeiro,151156721,151156721@gmail.com,Manteigas,-1.3324966,-75.65466
+NovoCliente:Luï¿½s Pedro Barbosa Ferreira,508281331,508281331@gmail.com,Sintra,21.24311,-20.91832
+NovoCliente:Rafael Inï¿½cio Lourenï¿½o,409327131,409327131@gmail.com,Portel,-43.608463,44.24498
 NovoCliente:Ana Margarida Reis Maia Campos,320713314,320713314@gmail.com,Serpa,-29.151657,31.92752
-NovoCliente:Daniela Sofia Pereira Arruda,764866727,764866727@gmail.com,Loulé,27.081665,29.323715
-NovoCliente:José Luís Abreu Mendes,267948990,267948990@gmail.com,Arronches,81.33693,91.724106
+NovoCliente:Daniela Sofia Pereira Arruda,764866727,764866727@gmail.com,Loulï¿½,27.081665,29.323715
+NovoCliente:Josï¿½ Luï¿½s Abreu Mendes,267948990,267948990@gmail.com,Arronches,81.33693,91.724106
 NovoCliente:Paulo Ricardo Antunes Pereira,736621899,736621899@gmail.com,Silves,92.348755,45.19586
-NovoCliente:António Manuel Almeida Pinto Bandeira Santos,485522223,485522223@gmail.com,Penafiel,-53.121685,-0.7440338
-NovoCliente:Luís Francisco Mendes Lopes,317097453,317097453@gmail.com,São Pedro do Sul,-87.99496,-35.746895
-NovoCliente:Carlos César Madureira Romano,951431455,951431455@gmail.com,Montemor-o-Novo,6.2865295,-45.430992
-NovoCliente:Nuno Azevedo Alves da Cunha,915796758,915796758@gmail.com,Valpaços,42.94374,-57.76404
-NovoCliente:Eduardo José Azevedo Ferreira Araújo,121922805,121922805@gmail.com,Felgueiras,-86.03128,10.573387
-NovoCliente:Hugo Fernandes Matias,553819515,553819515@gmail.com,Fundão,66.28754,81.175385
-NovoCliente:André Daniel Freitas Ferreira,231656216,231656216@gmail.com,Arronches,64.73607,25.154617
-NovoCliente:Luís Tiago Batoca Fernandes,742314621,742314621@gmail.com,Oleiros,-76.31173,-11.642372
-NovoCliente:José Pedro Gomes Rodrigues dos Santos,960368491,960368491@gmail.com,Arcos de Valdevez,8.199379,79.97957
+NovoCliente:Antï¿½nio Manuel Almeida Pinto Bandeira Santos,485522223,485522223@gmail.com,Penafiel,-53.121685,-0.7440338
+NovoCliente:Luï¿½s Francisco Mendes Lopes,317097453,317097453@gmail.com,Sï¿½o Pedro do Sul,-87.99496,-35.746895
+NovoCliente:Carlos Cï¿½sar Madureira Romano,951431455,951431455@gmail.com,Montemor-o-Novo,6.2865295,-45.430992
+NovoCliente:Nuno Azevedo Alves da Cunha,915796758,915796758@gmail.com,Valpaï¿½os,42.94374,-57.76404
+NovoCliente:Eduardo Josï¿½ Azevedo Ferreira Araï¿½jo,121922805,121922805@gmail.com,Felgueiras,-86.03128,10.573387
+NovoCliente:Hugo Fernandes Matias,553819515,553819515@gmail.com,Fundï¿½o,66.28754,81.175385
+NovoCliente:Andrï¿½ Daniel Freitas Ferreira,231656216,231656216@gmail.com,Arronches,64.73607,25.154617
+NovoCliente:Luï¿½s Tiago Batoca Fernandes,742314621,742314621@gmail.com,Oleiros,-76.31173,-11.642372
+NovoCliente:Josï¿½ Pedro Gomes Rodrigues dos Santos,960368491,960368491@gmail.com,Arcos de Valdevez,8.199379,79.97957
 NovoCliente:Luis Miguel Arieira Ramos,764179185,764179185@gmail.com,Lisboa,30.935974,-46.68057
-NovoCliente:Afonso Trindade Araújo de Pascoal Faria,699969500,699969500@gmail.com,Ferreira do Alentejo,-89.4371,-48.36335
-NovoCliente:Alexandra de Barros Reigada,748924311,748924311@gmail.com,Ferreira do Zêzere,-94.888016,-2.02874
+NovoCliente:Afonso Trindade Araï¿½jo de Pascoal Faria,699969500,699969500@gmail.com,Ferreira do Alentejo,-89.4371,-48.36335
+NovoCliente:Alexandra de Barros Reigada,748924311,748924311@gmail.com,Ferreira do Zï¿½zere,-94.888016,-2.02874
 NovoCliente:Bruno Miguel Garcia Neto,135834012,135834012@gmail.com,Ponte de Lima,-96.69923,79.95958
 NovoCliente:Joao Pedro Oliveira Meira,660209216,660209216@gmail.com,Portel,17.949486,-24.073837
-NovoCliente:Luís Aníbal Barbosa de Araújo,971015204,971015204@gmail.com,Matosinhos,-85.77136,-20.133125
-NovoCliente:Tânia Filipa Amorim da Rocha,961627793,961627793@gmail.com,Oleiros,60.84169,-14.837135
-NovoCliente:João da Cunha e Costa,116008155,116008155@gmail.com,Santa Maria da Feira,43.89708,44.098602
-NovoCliente:Constança Machado Aires Lobo Elias,748602079,748602079@gmail.com,Sesimbra,28.517487,-57.77148
+NovoCliente:Luï¿½s Anï¿½bal Barbosa de Araï¿½jo,971015204,971015204@gmail.com,Matosinhos,-85.77136,-20.133125
+NovoCliente:Tï¿½nia Filipa Amorim da Rocha,961627793,961627793@gmail.com,Oleiros,60.84169,-14.837135
+NovoCliente:Joï¿½o da Cunha e Costa,116008155,116008155@gmail.com,Santa Maria da Feira,43.89708,44.098602
+NovoCliente:Constanï¿½a Machado Aires Lobo Elias,748602079,748602079@gmail.com,Sesimbra,28.517487,-57.77148
 NovoCliente:Nuno Miguel Freitas de Oliveira,742931984,742931984@gmail.com,Alenquer,82.35593,-64.061295
-NovoCliente:Bruno Ricardo Marques da Costa Araújo,286849920,286849920@gmail.com,Manteigas,-80.37199,-29.802193
+NovoCliente:Bruno Ricardo Marques da Costa Araï¿½jo,286849920,286849920@gmail.com,Manteigas,-80.37199,-29.802193
 NovoCliente:Hugo Manuel Gomes Nogueira,555852595,555852595@gmail.com,Torres Novas,-80.24317,83.49252
 NovoCliente:Tiago Manuel da Silva Rego Macedo Alves,982441373,982441373@gmail.com,Anadia,-29.426239,72.52533
 NovoCliente:Joao Miguel Vasconcelos Ferreira Mesquita de Araujo,715921177,715921177@gmail.com,Alvito,-14.927223,-42.486618
-NovoCliente:António Maria de Araújo Serra Lobo Guerra,992279453,992279453@gmail.com,Vila Nova de Gaia,70.3642,13.586021
-NovoCliente:Filipe José Vieira Barbosa,358268139,358268139@gmail.com,Pedrógão Grande,-35.651268,84.169846
+NovoCliente:Antï¿½nio Maria de Araï¿½jo Serra Lobo Guerra,992279453,992279453@gmail.com,Vila Nova de Gaia,70.3642,13.586021
+NovoCliente:Filipe Josï¿½ Vieira Barbosa,358268139,358268139@gmail.com,Pedrï¿½gï¿½o Grande,-35.651268,84.169846
 NovoCliente:Tiago Gomes Campos,314008420,314008420@gmail.com,Mira,8.63633,-23.459053
-NovoCliente:Miguel Rúben Silva de Oliveira,154096011,154096011@gmail.com,Campo Maior,36.331436,-82.95535
+NovoCliente:Miguel Rï¿½ben Silva de Oliveira,154096011,154096011@gmail.com,Campo Maior,36.331436,-82.95535
 NovoCliente:Miguel Cardoso Pereira,904274186,904274186@gmail.com,Vinhais,33.45833,32.805008
 NovoCliente:Emanuel de Jesus Pedrosa Viana,476759518,476759518@gmail.com,Celorico de Basto,-15.797783,90.88934
 NovoCliente:Pedro Daniel Fernandes Abreu,294574498,294574498@gmail.com,Trancoso,-25.594604,-57.342686
-NovoCliente:Guilherme de Araujo Soares,917992722,917992722@gmail.com,Murça,76.214294,20.34098
-NovoCliente:Rui Pedro Magalhães Torres,783251577,783251577@gmail.com,Melgaço,5.632248,56.778717
+NovoCliente:Guilherme de Araujo Soares,917992722,917992722@gmail.com,Murï¿½a,76.214294,20.34098
+NovoCliente:Rui Pedro Magalhï¿½es Torres,783251577,783251577@gmail.com,Melgaï¿½o,5.632248,56.778717
 NovoCliente:Eduardo Manuel Sousa Pereira,592162105,592162105@gmail.com,Castro Verde,-97.03191,9.8795395
 NovoCliente:Francisco Domingos Martins Oliveira,329206254,329206254@gmail.com,Arouca,86.33856,-65.07254
 NovoCliente:Andre Loureiro Morais,170430344,170430344@gmail.com,Terras de Bouro,-50.486004,-63.12703
 NovoCliente:Pedro Miguel Leal Meireles Pereira,917794406,917794406@gmail.com,Amarante,-25.766502,-22.63092
-NovoCliente:Jorge Miguel da Silva Brandão Gonçalves,833592025,833592025@gmail.com,Ponte da Barca,-32.721413,-53.98004
-NovoCliente:Luís Pedro Martins Duarte,243842236,243842236@gmail.com,Montemor-o-Velho,-92.21484,-54.1916
-NovoCliente:Francisco Egídio Coutinho Martins Correia,114073192,114073192@gmail.com,Reguengos de Monsaraz,78.73314,42.76329
-NovoCliente:Gonçalo Sanches Garcia,523666359,523666359@gmail.com,Barrancos,51.11862,15.531097
+NovoCliente:Jorge Miguel da Silva Brandï¿½o Gonï¿½alves,833592025,833592025@gmail.com,Ponte da Barca,-32.721413,-53.98004
+NovoCliente:Luï¿½s Pedro Martins Duarte,243842236,243842236@gmail.com,Montemor-o-Velho,-92.21484,-54.1916
+NovoCliente:Francisco Egï¿½dio Coutinho Martins Correia,114073192,114073192@gmail.com,Reguengos de Monsaraz,78.73314,42.76329
+NovoCliente:Gonï¿½alo Sanches Garcia,523666359,523666359@gmail.com,Barrancos,51.11862,15.531097
 NovoCliente:Pedro Rafael Bernardo Medeiros,417033540,417033540@gmail.com,Amarante,20.540665,-98.95984
 NovoCliente:Mariana de Oliveira Pereira,996617717,996617717@gmail.com,Moita,29.023315,-10.528473
-NovoCliente:Gonçalo José Santiago Pereira,897583725,897583725@gmail.com,Vila Verde,58.77101,36.73825
-NovoCliente:Mário Rui Sendas Rocha,915488983,915488983@gmail.com,Lousada,12.333252,-24.95626
-NovoCliente:Miguel André da Silva Solino,680576540,680576540@gmail.com,Vinhais,-38.40777,-34.343147
-NovoCliente:Arthur Cardoso Franca,321059471,321059471@gmail.com,Freixo de Espada à Cinta,62.54489,60.712784
-NovoCliente:Maria Laura de Araújo Barbosa,696205027,696205027@gmail.com,Vale de Cambra,85.09726,-38.248466
+NovoCliente:Gonï¿½alo Josï¿½ Santiago Pereira,897583725,897583725@gmail.com,Vila Verde,58.77101,36.73825
+NovoCliente:Mï¿½rio Rui Sendas Rocha,915488983,915488983@gmail.com,Lousada,12.333252,-24.95626
+NovoCliente:Miguel Andrï¿½ da Silva Solino,680576540,680576540@gmail.com,Vinhais,-38.40777,-34.343147
+NovoCliente:Arthur Cardoso Franca,321059471,321059471@gmail.com,Freixo de Espada ï¿½ Cinta,62.54489,60.712784
+NovoCliente:Maria Laura de Araï¿½jo Barbosa,696205027,696205027@gmail.com,Vale de Cambra,85.09726,-38.248466
 NovoCliente:Diogo Pinto Ribeiro,709556211,709556211@gmail.com,Montalegre,5.3262863,-32.724968
 NovoCliente:Bruno Miguel Pinheiro Alves,761629016,761629016@gmail.com,Ovar,37.15555,-21.928856
-NovoCliente:Celso André de Carvalho Rodrigues,955764633,955764633@gmail.com,Vidigueira,-98.01335,-4.960106
+NovoCliente:Celso Andrï¿½ de Carvalho Rodrigues,955764633,955764633@gmail.com,Vidigueira,-98.01335,-4.960106
 NovoCliente:Rui Filipe Chaves,700431241,700431241@gmail.com,Arronches,-12.933769,-61.294235
 NovoCliente:Diogo Miguel Pinto Rio,907922764,907922764@gmail.com,Ferreira do Alentejo,-3.4428024,-71.17299
-NovoCliente:João Carlos Garcia Linhares,457727066,457727066@gmail.com,Póvoa de Lanhoso,28.943375,0.97766876
-NovoCliente:Renata Gomes Dias Ribeiro,272071529,272071529@gmail.com,Alvaiázere,46.24797,63.370743
+NovoCliente:Joï¿½o Carlos Garcia Linhares,457727066,457727066@gmail.com,Pï¿½voa de Lanhoso,28.943375,0.97766876
+NovoCliente:Renata Gomes Dias Ribeiro,272071529,272071529@gmail.com,Alvaiï¿½zere,46.24797,63.370743
 NovoCliente:Joao Marcelo Caseiro Cagigal Olival,696242538,696242538@gmail.com,Arganil,5.302513,91.646835
-NovoCliente:Mariana Gonçalves Marques,966818295,966818295@gmail.com,Santa Comba Dão,-63.08043,14.2789
-NovoCliente:Martinha João Trindade Ribeiro,608910020,608910020@gmail.com,Marvão,9.176506,88.00397
-NovoCliente:Sílvia Maria Acosta Roca,694275928,694275928@gmail.com,Soure,-7.1502,20.346153
-NovoCliente:Rosa Inês Carvalho Marinho,633608638,633608638@gmail.com,Albergaria-a-Velha,-95.97285,-82.87468
-NovoCliente:João Manuel da Rocha Rodrigues,433962024,433962024@gmail.com,Golegã,22.760178,-20.927284
+NovoCliente:Mariana Gonï¿½alves Marques,966818295,966818295@gmail.com,Santa Comba Dï¿½o,-63.08043,14.2789
+NovoCliente:Martinha Joï¿½o Trindade Ribeiro,608910020,608910020@gmail.com,Marvï¿½o,9.176506,88.00397
+NovoCliente:Sï¿½lvia Maria Acosta Roca,694275928,694275928@gmail.com,Soure,-7.1502,20.346153
+NovoCliente:Rosa Inï¿½s Carvalho Marinho,633608638,633608638@gmail.com,Albergaria-a-Velha,-95.97285,-82.87468
+NovoCliente:Joï¿½o Manuel da Rocha Rodrigues,433962024,433962024@gmail.com,Golegï¿½,22.760178,-20.927284
 NovoCliente:Pedro Mendes Pinto,228484086,228484086@gmail.com,Alcoutim,10.23027,-87.747826
-NovoCliente:André Alves dos Santos,849931933,849931933@gmail.com,Elvas,-54.3929,66.50943
+NovoCliente:Andrï¿½ Alves dos Santos,849931933,849931933@gmail.com,Elvas,-54.3929,66.50943
 NovoCliente:Diogo Alexandre Portela Teixeira,398068733,398068733@gmail.com,Albufeira,20.91098,-14.54377
-NovoCliente:André Mateus Pires Presa,733745462,733745462@gmail.com,Marvão,-34.106216,-27.137993
-NovoCliente:António Alexandre Carvalho Lindo,973700933,973700933@gmail.com,Portimão,38.68219,-42.577934
-NovoCliente:Fernanda Manuela Alves Dias,337691164,337691164@gmail.com,São João da Pesqueira,63.52661,-87.95431
+NovoCliente:Andrï¿½ Mateus Pires Presa,733745462,733745462@gmail.com,Marvï¿½o,-34.106216,-27.137993
+NovoCliente:Antï¿½nio Alexandre Carvalho Lindo,973700933,973700933@gmail.com,Portimï¿½o,38.68219,-42.577934
+NovoCliente:Fernanda Manuela Alves Dias,337691164,337691164@gmail.com,Sï¿½o Joï¿½o da Pesqueira,63.52661,-87.95431
 NovoCliente:Eduardo Joao Gomes Teixeira da Costa,593241645,593241645@gmail.com,Vila Nova de Gaia,38.775772,76.97209
 NovoCliente:Peter Ferreira Vala,950972819,950972819@gmail.com,Penela,-49.60407,73.94266
 NovoCliente:Ana Rita Miranda Rosendo,270322074,270322074@gmail.com,Ovar,-91.06322,-12.601707
 NovoCliente:Ivo Alexandre Pereira Baixo,641539539,641539539@gmail.com,Vila Nova de Gaia,18.390213,-26.02295
-NovoCliente:Luís Mário Macedo Ribeiro,601726781,601726781@gmail.com,Vila Velha de Ródão,-69.13868,89.036255
-NovoCliente:Diogo Araújo Ferreira,786059085,786059085@gmail.com,Arronches,38.61699,-70.53134
-NovoCliente:José Aventino Moura Saraiva de Menezes,437562334,437562334@gmail.com,Oleiros,57.663666,1.5640259e-3
+NovoCliente:Luï¿½s Mï¿½rio Macedo Ribeiro,601726781,601726781@gmail.com,Vila Velha de Rï¿½dï¿½o,-69.13868,89.036255
+NovoCliente:Diogo Araï¿½jo Ferreira,786059085,786059085@gmail.com,Arronches,38.61699,-70.53134
+NovoCliente:Josï¿½ Aventino Moura Saraiva de Menezes,437562334,437562334@gmail.com,Oleiros,57.663666,1.5640259e-3
 NovoCliente:Rui Alexandre Dias Neto,151858667,151858667@gmail.com,Ferreira do Alentejo,-93.45205,61.553696
-NovoCliente:Pedro Miguel Duarte Araújo,884428067,884428067@gmail.com,Chamusca,-22.681335,92.273926
-NovoCliente:Nelson Correia Faria,551653940,551653940@gmail.com,Alfândega da Fé,-27.576637,24.532333
-NovoCliente:André Filipe da Silva Marques,470222741,470222741@gmail.com,Mortágua,88.79288,-31.516983
-NovoCliente:Maria Manuela Soares Silva,104527940,104527940@gmail.com,Póvoa de Lanhoso,-24.455643,-63.0775
-NovoCliente:Ana João Dias de Almeida,894874169,894874169@gmail.com,Soure,59.66855,-60.937214
+NovoCliente:Pedro Miguel Duarte Araï¿½jo,884428067,884428067@gmail.com,Chamusca,-22.681335,92.273926
+NovoCliente:Nelson Correia Faria,551653940,551653940@gmail.com,Alfï¿½ndega da Fï¿½,-27.576637,24.532333
+NovoCliente:Andrï¿½ Filipe da Silva Marques,470222741,470222741@gmail.com,Mortï¿½gua,88.79288,-31.516983
+NovoCliente:Maria Manuela Soares Silva,104527940,104527940@gmail.com,Pï¿½voa de Lanhoso,-24.455643,-63.0775
+NovoCliente:Ana Joï¿½o Dias de Almeida,894874169,894874169@gmail.com,Soure,59.66855,-60.937214
 NovoCarro:Electrico,Microcar,CZ-73-82,237554858,39,2.2007167,0.51200515,791,30.1232,-79.07995
 NovoCarro:Electrico,Triumph,QR-50-15,293855884,107,1.654906,0.52433467,259,-18.114914,49.664246
 NovoCarro:Electrico,Volvo,KF-10-94,301649622,22,1.3126724,0.9178743,264,19.685349,-23.921326
@@ -3293,5 +3293,3 @@ Classificar:UC-21-33,49
 Classificar:RT-87-95,33
 Classificar:ZR-21-82,93
 Classificar:FO-71-54,24
-
-

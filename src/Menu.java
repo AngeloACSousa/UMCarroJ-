@@ -101,7 +101,6 @@ public class Menu implements Serializable {
                 //login
                 case 1:
                     System.out.println("NIF:");
-                    nif = sc.nextInt(); //tem uma excepçao aqui que nao tou a saber corrigir... (em caso do nuemro ser muito grande)
                     sc.nextLine();
                     if (master.clientes.containsKey(nif)) { //ainda por testar o anyMatch()
                         System.out.println("é um cliente :D");
@@ -296,7 +295,7 @@ public class Menu implements Serializable {
                 //sair
                 case 3:
                     try {
-                        master.lerFicheiro("C:\\Users\\angel\\Desktop\\UMCarroJ-\\src\\logs.bak");
+                        master.lerFicheiro("/Users/andre/Desktop/POO/UMCarroJ-/src/logsteste.txt");
                     }
                     catch (Exception e){
                         System.out.println("Erro no carregamento");
@@ -307,7 +306,7 @@ public class Menu implements Serializable {
                 case 4:
                     System.out.println("A recuperar estado anterior!");
                     try{
-                        master = master.recuperarEstado("C:\\Users\\angel\\Desktop\\UMCarroJ-\\guardado");
+                        master = master.recuperarEstado("/Users/andre/Desktop/POO/UMCarroJ-/guardado");
                     }
                     catch (Exception e){
                         System.out.println(e.getMessage());
@@ -369,8 +368,9 @@ public class Menu implements Serializable {
             System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
             System.out.println("1. Ver histórico de Alugueres                                                              +");
             System.out.println("2. Fazer Aluguer                                                                           +");
-            System.out.println("3. Voltar                                                                                  +");
-            System.out.println("4. Sair                                                                                    +");
+            System.out.println("3. Mudar posicão atual (coordenada)                                                        +");
+            System.out.println("4. Voltar                                                                                  +");
+            System.out.println("5. Sair                                                                                    +");
             System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
 
 
@@ -394,9 +394,17 @@ public class Menu implements Serializable {
                     opcaoc = 0;
                     break;
                 case 3:
-                    opcaoc = -1;
+                    //Mudar posicão atual (coordenada)
+                    System.out.println("Insira as novas coordenadas");
+                    Coordenada nova = getCoordenada();
+                    master.clientes.get(idCliente).setCoordenada(nova);
+                    System.out.println("Coordenada alterada com sucesso!");
+                    opcaoc = 0;
                     break;
                 case 4:
+                    opcaoc = -1;
+                    break;
+                case 5:
                     System.out.println("A gravar estado");
                     try{
                         master.gravarEstado("guardado");
@@ -460,7 +468,10 @@ public class Menu implements Serializable {
                                 classificaAluguer(v.getMatricula());
                                 op = 1;
                             }
-                            if(s.equals("n")) break;
+                            if(s.equals("n")) {
+                                op = 1;
+                                break;
+                            }
                         }
                     }catch (Exception e){
                         System.out.println("Não existem carros no sistema");
@@ -484,13 +495,14 @@ public class Menu implements Serializable {
                                 classificaAluguer(v.getMatricula());
                                 op = 1;
                             }
-                            if(s.equals("n")) break;
+                            if(s.equals("n")){
+                                op = 1;
+                                break;
+                            }
                         }
                     }catch (Exception e){
                         System.out.println("Não existem carros no sistema");
                     }
-
-                    System.out.println("Aluguer efectuado!");
                     opcaoc = -1;
                     break;
                 case 3:
@@ -502,10 +514,10 @@ public class Menu implements Serializable {
                         try {
                             km = sc.nextDouble();
                             sc.nextLine();
-                            if (km < 1) op = 1;
-                            else op = 0;
+                            if (km < 1) op = 0;
+                            else op = 1;
                         } catch (Exception e) {
-                            System.out.println("Input invalido para X");
+                            System.out.println("Distancia Invalida");
                             sc.nextLine();
                             op = 0;
                         }
@@ -525,13 +537,15 @@ public class Menu implements Serializable {
                                 classificaAluguer(v.getMatricula());
                                 op = 1;
                             }
-                            if(s.equals("n")) break;
+                            if(s.equals("n")){
+                                op = 1;
+                                break;
+                            }
                         }
                     }catch (Exception e){
                         System.out.println("Não existem carros no sistema");
                     }
 
-                    System.out.println("Aluguer efectuado!");
                     opcaoc = -1;
                     break;
                 case 4:
@@ -543,10 +557,10 @@ public class Menu implements Serializable {
                         try {
                             tempo = sc.nextDouble();
                             sc.nextLine();
-                            if (tempo < 1) op = 1;
-                            else op = 0;
+                            if (tempo < 1) op = 0;
+                            else op = 1;
                         } catch (Exception e) {
-                            System.out.println("Input invalido para X");
+                            System.out.println("Tempo Invalido");
                             sc.nextLine();
                             op = 0;
                         }
@@ -566,13 +580,15 @@ public class Menu implements Serializable {
                                 classificaAluguer(v.getMatricula());
                                 op = 1;
                             }
-                            if(s.equals("n")) break;
+                            if(s.equals("n")){
+                                op = 1;
+                                break;
+                            }
                         }
                     }catch (Exception e){
                         System.out.println("Não existem carros no sistema");
                     }
 
-                    System.out.println("Aluguer efectuado!");
                     opcaoc = -1;
                     break;
                 case 5:
@@ -1143,10 +1159,6 @@ public class Menu implements Serializable {
         c3.add(matricula);
         master.proprietarios.get(idProprietario).setVeiculos(c3);
         System.out.println("Veiculo adicionado com sucesso!");
-
-    }
-
-    public static void main(String args[]) throws Exception{
 
     }
 }
