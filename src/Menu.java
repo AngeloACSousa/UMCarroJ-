@@ -453,14 +453,14 @@ public class Menu implements Serializable {
     }
 
     public Coordenada getCoordenada(){
+        op = 0;
         while (op == 0) {
             try {
                 x = sc.nextDouble();
                 sc.nextLine();
-                if (x < 1) op = 0;
-                else op = 1;
+                op = 1;
             } catch (Exception e) {
-                System.out.println("Input invalido ");
+                System.out.println("Input invalido para X");
                 sc.nextLine();
                 op = 0;
             }
@@ -470,10 +470,9 @@ public class Menu implements Serializable {
             try {
                 y = sc.nextDouble();
                 sc.nextLine();
-                if (y < 1) op = 0;
-                else op = 1;
+                op = 1;
             } catch (Exception e) {
-                System.out.println("Input invalido ");
+                System.out.println("Input invalido para Y");
                 sc.nextLine();
                 op = 0;
             }
@@ -498,9 +497,9 @@ public class Menu implements Serializable {
             System.out.println("2. Abastecer Veiculo                                                                       +");
             System.out.println("3. Lista de Veiculos                                                                       +");
             System.out.println("4. Lista de Alugueres                                                                      +");
-            System.out.println("4. Visualizar Veiculo especifico                                                           +");
-            System.out.println("5. Voltar                                                                                  +");
-            System.out.println("6. Sair                                                                                    +");
+            System.out.println("5. Visualizar Veiculo especifico                                                           +");
+            System.out.println("6. Voltar                                                                                  +");
+            System.out.println("7. Sair                                                                                    +");
             System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
 
             //Apartir de aqui, é so chamar as funçoes necessarias dentro de um Switch
@@ -581,11 +580,23 @@ public class Menu implements Serializable {
 
 
                 case 4:
-                    //visualizar carro especifico (imprime todos os detalhes do carro)
+                    //imprimir lista de algueres
+                    master.visualizarAlugueresProprietario(idProprietario);
+                    opcaoc = 0;
                     break;
 
                 case 5:
-                    //imprimir lista de algueres
+                    //visualizar carro especifico (imprime todos os detalhes do carro)
+                    System.out.println("Matricula:");
+                    matricula = sc.next();
+                    sc.nextLine();
+                    try{
+                        master.visualizarCarro(matricula);
+                    }
+                    catch (Exception e){
+                        System.out.println("nao existe carro registado com esta matricula!");
+                    }
+                    opcaoc = 0;
                     break;
 
                 case 6:
@@ -622,6 +633,7 @@ public class Menu implements Serializable {
         marca = sc.next();
         sc.nextLine();
         System.out.println("Velocidade Média:");
+        op = 0;
         while (op == 0) {
             try {
                 velociademedia = sc.nextDouble();
@@ -635,6 +647,7 @@ public class Menu implements Serializable {
             }
         }
         System.out.println("Preço:");
+        op = 0;
         while (op == 0) {
             try {
                 preco = sc.nextDouble();
@@ -648,6 +661,7 @@ public class Menu implements Serializable {
             }
         }
         System.out.println("Quantidade de combustivel no tanque:");
+        op = 0;
         while (op == 0) {
             try {
                 capacidadeatual = sc.nextDouble();
@@ -661,6 +675,7 @@ public class Menu implements Serializable {
             }
         }
         System.out.println("Capacidade do tanque:");
+        op = 0;
         while (op == 0) {
             try {
                 capacidadetanque = sc.nextDouble();
@@ -674,6 +689,7 @@ public class Menu implements Serializable {
             }
         }
         System.out.println("Comsumo médio de Combustivel:");
+        op = 0;
         while (op == 0) {
             try {
                 consumomedio = sc.nextDouble();
@@ -714,6 +730,7 @@ public class Menu implements Serializable {
         marca = sc.next();
         sc.nextLine();
         System.out.println("Velocidade Média:");
+        op = 0;
         while (op == 0) {
             try {
                 velociademedia = sc.nextDouble();
@@ -727,6 +744,7 @@ public class Menu implements Serializable {
             }
         }
         System.out.println("Preço:");
+        op = 0;
         while (op == 0) {
             try {
                 preco = sc.nextDouble();
@@ -740,6 +758,7 @@ public class Menu implements Serializable {
             }
         }
         System.out.println("Quantidade de bateria:");
+        op = 0;
         while (op == 0) {
             try {
                 bateriaatual = sc.nextDouble();
@@ -753,6 +772,7 @@ public class Menu implements Serializable {
             }
         }
         System.out.println("Capacidade da bateria:");
+        op = 0;
         while (op == 0) {
             try {
                 capaciadebateria = sc.nextDouble();
@@ -766,6 +786,7 @@ public class Menu implements Serializable {
             }
         }
         System.out.println("Comsumo médio de bateria:");
+        op = 0;
         while (op == 0) {
             try {
                 consumomediobateria = sc.nextDouble();
@@ -809,6 +830,7 @@ public class Menu implements Serializable {
         marca = sc.next();
         sc.nextLine();
         System.out.println("Velocidade Média:");
+        op = 0;
         while (op == 0) {
             try {
                 velociademedia = sc.nextDouble();
@@ -822,6 +844,7 @@ public class Menu implements Serializable {
             }
         }
         System.out.println("Preço: (por exemplo 1,5€)");
+        op = 0;
         while (op == 0) {
             try {
                 preco = sc.nextDouble();
@@ -835,6 +858,7 @@ public class Menu implements Serializable {
             }
         }
         System.out.println("Quantidade de combustivel no tanque:");
+        op = 0;
         while (op == 0) {
             try {
                 capacidadeatual = sc.nextDouble();
@@ -848,6 +872,7 @@ public class Menu implements Serializable {
             }
         }
         System.out.println("Capacidade do tanque:");
+        op = 0;
         while (op == 0) {
             try {
                 capacidadetanque = sc.nextDouble();
@@ -861,7 +886,7 @@ public class Menu implements Serializable {
             }
         }
         System.out.println("Comsumo médio de Combustivel:");
-        consumomedio = sc.nextDouble();
+        op = 0;
         while (op == 0) {
             try {
                 consumomedio = sc.nextDouble();
@@ -875,6 +900,7 @@ public class Menu implements Serializable {
             }
         }
         System.out.println("Quantidade de bateria:");
+        op = 0;
         while (op == 0) {
             try {
                 bateriaatual = sc.nextDouble();
@@ -888,6 +914,7 @@ public class Menu implements Serializable {
             }
         }
         System.out.println("Capacidade da bateria:");
+        op = 0;
         while (op == 0) {
             try {
                 capaciadebateria = sc.nextDouble();
@@ -901,12 +928,12 @@ public class Menu implements Serializable {
             }
         }
         System.out.println("Comsumo médio de bateria:");
-        consumomediobateria = sc.nextDouble();
+        op = 0;
         while (op == 0) {
             try {
-                consumomedio = sc.nextDouble();
+                consumomediobateria = sc.nextDouble();
                 sc.nextLine();
-                if (consumomedio < 1) op = 0;
+                if (consumomediobateria < 1) op = 0;
                 else op = 1;
             } catch (Exception e) {
                 System.out.println("Input invalido ");

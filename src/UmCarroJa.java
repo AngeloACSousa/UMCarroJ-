@@ -463,13 +463,9 @@ public class UmCarroJa implements Serializable{
 
     // ESTADO DO PROGRAMA ////////////////////////////////////////////
     public void gravarEstado(String filename) throws IOException {
-        System.out.println("cheguei aqui1");
         ObjectOutputStream oout = new ObjectOutputStream(new FileOutputStream(filename));
-        System.out.println("cheguei aqui2");
         oout.writeObject(this);
-        System.out.println("cheguei aqui3");
         oout.flush();
-        System.out.println("cheguei aqui4");
         oout.close();
     }
 
@@ -478,7 +474,6 @@ public class UmCarroJa implements Serializable{
         ObjectInputStream ois = new ObjectInputStream(fis);
         UmCarroJa umCarroJa = (UmCarroJa) ois.readObject();
         ois.close();
-
         return umCarroJa;
     }
 
