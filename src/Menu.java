@@ -962,6 +962,7 @@ public class Menu implements Serializable {
         c3.add(matricula);
         master.proprietarios.get(idProprietario).setVeiculos(c3);
         System.out.println("Veiculo adicionado com sucesso!");
+
     }
 
     public static void main(String args[]) throws Exception{
