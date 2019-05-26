@@ -166,6 +166,11 @@ public class Eletrico extends Carro implements Serializable {
      */
 
     public void Abastecer(double quantidadeC, double quantidadeB){
-        this.setBateriaAtual(getBateriaAtual() + quantidadeB);
+        if(getBateriaAtual() + quantidadeB > getCapacidadeBateria()){
+            this.setBateriaAtual(getCapacidadeBateria());
+        }
+        else{
+            this.setBateriaAtual(getBateriaAtual() + quantidadeB);
+        }
     }
 }

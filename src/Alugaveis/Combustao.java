@@ -166,6 +166,11 @@ public class Combustao extends Carro implements Serializable {
      */
 
     public void Abastecer(double quantidadeC, double quantidadeB){
-        this.setCapacidadeAtual(getCapacidadeAtual() + quantidadeC);
+        if(getCapacidadeAtual() + quantidadeC > getCapacidadeTanque()){
+            this.setCapacidadeAtual(getCapacidadeTanque());
+        }
+        else{
+            this.setCapacidadeAtual(getCapacidadeAtual() + quantidadeC);
+        }
     }
 }

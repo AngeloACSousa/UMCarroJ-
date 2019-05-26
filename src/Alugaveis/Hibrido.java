@@ -224,8 +224,20 @@ public class Hibrido extends Carro implements Serializable {
      * caso o deposito esta a menos de 20% e esteja disponivel, entao é reabastecido.
      */
     public void Abastecer(double quantidadeC, double quantidadeB){
-        this.setCapacidadeAtual(getCapacidadeAtual() + quantidadeC);
-        this.setBateriaAtual(getBateriaAtual() + quantidadeB);
+        //deposito
+        if(getCapacidadeAtual() + quantidadeC > getCapacidadeTanque()){
+            this.setCapacidadeAtual(getCapacidadeTanque());
+        }
+        else{
+            this.setCapacidadeAtual(getCapacidadeAtual() + quantidadeC);
+        }
+        //bateria
+        if(getBateriaAtual() + quantidadeB > getCapacidadeBateria()){
+            this.setBateriaAtual(getCapacidadeBateria());
+        }
+        else{
+            this.setBateriaAtual(getBateriaAtual() + quantidadeB);
+        }
     }
     
 }
