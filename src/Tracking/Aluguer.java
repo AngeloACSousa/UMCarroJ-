@@ -17,6 +17,7 @@ public class Aluguer {
     private LocalDate data;
     private double preco;
     private String pref;
+    private boolean isClassificado;
 
     /**
      * Construtores --------------------------------------------------------------------------------------
@@ -33,6 +34,7 @@ public class Aluguer {
         this.data = LocalDate.now();
         this.preco = 0;
         this.pref = "";
+        this.isClassificado = false;
     }
 
     /**
@@ -46,7 +48,8 @@ public class Aluguer {
      * @param tempoViagem
      */
     public Aluguer(int idAluguer,int idCliente,int idProprietario,String idVeiculo,
-                     Coordenada a,Coordenada b, double tempoViagem,LocalDate data,double preco,String pref){
+                     Coordenada a,Coordenada b, double tempoViagem,LocalDate data,double preco,String pref,
+                   boolean isClassificado){
         this.idAluguer = idAluguer;
         this.idCliente = idCliente;
         this.idProprietario = idProprietario;
@@ -58,6 +61,7 @@ public class Aluguer {
         this.data = LocalDate.of(data.getYear(),data.getMonth(),data.getDayOfMonth());
         this.preco = preco;
         this.pref = pref;
+        this.isClassificado = isClassificado;
     }
 
     /**
@@ -75,6 +79,7 @@ public class Aluguer {
         this.data = v.getData();
         this.preco = v.getPreco();
         this.pref = v.getPref();
+        this.isClassificado = v.isClassificado();
     }
 
     /**
@@ -122,6 +127,10 @@ public class Aluguer {
         return pref;
     }
 
+    public boolean isClassificado(){
+        return this.isClassificado;
+    }
+
     /**
      * setters------------------------------------------------------------------------------------------------
      * @param a
@@ -165,6 +174,10 @@ public class Aluguer {
 
     public void setPref(String pref) {
         this.pref = pref;
+    }
+
+    public void setClassificado(boolean classificado){
+        this.isClassificado = classificado;
     }
 
     /**

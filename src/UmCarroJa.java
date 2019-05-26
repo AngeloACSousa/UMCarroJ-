@@ -236,11 +236,61 @@ public class UmCarroJa{
     //Metodo de visualizar Carros
     public void visualizarCarrosProprietario(int id){
         List<String> carros = proprietarios.get(id).getVeiculos();
+        if(carros.size() == 0){
+            System.out.println("Nao tem carros registados!");
+        }
         for(String c : carros){
             System.out.println("Marca: " +this.veiculos.get(c).getMarca());
             System.out.println("Tipo: "+ this.veiculos.get(c).getTipo());
             System.out.println("Matricula: " +this.veiculos.get(c).getMatricula()+"\n");
         }
+    }
+
+    //Visualizar um carro especifico
+    public void visualizarCarro(String matricula){
+        System.out.println(veiculos.get(matricula).toString());
+    }
+
+    //Classificar viagens - Proprietario
+    public void classificarProprietario(int idProprietario){
+        List<Integer> alugueresl = proprietarios.get(idProprietario).getAlugueres();
+        Aluguer alu;
+        double res = 0, clasc, op  = 0;
+        Scanner sc = new Scanner(System.in);
+        if(alugueresl.size() == 0){
+            System.out.println("Nao existe alugueres!");
+        }
+        for(Integer a : alugueresl){
+            alu = alugueres.get(a);
+            if(alu.isClassificado() == false){
+                System.out.println("Classifique este cliente: "+alu.getIdCliente());
+                while (op == 0) {
+                    try {
+                        res = sc.nextDouble();
+                        sc.nextLine();
+                        if (res < 1) op = 0;
+                        else op = 1;
+                    } catch (Exception e) {
+                        System.out.println("Input invalido ");
+                        sc.nextLine();
+                        op = 0;
+                    }
+                }
+            }
+            clasc = clientes.get(alu.getIdCliente()).getClassificacao();
+            if(clasc == 0){
+                clientes.get(alu.getIdCliente()).setClassificacao(res);
+            }
+            else {
+                clientes.get(alu.getIdCliente()).setClassificacao((clasc + res) / 2);
+            }
+        }
+
+    }
+
+    //Classificar viagens - Clientes ----- ACABAR -------
+    public void classificarCliente(int idCliente){
+        List<Integer> alugueres = clientes.get(idCliente).getAlugueres();
     }
 
     //metodos de procura de carros--------------------------------------------------------------------------------------
