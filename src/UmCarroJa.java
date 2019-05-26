@@ -318,6 +318,12 @@ public class UmCarroJa implements Serializable{
     //Visualizar um carro especifico
     public void visualizarCarro(String matricula){
         System.out.println(veiculos.get(matricula).toString());
+        List<Integer> alu = veiculos.get(matricula).getAlugueres();
+        int res = 0;
+        for(int i :alu){
+            res += alugueres.get(i).getPreco();
+        }
+        System.out.println("Total Faturado: "+res);
     }
 
     //Classificar viagens - Proprietario
@@ -491,8 +497,8 @@ public class UmCarroJa implements Serializable{
         clientes.get(idCliente).setCoordenada(destino.clone());
         veiculos.get(idVeiculo).setCoordenada(destino.clone());
     }
-    public void top10(){
-        Set<Cliente> top = new TreeSet<>(new ComparadorTop10());
+    public void top10Clientes(){
+        Set<Cliente> top = new TreeSet<>(new ComparadorTop10Clientes());
         for(Cliente c : clientes.values()){
             top.add(c.clone());
         }
@@ -503,7 +509,14 @@ public class UmCarroJa implements Serializable{
             System.out.println("Alugueres: "+c.getAlugueres().size());
             i++;
         }
-
+    }
+    public void totalFacturado(int id){
+        List<Integer> alu = proprietarios.get(id).getAlugueres();
+        double res = 0;
+        for(int i : alu){
+           res += alugueres.get(i).getPreco();
+        }
+        System.out.println("Total Facturado: "+res);
     }
     // ESTADO DO PROGRAMA ////////////////////////////////////////////
     public void gravarEstado(String filename) throws IOException {

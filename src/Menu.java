@@ -34,7 +34,7 @@ public class Menu implements Serializable {
         System.out.println("2. Registo                                                                                 +");
         System.out.println("3. Carregar estado incial (logs)                                                           +");
         System.out.println("4. Carregar estado anterior                                                                +");
-        System.out.println("5. Top 10                                                                                  +");
+        System.out.println("5. Top 10 Clientes                                                                         +");
         System.out.println("6. Sair                                                                                    +");
         System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
     }
@@ -335,7 +335,7 @@ public class Menu implements Serializable {
                     break;
                 //
                 case 5:
-                    master.top10();
+                    master.top10Clientes();
                     opcao = 0;
                     break;
                 case 6:
@@ -460,14 +460,14 @@ public class Menu implements Serializable {
         op = 0;
         int opcaoc = 0;
         while(op == 0) {
-            System.out.println("Indique o tipo de aluguer que pretende realizar                                                +");
-            System.out.println("1. Mais Barato                                                                                 +");
-            System.out.println("2. Mais Perto                                                                                  +");
-            System.out.println("3. Mais Barato a pé                                                                            +");
-            System.out.println("4. Mais Barato conforme o tempo a pé                                                           +");
-            System.out.println("5. Voltar                                                                                      +");
-            System.out.println("6. Sair                                                                                        +");
-            System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
+            System.out.println("Indique o tipo de aluguer que pretende realizar                                            +");
+            System.out.println("1. Mais Barato                                                                             +");
+            System.out.println("2. Mais Perto                                                                              +");
+            System.out.println("3. Mais Barato a pé                                                                        +");
+            System.out.println("4. Mais Barato conforme o tempo a pé                                                       +");
+            System.out.println("5. Voltar                                                                                  +");
+            System.out.println("6. Sair                                                                                    +");
+            System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
             try {
                 opcaoc = sc.nextInt();
                 if (opcaoc < 1) op = 0;
@@ -707,8 +707,9 @@ public class Menu implements Serializable {
             System.out.println("4. Lista de Alugueres                                                                      +");
             System.out.println("5. Visualizar Veiculo especifico                                                           +");
             System.out.println("6. Classificar Alugueres                                                                   +");
-            System.out.println("7. Voltar                                                                                  +");
-            System.out.println("8. Sair                                                                                    +");
+            System.out.println("7. Total Facturado                                                                         +");
+            System.out.println("8. Voltar                                                                                  +");
+            System.out.println("9. Sair                                                                                    +");
             System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
 
             //Apartir de aqui, é so chamar as funçoes necessarias dentro de um Switch
@@ -833,7 +834,10 @@ public class Menu implements Serializable {
                     matricula = sc.next();
                     sc.nextLine();
                     try{
-                        master.visualizarCarro(matricula);
+                        if(master.proprietarios.get(idProprietario).getVeiculos().contains(matricula))
+                            master.visualizarCarro(matricula);
+                        else
+                            System.out.println("O veiculo não pertence ao utilizador");
                     }
                     catch (Exception e){
                         System.out.println("nao existe carro registado com esta matricula!");
@@ -841,13 +845,19 @@ public class Menu implements Serializable {
                     opcaoc = 0;
                     break;
                 case 6://classificar alugueres
+                    master.classificarProprietario(idProprietario);
                     opcaoc = 0;
                     break;
-                case 7:
+
+                case 7://total facturado
+                    master.totalFacturado(idProprietario);
+                    opcaoc = 0;
+                    break;
+                case 8:
                     //Voltar ao menu anterior
                     opcaoc = -1;
                     break;
-                case 8:
+                case 9:
                     //sair
                     System.out.println("A gravar estado");
                     try{
