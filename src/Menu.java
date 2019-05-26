@@ -84,7 +84,18 @@ public class Menu implements Serializable {
         this.opcao = 0;
         while (opcao == 0){
             menu();
-            this.opcao = sc.nextInt();
+            op = 0;
+            while (op == 0) {
+                try {
+                    this.opcao = sc.nextInt();
+                    if (this.opcao < 1) op = 0;
+                    else op = 1;
+                } catch (Exception e) {
+                    System.out.println("Input invalido ");
+                    sc.next();
+                    op = 0;
+                }
+            }
 
             switch (opcao) {
                 //login
@@ -134,8 +145,19 @@ public class Menu implements Serializable {
                 //registo
                 case 2:
                     registar();
-                    int opcao2;
-                    opcao2 = sc.nextInt();
+                    int opcao2 = 0;
+                    op = 0;
+                    while (op == 0) {
+                        try {
+                            opcao2 = sc.nextInt();
+                            if (opcao2 < 1) op = 0;
+                            else op = 1;
+                        } catch (Exception e) {
+                            System.out.println("Input invalido!");
+                            sc.next();
+                            op = 0;
+                        }
+                    }
 
                     switch (opcao2) {
                         //Registo de Proprietarios
@@ -503,7 +525,18 @@ public class Menu implements Serializable {
             System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
 
             //Apartir de aqui, é so chamar as funçoes necessarias dentro de um Switch
-            opcaoc = sc.nextInt();
+            op = 0;
+            while (op == 0) {
+                try {
+                    opcaoc = sc.nextInt();
+                    if (opcaoc < 1) op = 0;
+                    else op = 1;
+                } catch (Exception e) {
+                    System.out.println("Input invalido! ");
+                    sc.next();
+                    op = 0;
+                }
+            }
 
             switch (opcaoc) {
                 case 1:
@@ -511,6 +544,18 @@ public class Menu implements Serializable {
                     registarCarro();
                     int opcaoReg = 0;
                     opcaoReg = sc.nextInt();
+                    op = 0;
+                    while (op == 0) {
+                        try {
+                            opcaoReg = sc.nextInt();
+                            if (opcaoReg < 1) op = 0;
+                            else op = 1;
+                        } catch (Exception e) {
+                            System.out.println("Input invalido..");
+                            sc.next();
+                            op = 0;
+                        }
+                    }
                     switch (opcaoReg) {
                         case 1:
                             //Combustao
