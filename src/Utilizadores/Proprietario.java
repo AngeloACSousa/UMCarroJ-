@@ -2,6 +2,7 @@ package Utilizadores;
 
 import Alugaveis.Veiculo;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +10,7 @@ import java.util.List;
 /**
  * Classe Proprietario dá extend a pessoa
  */
-public class Proprietario extends Pessoa {
+public class Proprietario extends Pessoa implements Serializable {
     //está como lista de strings porque a class aluguer ainda não está definida
     private List<Integer> alugueres;
     private List<String> veiculos;

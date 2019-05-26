@@ -6,6 +6,7 @@ package Utilizadores;
 import Alugaveis.Carro;
 import Tracking.Coordenada;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.Map;
 /**
  * Classe Cliente dá extend a Pessoa
  */
-public class Cliente extends Pessoa {
+public class Cliente extends Pessoa implements Serializable {
 
     private Coordenada coordenada;
 

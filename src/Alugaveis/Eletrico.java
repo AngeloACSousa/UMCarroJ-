@@ -2,12 +2,13 @@ package Alugaveis;
 
 import Tracking.Coordenada;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Classe eletrico dá extend da classe carro
  */
-public class Eletrico extends Carro {
+public class Eletrico extends Carro implements Serializable {
     private String tipo;
     private double capacidadeBateria;
     private double bateriaAtual;

@@ -1,12 +1,13 @@
 package Tracking;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 /**
  * Classe Alugueres
  */
 
-public class Aluguer {
+public class Aluguer implements Serializable {
     private int idAluguer;
     private int idCliente;
     private int idProprietario;

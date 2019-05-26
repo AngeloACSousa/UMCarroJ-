@@ -3,13 +3,14 @@ import Tracking.Coordenada;
 import Utilizadores.Cliente;
 import Utilizadores.Pessoa;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Teste {
+public class Teste implements Serializable {
     public static void main(String[] args) throws Exception{
         Coordenada c1 = new Coordenada(1,3);
         ArrayList<Integer> ar = new ArrayList<Integer>();

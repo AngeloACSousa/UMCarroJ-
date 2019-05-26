@@ -4,12 +4,13 @@ package Alugaveis;
 
 import Tracking.Coordenada;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Classe combustão dá extend da classe Carro
  */
-public class Combustao extends Carro {
+public class Combustao extends Carro implements Serializable {
     private String tipo;
     private double capacidadeTanque;
     private double capacidadeAtual;

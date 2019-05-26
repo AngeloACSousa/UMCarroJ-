@@ -3,6 +3,7 @@ import Tracking.Coordenada;
 import Utilizadores.Cliente;
 import Utilizadores.Proprietario;
 
+import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -12,7 +13,7 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.concurrent.Callable;
 
-public class Menu {
+public class Menu implements Serializable {
 
     private UmCarroJa master;
     private int opcao;
@@ -272,7 +273,7 @@ public class Menu {
                 //sair
                 case 3:
                     try {
-                        master.lerFicheiro("logsteste.txt");
+                        master.lerFicheiro("C:\\Users\\angel\\Desktop\\UMCarroJ-\\src\\logs.bak");
                     }
                     catch (Exception e){
                         System.out.println("Erro no carregamento");

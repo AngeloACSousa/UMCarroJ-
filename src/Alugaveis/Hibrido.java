@@ -2,12 +2,13 @@ package Alugaveis;
 
 import Tracking.Coordenada;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Classe hibrido dá extend a carro
  */
-public class Hibrido extends Carro {
+public class Hibrido extends Carro implements Serializable {
     private String tipo;
     private double consumoMedioBateria;
     private double consumoMedioCombustivel;

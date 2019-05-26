@@ -5,6 +5,8 @@ import Alugaveis.Eletrico;
 
 import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;
+
+import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
@@ -13,7 +15,7 @@ import java.util.Map;
  */
 
 
-public class Coordenada {
+public class Coordenada implements Serializable {
     private double x;
     private double y;
 

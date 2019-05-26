@@ -12,7 +12,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class UmCarroJa{
+public class UmCarroJa implements Serializable{
 
 
     public Map<Integer, Cliente> clientes;
@@ -463,9 +463,13 @@ public class UmCarroJa{
 
     // ESTADO DO PROGRAMA ////////////////////////////////////////////
     public void gravarEstado(String filename) throws IOException {
+        System.out.println("cheguei aqui1");
         ObjectOutputStream oout = new ObjectOutputStream(new FileOutputStream(filename));
+        System.out.println("cheguei aqui2");
         oout.writeObject(this);
+        System.out.println("cheguei aqui3");
         oout.flush();
+        System.out.println("cheguei aqui4");
         oout.close();
     }
 

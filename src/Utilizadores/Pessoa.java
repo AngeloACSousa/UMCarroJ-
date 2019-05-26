@@ -1,11 +1,12 @@
 package Utilizadores;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 /**
  * Classe Pessoa, classe abstrata fundamental
  */
-public abstract class Pessoa {
+public abstract class Pessoa implements Serializable {
     private String email;
     private String nome;
     private String password;

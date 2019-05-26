@@ -1,5 +1,6 @@
 package Alugaveis;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import Tracking.Coordenada;
@@ -8,7 +9,7 @@ import Tracking.Coordenada;
  * Classe Carro, abstrata
  */
 
-public abstract class Carro extends Veiculo {
+public abstract class Carro extends Veiculo implements Serializable {
 
     private String tipo;
     private double velocidadeMedia;

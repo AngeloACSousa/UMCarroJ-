@@ -2,13 +2,14 @@ package Alugaveis;
 
 import Tracking.Coordenada;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Classe Veiculo, classe abstrata fundamental
  */
-public abstract class Veiculo {
+public abstract class Veiculo implements Serializable {
     private Coordenada coordenada;
     private String matricula;
     private double preco;
