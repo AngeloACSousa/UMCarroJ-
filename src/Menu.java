@@ -32,8 +32,9 @@ public class Menu implements Serializable {
         System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
         System.out.println("1. Login                                                                                   +");
         System.out.println("2. Registo                                                                                 +");
-        System.out.println("3. Carregar Ficheiro                                                                       +");
-        System.out.println("4. Sair                                                                                    +");
+        System.out.println("3. Carregar estado incial (logs)                                                           +");
+        System.out.println("4. Carregar estado anterior                                                                +");
+        System.out.println("5. Sair                                                                                    +");
         System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
     }
 
@@ -280,7 +281,18 @@ public class Menu implements Serializable {
                     }
                     this.opcao = 0;
                     break;
+
                 case 4:
+                    System.out.println("A recuperar estado anterior!");
+                    try{
+                        master = master.recuperarEstado("guardado");
+                    }
+                    catch (Exception e){
+                        System.out.println(e.getMessage());
+                    }
+                    break;
+
+                case 5:
                     System.out.println("A gravar estado");
                     try{
                         master.gravarEstado("guardado");

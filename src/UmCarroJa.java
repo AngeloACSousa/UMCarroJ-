@@ -473,7 +473,7 @@ public class UmCarroJa implements Serializable{
         oout.close();
     }
 
-    static UmCarroJa recuperarEstado(String filename) throws IOException, ClassNotFoundException {
+    public UmCarroJa recuperarEstado(String filename) throws IOException, ClassNotFoundException {
         FileInputStream fis = new FileInputStream(filename);
         ObjectInputStream ois = new ObjectInputStream(fis);
         UmCarroJa umCarroJa = (UmCarroJa) ois.readObject();
