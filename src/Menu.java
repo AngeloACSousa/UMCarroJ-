@@ -411,15 +411,12 @@ public class Menu implements Serializable {
         }
     }
     void aluguer(int idCliente){
-        int opcaoc = 0;
-        while (opcaoc == 0) {
             System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
             System.out.println("-                              Menu de Aluguer                                             +");
             System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
             System.out.println("Indique as Coordenadas para onde pretende deslocar-se                                      +");
             Coordenada c = getCoordenada();
             TipoAluguer(idCliente, c);
-        }
     }
 
     void TipoAluguer(int idCliente, Coordenada x){
@@ -447,15 +444,54 @@ public class Menu implements Serializable {
             switch (opcaoc) {
                 case 1:
                     //Carro mais perto!
-                    Veiculo v = master.maisPerto(idCliente);
-                    System.out.println("carro mais barato:");
-                    System.out.println(v.toString());
-                    System.out.println("Aluguer efectuado!");
+
+                    try {
+                        Veiculo v = master.maisPerto(idCliente);
+                        System.out.println("carro mais barato:");
+                        System.out.println(v.toString());
+                        System.out.println("Aceitar? y/n");
+
+                        op = 0;
+                        while(op == 0) {
+                            String s = sc.next();
+                            if (s.equals("y")) {
+                                master.realizarAluguer(idCliente,"MaisPerto",v.getMatricula(), x);
+                                System.out.println("Aluguer efectuado!");
+                                classificaAluguer(v.getMatricula());
+                                op = 1;
+                            }
+                            if(s.equals("n")) break;
+                        }
+                    }catch (Exception e){
+                        System.out.println("Não existem carros no sistema");
+                    }
+                    opcaoc = -1;
                     break;
                 case 2:
                     //Carro mais barato!
-                    master.maisBarato(idCliente, x);
+                    try {
+                        Veiculo v = master.maisBarato(idCliente, x);
+                        System.out.println("carro mais barato:");
+                        System.out.println(v.toString());
+                        System.out.println("Aceitar? y/n");
+
+                        op = 0;
+                        while(op == 0) {
+                            String s = sc.next();
+                            if (s.equals("y")) {
+                                master.realizarAluguer(idCliente,"MaisBarato",v.getMatricula(), x);
+                                System.out.println("Aluguer efectuado!");
+                                classificaAluguer(v.getMatricula());
+                                op = 1;
+                            }
+                            if(s.equals("n")) break;
+                        }
+                    }catch (Exception e){
+                        System.out.println("Não existem carros no sistema");
+                    }
+
                     System.out.println("Aluguer efectuado!");
+                    opcaoc = -1;
                     break;
                 case 3:
                     //mais barato dentro da distancia que o cliente quer andar
@@ -474,8 +510,29 @@ public class Menu implements Serializable {
                             op = 0;
                         }
                     }
-                    master.maisBaratoAPe(idCliente, km, x);
+                    try {
+                        Veiculo v = master.maisBaratoAPe(idCliente, km, x);
+                        System.out.println("carro mais barato:");
+                        System.out.println(v.toString());
+                        System.out.println("Aceitar? y/n");
+
+                        op = 0;
+                        while(op == 0) {
+                            String s = sc.next();
+                            if (s.equals("y")) {
+                                master.realizarAluguer(idCliente,"MaisBaratoDistAPe",v.getMatricula(), x);
+                                System.out.println("Aluguer efectuado!");
+                                classificaAluguer(v.getMatricula());
+                                op = 1;
+                            }
+                            if(s.equals("n")) break;
+                        }
+                    }catch (Exception e){
+                        System.out.println("Não existem carros no sistema");
+                    }
+
                     System.out.println("Aluguer efectuado!");
+                    opcaoc = -1;
                     break;
                 case 4:
                     //carro mais barato dentro de um tempo que o Cliente quer andar a pe
@@ -494,8 +551,29 @@ public class Menu implements Serializable {
                             op = 0;
                         }
                     }
-                    master.maisBaratoAPe(idCliente, tempo, x);
+                    try {
+                        Veiculo v = master.maisBaratoAPe(idCliente, tempo, x);
+                        System.out.println("carro mais barato:");
+                        System.out.println(v.toString());
+                        System.out.println("Aceitar? y/n");
+
+                        op = 0;
+                        while(op == 0) {
+                            String s = sc.next();
+                            if (s.equals("y")) {
+                                master.realizarAluguer(idCliente,"MaisBaratoTempoAPe",v.getMatricula(), x);
+                                System.out.println("Aluguer efectuado!");
+                                classificaAluguer(v.getMatricula());
+                                op = 1;
+                            }
+                            if(s.equals("n")) break;
+                        }
+                    }catch (Exception e){
+                        System.out.println("Não existem carros no sistema");
+                    }
+
                     System.out.println("Aluguer efectuado!");
+                    opcaoc = -1;
                     break;
                 case 5:
                     opcaoc = -1;
@@ -514,7 +592,26 @@ public class Menu implements Serializable {
             }
         }
     }
+    public void classificaAluguer(String matricula){
+        System.out.println("Classifique a sua viagem entre 0-100");
+        op=0;
+        while(op == 0){
+            int classi;
+            try{
+                classi = sc.nextInt();
+                if(classi < 0 || classi > 100) op = 0;
+                else{
+                    if(master.veiculos.get(matricula).getAlugueres().size() == 0) master.veiculos.get(matricula).setClassificacao(classi);
+                    else master.veiculos.get(matricula).setClassificacao((master.veiculos.get(matricula).getClassificacao()+classi)/2);
+                    op = 1;
+                }
+            } catch (Exception e){
+                sc.next();
+                System.out.println("Input invalido");
+            }
 
+        }
+    }
     public Coordenada getCoordenada(){
         op = 0;
         while (op == 0) {
@@ -546,7 +643,6 @@ public class Menu implements Serializable {
     void naoFeito(){
         System.out.println("nao ta feito");
     }
-
     /**
      * Contem os menus de alugueres para o proprietarios.
      */

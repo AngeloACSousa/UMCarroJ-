@@ -235,7 +235,9 @@ public class UmCarroJa implements Serializable{
         vl.add(idAluguer);
         veiculos.get(matricula).setAlugueres(new ArrayList<>(vl));
 
-
+        //muda coordenadas pra o final da viagem
+        clientes.get(nif).setCoordenada(c.clone());
+        veiculos.get(matricula).setCoordenada(c.clone());
 
         return new Aluguer(idAluguer,nif,idProp,matricula,i,c,tempo,data,preco,pref,false);
 
@@ -355,10 +357,7 @@ public class UmCarroJa implements Serializable{
 
     }
 
-    //Classificar viagens - Clientes ----- ACABAR -------
-    public void classificarCliente(int idCliente){
-        List<Integer> alugueres = clientes.get(idCliente).getAlugueres();
-    }
+
 
     //metodos de procura de carros--------------------------------------------------------------------------------------
 
@@ -451,10 +450,39 @@ public class UmCarroJa implements Serializable{
 
         return res;
     }
-
+    //(int idAluguer,int idCliente,int idProprietario,String idVeiculo,
+    //                     Coordenada a,Coordenada b, double tempoViagem,LocalDate data,double preco,String pref,
+    //                   boolean isClassificado
     //Metodo de realizar Alugueres
-    public void fazerAluguer(int idCliente, int opcao){
+    public void realizarAluguer(int idCliente, String pref, String idVeiculo, Coordenada destino){
+        int idAluguer = alugueres.size()+1;
+        int idProp = veiculos.get(idVeiculo).getIdProprietario();
+        Coordenada i = veiculos.get(idVeiculo).getCoordenada();
+        double preco = veiculos.get(idVeiculo).precoViagem(destino);
+        Carro c = (Carro) veiculos.get(idVeiculo);
+        double tempo = i.distancia(destino)/c.getVelocidadeMedia();
+        LocalDate data = LocalDate.now();
+        Aluguer a = new Aluguer(idAluguer,idCliente,idProp,idVeiculo,i.clone(),destino.clone(),tempo,data,preco,pref,false);
 
+        alugueres.put(idAluguer,a.clone());
+        //adicionar no proprietario
+        List<Integer> p = proprietarios.get(idProp).getAlugueres();
+        p.add(idAluguer);
+        proprietarios.get(idProp).setAlugueres(new ArrayList<>(p));
+
+        //adicionar no cliente
+        List<Integer> cl =  clientes.get(idCliente).getAlugueres();
+        cl.add(idAluguer);
+        clientes.get(idCliente).setAlugueres(new ArrayList<>(cl));
+
+        //adicionar no veiculo
+        List<Integer> vl = veiculos.get(idVeiculo).getAlugueres();
+        vl.add(idAluguer);
+        veiculos.get(idVeiculo).setAlugueres(new ArrayList<>(vl));
+
+        //muda coordenadas do cliente e carro
+        clientes.get(idCliente).setCoordenada(destino.clone());
+        veiculos.get(idVeiculo).setCoordenada(destino.clone());
     }
 
     // ESTADO DO PROGRAMA ////////////////////////////////////////////
