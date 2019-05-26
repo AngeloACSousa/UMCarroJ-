@@ -60,6 +60,8 @@ public class UmCarroJa{
                                                 break;
 
                                         }
+                                    case "Aluguer":
+                                        Aluguer aluguer;
                                     default:
                                         System.out.println("Comando não encontrado " + split[0]);
                                         break;
@@ -109,6 +111,14 @@ public class UmCarroJa{
                capacidadeT,capacidadeT,capacidadeB,capacidadeB,Double.parseDouble(hibrido[6]), new ArrayList<Integer>(),0,
                new Coordenada(Double.parseDouble(hibrido[8]),Double.parseDouble(hibrido[9])),
                true,Integer.parseInt(hibrido[3]),hibrido[1]);
+    }
+    //nif cliente, X destino, Y destino, tipoCombustivel , preferencia
+    private Aluguer criarAluguer(String[] aluguer){
+        int nif = Integer.parseInt(aluguer[0]);
+        Coordenada c = new Coordenada(Integer.parseInt(aluguer[1]),Integer.parseInt(aluguer[2]));
+        String pref = aluguer[4];
+
+        return null;
     }
 
     public List<String> getCarrosdoTipo(String tipo) {

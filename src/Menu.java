@@ -347,16 +347,62 @@ public class Menu {
             }
         }
     }
-    void aluguer() {
+    void aluguer(int idCliente){
         int opcaoc = 0;
         while (opcaoc == 0) {
             System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
             System.out.println("-                              Menu de Aluguer                                             +");
             System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
-            System.out.println("Indique as Coordenadas para onde pretende deslocar-se                                     +");
-            int op = 0;
+            System.out.println("Indique as Coordenadas para onde pretende deslocar-se                                      +");
+            Coordenada c = getCoordenada();
+            while(true){
+                String s = getTipoAluguer();
+                switch (s) {
+                    case "MaisBarato":
+                        Veiculo veiculo = master.maisBarato(idCliente,c.clone());
+                        if(veiculo instanceof Hibrido) veiculo = (Hibrido) veiculo;
+                }
+            }
+        }
+    }
+
+    String getTipoAluguer(){
+        System.out.println("Indique o tipo de aluguer que pretende realizar                                       +");
+        System.out.println("1. Mais Barato                                                                        +");
+        System.out.println("2. Mais Perto                                                                         +");
+        System.out.println("3. Mais Barato a pé                                                                   +");
+        System.out.println("4. Mais Barato conforme o tempo a pé                                                  +");
+        System.out.println("5. Voltar                                                                             +");
+        System.out.println("6. Sair                                                                               +");
+        int opcaoc = 0;
+        while(opcaoc == 0) {
+            try {
+                opcaoc = sc.nextInt();
+                if (opcaoc < 1) opcaoc = 0;
+            } catch (Exception e) {
+                System.out.println("Opcao nao existe");
+                sc.next();
+            }
+
+            switch (opcaoc) {
+                case 1:
+                    return "MaisBarato";
+                case 2:
+                    return "MaisPerto";
+                case 3:
+                    return "MaisBaratoTempo";
+                case 4:
+                    return "MaisBaratoDistancia";
+                case 5:
+                    opcaoc = -1;
+                    break;
+                case 6:
+                    System.exit(0);
+                    break;
+            }
 
         }
+        return "";
     }
 
     public Coordenada getCoordenada(){

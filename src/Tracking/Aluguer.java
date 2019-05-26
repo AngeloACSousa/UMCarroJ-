@@ -17,6 +17,7 @@ public class Aluguer {
     private double classMedia;
     private LocalDate data;
     private double preco;
+    private String pref;
 
     /**
      * Construtores --------------------------------------------------------------------------------------
@@ -33,6 +34,7 @@ public class Aluguer {
         this.classMedia = 0.0;
         this.data = LocalDate.now();
         this.preco = 0;
+        this.pref = "";
     }
 
     /**
@@ -47,7 +49,7 @@ public class Aluguer {
      * @param classMedia
      */
     public Aluguer(int idAluguer,int idCliente,int idProprietario,String idVeiculo,
-                     Coordenada a,Coordenada b, double tempoViagem,double classMedia,LocalDate data,double preco){
+                     Coordenada a,Coordenada b, double tempoViagem,double classMedia,LocalDate data,double preco,String pref){
         this.idAluguer = idAluguer;
         this.idCliente = idCliente;
         this.idProprietario = idProprietario;
@@ -58,6 +60,7 @@ public class Aluguer {
         this.classMedia = classMedia;
         this.data = LocalDate.of(data.getYear(),data.getMonth(),data.getDayOfMonth());
         this.preco = preco;
+        this.pref = pref;
     }
 
     /**
@@ -75,6 +78,7 @@ public class Aluguer {
         this.classMedia = v.getClassMedia();
         this.data = v.getData();
         this.preco = v.getPreco();
+        this.pref = v.getPref();
     }
 
     /**
@@ -121,6 +125,10 @@ public class Aluguer {
         return preco;
     }
 
+    public String getPref() {
+        return pref;
+    }
+
     /**
      * setters------------------------------------------------------------------------------------------------
      * @param a
@@ -163,6 +171,10 @@ public class Aluguer {
 
     public void setPreco(double preco) {
         this.preco = preco;
+    }
+
+    public void setPref(String pref) {
+        this.pref = pref;
     }
 
     /**
@@ -225,6 +237,8 @@ public class Aluguer {
         sb.append(this.data.toString()+"\n");
         sb.append("Preco: ");
         sb.append(this.preco+ "\n");
+        sb.append("Preferencia: ");
+        sb.append(this.pref+ "\n");
 
         
         return sb.toString();
