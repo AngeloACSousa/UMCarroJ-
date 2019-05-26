@@ -389,7 +389,8 @@ public class Menu implements Serializable {
                     break;
 
                 case 2:
-                    naoFeito();
+                    //menu de Aluguer
+                    aluguer(idCliente);
                     opcaoc = 0;
                     break;
                 case 3:
@@ -417,44 +418,85 @@ public class Menu implements Serializable {
             System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
             System.out.println("Indique as Coordenadas para onde pretende deslocar-se                                      +");
             Coordenada c = getCoordenada();
-            while(true){
-                String s = getTipoAluguer();
-                switch (s) {
-                    case "MaisBarato":
-                        Veiculo veiculo = master.maisBarato(idCliente,c.clone());
-                        if(veiculo instanceof Hibrido) veiculo = (Hibrido) veiculo;
-                }
-            }
+            TipoAluguer(idCliente, c);
         }
     }
 
-    String getTipoAluguer(){
-        System.out.println("Indique o tipo de aluguer que pretende realizar                                       +");
-        System.out.println("1. Mais Barato                                                                        +");
-        System.out.println("2. Mais Perto                                                                         +");
-        System.out.println("3. Mais Barato a pé                                                                   +");
-        System.out.println("4. Mais Barato conforme o tempo a pé                                                  +");
-        System.out.println("5. Voltar                                                                             +");
-        System.out.println("6. Sair                                                                               +");
+    void TipoAluguer(int idCliente, Coordenada x){
+        System.out.println("Indique o tipo de aluguer que pretende realizar                                                +");
+        System.out.println("1. Mais Barato                                                                                 +");
+        System.out.println("2. Mais Perto                                                                                  +");
+        System.out.println("3. Mais Barato a pé                                                                            +");
+        System.out.println("4. Mais Barato conforme o tempo a pé                                                           +");
+        System.out.println("5. Voltar                                                                                      +");
+        System.out.println("6. Sair                                                                                        +");
+        System.out.println("-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+");
+        op = 0;
         int opcaoc = 0;
-        while(opcaoc == 0) {
+        while(op == 0) {
             try {
                 opcaoc = sc.nextInt();
-                if (opcaoc < 1) opcaoc = 0;
+                if (opcaoc < 1) op = 0;
+                else op = 1;
             } catch (Exception e) {
                 System.out.println("Opcao nao existe");
+                op = 0;
                 sc.next();
             }
 
             switch (opcaoc) {
                 case 1:
-                    return "MaisBarato";
+                    //Carro mais perto!
+                    Veiculo v = master.maisPerto(idCliente);
+                    System.out.println("carro mais barato:");
+                    System.out.println(v.toString());
+                    System.out.println("Aluguer efectuado!");
+                    break;
                 case 2:
-                    return "MaisPerto";
+                    //Carro mais barato!
+                    master.maisBarato(idCliente, x);
+                    System.out.println("Aluguer efectuado!");
+                    break;
                 case 3:
-                    return "MaisBaratoTempo";
+                    //mais barato dentro da distancia que o cliente quer andar
+                    System.out.println("Distancia que pretende andar a pe (em Km)");
+                    op = 0;
+                    double km = 0;
+                    while (op == 0) {
+                        try {
+                            km = sc.nextDouble();
+                            sc.nextLine();
+                            if (km < 1) op = 1;
+                            else op = 0;
+                        } catch (Exception e) {
+                            System.out.println("Input invalido para X");
+                            sc.nextLine();
+                            op = 0;
+                        }
+                    }
+                    master.maisBaratoAPe(idCliente, km, x);
+                    System.out.println("Aluguer efectuado!");
+                    break;
                 case 4:
-                    return "MaisBaratoDistancia";
+                    //carro mais barato dentro de um tempo que o Cliente quer andar a pe
+                    System.out.println("Tempo que pretende andar a pe:");
+                    op = 0;
+                    double tempo = 0;
+                    while (op == 0) {
+                        try {
+                            tempo = sc.nextDouble();
+                            sc.nextLine();
+                            if (tempo < 1) op = 1;
+                            else op = 0;
+                        } catch (Exception e) {
+                            System.out.println("Input invalido para X");
+                            sc.nextLine();
+                            op = 0;
+                        }
+                    }
+                    master.maisBaratoAPe(idCliente, tempo, x);
+                    System.out.println("Aluguer efectuado!");
+                    break;
                 case 5:
                     opcaoc = -1;
                     break;
@@ -470,9 +512,7 @@ public class Menu implements Serializable {
                     System.exit(0);
                     break;
             }
-
         }
-        return "";
     }
 
     public Coordenada getCoordenada(){
