@@ -257,7 +257,14 @@ public class Menu {
                             this.opcao = 0;
                             break;
                         case 4:
-                            System.out.println("A sair do programa!!");
+                            System.out.println("A gravar estado");
+                            try{
+                                master.gravarEstado("guardado");
+                            }
+                            catch (Exception e){
+                                System.out.println("Nao foi possivel gravar estado");
+                            }
+                            System.out.println("A sair");
                             System.exit(0);
                             break;
                     }
@@ -273,7 +280,14 @@ public class Menu {
                     this.opcao = 0;
                     break;
                 case 4:
-                    System.out.println("A sair do programa!!");
+                    System.out.println("A gravar estado");
+                    try{
+                        master.gravarEstado("guardado");
+                    }
+                    catch (Exception e){
+                        System.out.println("Nao foi possivel gravar estado");
+                    }
+                    System.out.println("A sair");
                     System.exit(0);
                     break;
 
@@ -346,6 +360,13 @@ public class Menu {
                     opcaoc = -1;
                     break;
                 case 4:
+                    System.out.println("A gravar estado");
+                    try{
+                        master.gravarEstado("guardado");
+                    }
+                    catch (Exception e){
+                        System.out.println("Nao foi possivel gravar estado");
+                    }
                     System.out.println("A sair");
                     System.exit(0);
                     break;
@@ -402,6 +423,14 @@ public class Menu {
                     opcaoc = -1;
                     break;
                 case 6:
+                    System.out.println("A gravar estado");
+                    try{
+                        master.gravarEstado("guardado");
+                    }
+                    catch (Exception e){
+                        System.out.println("Nao foi possivel gravar estado");
+                    }
+                    System.out.println("A sair");
                     System.exit(0);
                     break;
             }
@@ -552,7 +581,14 @@ public class Menu {
                     break;
                 case 7:
                     //sair
-                    System.out.println("A sair do programa!!");
+                    System.out.println("A gravar estado");
+                    try{
+                        master.gravarEstado("guardado");
+                    }
+                    catch (Exception e){
+                        System.out.println("Nao foi possivel gravar estado");
+                    }
+                    System.out.println("A sair");
                     System.exit(0);
                     break;
             }
